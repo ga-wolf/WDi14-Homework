@@ -31,6 +31,7 @@ var part1 = function(){
   };
 
   var percentOf = function(numOne, numTwo){
+      numTwo = (numOne * 1.4390).toFixed(2);
       var x = ((numOne / numTwo)*100).toFixed(2);
       return ( numOne + " is " + x + "% of " + numTwo);
   };
@@ -126,13 +127,16 @@ console.log(DrEvil(1000000));
 // Look up the JavaScript string reference to find methods which may be useful!
 
 var mixUp = function (str1,str2){
-       var tex1 = str2.substr(0,2) + str1.substr((str1.length-1));
-       var tex2 = str1.substr(0,2) + str2.substr((str1.length-1));
+       var tex1 = str2.substr(0,2) + str1.substr(2,(str1.length-1));
+       var tex2 = str1.substr(0,2) + str2.substr(2,(str2.length-1));
        return (tex1 + " " + tex2);
 };
 console.log("mixUp function");
 console.log(mixUp("mix", "pod"));
 console.log(mixUp("dog", "dinner"));
+console.log(mixUp("Pedro", "partes"));
+console.log(mixUp("Google","Facebook"));
+
 
 // FixStart
 //
