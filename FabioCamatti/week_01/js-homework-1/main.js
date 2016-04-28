@@ -20,33 +20,33 @@ var part1 = function(){
   var squareNumber = function (num){
 
       var x = Math.pow(num,2);
-      return ("The result of squaring the number " + num + " is " + x)
+      return ("The result of squaring the number " + num + " is " + x);
 
-  }
+  };
 
   var halfNumber = function(num){
       var x= (num /2);
-      return ("Half of " + num + " is " + x)
+      return ("Half of " + num + " is " + x);
 
-  }
+  };
 
   var percentOf = function(numOne, numTwo){
       var x = ((numOne / numTwo)*100).toFixed(2);
       return ( numOne + " is " + x + "% of " + numTwo);
-  }
+  };
 
   var areaOfCircle = function(num) {
 
       //A=πr^2=π·8^2≈201.06193 dfads
       var x = Math.pow(num,2)*Math.PI;
       return ("The area for a circle wiht radius " + num + " is " + x.toFixed(2));
-  }
+  };
   console.log("PART1\n\nCalculator, Part: 1");
   console.log("\n" + squareNumber(8));
   console.log(halfNumber(8));
   console.log(percentOf(8, 8));
   console.log(areaOfCircle(8));
-}
+};
 
 part1();
 
@@ -62,20 +62,20 @@ part1();
 var part2 = function(num){
   var squareNumber = function (num){
       return Math.pow(num,2);
-  }
+  };
 
   var halfNumber = function(num){
       return (num /2);
-  }
+  };
 
   var percentOf = function(numOne, numTwo){
       return (((numOne / numTwo)*100));
-  }
+  };
 
   var areaOfCircle = function(num) {
       //A=πr^2=π·8^2≈201.06193 dfads
       return (Math.pow(num,2)*Math.PI);
-  }
+  };
 //Take half of the number and store the result.
    var half = halfNumber(num);
 //Square the result of #1 and store that result.
@@ -85,9 +85,9 @@ var part2 = function(num){
 //Calculate what percentage that area is of the squared result (#3).
    var ww = percentOf(areac,sqr);
 
-   return ((half.toFixed(2)) + " " + (sqr.toFixed(2)) + " " + (areac.toFixed(3)) + " " + (ww.toFixed(2) + "\%"));
+   return ((half.toFixed(2)) + " " + (sqr.toFixed(2)) + " " + (areac.toFixed(3)) + " " + (ww.toFixed(2) + "%"));
 
-}
+};
 console.log("PART1\n\nCalculator, Part: 2");
 console.log("\n" + part2(8));
 
@@ -112,7 +112,7 @@ var DrEvil = function (num) {
     } else {
         return (num + " dollars");
     }
-}
+};
 console.log("DrEvil function");
 console.log(DrEvil(10));
 console.log(DrEvil(1000000));
@@ -129,7 +129,7 @@ var mixUp = function (str1,str2){
        var tex1 = str2.substr(0,2) + str1.substr((str1.length-1));
        var tex2 = str1.substr(0,2) + str2.substr((str1.length-1));
        return (tex1 + " " + tex2);
-}
+};
 console.log("mixUp function");
 console.log(mixUp("mix", "pod"));
 console.log(mixUp("dog", "dinner"));
@@ -152,7 +152,7 @@ var fixStart = function(word){
     }
     if (word === newText){
 
-           return ("The word: \'" + word + "\' has only one occurence of the char " + first + ".");
+           return ("The word: \'" + word + "\' has only one occurence of the character " + first + ".");
 
     } else{
 
@@ -161,7 +161,7 @@ var fixStart = function(word){
     }
 
 
-}
+};
 console.log("fixStart function");
 console.log(fixStart("babble"));
 console.log(fixStart("fabio"));
@@ -190,7 +190,7 @@ var verbling = function(word){
 
        }
 
-}
+};
 console.log("verbling function");
 console.log(verbling("swim"));
 console.log(verbling("swimming"));
@@ -213,7 +213,7 @@ var notBad = function(word){
 
     var newstr = word.replace(/not.*?bad|not/ig, 'good');
     return newstr;
-}
+};
 console.log("notBad function");
 console.log(notBad("This dinner is not that bad!"));
 console.log(notBad("This movie is not so bad!"));
