@@ -32,3 +32,22 @@ var isLeapYear = function( year ){
 isLeapYear(1996) // Leap year
 isLeapYear(1997) // Isn't a leap year
 isLeapYear(2000) // Is a tricky leap year
+
+// Other bonus stuff:
+//
+// We touched on using a prompt to get a number rather than calling it from the console.
+// We can do this with something like:
+//
+// var userInput = prompt("Give me a year");
+//
+// If the user puts in 2000, and we call userInput, the value will be:
+// => "2000"
+//
+// This string value is not going to be dividible, so we require one more step:
+//
+// userInput = parseInt(userInput);
+//
+// If we call it again,
+// userInput => 2000
+//
+// parseInt converts a number string to an integer, and gets us a number we can work with.
