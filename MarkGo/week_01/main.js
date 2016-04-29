@@ -105,20 +105,26 @@ multiplyNumbers (numOne, numTwo);
 // Write a function called percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
 // Write a function called areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
 // Bonus: Round the result so there are only two digits after the decimal.
-
+var randomNum = 2;
+var numResult;
 var squareNumber = function(num) {
-  result = num * num;
+var result = num * num;
   return result;
 }
-console.log( "The result of squaring the number " + num + " is " + result + "." );
-squareNumber (2)
-// ERROR - num is not defined
+numResult = squareNumber (randomNum);
+var message = "The result of squaring the number " + randomNum + " is " + numResult + "." ;
+console.log(message)
 
+
+var randomNum = 10;
+var numResult;
 var halfNumber = function(num) {
-  result = num / 2;
+  var result = num / 2;
   return result;
 }
-console.log("Half of " + num + " is " + result + "." );
+numResult = halfNumber (randomNum);
+var message = "Half of " + randomNum + " is " + numResult + "." ;
+console.log(message);
 
 var percentOf = function (numOne, numTwo) {
   result = numOne / numTwo;
@@ -152,12 +158,13 @@ console.log("Your input number" + num)
 //   DrEvil(1000000): 1000000 dollars (pinky)
 
   var drEvil = function (amount) {
+    var message;
   if (amount == 1000000) {
-    return amount + " dollars (pinky)";
+     message = amount + " dollars (pinky)";
   } else {
-    return amount + " dollars";
-  }
-}
+    message = amount + " dollars";
+  }return message;
+};
 
 // MixUp
 //
@@ -215,5 +222,5 @@ var verbing = function(string) {
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 
 var notBad = function(string) {
-  
+
 }
