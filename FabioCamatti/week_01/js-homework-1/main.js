@@ -189,7 +189,8 @@ var verbling = function(word){
            if(regex){
                return word + word.substr((word.length-1)) + "ing";
            } else{
-               return word + "ing";
+             
+               return word.slice(0,-1) + "ing";
            }
 
        }
@@ -199,6 +200,7 @@ console.log("verbling function");
 console.log(verbling("swim"));
 console.log(verbling("swimming"));
 console.log(verbling("go"));
+console.log(verbling("live"));
 
 // Not Bad
 //
