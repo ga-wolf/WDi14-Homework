@@ -1,11 +1,12 @@
 console.log ("Hello Jane and Betty");
 
+// var computer = Betty;
 // Betty, we're helping people around the sub-way.
 // They want to know how to get between stations.
-// There are 3 train lines.  They all go through Union Square. You need to REMEMBER (VAR) the stations in a very speficic order ARRAY []. We also need to look through FUNCTION each line at various times to see if the stations they are wanting are on them.  AN OBJECT for the collections of lines. We then need to figure out whether the start and end stations VARIABLES are on the same line, or if they need to change between lines FUNCTION.  Also, if the start line is Grand Central, there will only ever be one line.  IF STATEMENTS We then need to work out the order of the stations.  There will be a forward and back way on the line. Because you remember the INDEX NUMBER of where the stations are, for each line, IF the start station has an index number LESS THAN the end station, they will be travelling forward.  If not, they will be travelling backwards, and we will need to put the stations in the reverse order.  Also, if they start station and the end station are the same, they are douche bags and aren't going anywhere!
+// There are 3 train lines.  They all go through Union Square. You need to REMEMBER (VAR) the stations in a very speficic order ARRAY []. We also need to look through  each line at various times to see if the stations they are wanting, are on them ie FUNCTIONS  AN OBJECT for the collections of lines. We then need to figure out whether the start and end stations (VARIABLES) are on the same line, or if they need to change between lines (FUNCTION).  Also, if the start line is Union Square, there will only ever be one line.  IF STATEMENTS We then need to work out the order of the stations.  There will be a forward and backwards way on the line. Because you remember the INDEX NUMBER of where the stations are, for each line, IF the start station has an index number LESS THAN the end station, they will be travelling forward.  If not, they will be travelling backwards, and we will need to put the stations in the reverse order (ARRAY.REVERSE???)  Also, if the start station and the end station are the same, they are douche bags and aren't going anywhere!
 
 
-//These are the list of stations - created as arrays because the order is important
+//These are the list of stations - created as arrays because the order is important.  I think I should be able to put the //arrays in an OBJECT to make some of the code more eloquent, but didn't quite get there. The names in these arrays are ridiculously convuloted and long and I want need to do something to help the user pick the right one!
 
 var lLine = ["Eigth station on the l Line", "Sixth station on the l Line ", "Union Square", "third station on the l Line", "1st station on the l Line"] ;
 
@@ -20,8 +21,8 @@ var endStation = "Times Square";
 
 //Users mistakes in inputting data
 
-// This was supposed to check that the user was going somewhere.  I couldn't get it working in here, but I got it working in JS bin. Don't know why!
-//Would also like to compel the user to pick from a list of stations - rather than free-form.
+// HELP This was supposed to check that the user was going somewhere.  I couldn't get it working in here, but I got it working in JS bin. Don't know why!
+//Would also like to get the user to pick from a list of stations - rather than the free-form typing which is bound to cause //problems.
 // Assume this would use some kind of array
 
 // var validInput = function (startStation, endStation){
@@ -35,19 +36,14 @@ var endStation = "Times Square";
 
 
 
-//This code is about finding about what lines the stations the users wants to travel to and from are on.  One scenario, is that the user will not need to change lines.  This is dealt with in a separate function. Initially I have dealt with this in here, but have moved it to a separate function (which is hopefully working!).
+//This code is about finding  what train lines the stations are on that the users wants to travel to and from.  One scenario, is that the user will not need to change lines.  This is dealt with in a separate function. Initially I had dealt with this in here, but have moved it to a separate function (which is hopefully working!).
 
 // STARTING  This bit tells me what starting line the user would take.  It generates a variable called startLine
 // //I'm sure I could use a loop here, but I can't figure out how
 //
 //
-//   if (startStation === "Union Square"){
-//     console.log ("This will be the same as the end line")
-//   }
-//
  var startLine = function (startStation){
     if ((lLine.indexOf (startStation)) >= 0){
-
     console.log ("The startline is lLine");
     return lLine;
   }
@@ -67,7 +63,7 @@ var endStation = "Times Square";
 startLine (startStation);
 console.log ("The stations on the first line are: " + startLine (startStation));
 
-// ENDLINE This bit tells me what ending line the usere would take.  It generates a variable called endLine
+// ENDLINE This bit tells me what ending line the user would take.  It generates a variable called endLine
 //
 var endLine = function (endStation){
   var yourEndLine;
@@ -89,11 +85,10 @@ var endLine = function (endStation){
    }
 }
 
-
 endLine (endStation);
 console.log ("The stations on the second line are: " + endLine (endStation));
-//
-// //This part is about finding the index numbers of the station on the line. This is important for enabling us to tell the user what stations etc they will travel through.
+
+// //This part is about finding the index numbers of the station on the line. This is important for enabling us to tell the user what stations etc they will travel through and getting Betty to figure out whether they are going forward or backward along the line.
 //
 var startStationNumber = function (startStation, startLine){
   var startStationArray = startLine(startStation);
@@ -114,17 +109,9 @@ var endStationNumber = function (endStation, endLine){
 
 endStationNumber (endStation, endLine);
 //
-// //This section is finally about listing the stations. First of all, I've used a function to see whether the user needs to change. I then need two more functions to run to list the stations where there is no change, and the stations where there is a change.  I was planning on using .reverse where the user needed to travel in the  "backward" direction along the line.
+// HELP This section is finally about listing the stations. I haven't really finished it, but was working along the following lines, and have included it to test my logic. First of all, I've used a FUNCTION to see whether the user needs to change. I then need two more functions to run to list the stations where there is no change, and the stations where there is a change.  I was planning on using .reverse where the user needed to travel in the  "backward" direction along the line.
 //
 //
-
-var startLine = 1;
-var endLine = 1;
-var startStation;
-var endStation;
-var startStationNumber;
-var endStationNumber;
-
 var isChangeNeeded = function (startLine,endLine){
 var doIchange;
   if (startLine === endLine){
@@ -149,27 +136,26 @@ var noChangeRoute = function (changeNeeded, startStationNumber, endStationNumber
     }
   console.log ("The stations you will travel on are " + travellingRoute)
  }
+// HELP This bit here was really doing my head in.  I hope I'm on the right direction.  I didn't get time to really test, so will keep working on it. 
+
 var changeNeededRoute = function (){
   var stage1;
   var stage2;
   var startLineUnSq = startLine.indexOf ("Union Square");
   var endLineUnSq = endLine.indexOf ("Union Square");
   if (isChangeNeeded === true){
-    (if (startStationNumber < startLineUnSq{
+    (if (startStationNumber < startLineUnSq {
     var stage1 = startLine.splice (startStationNumber,startLineUnSq)
     };
-    else stage1 = stareLine.reverse (startStationNumber,startLineUnSq;
+    else stage1 = startLine.reverse (startStationNumber,startLineUnSq;
     };)
     (if (startStationNumber < endLineUnSq{
     var stage2 = startLine.splice (startStationNumber,startLineUnSq)
     };
     else stage2 = stareLine.reverse (startStationNumber,startLineUnSq;
     };)
-
-
+  else (console.log ("You don't need to change! So lucky")
   }
+  console.log ("Your journey is " + stage1 + stage2);
   return stage1, stage2;
-
-
-
 }
