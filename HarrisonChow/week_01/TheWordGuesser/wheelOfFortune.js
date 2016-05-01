@@ -1,8 +1,12 @@
-// Homework: The Word Guesser
+// Bonus: Make it more like Wheel of Fortune:
+//
+// Start with a reward amount of $0
+// Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
+// When they guess the word, log their final reward amount.
 
-// Create two global arrays: one to hold the letters of the word (e.g. 'F', 'O', 'X'), and one to hold the current guessed letters (e.g. it would start with '', '', '_' and end with 'F', 'O', 'X').
 var letterTarget = ["A", "P", "P", "L", "E"];
 var letterGuessed = ["_", "_", "_", "_", "_"];
+var reward = 0;
 //  function of guessLetter
 var guessedLetters = function () {
   // console.log("Please start the word gussing.");
@@ -13,15 +17,20 @@ var guessedLetters = function () {
       if (input === letterTarget[i]) {
         letterGuessed[i] = letterTarget[i];  // align the correct value to letterGuessed array
         bingo = true;
+
       }
     }
     if(bingo) {
-      alert(letterGuessed.join(" ")); //show the guessed charactor
+      reward += Math.round(Math.random()*100);
+      console.log(reward);
+      alert(letterGuessed.join(" ") + "\n" + "Your reward is $"+ reward); //show the guessed charactor
     } else {
-      alert('Try again');
+      reward -= Math.round(Math.random()*100);
+
+      alert('Try again' + "\n" + "You balace is $" + reward);
     }
   }
-  alert("Congratulation!");
+  alert("Congratulation! \n" + "You earnd $" + reward +" in total." );
 
 
 }
