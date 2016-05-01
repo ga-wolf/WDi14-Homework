@@ -101,13 +101,6 @@ var notBad = function(string) {
 
 
 
-
-
-
-
-
-
-
 // var babbleThing = function (stringy) {
 //   var splitString = stringy.split("");
 //
