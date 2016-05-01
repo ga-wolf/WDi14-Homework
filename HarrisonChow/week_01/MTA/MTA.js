@@ -52,6 +52,11 @@ var differentLine = function (fromLine, startStation, toLine, stopStation) {
 }
 // The MTA main function which is combined the two situations.
 var PlanTrip = function (fromLine, startStation, toLine, stopStation) {
+  fromLine = prompt("Please input your line of start station..." );
+  startStation = prompt("Please input the name of start station..." );
+  toLine = prompt("Please input your line of stop station... ");
+  stopStation = prompt("Please input the name of stop station... ");
+
   if (fromLine === toLine) {
     sameLine(fromLine, startStation, stopStation);
   } else {
@@ -60,7 +65,4 @@ var PlanTrip = function (fromLine, startStation, toLine, stopStation) {
 }
 
 
-PlanTrip("N", "34th", "N", "23rd");
-PlanTrip("6", "33rd", "N", "34th");
-PlanTrip("L", "8th", "L", "3rd");
-PlanTrip("N", "Times Square", "6", "33rd");
+PlanTrip();
