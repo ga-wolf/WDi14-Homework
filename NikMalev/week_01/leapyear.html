@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+  </head>
+  <body>
+
+
+    <script>
+    var year = prompt();
+
+    var isLeapYear = function() {
+        if ((year % 4 === 0) && !(year % 100 === 0)) {   // if year is divisible by 4 and not divisible by 100
+            console.log(year + " is a leap year");
+        } else if ((year % 4 === 0) & (year % 400 === 0)) {  // if year is divisible by 4 and 400
+            console.log(year + " is a leap year");
+        }  else {
+            console.log(year + " is not a leap year");
+        }
+
+    }
+
+
+  isLeapYear();
+
+     </script>
+  </body>
+</html>
