@@ -1,26 +1,3 @@
-// There are 3 subway lines:
-// The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
-// The L line has the following stops: 8th, 6th, Union Square, 3rd, and 1st
-// The 6 line has the following stops: Grand Central, 33rd, 28th, 23rd, Union Square, and Astor Place.
-// All 3 subway lines intersect at Union Square, but there are no other intersection points. (For example, this means the 28th stop on the N line is different than the 28th street stop on the 6 line, so you'll have to differentiate this when you name your stops in the arrays.)
-// Tell the user the number of stops AND the stops IN ORDER that they will pass through or change at.
-
-
-// We will have three arrays, one for each line. Each array will list stations on that line as the values of the arrays.
-// Begin with travel through one array only...
-// Two variables will be required, startStation & endStation.
-// find indexOf startStation & endStation
-// if startStation < endStation loop forward ++
-// if startStation > endStation loop backward --
-// Loop will add each iteration to a string, used to print stops passed
-// Loop will add to a count variable with each iteration used to print total stops
-
-// Expand for cross - line jurneys....
-// MTA Object containing three array's, one for each line?
-
-// USER INPUT (variables provided) WE CAN WORK WITH INCLUDES:
-// startStation, whatLineTheyStartOn, endStation, whatLineTheyEndOn
-
 var lineN = [
   "Times Square",
   "34th",
@@ -54,18 +31,20 @@ var endIndex;
 
 var planTrip = function ( startLine, startStation, endLine, endStation ) {
 
+//Check if trip covers more than one line.
   if( startLine === endLine ) {
 
     startIndex = startLine.indexOf(startStation) + 1;
     endIndex = startLine.indexOf(endStation);
     lineTravel( startLine, startIndex, endIndex );
-  } else if (endStation === "Union Square") {
+  } else if (endStation === "Union Square") { // Check if end station is Union Square on second line.
 
     startIndex = startLine.indexOf(startStation) + 1;
     endIndex = startLine.indexOf("Union Square");
     lineTravel( startLine, startIndex, endIndex );
   } else {
 
+// If trip covers two lines, break into two trips. first trip end point = union station, second trip start point = union station.
     startIndex = startLine.indexOf(startStation) + 1;
     endIndex = startLine.indexOf("Union Square");
     lineTravel( startLine, startIndex, endIndex );
@@ -78,6 +57,8 @@ var planTrip = function ( startLine, startStation, endLine, endStation ) {
   console.log( tripCounter + " stops in total." )
 };
 
+//Function to run through line - requires line to be provided, and start + end index.
+
 var lineTravel = function ( curLine, startIndex, endIndex ) {
   if( tripCounter > 0 && startIndex < endIndex ) {
     startIndex += 1
@@ -87,6 +68,7 @@ var lineTravel = function ( curLine, startIndex, endIndex ) {
     console.log("Change at Union Square")
   }
 
+// return string of line name based on array provided (curLine)
   switch (curLine) {
     case lineN:
         lineName = "N"
@@ -101,12 +83,14 @@ var lineTravel = function ( curLine, startIndex, endIndex ) {
 
   }
 
+//Choose output message based on if this is the first run through lineTravel
   if( tripCounter === 0 ) {
     tripMessage = "You must travel through the following stops on the " + lineName + " line: ";
   } else {
     tripMessage = "Your journey then continues on the " + lineName + " line through stops: ";
   }
 
+//Check is looping forward or backward - Loop through array and add stations to message, stops to counter.
   if(startIndex < endIndex) {
     for(var i = startIndex; i <= endIndex; i += 1) {
       if(i !== endIndex){
@@ -129,6 +113,8 @@ var lineTravel = function ( curLine, startIndex, endIndex ) {
   console.log(tripMessage);
 };
 
+
+//Get input from user, prompt with options available.. Additional error checking should be added..
 var getStartLine = prompt("Which line are you starting from?", "N, L, or 6")
 
 if( getStartLine === "N" ) {
@@ -159,4 +145,5 @@ if( getEndLine === "N" ) {
   alert("Invalid Line Name. \n ABORT!")
 }
 
+//Call function with user inputs.
 planTrip( getStartLine, getStartStation, getEndLine, getEndStation );
