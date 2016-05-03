@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+
+
+
+var N = {
+lineStops: ["TS", "34th", "28th","23rd","US", "8th"],
+name:"N"
+};
+
+var L = {
+lineStops: ["8th", "6th", "US", "3rd", "1st"],
+name: "L"
+};
+
+var G = {
+lineStops: ["GC", "33rd","28th","23rd","US", "AS"],
+name: "G"
+};
+
+  var planTrip = function(lineOn, start, lineOff, end) {
+      var lineChange;
+      var stopsAmount = 0;
+      var getOn = lineOn.lineStops.indexOf(start);
+      var getOff = lineOff.lineStops.indexOf(end);
+      var TS1 = lineOn.lineStops.indexOf("US");
+      var TS2 = lineOff.lineStops.indexOf("US");
+
+
+
+                if (lineOn === lineOff) {
+                  lineChange = false;
+                } else {
+                  lineChange = true;
+                };
+
+
+          if (lineChange === false) {
+              if (getOn < getOff) {
+                stopsAmount = getOff - getOn;
+                 console.log("You must travel through the following stops" + " on the " + lineOn.name + " line: " + lineOn.lineStops.slice(getOn,getOff + 1));
+              } else {
+                stopsAmount = getOn - getOff;
+                 console.log("You must travel through the following stops" + " on the " + lineOn.name + " line: " + lineOn.lineStops.slice(getOff,getOn).reverse());
+              }
+          };
+
+          if (lineChange === true) {
+              if (getOn < TS1) {
+                stopsAmount += TS1 - getOn;
+                 console.log("You must travel through the following stops" + " on the " + lineOn.name + " line: " + lineOn.lineStops.slice(getOn + 1,TS1 + 1));
+                 console.log("Change at Union Square");
+              } else {
+                stopsAmount += getOn - TS1;
+                 console.log("You must travel through the following stops" + " on the " + lineOn.name + " line: " + lineOn.lineStops.slice(TS1, getOn));
+                 console.log("Change at Union Square");
+              }
+
+              if (getOff < TS2) {
+                  stopsAmount += TS2 - getOff;
+                  console.log("Your journey continues through the following stops" + " on the " + lineOff.name + " line: " + lineOff.lineStops.slice(getOff, TS2).reverse());
+              } else {
+                  stopsAmount += getOff - TS2;
+                  console.log("Your journey continues through the following stops" + " on the " + lineOff.name + " line: " + lineOff.lineStops.slice(getOff, TS2).reverse());
+              }
+          }
+
+    console.log(stopsAmount + " stops in total.");
+
+              console.log(TS1);
+  }
+
+
+
+
+    planTrip(G, 'US', N, 'TS');
+
+
+    </script>
+  </body>
+</html>
