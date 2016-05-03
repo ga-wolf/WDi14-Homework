@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,400italic,700,700italic);
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  display: inline;
+  font-size: 20px;
+}
+
+.throughTheAges {
+  font-size: 30px;
+  color: #FFFFFF;
+  display: list-item;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a {
+  display: inline-block;
+  color: #C5CAE9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+body {
+  background-color: #3F51B5;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+h1, h3 {
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom:2px solid #FF5722;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.centerHome {
+  text-align: center;
+
+}
+
+.headerBar {
+  margin: 0 auto;
+  background-color: #303F9F;
+  height: 400px;
+  width: auto;
+  text-align: left;
+}
+
+.headerBar .Name {
+  margin-top: 2%;
+  margin-bottom: 0px;
+  font-size: 100px;
+  padding-top: 15px;
+}
+
+.headerBar .Name1 {
+  padding-top: 0px;
+  font-size: 40px;
+}
+
+.headerBar .cartoon {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.video {
+  padding: 30px;
+}
+
+.video .setLeft {
+  float: left;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.photoBlockOne {
+  padding: 30px;
+}
+
+.photoBlockOne .makeItSmaller {
+    float: right;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 500px;
+}
+
+.photoBlockOne .throwback {
+    float: left;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 500px;
+}
+
+.photoBlockOne .manAndMouse {
+    float: left;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 500px;
+}
