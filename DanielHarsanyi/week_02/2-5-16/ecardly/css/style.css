@@ -1,0 +1,51 @@
+body {
+  background-image: url(/Users/danielharsanyi/WDI-14/WDi14-Homework/DanielHarsanyi/week_02/2-5-16/ecardly/images/background.jpg);
+  background-color: #D6D6D6;
+  background-repeat:repeat-x;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.ecard {
+  position: relative;
+  top: 40px;
+  background-color: white;
+  height: 500px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.mainImage {
+  display: inline;
+  float: left;
+  position: relative;
+}
+
+.ecard > .para {
+  display: inline;
+  max-width: 340px;
+  float:right;
+  position: relative;
+}
+
+.ecard > div > p {
+  font-size: 12px;
+  font-family: Tahoma;
+  line-height: 18px;
+  opacity: 60%;
+  display: inline;
+}
+
+.CTA {
+  color: red;
+  font-weight: bold;
+}
