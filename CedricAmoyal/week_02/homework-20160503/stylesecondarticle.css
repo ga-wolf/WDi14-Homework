@@ -1,0 +1,48 @@
+.secondArticle img {
+  height: 150px;
+}
+
+.secondArticle {
+  box-sizing: border-box;
+	height: 300px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.secondArticle1, .secondArticle2, .secondArticle3 {
+  box-sizing: border-box;
+	display: inline-block;
+	padding: 20px;
+
+	height: 100%;
+
+}
+
+.secondArticle1 {
+	width: 30%;
+}
+
+.secondArticle2 {
+	width: 40%;
+}
+
+.secondArticle3 {
+	width: 30%;
+}
+
+.content21, .content22, .content23 {
+  box-sizing: border-box;
+	border: 2px dashed black;
+	height: 100%;
+	width: 100%;
+  background-color: white;
+  border-radius: 15px;
+
+	display: table;
+  text-align: center;
+}
+
+span {
+	display: table-cell;
+  	vertical-align: middle;
+}
