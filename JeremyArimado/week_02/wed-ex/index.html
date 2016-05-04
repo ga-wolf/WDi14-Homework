@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorites:  <span id="favorites"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+   </ul>
+
+ <script>
+
+    var nickNode = document.querySelector('#nickname');
+    var favNode = document.querySelector('#favourites');
+    var hometownNode = document.querySelector('#hometown');
+
+    nickNode.innerHTML = 'lolslol';
+
+
+    //----------
+
+    var object = {
+        testProp: 'lololol'
+    }
+
+    var testRef = object.testProp;
+    console.log('testRef: ' + testRef);
+    testRef.testProp = 'changed';
+
+    console.log(object.testProp);
+
+ </script>
+ </body>
+</html>
