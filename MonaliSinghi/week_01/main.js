@@ -39,8 +39,8 @@ var halfNumber = function (numb1) {
 // return the result. It should also log a string like "2 is 50% of 4."
 
 var percentOf = function (numb1, numb2) {
-  var perResult = numb1 * numb2 / 100;
-  console.log(perResult + " is " + numb1 + "% of " + numb2 );
+  var perResult = numb1 / numb2 * 100;
+  console.log(numb1 + " is " + perResult + "% of " + numb2 );
   return perResult;
 }
 
@@ -348,7 +348,7 @@ maxOfThree(10,7,15);
 
 
 
- }
+
 
  var myArray = [1,2,3,4];
 
@@ -388,7 +388,7 @@ var areaOfRectangle = function(){
   var result = rectangle.width * rectangle.length;
 return result;
 }
-areaOfRectangle(;)
+areaOfRectangle(3,4);
 
 
 var perimeter=function(){
@@ -404,10 +404,10 @@ var perimeter=function(){
 //isObtuse - Returns whether the triangle is obtuse or not
 
 var triangle={
-  sideA = 3,
+  sideA: 3,
 
-  sideB = 4,
-  sideC = 4
+  sideB: 4,
+  sideC: 4
 }
 var myOneA = triangle.sideA;
 var myoneB = triangle.sideB;
@@ -422,8 +422,8 @@ var isIsosceles=function(){
   var result = (myOneA===myOneB || myOneB===myOneC ||myOneC ===myOneA)
   return result;
 }
-var = function(){
-  var result =
+var func = function(){
+  var result = 3;
 }
 
 
@@ -478,7 +478,7 @@ var Bank = {
   },
 
   closeAccount: function(account) {
-    
+
   }
 }
 
@@ -495,9 +495,9 @@ var accounts=[{
   name:"monica"
 }
 
-];
-var addAccount = function(balance,newName){
-  var newInfo{ }
+]
+// var addAccount = function(balance,newName){
+  // var newInfo{ }
 
 
 
@@ -545,8 +545,8 @@ var addAccount = function(balance,newName){
       }
       console.log(word + "has a value of:"+totalScore);
       return result;
-    }
-    letterScore{
+    },
+    letterScore: {
       "A": 1,
    "E": 1,
    "I": 1,
@@ -623,14 +623,13 @@ serge={
       console.log("Whatever");
     }
   },
-  isQuestion:function(userInput{
+  isQuestion:function(userInput){
     if(userInput.trim().endsWith("?")===true){
       return true;
     }else {
       return false;
     }
-  }
-},
+  },
 
 isLoud:function(userInput){
   if(userInput===userInput.toUppercase()){
@@ -643,6 +642,7 @@ isSilent:function(userInput){
   if(userInput===""){
     console.log("Be That Way")
   }
+}
 }
 serge.respondTo("Question?");
 serge.respondTo("Loud");

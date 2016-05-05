@@ -1,0 +1,64 @@
+
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+.container {
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+h1 {
+ font-family: "Times New Roman", serif;
+ color: #656565;
+}
+
+h2 {
+	font-family: "Times New Roman", serif;
+	color: #656565;
+	font-size: 15px;
+}
+
+p {
+font-size: 10px;
+font-family: "Times New Roman", serif;
+color: #656565;
+}
+
+ {
+	font-size: 10px;
+	font-family: "Times New Roman", serif;
+	color: lightblue;
+}
+footer{
+	font-size: 7px;
+	font-family: "Times New Roman", serif;
+	color: #656565;
+margin-left: 60px;
+}
+
+ .images {
+	margin-left: 60px;
+	
+
+
+}
+
+ .date {
+	font-size: 10px;
+	font-family: "Times New Roman", serif;
+	color: lightblue;
+}
