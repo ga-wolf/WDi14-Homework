@@ -1,21 +1,36 @@
 var greyWalk = document.querySelector( ".greyWalk" );
-var greyLeftTimer;
-var greyRightTimer;
-var newPosition = -250;
-var windowWidth = window.innerWidth -200;
-// greyWalk.setAttribute( "left", "0" );
+var greyLeftTimer = null;
+var greyRightTimer = null;
+var windowWidth = window.innerWidth;
 
-var greyWalkMoveLeft = function() {
-  // var position = greyWalk.left;
+greyWalk.style.left = "-250px"
 
-  newPosition += 10;
+var greyWalkMoveRight = function() {
+  greyWalk.style.transform = "scaleX(-1)"
 
-  if( newPosition >= windowWidth ) {
-    window.clearInterval( greyLeftTimer )
-    window.setInterval( greyRightTimer )
+  var curLeft = parseFloat( greyWalk.style.left );
+  var newLeft = curLeft + 2;
+
+  if( newLeft >= windowWidth ) {
+    window.clearInterval( greyRightTimer )
+    greyLeftTimer = window.setInterval( greyWalkMoveLeft, 20 )
   }
 
-  greyWalk.style.left = newPosition + "px";
+  greyWalk.style.left = newLeft + "px";
 };
 
-greyLeftTimer = window.setInterval( greyWalkMoveLeft, 100 );
+var greyWalkMoveLeft = function() {
+  greyWalk.style.transform = "scaleX(1)"
+
+  var curLeft = parseFloat( greyWalk.style.left );
+  var newLeft = curLeft - 2;
+
+  if( newLeft <= -200 ) {
+    window.clearInterval( greyLeftTimer )
+    greyRightTimer = window.setInterval( greyWalkMoveRight, 20 );
+  }
+
+  greyWalk.style.left = newLeft + "px";
+};
+
+greyRightTimer = window.setInterval( greyWalkMoveRight, 20 );

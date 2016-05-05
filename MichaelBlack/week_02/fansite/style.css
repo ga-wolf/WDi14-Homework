@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .top-nav-bar {
@@ -75,6 +76,10 @@ a:link, a:visited, a:hover {
   text-align: justify;
 }
 
+.quotes {
+  text-align: left;
+}
+
 .bot-nav-bar {
   background-color: lightslategray;
   display: inline-block;
@@ -91,4 +96,10 @@ a:link, a:visited, a:hover {
 
 .bot-nav-bar h4 {
   top: 115px
+}
+
+#map {
+  display: inline-block;
+  position: relative;
+  left: -90px;
 }
