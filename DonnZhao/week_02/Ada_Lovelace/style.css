@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700italic,700,400);
+
+
+
+/*body {
+height:1800px;
+width: 100%;
+}
+*/
+
+.hero
+ {
+  position: relative;
+  height: 900px;
+  background:;
+}
+
+.hero_background {
+  background-size:100% 900px;
+  background-image:url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/large_person.jpeg);
+  height:900px;
+  width: 100%;
+  min-width: 800px;
+  position: center absolute;
+  top:0
+  left:0
+  right:0
+}
+ /*100vh*/
+
+.topnav {
+  width: 100%;
+  height:60px;
+  position:absolute;
+  top:400px;}
+
+ .topnav li{
+  list-style-type: none;
+      display: inline;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 2px 16px 5px 16px;
+      /*border-style: groove;
+      border-bottom-color: azure;
+      border-width: 2px;*/
+      margin-left: 10px;
+
+
+}
+
+.topnav li:hover {
+  border-width: thin;
+  border-style: outset;
+  border-color: black;
+}
+
+
+.topnav>li:first-child{
+  margin-left:-3px;
+}
+
+a {
+  color:#000000;
+  text-decoration:none;
+
+}
+
+li> a:link {
+color:#000000;
+text-decoration:none;
+}
+
+li> a:visited {
+color:#000000;
+text-decoration:underline;
+}
+
+
+/*.blank {
+  height: 300px;
+  width: 100%;
+  background-color: rgba(6, 6, 6, 0.3);
+  position:relative;
+  top:-300px;
+  bottom:0px;
+}*/
+
+/*#header {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:800px;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:contain;
+
+  background: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/large_person.jpeg)
+}*/
+/*#mainbg {
+  width: 100%;
+  height:100%;
+  top:0px;
+  bottom:0px;
+  z-index:1;
+}*/
+
+#maintext {
+  height:0px;
+  font-family: 'Lato', sans-serif;
+  font-size:30px;
+  position:absolute;
+  top:327px;
+  left:71px;
+  color:white;
+  background-color: yellow;
+}
+@keyframes textmove {
+  0% {left:85px;}
+  100%(left:100px;)
+
+}
+#maintext:hover {
+  animation:1s;
+  animation-name:textmove;
+  animation-fill-mode: forwards;
+
+}
+
+.Bio {
+  margin-top:62px;
+  height:auto;
+  background-color:rgba(33, 33, 33, 1);
+
+
+}
+
+.topnav_b {
+  left:0
+  right:0;
+  width: 100%;
+  height:50px;
+  position:fixed;
+  top:0px;
+    background-color: white;
+    border-bottom-width:8px;
+    border-bottom-style:groove;
+    border-bottom-color: black;
+
+
+}
+
+.topnav_b li {
+  list-style-type: none;
+  top:-5px;
+margin-top: -5px;
+margin-left: -0px;
+margin-right: 3px;
+      display: inline;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+  border-style: none;
+  /*border-bottom-color: azure;
+  border-width: 2px;*/
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+.topnav_b li:hover {
+  border-width: 2px;
+  border-style: outset;;
+  border-color: black;
+}
+
+#fistBli{
+  border-left: 20px;
+  margin-left: 0px;
+}
+
+
+/*.left_box {
+  margin-left: auto;
+  height:300px;
+  width: 20%;
+  background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/small_Ada_4years.jpg);
+  background-size:100% 300px;
+  background-repeat: no-repeat;
+  float:left;
+}*/
+
+/*.middle_box {
+  height:300px;
+  width: 20%;
+  background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/small_Ada_Lovelace_color.png);
+
+  background-size:100% 300px;
+  background-repeat: no-repeat;
+  float: left;
+}*/
+
+
+/*.text {
+  margin:0 auto;
+  margin-top: 30px;
+  width:600px;
+  height:50%;
+
+
+}*/
+
+/*p {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}*/
+
+/*.right_box {
+  margin-top: 30px;
+  height:300px;
+  width: 30%;
+  background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/small_ada_age18.jpg);
+  background-size:100% 300px;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  float: left;
+
+}*/
+
+/*#map {
+       width: 500px;
+       height: 400px;
+       background-color: #CCC;
+       bottom: 0
+       right:0
+
+     }*/
+
+.comic {
+  list-style:none;
+  margin:0 auto;
+  width:1100px;
+  height:1500px;
+  background-color;
+  position:static;
+}
+#comic1{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_001.jpg);*/
+  width: 500px;
+  height: 600px;
+  left:0;
+  margin: 40px 0px 60px 0;
+
+
+  /*position: absolute;*/
+  float: left;
+  display:inline;
+  /*z-index: 1;*/
+}
+
+
+#comic2{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_002.jpg);*/
+  width: 500px;
+  height: 600px;
+  margin: 40px 0px 60px 0;
+  /*right:0px;
+  top:20px;*/
+  float: right;
+  display:inline-block;
+  /*position:absolute;*/
+}
+#comic3{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_003.jpg);*/
+  width: 500px;
+  height: 800px;
+  margin: 20px 0px 60px 0;
+  /*top:900px;
+  left:0px;*/
+/*position: absolute;*/
+float: left;
+  display:inline;
+}
+
+#comic4{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_004.jpg);*/
+  width: 500px;
+  height: 800px;
+  margin: 20px 0px 60px 0;
+  /*top:900px;
+  right:0px;*/
+/*position: absolute;*/
+float: right;
+  display:inline;
+}
+
+
+
+.biofooter {
+  top: 1600px;
+  width :200vh;
+  height:40px;
+  font-family:'Roboto', sans-serif;
+  font-weight:900;
+  font-style: italic;
+  background-color:rgba(250, 250, 250, 0.5);
+  font-size: 16px;
+  position: absolute;
+  text-align: right;
+  background-color: white;
+  border-width:10px;
+  border-style:groove;
+  border-color: black;
+  padding: 0 50px 7px 0;
+
+}
+
+
+.achivepicure {
+  list-style:none;
+  margin:0 auto;
+  width:100%;
+  height:1500px;
+  position:static;
+  text-align: center;
+
+}
+
+#achivepic1{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_004.jpg);*/
+  width: 1000px;
+  height: 600px;
+  margin: 10px 0px 60px 0;
+  /*top:900px;
+  right:0px;*/
+/*position: absolute;*/
+  display:inline-block;
+}
+
+
+#achivepic2, #achivepic4, #achivepic3{
+  /*background-image: url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/origin_004.jpg);*/
+  width: 1000px;
+  height: 600px;
+  margin: 50px 0px 60px 0;
+  /*top:900px;
+  right:0px;*/
+/*position: absolute;*/
+  display:inline-block;
+}
