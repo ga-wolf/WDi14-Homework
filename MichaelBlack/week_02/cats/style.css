@@ -1,3 +1,30 @@
 body {
   background-color: gainsboro;
+  overflow: hidden;
+}
+
+.greyWalk {
+  position: absolute;
+  left: -250px;
+  transform: scaleX(-1);
+}
+
+.turning {
+  position: absolute;
+  top: 70vh;
+  left: 40vw;
+}
+
+.snake {
+  position: absolute;
+  left: -200px;
+  height: 100vh;
+  display: none;
+}
+
+.boom {
+  position: absolute;
+  left: 10vw;
+  height: 100vh;
+  opacity: 0;
 }
