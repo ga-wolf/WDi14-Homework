@@ -1,0 +1,39 @@
+body {
+  height: 10000px;
+}
+
+
+.relative{ /* overlap one - pays attention to document flow */
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+
+.absolute{ /* pays attention to the entire page*/
+  position: absolute;
+  top: 1px;
+  right: 10px;
+}
+
+.fixed{ /*This one scroll with the page*/
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.landingPage{
+  height: 100vh;
+  background-color: rgb( 110, 60, 110);
+  position: relative;
+  text-align: center;
+}
+
+.landingPage h1{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-left: -80px;
+}
