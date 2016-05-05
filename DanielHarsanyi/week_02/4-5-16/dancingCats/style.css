@@ -1,0 +1,51 @@
+.blackCatGif {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 100px;
+}
+
+body {
+  background-size: cover;
+}
+
+#pinkCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+
+}
+
+#vibratingCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+  width: 400px;
+}
+
+#vibratingCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+  width: 400px;
+}
+
+#lightsaberCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+  width: 400px;
+}
+
+#beanieCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+  width: 400px;
+}
+
+#raveCat {
+  position:absolute;
+  display: inline-block;
+  opacity: 0;
+}
