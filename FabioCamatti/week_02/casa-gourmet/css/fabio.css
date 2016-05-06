@@ -1,0 +1,130 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+  body{
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  /*blockquote{
+    padding-bottom: 40px;
+  }
+  blockquote p{
+    text-align: center;
+  }
+  blockquote footer{
+    text-align: center;
+  }*/
+
+  blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  width: 60%;
+  margin: 0 auto;
+  /*margin: 1.5em 10px;*/
+  padding: 0.5em 10px;
+  /*   quotes: "\201C""\201D""\2018""\2019"; */
+}
+blockquote:before {
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+
+blockquote p {
+  display: inline;
+  padding-bottom: 10px;
+}
+
+  header {
+/*       position: fixed;
+    top: 0;
+    display: cover;
+    z-index: 600;
+    width:100%;
+    background-color:#fff; */
+    text-align: center;
+    background-size: cover;
+    color: #000;
+    margin-bottom: 40px;
+  }
+  a {
+    color: #000;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 37px;
+  }
+  @-webkit-keyframes spinnerRotate
+  {
+      from{-webkit-transform:rotate(0deg);}
+      to{-webkit-transform:rotate(360deg);}
+  }
+  @-moz-keyframes spinnerRotate
+  {
+      from{-moz-transform:rotate(0deg);}
+      to{-moz-transform:rotate(360deg);}
+  }
+  @-ms-keyframes spinnerRotate
+  {
+      from{-ms-transform:rotate(0deg);}
+      to{-ms-transform:rotate(360deg);}
+  }
+  #spin {
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 0.2s;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+
+  }
+  img {
+    width: 10%;
+    hezight: 10%;
+    margin-top: 18px;
+    border-radius: 100%;
+    border: 5px solid #000;
+    /*        margin: 40px 0px 0px 0px;
+
+    border-radius:20px; */
+
+  }
+
+  ul {
+    padding: 10px;
+/*       background: rgba(0,0,0,0.5); */
+  }
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+  }
+  article {
+    max-width: 1044px;
+    padding: 16px;
+    margin: 0 auto;
+  }
+  p{
+    text-indent:4%;
+    text-align: justify;
+    line-height: 150%;
+  }
+  footer p{
+    text-align:center;
+  }
+  article h2{
+    font-size: 18px;
+  }
+  article p {
+      font-size: 15px;
+    }
