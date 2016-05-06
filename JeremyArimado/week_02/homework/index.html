@@ -5,18 +5,36 @@
     <title>Cat</title>
 
 </head>
+
 <body style="position: relative;" id="body">
+    <div id="overlay"></div>
     <script src="main.js"></script>
     <div id="message">
-        <div class="line1">I HAVE DECIDED YOUR FUTURE, AND IT IS:</div> <br></br>
-        <div class="line2">TRUMP</div>
+        <div class="line1">ALL GLORY TO THE</div> <br></br>
+        <div class="line2">HYPNO CAT</div>
     </div>
-
     <style>
+        body {
+            background-image: url("http://i.imgur.com/pdMsq.gif");
+            height: 100%;
+            width: 100%;
+    margin: auto;
+
+        }
+        #overlay {
+            position: absolute;
+            width: 100%;
+            height: 1000px;
+            background: yellow;
+            opacity: 0.1;
+            margin: 0;
+            position: absolute;
+            z-index: 300;
+        }
         #message {
             font-family: Helvetica;
             font-weight: bold;
-            font-size: 40px;
+            font-size: 90px;
             color: white;
             text-align: center;
             position: relative;
@@ -37,7 +55,13 @@
         .line2 {
 
         }
+        audio {
+            display: none;
+        }
     </style>
+    <audio autoplay="true" controls loop>
+        <source  src="hypnotoad.mp3" type="audio/mpeg">
+    </audio>
 
 </body>
 </html>
