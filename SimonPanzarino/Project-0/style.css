@@ -1,0 +1,65 @@
+.fall {
+  background-color: #000;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  transition: transform 0.4s linear;
+  transform-origin: bottom left;
+  transform-style: preserve-3D;
+}
+
+.box-rotate {
+  transform: rotate(90deg);
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.gameBoard {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #888;
+  left: 200px;
+  overflow: hidden;
+}
+
+.cell {
+  width: 200px;
+  height: 200px;
+  float: left;
+  background-color: rebeccapurple;
+  margin: 0;
+  padding: 0;
+  -moz-box-shadow: inset 0 0 0 2px #888;
+  -webkit-box-shadow: inset 0 0 0 2px #888;
+  box-shadow: inset 0 0 0 2px #888;
+  background-image: url('images/nought.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.inner {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.4s linear;
+  transform-origin: bottom left;
+  transform-style: preserve-3D;
+  -moz-box-shadow: inset 0 0 0 2px #888;
+  -webkit-box-shadow: inset 0 0 0 2px #888;
+  box-shadow: inset 0 0 0 2px #888;
+}
