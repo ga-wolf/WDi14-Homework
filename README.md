@@ -7,8 +7,8 @@
 - Clone your forked repository on your local computer
     + git clone url_of_your_fork_on_github
 - Add an upstream, so that your local copy's remote is pointing to my repository on Github (this repository)
-    + Move into the the repository (cd WDi14_Homework)
-    + git remote add upstream https://github.com/ga-wolf/WDi14_Homework
+    + Move into the the repository (cd WDi14-Homework)
+    + git remote add upstream https://github.com/ga-wolf/WDi14-Homework
     + git pull upstream master
 
 ## To Add your Homework
@@ -18,7 +18,7 @@
     + git commit -m "Your commit message"
     + git pull
     + git push origin master
-- Navigate to your forked version on Github - should be https://github.com/{{YOUR_USERNAME_HERE}}/WDi14_Homework
+- Navigate to your forked version on Github - should be https://github.com/{{YOUR_USERNAME_HERE}}/WDi14-Homework
 - Hit the pull request button
 - Make sure the destination for the pull request is set to my repository
 - Tell me the following things in the comment:

@@ -1,0 +1,172 @@
+
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+body{
+  background-image: url("../images/bg_wrapper.png");
+  background-repeat: repeat-x;
+  text-align: center;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+ul.topnav li {float: left;}
+ul.topnav li a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover {
+  background-image: url("../images/bg_nav_rollover.png");
+  background-repeat: repeat-x;
+}
+.logo{
+  position: relative;
+  margin-top: 90px;
+  float: left;
+  padding-left: 20px;
+}
+.social{
+  margin-top: 90px;
+  background-image: url("../images/socialNav.png");
+}
+
+.social.socialNav{
+  display: inline-block;
+  width: 249px;
+  height: 62px;
+  float: right;
+  padding-right: 20px;
+  background-position: 0 62px;
+}
+.social.socialNav:hover{
+  display: inline-block;
+  width: 249px;
+  height: 62px;
+  float: right;
+  padding-right: 20px;
+  background-position: 0 124px;
+}
+.mainpic{
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  position: relative;
+  margin: auto;
+}
+.middleSection{
+  position: relative;
+  display: inline-block;
+  border: 2px solid lightgrey;
+  border-style:inset;
+  margin-top: 25px;
+  width: 90%;
+  height: 100px;
+}
+.middletext {
+  position: relative;
+  float: left;
+  text-align: justify;
+  width: 70%;
+  padding-left: 25px
+
+}
+.buttons{
+  position: relative;
+  float: right;
+  padding: 25px;
+}
+
+button{
+  width: 202px;
+  height: 50px;
+}
+
+button#submitbuton {
+  background-image: url('../images/button_blurb.png');
+}
+
+.lastContent{
+  position: relative;
+  display: inline-block;
+}
+.column {
+  display: inline-block;
+  margin: 15px 5px;
+  width: 30%;
+  text-align: justify;
+  padding: 13px;
+}
+.columnpic{
+  padding: 2px;
+  border: 3px solid grey;
+}
+a:link{
+  color: lightblue;
+  text-decoration: none;
+}
+
+/*
+a:link {
+  color:#cc6633;
+  text-decoration: none;
+}
+
+.logo{
+  margin-top: -140px;
+  text-align: center;
+  width: 940px;
+  position: relative;
+  float: inherit;
+  z-index: 1;
+}
+.Container{
+  width: 100%;
+  height: 800px;
+  margin-top: 140px;
+  position: absolute;
+  background-color: #d6d6d6;
+}
+#main{
+  background-color: #fff;
+  position: absolute;
+  width: 640px;
+  height: 500px;
+  left: 50px;
+  padding: 0px 20px 20px 20px;
+}
+#sidebar{
+  background-color: #fff;
+  width: 280px;
+  height: 500px;
+  position: absolute;
+  margin-left: 640px;
+  text-align: justify;
+  padding: 60px 20px 20px 20px;
+}*/

@@ -1,0 +1,11 @@
+.constant {
+    width: 200px;
+    height: 10px;
+    background-color: black;
+}
+
+.boxModel {
+    height: 50px;
+    width: 200px;
+    background-color: hotpink;
+}

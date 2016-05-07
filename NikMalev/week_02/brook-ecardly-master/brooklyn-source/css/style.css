@@ -1,0 +1,71 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.brooklyn {
+	font-weight: bold;
+	font-size: 35px;
+	display: block;
+	padding-top: 45px;
+	padding-bottom: 25px;
+	color: gray;
+}
+
+#collections-title {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+#container {
+	width: 1180px;
+	margin: 0 auto;
+	background-color: white;
+	padding-left: 80px;
+	padding-bottom: 10px;
+}
+
+#wrapper {
+	background-color: gray;
+}
+
+body {
+	font-size: 12px;
+	line-height: 17px;
+	font-family: "Times New Roman", serif;
+	color: #656565;
+
+}
+
+a {
+	color: blue;
+}
+
+#sponsors img {
+	border: 5px solid gainsboro;
+}
+
+#bio {
+	margin-right: 100px;
+}
+
+a:hover {
+	color: #20222a;
+}
