@@ -14,13 +14,13 @@
   background-color: #fff;
   width: 200px;
   height: 200px;
-  transition: transform 0.4s linear;
+  transition: transform 1s ease;
   transform-origin: bottom left;
   transform-style: preserve-3D;
 }
 
 .box-rotate {
-  transform: rotate(90deg);
+  transform: rotate(135deg);
 }
 
 button {
@@ -34,7 +34,7 @@ button {
   height: 600px;
   border: 1px solid #888;
   left: 200px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .cell {
@@ -49,16 +49,60 @@ button {
   box-shadow: inset 0 0 0 2px #888;
   background-image: url('images/nought.png');
   background-repeat: no-repeat;
-  overflow: hidden;
+  /*overflow: hidden;*/
+}
+
+.fallOff {
+  animation: fall-off 5s forwards;
+  -moz-animation: fall-off 5s forwards;
+  -webkit-animation: fall-off 5s forwards;
+  -o-animation: fall-off 5s forwards;
+}
+
+@keyframes fall-off {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    animation-timing-function: cubic-bezier(0.75, -0.05, 0.74, 1);
+  }
+  30% {
+    transform: rotate(185deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: rotate(115deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  70% {
+    transform: rotate(155deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  90% {
+    transform: rotate(135deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate3d(-100px, 1000px, 0px);
+    animation-timing-function: ease-in;
+    transform-origin: bottom left;
+  }
 }
 
 .inner {
   background-color: #fff;
   height: 100%;
   width: 100%;
-  transition: transform 0.4s linear;
+  /*transition: transform 1s cubic-bezier(.62,-0.02,.82,-0.01);
   transform-origin: bottom left;
-  transform-style: preserve-3D;
+  transform-style: preserve-3D;*/
+  /*animation: fall-off 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -moz-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -webkit-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -o-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);*/
   -moz-box-shadow: inset 0 0 0 2px #888;
   -webkit-box-shadow: inset 0 0 0 2px #888;
   box-shadow: inset 0 0 0 2px #888;
