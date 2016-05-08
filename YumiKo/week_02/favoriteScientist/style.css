@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700italic|Source+Sans+Pro|Raleway|Droid+Serif|Playfair+Display|Libre+Baskerville|Archivo+Narrow);
+
+body {
+  font-family: 'Libre Baskerville', sans-serif;
+  text-align: center;
+  background-color: lemonchiffon;
+}
+
+ul {
+  text-align: right;
+  background-color: rgba(200,200,200, 0.3);
+  border-radius: 30px;
+
+}
+li {
+  display: inline-block;
+  margin-right: 30px;
+  color: black;
+  font-size: 20px;
+}
+
+/*nav {
+  background-color: lemonchiffon;
+  display: flex;
+  float: left;
+}*/
+
+header {
+  font-size: 90px;
+  /*top: 300px;*/
+  width: 100%;
+  margin: 150px 0px 80px 0px;
+}
+
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 6px #ab3c3c;
+  border-radius: 0 0 5px 5px;
+  background-color: rgb(203,78,78);
+}
+
+button:hover {
+  box-shadow: 0 10px #ab3c3c;
+  top:-2px;
+}
