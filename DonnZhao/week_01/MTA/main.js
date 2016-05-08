@@ -67,7 +67,7 @@ var planTrip = function (getOnlineName, getOnStation, getOffLineName, getOffStat
     console.log ( totalStopTotal+ ' stops in total.')
 };
 };
-  planTrip (N, 'Times Square', line6, '33rd');
+  planTrip (N, 'Times Square', line6, 'Grand Central');
 
 
 
