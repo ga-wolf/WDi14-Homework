@@ -107,10 +107,22 @@ $(".vom1").add(".vom2").add(".vom3").add(".vom4").add(".vom5").click(function(){
       target.css("left", newLeftCat + "px");
     if (newTop >= 0)
       target.css("top", newTop + "px");
+
+    target.fadeOut(3000);
   };
   howFatCat = window.setInterval(catShoot, 10);
+
 });
 
+window.setTimeout( function () {
+$("body").css({
+  backgroundImage: "url('https://m.popkey.co/3af64e/GezqD.gif')",
+  zIndex: "99999999"
+})}, 20000);
+
+window.setTimeout(function() {
+  $(".cat").hide()
+}, 20000);
 ///////////////////////////////////////////////////////
 
 // var barfCats = function() {
@@ -147,29 +159,3 @@ $(".vom1").add(".vom2").add(".vom3").add(".vom4").add(".vom5").click(function(){
 //   howFatCat = window.setInterval( pukeUpCats, 10 );
 
 ///////////////////////////////////////////////////////////////
-
-// var nick = document.querySelector( ".nick" );
-// var widthTimer = null;
-//
-// nick.setAttribute("width", "200");
-// // nick.style.width: "200px";
-//
-// var makeImageBigger = function () {
-//   // Get the current width
-//   var currentWidth = nick.width;
-//   // var currentWidth = nick.style.width;
-//
-//   // console.log( "This just ran" );
-//   if ( currentWidth > 800 ) {
-//     window.clearInterval( widthTimer );
-//   }
-//
-//   // Add ten to it
-//   var newWidth = currentWidth + 1;
-//
-//   // Then change the width to be the new value
-//   nick.width = newWidth;
-//   // nick.style.width = newWidth + "px";
-// };
-//
-// widthTimer = window.setInterval( makeImageBigger, 5 );
