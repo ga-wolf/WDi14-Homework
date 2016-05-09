@@ -1,0 +1,10 @@
+
+
+var theRows = $(".rowOne").html();
+// console.log ("these are the items in rowOne " + theRows);
+//
+// // var theSquares = $(".square").text();
+// // console.log ("these are the items in the " + theSquares);
+//
+// var rowOne = $(".rowOne").html();
+// console.log ("This is row one " + rowOne);

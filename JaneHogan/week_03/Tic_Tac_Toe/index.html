@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</style>
+  <title>Jane's tic tac toe </title>
+</head>
+<body>
+
+  <button name="NewGame" class="newGame" value="Start a New Game" onClick="fnNewGame()">Start a New Game</button>
+
+
+  <div class="board">
+    <h1>This is the Board</h1>
+
+      <div class="row one">
+        <p>some text in row one</p>
+          <div class="square" id="a">
+            <p>
+              Click me row 1 square 1
+            </p>
+          </div>
+          <div class="square" id = "b">
+            <p>
+                  Click me row 1 square 2
+            </p>
+          </div>
+          <div class="square" id = "c">
+            <p>
+              Click me row1 sq3
+            </p>
+          </div>
+      </div>
+
+
+    <div class="row two">
+      <div class="square" id="d">
+        <p>
+          Click me row2 sq1
+        </p>
+      </div>
+      <div class="square" id = "e">
+        <p>
+          Click me row 2 square 2
+        </p>
+      </div>
+      <div class="square" id = "f">
+        <p>
+            Click me row 3 square 3
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row three">
+        <div class="square" id="g">
+          <p>
+            Click me row 3 square 1
+          </p>
+        </div>
+        <div class="square" id = "h">
+          <p>
+              Click me row 3 square 1
+          </p>
+        </div>
+        <div class="square" id = "i">
+          <p>
+            Click me row 3 square 1
+          </p>
+        </div>
+    </div>
+  </div>
+
+
+<!-- for reference -->
+  <div id="board-outer" class="center">
+        <table id="board">
+            <tr class="row">
+                <td id="a1"></td>
+                <td id="a2"></td>
+                <td id="a3"></td>
+            </tr>
+            <tr class="row">
+                <td id="b1"></td>
+                <td id="b2"></td>
+                <td id="b3"></td>
+            </tr>
+            <tr class="row">
+                <td id="c1"></td>
+                <td id="c2"></td>
+                <td id="c3"></td>
+            </tr>
+        </table>
+    </div>
+
+
+  <script src="jquery-1.12.3.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
