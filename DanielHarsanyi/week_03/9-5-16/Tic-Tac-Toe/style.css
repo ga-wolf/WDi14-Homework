@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+}
+
+.gameBoard {
+  margin-top: 200px;
+}
+
+.gameBoard .cell {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+
+#cellOne {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#cellTwo {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#cellThree {
+  border-bottom: 5px solid black;
+}
+
+#cellFour {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#cellFive {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#cellSix {
+  border-bottom: 5px solid black;
+}
+
+#cellSeven {
+  border-right: 5px solid black;
+}
+
+#cellEight {
+  border-right: 5px solid black;
+}

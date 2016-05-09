@@ -23,13 +23,6 @@ body {
   width: 400px;
 }
 
-#vibratingCat {
-  position:absolute;
-  display: inline-block;
-  opacity: 0;
-  width: 400px;
-}
-
 #lightsaberCat {
   position:absolute;
   display: inline-block;
