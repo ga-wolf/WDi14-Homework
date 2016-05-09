@@ -13,14 +13,46 @@ var playO = function ($cell) {
 var addToArray = function ($cell, player){
     var currentCell = $cell.id;
     if (player === true){
-          console.log(currentCell);
-    } else if (player === false ){
-          console.log(currentCell);
+        for (var i = 0; i < gameBoard.length ; i+=1) {
+          for (j = 0; j < gameBoard[i].length ; j+=1) {
+            if (currentCell === gameBoard[i][j]) {
+              gameBoard[i][j] = "X";
+              console.log(gameBoard[i][j]);
+            }
         }
-    };
+      }
+    } else if (player === false){
+        for (var k = 0; k < gameBoard.length ; k+=1) {
+          for (l = 0; l < gameBoard[k].length ; l+=1) {
+            if (currentCell === gameBoard[k][l]) {
+              gameBoard[k][l] = "O";
+              console.log(gameBoard[k][l]);
+          }
+        }
+      }
+    }
+};
 
 var checkWinner = function (){
-    //for loop running through each winning combo
+  if ((gameBoard[0][0] === gameBoard[0][1]) && (gameBoard[0][1] === gameBoard[0][2])) {
+      alert(gameBoard[0][0] + " is the winner");
+  } else if ((gameBoard[1][0] === gameBoard[1][1]) && (gameBoard[1][1] === gameBoard[1][2])) {
+        alert(gameBoard[1][0] + " is the winner");
+    } else if ((gameBoard[2][0] === gameBoard[2][1]) && (gameBoard[2][1] === gameBoard[2][2])) {
+          alert(gameBoard[2][0] + " is the winner");
+      } else if ((gameBoard[0][0] === gameBoard[1][0]) && (gameBoard[1][0] === gameBoard[2][0])) {
+            alert(gameBoard[0][0] + " is the winner");
+        } else if ((gameBoard[0][1] === gameBoard[1][1]) && (gameBoard[1][1] === gameBoard[2][1])) {
+              alert(gameBoard[0][1] + " is the winner");
+          } else if ((gameBoard[0][2] === gameBoard[1][2]) && (gameBoard[1][2] === gameBoard[2][2])) {
+                alert(gameBoard[0][2] + " is the winner");
+            } else if ((gameBoard[0][0] === gameBoard[1][1]) && (gameBoard[1][1] === gameBoard[2][2])) {
+                  alert(gameBoard[1][1] + " is the winner");
+              } else if ((gameBoard[0][2] === gameBoard[1][1]) && (gameBoard[1][1] === gameBoard[2][0])) {
+                    alert(gameBoard[1][1] + " is the winner");
+                } else if (playersTurn === 9) {
+                  alert("There was no winner! Refresh to play again");
+                }
 };
 
 var playersTurn = 0;
