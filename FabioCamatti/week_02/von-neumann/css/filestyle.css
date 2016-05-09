@@ -1,0 +1,282 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: #fff;
+	background-image: url(https://www.cs.auckland.ac.nz/historydisplays/TimeLine/TimeLine3/3.1.02-VonNeumann/VNAndComputert1.jpg);
+	display:inline;
+}
+
+img {
+	border: 0px;
+}
+
+header{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:auto;
+	padding:10px;
+	height:150px;
+	/*position: relative;*/
+	background-color: rgba(255,255,255,0.4);
+}
+
+#alone{
+	text-align:center;
+
+	font-size: 16px;
+	font-weight: bold;
+	color: #02314b;
+	text-transform:uppercase;
+}
+
+#body{
+
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:1000px;
+	height:32px;
+	text-align:center;
+}
+
+#content{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	width:1000px;
+	height:auto;
+
+}
+
+#footer{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	width:1000px;
+	height:100px;
+	background-color: #b62418;
+
+}
+
+ul {
+
+	font-size: 16px;
+	font-weight:bold;
+	color: #02314B;
+    list-style: none;
+	width:100%;
+
+
+}
+ul li {
+    display: block;
+    position: relative;
+    float:left;
+	margin-left:4px;
+
+}
+li ul {
+    display: none;
+}
+ul li a {
+  display: block;
+	font-size: 16px;
+	text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 15px 5px 15px;
+  background: rgba(255,255,255,0)
+  margin-left: 3px;
+  margin-bottom:2px;
+	width:10%;
+
+}
+
+ul li a#test{
+   	width:220px;
+}
+ul li a:hover {
+	background:#97A0A0;
+
+}
+li:hover ul {
+    display: block;
+    position: absolute;
+
+}
+li:hover li {
+    float: none;
+    font-size: 11px;
+}
+
+li:hover a { background: #fef1d1; }
+li:hover li a:hover {  background: #97A0A0;}
+
+
+p.text {
+
+	font-size: 16px;
+	font-weight: bold;
+	color: #02314b;
+	padding: 6px;
+	text-align:justify;
+	text-indent: 1em;
+}
+p.footer{
+
+	font-size: 12px;
+	color: #FFFFFF;
+	float:left;
+
+}
+p#footer1{
+
+	font-size: 12px;
+	color: #FFFFFF;
+	float:right;
+}
+iframe{
+	float:left;
+	margin-left:100px;
+}
+div.box{
+			margin-left:500px;
+			width:420px;
+			background:#FEF1D1;
+			top:50px;
+			border:1px solid #000000;
+			text-transform:uppercase;
+
+		}
+		div.box label {
+			width:100%;
+			display: block;
+			background:#FEF1D1;
+			border-bottom:1px solid #262626;
+			padding:10px 0 10px 0;
+			color:#000000;
+		}
+		div.box label span {
+			display: block;
+			color:#000000;
+			font-size:12px;
+			float:left;
+			width:110px;
+			text-align:right;
+			padding:5px 20px 0 0;
+
+		}
+		div.box .input_text {
+			padding:10px 10px;
+			width:200px;
+			background:#FFFFFF;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+			color:#000000;
+		}
+#fazer{
+	font-size: 10px;
+	font-weight:none;
+	color: #000000;
+	overflow:hidden;
+		}
+		div.box .message{
+			padding:7px 7px;
+			width:250px;
+
+			background:#FFFFFF;
+			border-bottom: 1px double #171717;
+			border-top: 1px double #171717;
+			border-left:1px double #333333;
+			border-right:1px double #333333;
+			overflow:hidden;
+			height:150px;
+		}
+		div.box .button {
+			margin:0 0 10px 0;
+			padding:4px 7px;
+			background:#E6F1FC;
+			border:0px;
+			position: relative;
+			top:10px;
+			left:50px;
+			width:100px;
+			border-bottom: 1px double #787878;
+			border-top: 1px double #787878;
+			border-left:1px double #787878;
+			border-right:1px double #787878;
+}
+
+span.dropt {
+	border-bottom: thin dotted;
+	background: #ffeedd;
+}
+span.dropt:hover {
+	text-decoration: none;
+	background: #ffffff;
+	z-index: 6;
+}
+span.dropt span {
+	position: absolute;
+	left: -9999px;
+	margin: 20px 0 0 0px;
+	padding: 3px 3px 3px 3px;
+	z-index: 6;
+}
+span.dropt:hover span {
+	left: 2%;
+	background: #ffffff;
+}
+span.dropt span {
+	position: absolute;
+	left: -9999px;
+	margin: 4px 0 0 0px;
+	padding: 3px 3px 3px 3px;
+  }
+span.dropt:hover span {
+	margin: 180px 20px 20px 650px;
+	background: #ffffff;
+	z-index:6;
+	font-size: 14px;
+	font-weight:bold;
+	text-align: center;
+}
+
+
+
+.table {
+ border-color: #FFFFFF;
+}
+
+.table1 {
+
+	font-size: 22px;
+	color: #02314B;
+}
+
+.table2 {
+
+	font-size: 14px;
+	color: #02314B;
+	text-decoration: bold;
+	border: 2px solid #02314B;
+}
+
+.thumbnail {
+	float:center;
+	width:220px;
+	height:180px;
+	margin:5px;
+}
