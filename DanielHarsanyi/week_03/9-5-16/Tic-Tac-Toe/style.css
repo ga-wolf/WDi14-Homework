@@ -3,47 +3,67 @@ body {
 }
 
 .gameBoard {
-  margin-top: 200px;
+  margin-top: 100px;
+  font-size: 0;
 }
 
 .gameBoard .cell {
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  overflow: auto;
+  height: 250px;
+  width: 250px;
+}
+
+.xImage {
+  position: relative;
+  display: block;
+  background-image: url("assets/letterX.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.oImage {
+  position: relative;
+  display: block;
+  background-image: url("assets/letterO.png");
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #cellOne {
-  border-right: 5px solid black;
-  border-bottom: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellTwo {
-  border-right: 5px solid black;
-  border-bottom: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellThree {
-  border-bottom: 5px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellFour {
-  border-right: 5px solid black;
-  border-bottom: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellFive {
-  border-right: 5px solid black;
-  border-bottom: 5px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellSix {
-  border-bottom: 5px solid black;
+  border-bottom: 10px solid black;
 }
 
 #cellSeven {
-  border-right: 5px solid black;
+  border-right: 10px solid black;
 }
 
 #cellEight {
-  border-right: 5px solid black;
+  border-right: 10px solid black;
 }
