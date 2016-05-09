@@ -1,0 +1,30 @@
+.main{
+  width: 420px;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cell{
+  display: inline-block;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.cell:hover {
+  background: gray;
+}
+
+#popupcontent{
+   position: absolute;
+   visibility: hidden;
+   overflow: hidden;
+   color: white;
+   font-size: 20px;
+   z-index: 1;
+   text-align: center;
+   border:1px solid #3A9FDA;
+   background-color:#024157;
+   border:1px solid #3A9FDA;
+   padding:50px;
+}

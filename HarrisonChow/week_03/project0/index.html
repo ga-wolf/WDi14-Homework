@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Let's play Tic Tac Toe...</title>
-  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-
-
+  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="animate.css" media="screen" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-<div id = "cellsNum">
-  Please select:
-  <input type="radio" name="games" id="three" value="3"> 3*3
-  <input type="radio" name="games" id="Four" value="4"> 4*4
-  <button onclick="createPlayBoard()"> Start </button>
-</div>
-<div id="popupcontent">This is a popup window!</div>
+  <div class="menu"><p class="tada">Let's Play</p></div>
+  <div id = "cellsNum">
+    Please select:&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="games" id="three" value="3"> 3 * 3&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="games" id="Four" value="4"> 4 * 4&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="createPlayBoard()"> Start </button>
+  </div>
+  <div id="popupcontent">This is a popup window!</div>
 
 
 <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
