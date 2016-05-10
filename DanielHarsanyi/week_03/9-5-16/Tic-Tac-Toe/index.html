@@ -4,29 +4,36 @@
   <meta charset="UTF-8">
   <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">
+  <link rel="stylesheet" href="animate.css">
 </head>
 <body>
 
-<h1>Welcome to Tic-tac-Toe</h1>
+<container class="animated bounceInRight" id="scoreCounter">
+  <div class="marker" id="xMarker"></div><div class="score" id="jokerScore">0</div>
+  <div class="marker" id="oMarker"></div><div class="score" id="heathScore">0</div>
+</container>
 
-<div class="gameBoard">
-  <div class="topRow">
+<div class="gameBoard animated bounceInLeft">
+  <div>
     <div class="cell" id="cellOne"></div>
     <div class="cell" id="cellTwo"></div>
     <div class="cell" id="cellThree"></div>
   </div>
-  <div class="middleRow">
+  <div>
     <div class="cell" id="cellFour"></div>
     <div class="cell" id="cellFive"></div>
     <div class="cell" id="cellSix"></div>
   </div>
-  <div class="bottomRow">
+  <div>
     <div class="cell" id="cellSeven"></div>
     <div class="cell" id="cellEight"></div>
     <div class="cell" id="cellNine"></div>
   </div>
 </div>
 
+<script src="sweetalert-master/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
 <script src="main.js"></script>
 

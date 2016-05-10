@@ -1,9 +1,62 @@
 body {
   text-align: center;
+  background-image:url("assets/brokeback.jpg");
+  background-size: cover;
 }
 
+.marker {
+  border: 2px solid white;
+  border-radius: 6px;
+  width: 150px;
+  height: 150px;
+  float:left;
+}
+
+.score {
+  border: 2px solid white;
+  border-radius: 6px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  font-size: 130px;
+  font-family: sans-serif;
+  float:left;
+}
+
+#scoreCounter {
+  position: fixed;
+  width: 309px;
+  height: 309px;
+  left: 0;
+  bottom: 0;
+}
+
+#xMarker {
+  position: relative;
+  display: block;
+  background-image: url("assets/joker.jpg");
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: auto;
+}
+
+#oMarker {
+  position: relative;
+  display: block;
+  background-image: url("assets/tenThings.png");
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 26% 75%;
+  overflow: auto;
+}
+
+
 .gameBoard {
-  margin-top: 100px;
+  margin-top: 110px;
   font-size: 0;
 }
 
@@ -17,53 +70,57 @@ body {
 .xImage {
   position: relative;
   display: block;
-  background-image: url("assets/letterX.png");
-  background-size: 70%;
+  background-image: url("assets/joker.jpg");
+  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 50%;
+  overflow: auto;
 }
 
 .oImage {
   position: relative;
   display: block;
-  background-image: url("assets/letterO.png");
-  background-size: 85%;
+  background-image: url("assets/tenThings.png");
+  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 26% 75%;
+  overflow: auto;
 }
 
 #cellOne {
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
 }
 
 #cellTwo {
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
 }
 
 #cellThree {
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid white;
 }
 
 #cellFour {
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
 }
 
 #cellFive {
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
 }
 
 #cellSix {
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid white;
 }
 
 #cellSeven {
-  border-right: 10px solid black;
+  border-right: 10px solid white;
 }
 
 #cellEight {
-  border-right: 10px solid black;
+  border-right: 10px solid white;
 }
