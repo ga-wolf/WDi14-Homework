@@ -53,7 +53,6 @@ var checkAll = function(moves,grid) {
 
 var playerOneCurrent = [];
 var playerTwoCurrent = [];
-
 var playerOne = 1;
 var playerTwo = -1;
 var PlayerOneCount = 0;
@@ -61,11 +60,13 @@ var PlayerTwoCount = 0;
 var tieCount = 0;
 var currentPlayer = playerOne;
 var numGet = 3;
+var playerOneImg;
+var playerTwoImg;
 var cells= {};
 var createPlayBoard = function () {
   $("div.main").remove();
   numGet = parseInt($("select.grid").val());
-
+  imgurl = $("select.bgimg").val();
   for (var j = 0; j < numGet; j++) {
     var $newDivOut = $("<div class='main'></div>");
     $newDivOut.appendTo(document.body);
@@ -78,23 +79,32 @@ var createPlayBoard = function () {
   addEventHandlers();
 }
 
-var annouceWinner = function() {
-  var playerName = currentPlayer === playerOne ? 'Player One' : 'Player Two';
-  $("#popupcontent").html("Congratulations!  "+ playerName + " is the winner!");
-  showPopup(400,200);
-  $("div.cell").css({
-    "pointer-events":"none"
-  })
+
+var styleSelect = function() {
+  imgurl = parseInt($("select.bgimg").val());
+  if (imgurl ===2 ) {
+    playerOneImg = "images/01.jpg";
+    playerTwoImg = "images/02.png";
+  } else if(imgurl ===3 ) {
+    playerOneImg = "images/03.jpg";
+    playerTwoImg = "images/04.jpg";
+  } else {
+    playerOneImg = "images/cross.png";
+    playerTwoImg = "images/circle.png";
+  }
 }
 
 var addEventHandlers = function () {
+  styleSelect();
+
   $("div.cell").off();
   $("div.cell").one("click", function (event) {
     var $currentCell = $(this);
     $currentCell.css("background", "black");
 
     if (currentPlayer === playerOne) {
-      $currentCell.css("backgroundImage", "url(images/cross.png)");
+      $currentCell.css("backgroundImage", "url("+playerOneImg+")");
+      console.log(playerOneImg);
       playerOneCurrent.push(cells[$currentCell.attr('id')]);
 
       if(checkAll(playerOneCurrent, numGet)) {
@@ -104,7 +114,7 @@ var addEventHandlers = function () {
       }
 
     } else {
-      $currentCell.css("backgroundImage", "url(images/circle.png)");
+      $currentCell.css("backgroundImage", "url("+playerTwoImg+")");
       playerTwoCurrent.push(cells[$currentCell.attr('id')]);
 
       if(checkAll(playerTwoCurrent, numGet)) {
@@ -121,8 +131,6 @@ var addEventHandlers = function () {
     currentPlayer = currentPlayer * -1;
   })
 }
-
-var baseText = null;
 
 
 function popUp() {
