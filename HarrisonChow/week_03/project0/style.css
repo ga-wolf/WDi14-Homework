@@ -30,10 +30,33 @@ body{
   margin-right: 5px;
   width: 140px;
   height: 140px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+
+
+}
+
+#cellStart{
+  position: relative;
+  margin-top: 100px;
+  padding: 50px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 45px;
+  color: #fff;
 }
 
 .cell:hover {
   background: rgba(59,56,64,0.5);
+  -webkit-transform:scale(1.15); /* Safari and Chrome */
+  -moz-transform:scale(1.15); /* Firefox */
+  -ms-transform:scale(1.15); /* IE 9 */
+  -o-transform:scale(1.15); /* Opera */
+   transform:scale(1.15);
 }
 .wonCount {
   width:125px;
@@ -73,4 +96,10 @@ body{
   border-radius: 10px;
   color: White;
   font-size: 25px;
+}
+.animation{
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

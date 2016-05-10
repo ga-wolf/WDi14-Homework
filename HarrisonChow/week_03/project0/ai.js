@@ -62,10 +62,8 @@ var currentPlayer = playerOne;
 var numGet = 3;
 var playerOneImg;
 var playerTwoImg;
+var imgurl;
 var cells= {};
-
-
-
 
 $('#cellStart').on("click", function () {
   reset();
@@ -73,7 +71,20 @@ $('#cellStart').on("click", function () {
 
 });
 
-
+var styleSelect = function() {
+  imgurl = parseInt($("select.bgimg").val());
+  console.log(imgurl);
+  if (imgurl === 2 ) {
+    playerOneImg = "images/01.jpg";
+    playerTwoImg = "images/02.png";
+  } else if(imgurl === 3 ) {
+    playerOneImg = "images/03.jpg";
+    playerTwoImg = "images/04.jpg";
+  } else {
+    playerOneImg = "images/cross.png";
+    playerTwoImg = "images/circle.png";
+  }
+}
 var createPlayBoard = function () {
   $("div.main").remove();
   numGet = parseInt($("select.grid").val());
@@ -87,65 +98,58 @@ var createPlayBoard = function () {
       cells["cell"+(j*numGet+i)] = [i, j];
     }
   }
-  addEventHandlers();
 }
 
 
-var styleSelect = function() {
-  imgurl = parseInt($("select.bgimg").val());
-  if (imgurl === 2 ) {
-    playerOneImg = "images/01.jpg";
-    playerTwoImg = "images/02.png";
-  } else if(imgurl === 3 ) {
-    playerOneImg = "images/03.jpg";
-    playerTwoImg = "images/04.jpg";
-  } else {
-    playerOneImg = "images/cross.png";
-    playerTwoImg = "images/circle.png";
-  }
-}
 
-var addEventHandlers = function () {
-  styleSelect();
 
-  $("div.cell").off();
-  $("div.cell").one("click", function (event) {
+
+var run = function() {
+  $(document).on("click","div.cell", function (event) {
     var $currentCell = $(this);
-    $currentCell.css("background", "black");
-
-    if (currentPlayer === playerOne) {
-      $currentCell.css("backgroundImage", "url("+playerOneImg+")");
-      console.log(playerOneImg);
-      playerOneCurrent.push(cells[$currentCell.attr('id')]);
-
-      if(checkAll(playerOneCurrent, numGet)) {
-        PlayerOneCount +=1;
-        $("#PlayerOne").html("Player One won: "+PlayerOneCount);
-        popUp();
-      }
-
-    } else {
-      $currentCell.css("backgroundImage", "url("+playerTwoImg+")");
-      playerTwoCurrent.push(cells[$currentCell.attr('id')]);
-
-      if(checkAll(playerTwoCurrent, numGet)) {
-        popUp();
-        PlayerTwoCount +=1;
-        $("#PlayerTwo").html("Player Two won: "+PlayerTwoCount);
-      }
-    }
-    if (!checkAll(playerOneCurrent, numGet) && !checkAll(playerTwoCurrent, numGet) && ((playerOneCurrent.length+playerTwoCurrent.length) === numGet*numGet)) {
+    styleSelect();
+    $currentCell.css("backgroundImage", "url("+playerOneImg+")");
+    playerOneCurrent.push(cells[$currentCell.attr('id')]);
+    var playerOneWin = checkAll(playerOneCurrent, numGet);
+    var gameOver = ((playerOneCurrent.length+playerTwoCurrent.length) === numGet*numGet);
+    if(playerOneWin) {
+      PlayerOneCount +=1;
+      $("#PlayerOne").html("Player One won: "+PlayerOneCount);
+      popUp('Player One');
+    } else if(gameOver) {
       popUpTie();
       tieCount +=1;
       $("#Tie").html("Tie: "+tieCount);
+    } else {
+      var allMoves = Object.keys(cells).map(function(key){return cells[key]})
+      var availableMoves = allMoves.filter(function(value) {
+        return (playerOneCurrent.indexOf(value) === -1) && (playerTwoCurrent.indexOf(value) === -1);
+      })
+
+      var randomId = Math.floor(Math.random()*(availableMoves.length));
+      var nextMove = availableMoves[randomId];
+      var computerId = allMoves.indexOf(nextMove);
+      $("#cell"+computerId).css("backgroundImage", "url("+playerTwoImg+")");
+
+      playerTwoCurrent.push(cells['cell'+computerId]);
+      var playerTwoWin = checkAll(playerTwoCurrent, numGet);
+      gameOver = ((playerOneCurrent.length+playerTwoCurrent.length) === numGet*numGet);
+
+      if(playerTwoWin) {
+        PlayerTwoCount +=1;
+        $("#PlayerTwo").html("Player Two won: "+PlayerTwoCount);
+        popUp('Player Two');
+      }else if(gameOver) {
+        popUpTie();
+        tieCount +=1;
+        $("#Tie").html("Tie: "+tieCount);
+      }
     }
-    currentPlayer = currentPlayer * -1;
-  })
-}
+  });
+};
+run();
 
-
-function popUp() {
-  var playerName = currentPlayer === playerOne ? 'Player One' : 'Player Two';
+function popUp(playerName) {
   swal({
     title: "Congratulations!  "+ playerName + " is the winner!",
     showCancelButton: true,
@@ -168,7 +172,6 @@ function popUpTie() {
       reset();
     });
 }
-
 var reset = function() {
   createPlayBoard();
   playerOneCurrent = [];
