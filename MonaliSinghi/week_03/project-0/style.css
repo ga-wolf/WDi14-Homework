@@ -1,0 +1,72 @@
+/* normalise css */
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #95734e;
+    font-family: cursive;
+}
+/* game wrapper */
+.game-wrapper {
+    width: 1280px;
+    height: 728px;
+    margin: 0 auto;
+    padding-top: 190px;
+    background: url('./images/beach.jpg') no-repeat left top;
+    background-size: cover;
+    position: relative;
+}
+/* game board styles */
+.board {
+    margin: 0 auto;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+}
+.row {
+    display: block;
+    height: 33.33333%;
+    border-top: 5px solid rgba(255, 255, 255, 0.1);
+}
+.row:first-child {
+    border-top: none;
+}
+.cell {
+    float: left;
+    display: block;
+    width: 33.33333%;
+    height: 100%;
+    border-left: 5px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.cell:first-child {
+    border-left: none;
+}
+.cell-x {
+    background: url('./images/x.png') no-repeat 50% 50%;
+}
+.cell-o {
+    background: url('./images/o.png') no-repeat 50% 50%;
+}
+.wave{
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 680px;
+}
+.score{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 200px;
+}
