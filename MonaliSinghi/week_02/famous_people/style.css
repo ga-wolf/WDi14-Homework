@@ -1,0 +1,48 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  font-size: 16px;
+}
+header{
+  text-align: center;
+}
+ul.primary-nav{
+  padding:0;
+  margin: 0;
+  list-style: none;
+}
+ul.primary-nav li{
+  display: inline;
+  padding: 0 0 0 10px;
+}
+ul.primary-nav li::after{
+  content: "|";
+  padding-left: 10px;
+}
+ul.primary-nav li:last-child::after{
+  content: "";
+}
+main{
+  overflow: hidden;
+}
+article{
+  width: 70%;
+  float: left;
+  padding: 0 20px;
+}
+h2{
+  padding-bottom: 6px;
+  border-bottom: 1px solid #999;
+}
+aside{
+  width: 20%;
+  float: right;
+  padding: 60px 20px 0;
+}
+img{
+  max-width: 100%;
+}
+footer{
+  padding: 0 20px;
+}
