@@ -1,65 +1,75 @@
 
-p {
-background-color:  lightpink;
-}
+//Layout elements
 
 body {
-  background-color: linen;
   text-align: center;
+  background-color:blue;
+}
+h1{
+  color: pink;
+  text-align:center;
 }
 
-.row {
-  width: 100%;
+.board {
+   width: 80vw;
+   height: 15vh;
+   background-color:none;
+   border-spacing:0;
+   margin: 0 auto;
+
 }
+
 .square {
 float: left;
-width: 20%;
-height: 50px;
+width: 25%;
+height: 90%;
 padding: 25px;
-border: 25px solid navy;
-margin: 25px;
+border: 25px chartreuse;
+border-radius: 50px;
+margin: 5px;
 background-color: aliceblue;
 }
 
-/**/for reference
-/* BOARD STYLES */
- #board-outer {
-    height: 350px;
-    width: 350px;
-    background-color:none;
-    overflow: hidden;
-}
-#board {
-    width: 354px;
-    height: 354px;
-    background-color:none;
-    border-spacing:0;
-    margin-left: -2px;
-    margin-top: -2px;
-}
-td {
-    height: 116px;
-    width: 116px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 40pt;
-    border-collapse: collapse;
-    border: 2px solid #B9E9F0;
-    text-transform: uppercase;
-    color: #999999;
-}
-.x {
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-}
-.o {
-    width: 100%;
-    height: 100%;
-    background-color: red;
+
+.square:hover {
+	background-color: grey;
 }
 
-.center {
-    margin-right: auto;
-    margin-left: auto;
+.clicked {
+  background-color: pink;
 }
+
+.x {
+  background-image: url('images/x.jpg');
+
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*width: 50%;
+  height: 20px;*/
+}
+.o {
+  background-image: url('images/o.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+button {
+  background-color:pink;
+  width: 100px;
+  height: 200px;
+
+}
+
+footer{
+  float: left;
+
+}
+
+}
+/*.o {
+    width: 20%%;
+    height: 100%;
+    background-color: red;
+}*/

@@ -1,6 +1,6 @@
 
-
-var theRows = $(".rowOne").html();
+//Selects row one and logs the html contents of row one
+//var theRows = $(".rowOne").html();
 // console.log ("these are the items in rowOne " + theRows);
 //
 // // var theSquares = $(".square").text();
