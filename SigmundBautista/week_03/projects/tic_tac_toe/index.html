@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css" class="styles css">
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+  <link href='https://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
   <title>Project 0: Tic Tac Toe</title>
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
-    <div class=turnTimer>
-      Player turn 0
-    </div>
     <div class="controlPanel">
-      <button type="button" id="newGame">New Game</button>
+      <div class=turnTimer>Click New Game</div><br>
+      <div class=playerTurn></div><br>
+      <input type="radio" name="mode" id="pvp" value="PVP" checked="checked">Player VS Player<br>
+      <input type="radio" name="mode" id="pva" value="PVAI">Player VS Dumbass<br>
+      <button class= type="button" id="newGame">New Game</button><br>
       <button type="button" id="typeX">X</button>
       <button type="button" id="typeO">O</button>
     </div>
-    <div>
-      <button type="button" id="PlayerVsPlayer">Player VS Player</button>
-      <button type="button" id="PlayerVsDumbAi">Player VS Dumbass AI</button>
-    </div>
-
 
     <div class="container">
       <div class="Box" id=box0 index=0></div>
@@ -32,11 +29,15 @@
       <div class="Box" id=box7 index=7></div>
       <div class="Box" id=box8 index=8></div>
     </div>
-    <div>
-      <label><input type="checkbox" id="something">Something</label>
-    </div>
+  <div class="players">
+    <img class="playersImg" id="player1Img" src="player1.gif">
+  </div>
+  <div>
+    <img class="playersImg" id="player2Img" src="dumbass.gif">
+  </div>
 
     <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
     <script src="main.js"></script>
+    <script src="dist/sweetalert.min.js"></script>
 </body>
 </html>
