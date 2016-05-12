@@ -1,5 +1,7 @@
 Welcome to Tic Tac Toe Mari Kart style! (Or Tic Tac Mari-Toe Kart I guess?)
 
+Click here to play: https://htmlpreview.github.io/?https://github.com/danharsanyi/TicTacMariToeKart/blob/master/index.html
+
 This was built as my first 'real' project as part of the General Assembly Web Development Immersive Course in Sydney, Australia, May 2016.
 
 When you load the game you'll be greeted with a screen to choose your player icons.
