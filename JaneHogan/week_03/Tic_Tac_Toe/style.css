@@ -1,5 +1,4 @@
-
-//Layout elements
+//layout elements
 
 body {
   text-align: center;
@@ -28,6 +27,8 @@ border: 25px chartreuse;
 border-radius: 50px;
 margin: 5px;
 background-color: aliceblue;
+font-size: 50px;
+text-align: center;
 }
 
 
@@ -40,6 +41,14 @@ background-color: aliceblue;
 }
 
 .x {
+  background: gainsboro;
+}
+
+.0 {
+  background: hotpink;
+}
+
+/*.x {
   background-image: url('images/x.jpg');
 
   background-size: 40%;
@@ -47,13 +56,13 @@ background-color: aliceblue;
   background-position: center;
   /*width: 50%;
   height: 20px;*/
-}
+/*}
 .o {
   background-image: url('images/o.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-}
+}*/*/
 
 button {
   background-color:pink;

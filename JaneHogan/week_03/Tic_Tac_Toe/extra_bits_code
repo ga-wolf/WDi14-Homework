@@ -8,3 +8,25 @@
 //
 // var rowOne = $(".rowOne").html();
 // console.log ("This is row one " + rowOne);
+
+
+<!-- for reference -->
+  <div id="board-outer" class="center">
+        <table id="board">
+            <tr class="row">
+                <td id="a1"></td>
+                <td id="a2"></td>
+                <td id="a3"></td>
+            </tr>
+            <tr class="row">
+                <td id="b1"></td>
+                <td id="b2"></td>
+                <td id="b3"></td>
+            </tr>
+            <tr class="row">
+                <td id="c1"></td>
+                <td id="c2"></td>
+                <td id="c3"></td>
+            </tr>
+        </table>
+    </div>
