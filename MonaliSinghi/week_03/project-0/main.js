@@ -88,7 +88,7 @@ var clearBoard = function(){
   sound.play();
   setTimeout(function(){
     $(sound).animate({volume: 0}, 1000);
-  }, 4500);
+  }, 1500);
   $('.wave').slideUp("fast");
   $('.cell').removeClass('cell-x').removeClass('cell-o');
   chosenCells = {
