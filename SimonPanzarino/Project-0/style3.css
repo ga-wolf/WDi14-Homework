@@ -1,11 +1,14 @@
 body {
   overflow: hidden;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+}
+
+#scene {
+  height: 100vh;
   background-image: url('images/mountain-background.jpg');
   background-repeat: no-repeat;
+  background-position: bottom center;
   background-size: 100%;
-  background-position: 0 -50px;
 }
 
 
@@ -23,11 +26,12 @@ body {
   background-repeat: no-repeat;
   height: 131px;
   width: 80px;
+  z-index: 99;
 }
 
 #mario-running {
   position: absolute;
-  bottom: 25px;
+  bottom: 46px;
   left: -66px;
   background-image: url("images/mario-running3.gif");
   background-repeat: no-repeat;
@@ -35,6 +39,7 @@ body {
   background-position: -70px 0px;
   height: 65px;
   width: 66px;
+  z-index: 1000;
 }
 
 .mario-run {
@@ -60,7 +65,7 @@ body {
     background-position: -5px 0;
   }
   50% {
-    transform: translate3d(1245px, -220px, 0px);
+    transform: translate3d(1245px, -230px, 0px);
     animation-timing-function: linear;
     background-position: -5px 0;
   }
@@ -84,26 +89,26 @@ body {
 
 #flag-pole {
   position: absolute;
-  bottom: 29px;
+  bottom: 50px;
   right: 200px;
   background-image: url("images/flag-pole.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   height: 300px;
   width: 32px;
-  z-index: -100;
+  z-index: 10;
 }
 
 #flag {
   position: absolute;
-  bottom: 270px;
+  bottom: 291px;
   right: 225px;
   background-image: url("images/mario-flag.gif");
   background-repeat: no-repeat;
   background-size: 100% auto;
   height: 44px;
   width: 55px;
-  z-index: -100;
+  z-index: 10;
 }
 
 #lakitu {
@@ -115,18 +120,19 @@ body {
   background-image: url("images/lakitu.gif");
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: 99;
 }
 
 #goomba1 {
   position: absolute;
-  bottom: 95px;
-  right: 55px;
+  bottom: 116px;
+  right: 75px;
   height: 24px;
   width: 20px;
   background-image: url("images/goomba.gif");
   background-repeat: no-repeat;
   background-size: 100%;
-  z-index: -100;
+  z-index: 999;
 }
 
 #goomba2 {
@@ -153,7 +159,7 @@ body {
 
   }
   50% {
-    transform: translate3d(0px, -531px, 0px);
+    transform: translate3d(0px, -510px, 0px);
     animation-timing-function: ease-in;
   }
   100% {
@@ -190,6 +196,7 @@ body {
   left: -1000px;
   top: 160px;
   background-size: auto 100%;
+  z-index: 1000;
 }
 
 .piranha-eat {
@@ -216,7 +223,7 @@ body {
   background-repeat: no-repeat;
   width: 287px;
   height: 119px;
-  z-index: -10;
+  z-index: 10;
 }
 .cloud2 {
   position: absolute;
@@ -226,7 +233,7 @@ body {
   background-repeat: no-repeat;
   width: 145px;
   height: 61px;
-  z-index: -11;
+  z-index: 9;
 }
 .cloud3 {
   position: absolute;
@@ -236,7 +243,7 @@ body {
   background-repeat: no-repeat;
   width: 106px;
   height: 47px;
-  z-index: -12;
+  z-index: 8;
 }
 
 .fall {
@@ -270,10 +277,13 @@ button {
 }
 
 .gameBoard {
-  margin: 100px auto 0;
+  position: relative;
+  top: 100px;
+  margin: 0px auto 0px;
   width: 210px;
   height: 210px;
-  /*overflow: hidden;*/
+  display: none;
+  z-index: 100;
 }
 
 .cell {
@@ -286,46 +296,6 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 8px;
-}
-
-.miniGameBoard {
-  position: absolute;
-  bottom: 135px;
-  right: 47px;
-  width: 72px;
-  height: 72px;
-  z-index: -100;
-}
-
-.miniCell {
-  width: 24px;
-  height: 24px;
-  float: left;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-}
-
-.miniCell .inner {
-  background-image: url("images/block.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  display: block;
-}
-.miniCell .inner-star {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  display: block;
-}
-
-.miniCell .inner-mushroom {
-  background-image: url("images/mushroom.png");
-  background-repeat: no-repeat;
-  background-color: black;
-  background-size: 100%;
-  display: block;
 }
 
 .fallOff {
@@ -430,21 +400,30 @@ button {
 }
 
 #menu {
+  position: absolute;
+  margin-top: 0;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 #logo {
+  position: relative;
+  top: 100px;
+  left: 50%;
   background-image: url('images/logo.png');
   background-repeat: no-repeat;
   height: 425px;
   width: 600px;
+  margin-left: -300px;
   background-size: 100% auto;
-  margin: 100px auto 0;
+  padding: 0 auto;
 }
 
 #menu ul {
+  position: relative;
+  top: 100px;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -499,6 +478,7 @@ button {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  z-index: 1000;
 }
 
 #winner .glowBox h2 {
@@ -510,6 +490,7 @@ button {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
 }
 
 .ghost-button {
@@ -525,6 +506,7 @@ button {
   transition: border-color 0.3s ease-out,
               color 0.3s ease-out,
               width 0.4s ease-in;
+              z-index: 1000;
 }
 .ghost-button:hover,
 .ghost-button:active {
@@ -547,6 +529,7 @@ button {
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: none;
+  z-index: 80;
 }
 
 .current-player {
@@ -568,6 +551,7 @@ button {
    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: black;
+   z-index: 1000;
 }
 #playerTwo {
   font-family: marioFont, "Open Sans", sans-serif;
@@ -580,6 +564,7 @@ button {
    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: black;
+   z-index: 1000;
 }
 
 #playerOne .won {

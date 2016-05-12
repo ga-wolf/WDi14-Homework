@@ -10,6 +10,11 @@ var playGame = {
     choices: [],
     won: 0
   },
+  gameBoard: [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+  ],
   takeTurn: function() {
     if (playGame.turnCount % 2 === 0) {
       console.log($(this).parent()[0].id);
@@ -125,43 +130,120 @@ var playAi = {
     }
   },
   computerTurn: function() {
-    if (this.playerOne.choices[this.playerOne.choices.length - 1] === 1) {
+    var yourMoves = this.playerOne.choices;
+    var lastChoice = yourMoves[yourMoves.length - 1];
+    // if you play center, computer plays 1
+    // if you play 3, computer plays 9
+    // if you play 4, computer plays
+    // if you play anywhere else, computer plays center
+    if (lastChoice === 1) {
       console.log("you played top left");
-      if (this.turnCount === 2) {
+      if (this.turnCount === 1) {
         console.log("Turn 2");
-      }
-      this.takenSquares.taken.push(5);
-      setTimeout(function() {
-        $('#5 .inner').addClass('fallOff');
+        this.takenSquares.taken.push(5);
         setTimeout(function() {
-          $('#5 .inner').css('visibility', 'hidden');
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
         }, 5000);
-      }, 5000);
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 2) {
+      }
+    } else if (lastChoice === 2) {
       console.log("you played top middle");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 3) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 3) {
       console.log("you played top right");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 4) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 4) {
       console.log("you played middle left");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 5) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 5) {
       console.log("you played middle middle");
       if (this.turnCount === 1) {
         console.log("Turn 2");
-      }
-      setTimeout(function() {
-        $('#1 .inner').addClass('fallOff');
+        this.takenSquares.taken.push(1);
         setTimeout(function() {
-          $('#1 .inner').css('visibility', 'hidden');
-        }, 5000)
-      }, 5000);
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 6) {
+          $('#1 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#1 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 6) {
       console.log("you played middle right");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 7) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 7) {
       console.log("you played bottom left");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 8) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 8) {
       console.log("you played bottom middle");
-    } else if (this.playerOne.choices[this.playerOne.choices.length - 1] === 9) {
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
+    } else if (lastChoice === 9) {
       console.log("you played bottom right");
+      if (this.turnCount === 1) {
+        console.log("Turn 2");
+        this.takenSquares.taken.push(5);
+        setTimeout(function() {
+          $('#5 .inner').addClass('fallOff');
+          setTimeout(function() {
+            $('#5 .inner').css('visibility', 'hidden');
+          }, 5000);
+        }, 5000);
+      }
     }
     playAi.turnCount++;
     this.checkForWin(playAi.playerTwo);
@@ -218,4 +300,96 @@ var playAi = {
   }
 }
 
-$(document).on("click", ".inner", playAi.takeTurn);
+// $('#character').css({
+//   position: "absolute",
+//   bottom: "0px"
+// });
+//
+// $character = $('#character');
+//
+// var goingUp = true;
+//
+// setInterval(moveCharacter, 20);
+//
+// var keys = {}
+//
+// $(document).keydown(function(e) {
+//     keys[e.keyCode] = true;
+// });
+//
+// $(document).keyup(function(e) {
+//     delete keys[e.keyCode];
+// });
+//
+//
+// function moveCharacter() {
+//     for (var direction in keys) {
+//         if (!keys.hasOwnProperty(direction)) continue;
+//         if (direction == 37) {
+//             $("#character").animate({left: "-=5"}, 0);
+//         }
+//         if (direction == 39) {
+//             $("#character").animate({left: "+=5"}, 0);
+//         }
+//         if (direction == 40) {
+//             $("#character").animate({bottom: "-=5"}, 0);
+//         }
+//         if (direction == 38) {
+//             $("#character").animate({bottom: "+=5"}, 0);
+//         }
+//     }
+// }
+//
+// $(document).keypress(function(e) {
+//   if (e.keyCode === 32) {
+//     $('#character').animate(
+//     { bottom: 200 }, // what we are animating
+//     {
+//         duration: 'fast', // how fast we are animating
+//         easing: 'swing'
+//     }).animate(
+//     { bottom: 0 }, // what we are animating
+//     {
+//         duration: 'fast', // how fast we are animating
+//         easing: 'easeOutCubic'
+//     });
+//   }
+// });
+
+// Overlay dark with highlighted text for start
+
+var menu = {
+  onePlayer: true,
+  twoPlayer: false
+}
+
+$(document).keydown(function(e) {
+  console.log(e.keyCode);
+  if (e.keyCode === 40 && menu.onePlayer === true) {
+    $('#one').removeClass("active");
+    $('#two').addClass("active");
+    menu.onePlayer = false;
+    menu.twoPlayer = true;
+    console.log(menu.onePlayer + " " + menu.twoPlayer);
+  }
+  if (e.keyCode === 38 && menu.twoPlayer === true) {
+    $('#one').addClass("active");
+    $('#two').removeClass("active");
+    menu.onePlayer = true;
+    menu.twoPlayer = false;
+    console.log(menu.onePlayer + " " + menu.twoPlayer);
+  }
+  if (e.keyCode === 13 && menu.onePlayer === true) {
+    console.log("Start 1 player game");
+    closeMenu(playAi.takeTurn);
+  } else if (e.keyCode === 13 && menu.twoPlayer === true) {
+    console.log("Start 2 player game");
+    closeMenu(playGame.takeTurn);
+  }
+});
+
+var closeMenu = function(option) {
+  console.log()
+  $(document).on("click", ".inner", option);
+  $('#menu').fadeOut();
+}
