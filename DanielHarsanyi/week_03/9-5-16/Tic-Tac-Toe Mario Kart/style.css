@@ -12,6 +12,19 @@ h2 {
   z-index: 1100;
 }
 
+.gameLogoPlayerSelect {
+  max-width: 1000px;
+  margin-left: -80px;
+}
+
+.gameLogoBoard {
+  max-width: 1000px;
+  margin-top: 25px;
+  margin-left: -80px;
+  margin-bottom: 40px;
+  opacity: 0;
+}
+
 .playerScoreIcon {
   border: 2px solid white;
   border-radius: 6px;
@@ -44,6 +57,7 @@ h2 {
   font-size: 38px;
   border-radius: 5px;
   opacity: 0;
+  z-index: 5000;
 }
 
 button:focus {outline:0;}
@@ -59,6 +73,7 @@ button:hover {
   left: 0;
   bottom: 0;
   opacity: 0;
+
 }
 
 #firstPlayerScoreIcon {
@@ -82,7 +97,8 @@ button:hover {
 }
 
 .gameBoard {
-  margin-top: 110px;
+  margin-top: -40px;
+  padding: 40px;
   font-size: 0;
   opacity: 0;
 }
@@ -129,7 +145,7 @@ button:hover {
   position: relative;
   display: inline-block;
   width:1000px;
-  top: -750px;
+  top: -980px;
   left: -2000px;
   margin: 0 auto;
   z-index: 1000;

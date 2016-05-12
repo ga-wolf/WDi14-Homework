@@ -15,6 +15,7 @@
   <div class="playerScoreIcon" id="secondPlayerScoreIcon"></div><div class="playerScore" id="secondPlayerScore"></div>
 </container>
 
+<img class="gameLogoBoard" src="assets/gameLogo.png">
 <div class="gameBoard">
   <div>
     <div class="cell" id="cellOne"></div>
@@ -42,7 +43,8 @@
 </div>
 
 <div class="playerIconChoice">
-<h2>Player 1: Choose your icon</h2>
+  <img class="gameLogoPlayerSelect" src="assets/gameLogo.png">
+<h2>Player 1: Choose your Player!</h2>
   <div class="grow selectIcon" id="bowser">
     <img src="assets/bowserKartSmall.png"/>
   </div>
@@ -69,7 +71,42 @@
   </div>
 </div>
 
-<!-- <script src="easing.js"></script> -->
+<audio autoplay="autoplay" loop="loop">
+   <source src="assets/marioKartSoundtrack.mp3" id="themeSong"/>
+</audio>
+
+<audio>
+   <source src="assets/bowserSelect.mp3" id="bowserAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/donkeyKongSelect.mp3" id="donkeyKongAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/luigiSelect.mp3" id="luigiAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/marioSelect.mp3" id="marioAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/peachSelect.mp3" id="peachAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/toadSelect.mp3" id="toadAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/warioSelect.mp3" id="warioAudio"/>
+</audio>
+
+<audio>
+   <source src="assets/yoshiSelect.mp3" id="yoshiAudio"/>
+</audio>
+
 <script src="sweetalert-master/dist/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
 <script src="main.js"></script>

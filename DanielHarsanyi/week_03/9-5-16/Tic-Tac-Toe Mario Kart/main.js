@@ -1,41 +1,5 @@
-/*
- * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
- *
- * Uses the built in easing capabilities added In jQuery 1.1
- * to offer multiple easing options
- *
- * TERMS OF USE - jQuery Easing
- *
- * Open source under the BSD License.
- *
- * Copyright Â© 2008 George McGinley Smith
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list
- * of conditions and the following disclaimer in the documentation and/or other materials
- * provided with the distribution.
- *
- * Neither the name of the author nor the names of contributors may be used to endorse
- * or promote products derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- *
-*/
+// jQuery Easing Plugin
 
-// t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing.jswing = jQuery.easing.swing;
 
 jQuery.extend( jQuery.easing,
@@ -171,81 +135,86 @@ jQuery.extend( jQuery.easing,
 	}
 });
 
-/*
- *
- * TERMS OF USE - EASING EQUATIONS
- *
- * Open source under the BSD License.
- *
- * Copyright Â© 2001 Robert Penner
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of
- * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list
- * of conditions and the following disclaimer in the documentation and/or other materials
- * provided with the distribution.
- *
- * Neither the name of the author nor the names of contributors may be used to endorse
- * or promote products derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
- * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- */
+//jQuery Easing Plugin END
+
+//The below code plays the characters selection sound on mouseover
+
+var bowserAudio = new Audio("assets/bowserSelect.mp3");
+$("#bowser").mouseenter(function() {
+  bowserAudio.play();
+});
+
+var donkeyKongAudio = new Audio("assets/donkeyKongSelect.mp3");
+$("#donkeyKong").mouseenter(function() {
+  donkeyKongAudio.play();
+});
+
+var luigiAudio = new Audio("assets/luigiSelect.mp3");
+$("#luigi").mouseenter(function() {
+  luigiAudio.play();
+});
+
+var marioAudio = new Audio("assets/marioSelect.mp3");
+$("#mario").mouseenter(function() {
+  marioAudio.play();
+});
+
+var peachAudio = new Audio("assets/peachSelect.mp3");
+$("#peach").mouseenter(function() {
+  peachAudio.play();
+});
+
+var toadAudio = new Audio("assets/toadSelect.mp3");
+$("#toad").mouseenter(function() {
+  toadAudio.play();
+});
+
+var warioAudio = new Audio("assets/warioSelect.mp3");
+$("#wario").mouseenter(function() {
+  warioAudio.play();
+});
+
+var yoshiAudio = new Audio("assets/yoshiSelect.mp3");
+$("#yoshi").mouseenter(function() {
+  yoshiAudio.play();
+});
+
+//Character sound selection END
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Setting the gameBoard to an empty array - naming convention the same as the HTML IDs to allow crosscheck of contents
 var gameBoard = [["cellOne", "cellTwo", "cellThree"],["cellFour", "cellFive", "cellSix"],["cellSeven", "cellEight", "cellNine"]];
+//Using local storage to store wins across refreshes
 var firstPlayerWins = localStorage.firstPlayerWins || 0;
 var secondPlayerWins = localStorage.secondPlayerWins || 0;
+//Setting player icon variables to store image URL
 var player1Icon;
 var player2Icon;
+//Setting opening scores to 0 or whatever was stored in local storage
 $(document).ready(function(){
   $("#firstPlayerScore").html(firstPlayerWins);
   $("#secondPlayerScore").html(secondPlayerWins);
 });
 
+//Function that runs if it is player 1's turn - adds their icon and semi opaque background to the square they clicked and unbinds the click
+//so player 2 can't override it
 var playFirst = function ($cell) {
     $($cell).addClass("firstPlayerGameIcon");
     $($cell).css('background-image', player1Icon);
     $($cell).unbind("click");
 };
 
+//Function that runs if it is player 2's turn - adds their icon and semi opaque background to the square they clicked and unbinds the click
+//so player 1 can't override it
 var playSecond = function ($cell) {
     $($cell).addClass("secondPlayerGameIcon");
     $($cell).css('background-image', player2Icon);
     $($cell).unbind("click");
 };
 
+//Function that determines which cell the player clicked and then iterates through the entire gameboard. When it finds a match between
+//the cell clicked and empty square in the array it replaces the array with the player number depending on which player it was. This is
+//then used later for determining if a player has three squares in a row.
 var addToArray = function ($cell, player){
     var currentCell = $cell.id;
     if (player === "Player 1"){
@@ -267,6 +236,8 @@ var addToArray = function ($cell, player){
     }
 };
 
+
+//Function that resets the gameBoard array to empty, the player turn to 0, removes all classes and background images from the clicked squares, unbinds all clicks and then adds back on the gameplay click so the players can restart
 var reset = function (){
     gameBoard = [["cellOne", "cellTwo", "cellThree"],["cellFour", "cellFive", "cellSix"],["cellSeven", "cellEight", "cellNine"]];
     playersTurn = 0;
@@ -276,6 +247,8 @@ var reset = function (){
     $(".cell").on("click", gamePlay);
 };
 
+
+//Function that adds 1 to the winners score and puts it in the score counter in the bottom left hand corner
 var addToWinnerCount = function (winner){
   if (winner === "Player 1") {
     firstPlayerWins ++;
@@ -288,6 +261,8 @@ var addToWinnerCount = function (winner){
   }
 };
 
+
+// Function that resets both players scores to 0 in the local storage and in the score counter
 var resetScores = function (){
   firstPlayerWins = 0;
   localStorage.firstPlayerWins = 0;
@@ -299,6 +274,10 @@ var resetScores = function (){
 
 $(".resetBothScores").on("click", resetScores);
 
+
+//Function that checks to see whether a player has a winning combination. It checks square 1 against square 2, and then sqaure 2 against square 3
+//showing that there would be three of the same in a row. It then shows an alert with the winning players name(number), adds 1 to their winner count
+//and on clicking the reset button (called the confirm class in the sweet-alert plugin) runs the reset function described earlier.
 var checkWinner = function (){
   var winner;
   if ((gameBoard[0][0] === gameBoard[0][1]) && (gameBoard[0][1] === gameBoard[0][2])) {
@@ -347,6 +326,7 @@ var checkWinner = function (){
                 }
 };
 
+//Function that determines whether it is player 1 or player 2's turn
 var playersTurn = 0;
 var turnCounter = function (){
     playersTurn +=1;
@@ -357,6 +337,9 @@ var turnCounter = function (){
   }
 };
 
+
+//Function that runs every time a cell is clicked. It runs the turn counter, and then depending on who's turn it is it runs that players cycle(adding
+//images to the cell etc, adds their name to the gameboard array and checks for a winner)
 var gamePlay = function(){
     var player = turnCounter();
     if (player === "Player 1") {
@@ -372,8 +355,7 @@ var gamePlay = function(){
   }
 };
 
-//Icon Setup
-
+//Function that determines who's turn it is to choose their player icon
 var playersTurnToChoose = 0;
 var iconCounter = function (){
     playersTurnToChoose +=1;
@@ -384,25 +366,33 @@ var iconCounter = function (){
   }
 };
 
-var $imageSrc;
-
+//Function that removes the dark overlay over the background and removes the player icon choice screen. Called later after second players click.
 var removeOverlayAndIcons = function(){
   $(".overlay").addClass('animated bounceOutLeft');
   $(".playerIconChoice").addClass('animated bounceOutRight');
 };
 
+//Function that brings in the gameboard, score counter and second logo. Also fades them in from 0 opacity.
 var gameBoardAndScoresEnter = function(){
   $(".gameBoard").addClass('animated rotateIn');
   $("#scoreCounter").addClass('animated bounceInRight');
   $(".resetBothScores").addClass('animated bounceInDown');
+	$(".gameLogoBoard").addClass('animated bounceInDown');
   $("#scoreCounter").fadeTo("slow", 1);
   $(".resetBothScores").fadeTo("slow", 1);
+	$(".gameLogoBoard").fadeTo("slow", 1);
 };
 
+//Function that changes the h2 to "Let's play!". Called after the second players click.
 var letsPlayText = function (){
   $("h2").html("Let's Play!");
 };
 
+//Function that assigns the background image from the icon that the person chose to the score counter and cells once chosen.
+//Also unbinds the click from that icon so two players can't have the same.
+//After the second player selects their choice the text changes to "Let's play", the overlay and icons exit and just after that the game board
+//animation fires so they can enter.
+var $imageSrc;
 var playerChoosesIcon = function(){
   var player = iconCounter();
     if (player === "Player 1") {
@@ -413,6 +403,7 @@ var playerChoosesIcon = function(){
       });
       player1Icon = 'url('+$imageSrc+')';
       $(this).addClass('animated bounce');
+      // $("#bowserAudio").play();
       $(this).unbind("click");
 } else {
       var $clickedIconImage = $("img", this);
@@ -426,19 +417,20 @@ var playerChoosesIcon = function(){
       window.setTimeout(removeOverlayAndIcons,1500);
       window.setTimeout(gameBoardAndScoresEnter,2250);
 }
-  $("h2").html("Player 2: Choose your icon");
+  $("h2").html("Player 2: Choose your Player!");
   $("h2").addClass("animated tada");
 };
 
+//Function call that runs the playerChoosesIcon function when the player clicks a choice.
 $(".selectIcon").on("click", playerChoosesIcon);
 
+//Function call to make the magic happen! On a cell click the whole game play sequence runs.
 $(".cell").on("click", gamePlay);
 
-//Animations
-
+//Animation that brings in all the player icon choices
 var playerIconChoiceEntry = function() {
   $(".playerIconChoice").animate({left: "0px"}, 600, "easeOutBack", function(){});
 };
 
-
+//Brings in the player icon choice 1s after the page loads
 window.setTimeout(playerIconChoiceEntry,1000);
