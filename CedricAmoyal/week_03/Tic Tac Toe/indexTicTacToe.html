@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+
+<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+  <link rel="stylesheet" href="styleTicTacToe.css">
+  <link rel="stylesheet" href="styleIntro.css">
+  <link rel="stylesheet" type="text/css" href="./sweetalert-master/dist/sweetalert.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <link rel='stylesheet' href='./bgrins-spectrum-98454b5/spectrum.css' />
+
+</head>
+<body>
+
+  <!-- <a href="#openModal">Open Modal</a> -->
+
+  <div id="openModal" class="modalDialog">
+  	<div>
+  		<a href="#close" title="Close" class="close">X</a>
+  		<h2>Welcome to Tic Tac Toe</h2>
+  		<p>First challenge: find a friend who is happy to play with you.</p>
+  		<p>Give us your names:</p>
+      <input class="playerNames player1Name" type="text" placeholder = "Player 1"/>
+      <input class="playerNames player2Name" type="text" placeholder = "Player 2"/>
+
+      <div class="soundsSwitch">
+          <div class="soundsP"><p>Sounds:</p></div>
+          <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+              <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+          </div>
+      </div>
+      <a href="#close"><button type="button" class="letsPlayButton">Let's play !!</button></a>
+  	</div>
+  </div>
+
+
+
+    <div class="playerS">
+        <div class="playerChoice1">
+          <div class="player1Title"></div>
+          <input type='text' id="custom1" />
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <i class="fa fa-coffee" aria-hidden="true"></i>
+          <i class="fa fa-bicycle" aria-hidden="true"></i>
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </div>
+
+        <div class="playerChoice2">
+          <div class="player2Title"></div>
+          <i class="fa fa-futbol-o" aria-hidden="true"></i>
+          <i class="fa fa-hashtag" aria-hidden="true"></i>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+          <input type='text' id="custom2" />
+
+        </div>
+    </div>
+
+    <div class="mainTic">
+        <div class="tictactoe">
+          <div class="cell number0"></div>
+          <div class="cell number1"></div>
+          <div class="cell number2"></div>
+
+          <div class="cell number3"></div>
+          <div class="cell number4"></div>
+          <div class="cell number5"></div>
+
+          <div class="cell number6"></div>
+          <div class="cell number7"></div>
+          <div class="cell number8"></div>
+        </div>
+        <br>
+
+        <div class="allWins player1Wins"></div>
+        <div class="allWins player2Wins"></div>
+        <br>
+        <button type="button" class="newGameButton">New game</button>
+    </div>
+
+
+
+
+<script src="./sweetalert-master/dist/sweetalert.min.js"></script>
+<script src='./bgrins-spectrum-98454b5/spectrum.js'></script>
+<!-- <script src="main2playersBackground.js"></script> -->
+<!-- <script src="main2playersImages.js"></script> -->
+<!-- <script src="main2playersIcons.js"></script> -->
+<!-- <script src="main2playersIconsChoseColor.js"></script> -->
+<script src="main2playersICCDatabase.js"></script>
+</body>
+</html>
