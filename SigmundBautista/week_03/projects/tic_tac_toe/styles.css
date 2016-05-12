@@ -1,3 +1,21 @@
+body   {
+  font-family:'Ceviche One', cursive;
+  background: url("background.png")
+
+}
+
+.player1Select  {
+  position: fixed;
+  left: 0px;
+  top:20px;
+}
+
+.player2Select{
+  position: fixed;
+  right: 0px;
+  top: 100px;
+}
+
 .container  {
   position: fixed;
   height: 320px;
@@ -8,12 +26,6 @@
   background-image: url("Vs.png");
   background-repeat:no-repeat;
   background-position: center center;
-}
-
-body   {
-  font-family:'Ceviche One', cursive;
-  background: url("background.png")
-
 }
 
 .Box  {
@@ -52,8 +64,11 @@ body   {
   cursor: pointer;
 }
 
+
+
 #player1Img  {
   width: 220px;
+  top:100px;
   left: 5%;
   position: fixed;
   visibility: hidden;
@@ -62,6 +77,7 @@ body   {
 
 #player2Img  {
   width: 220px;
+  top:100px;
   right: 5%;
   position: fixed;
   visibility: hidden;

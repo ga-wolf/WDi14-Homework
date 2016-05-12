@@ -13,9 +13,10 @@
       <div class=playerTurn></div><br>
       <input type="radio" name="mode" id="pvp" value="PVP" checked="checked">Player VS Player<br>
       <input type="radio" name="mode" id="pva" value="PVAI">Player VS Dumbass<br>
-      <button class= type="button" id="newGame">New Game</button><br>
       <button type="button" id="typeX">X</button>
-      <button type="button" id="typeO">O</button>
+      <button type="button" id="typeO">O</button><br>
+      <button class= type="button" id="newGame">New Game</button>
+
     </div>
 
     <div class="container">
@@ -29,12 +30,28 @@
       <div class="Box" id=box7 index=7></div>
       <div class="Box" id=box8 index=8></div>
     </div>
-  <div class="players">
-    <img class="playersImg" id="player1Img" src="player1.gif">
-  </div>
-  <div>
-    <img class="playersImg" id="player2Img" src="dumbass.gif">
-  </div>
+
+    <div class="players">
+      <img class="playersImg" id="player1Img" src="player1.gif">
+      <img class="playersImg" id="player2Img" src="dumbass.gif">
+    </div>
+
+    <div class="player1Select">
+        <div class="player1Characters" id="ken"><img src="http://vignette2.wikia.nocookie.net/streetfighter/images/7/7f/Ken-gem-power.gif/revision/latest?cb=20130126134929" alt="">
+        </div>
+        <div class="player1Characters" id="chun-lee"><img src="http://vignette4.wikia.nocookie.net/screwattackdeathbattle/images/7/73/Pocketchun12.gif/revision/latest?cb=20140613050650" alt="">
+        </div>
+        <div class="player1Characters" id="ryuu"><img src="http://vignette4.wikia.nocookie.net/streetfighter/images/5/5e/Ryu-gem-super2.gif/revision/latest?cb=20100409224452" alt="">
+        </div>
+    </div>
+    <div class="player2Select">
+        <div class="player2Characters" id="akuma"><img src="http://vignette1.wikia.nocookie.net/streetfighter/images/4/49/Akuma-gem-tatsumaki.gif/revision/latest?cb=20120917162840" alt="">
+        </div>
+        <div class="player2Characters" id="weirdo"><img src="http://i.imgur.com/uKVpZGB.gif" alt="">
+        </div>
+        <div class="player3Characters" id="evil-ryuu"><img src="http://vignette2.wikia.nocookie.net/streetfighter/images/3/3c/Pocket_evil_ryu_-_evil_ryu_chibi.gif/revision/latest?cb=20091024095116" alt="">
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
     <script src="main.js"></script>

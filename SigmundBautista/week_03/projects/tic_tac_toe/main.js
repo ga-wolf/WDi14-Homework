@@ -1,14 +1,16 @@
+// Global variables
 var board = ["", "", "", "", "", "", "", "", ""];
 var turnTimer = 1;
-var playerTurn = "";
+var playerTurn =  "Player 1";
 var winCheck = "no win";
 var p = ""; // Player var
 var q = ""; // computer/player 2 var
 var gameOver = false;
 var gameMode = "vsPlayer"
+var player1Img = "player1.gif"
+var player2Img = "player1.gif"
 
-var something = $("#player1").val
-//set defaults
+//set gamemode
 $("#pvp").change(function(){
   if(this.checked){
     gameMode = "vsPlayer"
@@ -19,6 +21,33 @@ $("#pva").change(function(){
     gameMode = "vsDumbass"
   }
 })
+
+//Character Selection screen on load
+$("#ken").on("click", function(){
+  player1Img = "http://vignette2.wikia.nocookie.net/streetfighter/images/7/7f/Ken-gem-power.gif/revision/latest?cb=20130126134929"
+  $(".player1Select").css("visibility", "hidden");
+})
+$("#chun-lee").on("click", function(){
+  player1Img = "http://vignette4.wikia.nocookie.net/screwattackdeathbattle/images/7/73/Pocketchun12.gif/revision/latest?cb=20140613050650"
+  $(".player1Select").css("visibility", "hidden");
+})
+$("#ryuu").on("click", function(){
+  player1Img = "http://vignette4.wikia.nocookie.net/streetfighter/images/5/5e/Ryu-gem-super2.gif/revision/latest?cb=20100409224452"
+  $(".player1Select").css("visibility", "hidden");
+})
+$("#akuma").on("click", function(){
+  player2Img = "http://vignette1.wikia.nocookie.net/streetfighter/images/4/49/Akuma-gem-tatsumaki.gif/revision/latest?cb=20120917162840"
+  $(".player2Select").css("visibility", "hidden");
+})
+$("#weirdo").on("click", function(){
+  player2Img = "http://i.imgur.com/uKVpZGB.gif"
+  $(".player2Select").css("visibility", "hidden");
+})
+$("#evil-ryuu").on("click", function(){
+  player2Img = "http://vignette2.wikia.nocookie.net/streetfighter/images/3/3c/Pocket_evil_ryu_-_evil_ryu_chibi.gif/revision/latest?cb=20091024095116"
+  $(".player2Select").css("visibility", "hidden");
+})
+
 
 //Use type X
 $("#typeX").on("click", function(){
@@ -38,15 +67,19 @@ $("#newGame").on("click", function(){
   turnTimer = 1;
   winCheck = "no win";
   gameOver = false;
+  playerTurn =  "Player 1";
+  $(".player1Select").css("visibility", "hidden");
+  $(".player2Select").css("visibility", "hidden");
   $(".playersImg").css("visibility", "visible");
   if(gameMode === "vsDumbass")  {
-    $("#player1Img").attr("src", "player1.gif");
+    $("#player1Img").attr("src", player1Img);
     $("#player2Img").attr("src", "dumbass.gif");
   } else if(gameMode = "vsPlayer")  {
-    $("#player1Img").attr("src", "player1.gif");
-    $("#player2Img").attr("src", "player1.gif");
+    $("#player1Img").attr("src", player1Img);
+    $("#player2Img").attr("src", player2Img);
   }
   $(".turnTimer").text("Player turn " + turnTimer);
+  $(".playerTurn").text(playerTurn + "'s turn");
   for(i = 0; i <= board.length; i++)  {
     $("#box" + i).text("");
   }
@@ -71,12 +104,12 @@ $(".Box").on("click", function(){
     } else {
         if(turnTimer % 2 != 0) {
           board[index] = p;
-          playerTurn = "Player 1";
+          playerTurn = "Player 2";
           $(".playerTurn").text(playerTurn + "'s turn");
           $("#box" + index).text(p);
         } else {
           board[index] = q;
-          playerTurn = "Player 2";
+          playerTurn = "Player 1";
           $(".playerTurn").text(playerTurn + "'s turn");
           $("#box" + index).text(q);
         }
