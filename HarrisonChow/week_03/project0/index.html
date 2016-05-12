@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="css/animate.css" media="screen" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-
 </head>
+
 <body>
   <div class="menu"><p class="animated bounceInLeft">Let's play Tic Tac Toe</p></div>
   <div class="nav">
@@ -21,23 +21,24 @@
           <option value="5">5 grids * 5 grids</option>
           <option value="6">6 grids * 6 grids</option>
           <option value="7">7 grids * 7 grids</option>
+          <option value="9">9 grids * 9 grids</option>
         </select>
         <select name="bgimg" class="bgimg">
           <option value="1"> style One </option>
           <option value="2"> style Two </option>
           <option value="3"> style Three </option>
+          <option value="4"> style Four </option>
         </select>
         <button type="submit" onclick="reset()" class="animated wobble"> Start </button>
     </div>
-    <div class="wonCount" id="PlayerOne">Player One won:</div>
-    <div class="wonCount" id="PlayerTwo">Player Two won:</div>
-    <div class="wonCount" id="Tie">Tie:</div>
+    <div class="wonCount" id="PlayerOne">Player One won: 0</div>
+    <div class="wonCount" id="PlayerTwo">Player Two won: 0</div>
+    <div class="wonCount" id="Tie">Tie: 0</div>
   </div>
   <div class="main">
-    <div class="animated bounceInUp">
-      <div class="cell" id="cellStart">START
-      </div>
-    </div>
+      <div id="cellStart" class="animated fadeInRightBig"><span>START</span></div>
+      <div id="OnePlayer" class="player">One Player</div>
+      <div id="TwoPlayer" class="player">Two Players</div>
   </div>
 
 <script src="js/bounce.js"></script>
