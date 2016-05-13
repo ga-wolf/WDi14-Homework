@@ -15,11 +15,9 @@ body{
   padding-left: 50px;
 }
 .main{
-  margin-top: 5px;
   width: 100%;
   position:relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin:5px auto;
   text-align: center;
 }
 .cell{
@@ -35,22 +33,60 @@ body{
   -ms-transition: all 1s ease; /* IE 9 */
   -o-transition: all 1s ease; /* Opera */
   transition: all 1s ease;
+}
 
-
+.cell100{
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
 }
 
 #cellStart{
-  position: relative;
   margin-top: 100px;
-  padding: 50px;
-  padding-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
   font-size: 45px;
   color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
 }
-
-.cell:hover {
+.player{
+  position: relative;
+  top: -150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 25px;
+  width: 180px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  visibility: hidden;
+  box-shadow: 10px 10px 5px rgba(71,79,66,0.4)
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.player:hover, .cell:hover{
   background: rgba(59,56,64,0.5);
   -webkit-transform:scale(1.15); /* Safari and Chrome */
   -moz-transform:scale(1.15); /* Firefox */
@@ -58,10 +94,11 @@ body{
   -o-transform:scale(1.15); /* Opera */
    transform:scale(1.15);
 }
+
 .wonCount {
   width:125px;
   height: 40px;
-  font-size: 12px;
+  font-size: 13px;
   display: inline-block;
 }
 
