@@ -1,0 +1,70 @@
+/*body {
+	background: url(https://0.s3.envato.com/files/4556159/coconut%20590.jpg);
+	background-height:1000px;
+	background-width: 1000px;
+	background-repeat: no-repeat;
+}*/
+body {
+	background-image: url(https://0.s3.envato.com/files/4556159/coconut%20590.jpg);
+	background-size: 100%;
+}
+.bikiniCat {
+	position:absolute;
+  	left:calc(80% - 100px);
+  	transition:3s;
+-webkit-transition:3s;
+-moz-transition:3s;
+}
+
+.bikiniCat:hover {
+  left:0px;
+}
+
+.bikiniCat {
+	width: 200px;
+	height: 250px;
+    position: absolute;
+    top: 400px;
+}
+.catsGoneWild {
+	width: 350px;
+	height: 200px;
+	position: absolute;
+	top: 0px;
+	transition:3s;
+-webkit-transition:3s;
+-moz-transition:3s;
+left:calc(80% - 100px)
+}
+
+.catsGoneWild:hover {
+  left:0px;
+}
+
+.dancingOne {
+	position: absolute;
+	left: 0px;
+	top: 250px;
+
+}
+.dancing {
+	position: absolute;
+	width: 200px;
+	height: 250px;
+	left: 600px;
+	bottom: 0px;
+}
+.dancingTwo {
+	top: 350px;
+	right: 0px;
+	position: absolute;
+}
+
+.rain {
+	width: 100%;
+	position: absolute;
+	z-index: 100;
+}
+
+
+
