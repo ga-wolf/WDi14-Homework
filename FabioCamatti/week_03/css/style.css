@@ -1,0 +1,152 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing :border-box;
+}
+body,html{
+	width: 100%;
+	height: 95%;
+	font-family: 'Francois One', sans-serif;
+	background: repeating-linear-gradient(           to bottom,           #5d9634,           #5d9634 10px,           #538c2b 10px,           #538c2b 20px         );`
+}
+
+.container{
+	width:1000px;
+	margin:40px auto;
+	text-align: center;
+}
+
+.tictactoe{
+	margin:50px auto;
+}
+
+.board{
+	width:500px;
+	margin:20px auto;
+	overflow: auto;
+}
+
+.options{
+	width:300px;
+	margin:20px auto;
+	overflow: auto;
+	display: inline;
+}
+
+.cell{
+	float:left;
+	width:160px;
+	height:140px;
+	line-height: 100px;
+}
+
+#cells{
+		font-size: 36px;
+		text-align:center;
+		vertical-align: center;
+}
+
+[class*="0"],[class*="1"],[class*="2"],[class*="3"],[class*="4"],[class*="5"] {
+	border-bottom:6px solid black;
+}
+[class*="0"],[class*="3"],[class*="6"],[class*="1"],[class*="4"],[class*="7"] {
+	border-right:6px solid black;
+
+}
+
+.cell:hover{
+	background-color: rgba(0, 0, 255, 0.02);
+}
+
+.playerText{
+	float:left;
+	padding: 0.4em 1em;
+  background: rgba(255,255,255,0);
+	font-size: 22px;
+	text-transform: uppercase;
+
+}
+.restart{
+	float:right;
+	width: 110px;
+	height: 35px;
+	padding: 0.4em 1em;
+  border-radius: 4px;
+	font-size: 1em;
+	background: #5d9634;
+	color: #ffffff;
+	text-transform: uppercase;
+
+}
+.restart:hover{
+	background: #538c2b;
+  text-decoration: none;
+}
+/*NEW CODE GOES HERE*/
+.headerList {
+ list-style-type: none;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    z-index:6;
+    margin: 0 auto;
+}
+footer{
+	  margin: 0 auto;
+		height: 60px;
+
+}
+a:link {
+  text-decoration: none;
+  margin: 0 auto;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+a:visited {text-decoration: none;}
+
+a:hover{ text-decoration: underline;}
+
+a:focus{ text-decoration: underline;}
+
+a:active{text-decoration: none;}
+
+svg{
+	opacity: 0.6;
+}
+svg:hover{
+		fill:#4078BD;
+		opacity: 0.75;
+}
+.github{
+	margin: 0 auto;
+	position: relative;
+  top: 10%;
+  transform: translateY(-50%);
+}
+.score{
+		font-size: 22px;
+}
+.score p{
+	color:black;
+}
+
+.btn {
+	width: 110px;
+	height: 35px;
+	padding: 0.4em 1em;
+  border-radius: 4px;
+	font-size: .5em;
+	background: #538c2b;
+	color: #ffffff;
+	text-transform: uppercase;
+
+}
+
+.btn:hover {
+  background: #5d9634;
+  text-decoration: none;
+}
