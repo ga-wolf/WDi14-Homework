@@ -143,78 +143,113 @@ var updateBoard = function(yourCell, player, i, j) {
     var yourId = $(yourCell).children(".inner");
     console.log(turnCount);
     if (parseInt(yourCell.id) === 1 || yourCell === "#1") {
-      $("#lakitu").css({
-        left: "-387px"
-      })
-      $("#lakitu").addClass("lakitu-fly");
-      yourId.addClass("flyaway");
+      var lakituLeft = window.innerWidth / 2 - 110;
+      $("#lakitu").animate({
+        left: lakituLeft
+      }, 1700);
       setTimeout(function() {
-        $("#lakitu").removeClass("lakitu-fly");
-      }, 3000);
+        $(yourId).animate({
+          top: "-40px"
+        }, 200)
+      }, 1900);
+      setTimeout(function() {
+        $("#lakitu").animate({
+          left: window.innerWidth + 70
+        }, 1030, "linear");
+        $(yourId).animate({
+          left: window.innerWidth - lakituLeft + 70
+        }, 1030, "linear");
+      }, 2100)
     }
     if (parseInt(yourCell.id) === 2 || yourCell === "#2") {
-      $("#lakitu").css({
-        left: "-317px"
-      })
-      $("#lakitu").addClass("lakitu-fly");
-      yourId.addClass("flyaway");
+      var lakituLeft = window.innerWidth / 2 - 40;
+      $("#lakitu").animate({
+        left: lakituLeft
+      }, 1700);
       setTimeout(function() {
-        $("#lakitu").removeClass("lakitu-fly");
-      }, 3000);
+        $(yourId).animate({
+          top: "-40px"
+        }, 200)
+      }, 1900);
+      setTimeout(function() {
+        $("#lakitu").animate({
+          left: window.innerWidth + 70
+        }, 1030, "linear");
+        $(yourId).animate({
+          left: window.innerWidth - lakituLeft + 70
+        }, 1030, "linear");
+      }, 2100)
     }
     if (parseInt(yourCell.id) === 3 || yourCell === "#3") {
-      $("#lakitu").css({
-        left: "-243px"
-      })
-      $("#lakitu").addClass("lakitu-fly");
-      yourId.addClass("flyaway");
+      var lakituLeft = window.innerWidth / 2 + 30;
+      $("#lakitu").animate({
+        left: lakituLeft
+      }, 1700);
       setTimeout(function() {
-        $("#lakitu").removeClass("lakitu-fly");
-      }, 3000);
+        $(yourId).animate({
+          top: "-40px"
+        }, 200)
+      }, 1900);
+      setTimeout(function() {
+        $("#lakitu").animate({
+          left: window.innerWidth + 70
+        }, 1030, "linear");
+        $(yourId).animate({
+          left: window.innerWidth - lakituLeft + 70
+        }, 1030, "linear");
+      }, 2100)
     }
     if (parseInt(yourCell.id) === 4 || yourCell === "#4") {
+      var piranhaLeft = window.innerWidth / 2;
       $("#piranha").css({
         left: "-1000px"
       })
-      $("#piranha").addClass("piranha-eat");
+      $("#piranha").animate({
+        left: piranhaLeft - 916
+      }, 1000, function() {
+        $("#piranha").animate({
+          left: "-1000px"
+        }, 1000)
+      })
       setTimeout(function() {
         yourId.toggle();
       }, 1000)
-      setTimeout(function() {
-        $("#piranha").removeClass("piranha-eat");
-        $("#piranha").css("left", "-1000px");
-      }, 2000);
     }
     if (parseInt(yourCell.id) === 5 || yourCell === "#5") {
+      var piranhaLeft = window.innerWidth / 2;
       $("#piranha").css({
-        left: "-930px"
+        left: "-1000px"
       })
-      $("#piranha").addClass("piranha-eat");
+      $("#piranha").animate({
+        left: piranhaLeft - 846
+      }, 1000, function() {
+        $("#piranha").animate({
+          left: "-1000px"
+        }, 1000)
+      })
       setTimeout(function() {
         yourId.toggle();
       }, 1000)
-      setTimeout(function() {
-        $("#piranha").removeClass("piranha-eat");
-        $("#piranha").css("left", "-1000px");
-      }, 2000);
     }
     if (parseInt(yourCell.id) === 6 || yourCell === "#6") {
+      var piranhaLeft = window.innerWidth / 2;
       $("#piranha").css({
-        left: "-860px"
+        left: "-1000px"
       })
-      $("#piranha").addClass("piranha-eat");
+      $("#piranha").animate({
+        left: piranhaLeft - 776
+      }, 1000, function() {
+        $("#piranha").animate({
+          left: "-1000px"
+        }, 1000)
+      })
       setTimeout(function() {
-        yourId.css({
-          display: "none"
-        });
+        yourId.toggle();
       }, 1000)
-      setTimeout(function() {
-        $("#piranha").removeClass("piranha-eat");
-        $("#piranha").css("left", "-1000px");
-      }, 2000);
     }
     if (parseInt(yourCell.id) === 7 || yourCell === "#7") {
-      $("#mario").css("left", "600px");
+      var marioLeft = window.innerWidth / 2 - 110;
+      $("#mario").css("left", marioLeft);
       $("#mario").addClass("mario-jump");
       yourId.addClass("bump");
       setTimeout(function() {
@@ -222,7 +257,8 @@ var updateBoard = function(yourCell, player, i, j) {
       }, 1000);
     }
     if (parseInt(yourCell.id) === 8 || yourCell === "#8") {
-      $("#mario").css("left", "675px");
+      var marioLeft = window.innerWidth / 2 - 40;
+      $("#mario").css("left", marioLeft);
       $("#mario").addClass("mario-jump");
       yourId.addClass("bump");
       setTimeout(function() {
@@ -230,7 +266,8 @@ var updateBoard = function(yourCell, player, i, j) {
       }, 1000);
     }
     if (parseInt(yourCell.id) === 9 || yourCell === "#9") {
-      $("#mario").css("left", "750px");
+      var marioLeft = window.innerWidth / 2 + 30;
+      $("#mario").css("left", marioLeft);
       $("#mario").addClass("mario-jump");
       yourId.addClass("bump");
       setTimeout(function() {
@@ -308,7 +345,7 @@ clearBoard = function(player) {
     setTimeout(function() {
       $("#flag").animate({
         bottom: "55px"
-      }, 780);
+      }, 600, "linear");
       if (player.name === "Star"){
         $("#flag").css("background-image", "url('images/star-flag.gif')");
       } else {
@@ -337,6 +374,10 @@ clearBoard = function(player) {
       $(".current-player").css("background-image", "url('images/star.png')");
       setTimeout(function() {
         $("#mario-running").removeClass("mario-run");
+        $(".inner").css ({
+          top: 0,
+          left: 0
+        })
       }, 1000);
     }
 
@@ -427,6 +468,9 @@ loopAnimation3(false);
 $('.ghost-button').on("click", function(e) {
   e.preventDefault();
   $("#winner").toggle();
+  $("#frame").toggle();
+  $(".gameBoard").toggle();
+  $("#menu").fadeIn();
 })
 
 $("#one").on("click", function() {

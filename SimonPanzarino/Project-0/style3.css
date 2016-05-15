@@ -8,7 +8,7 @@ body {
   background-image: url('images/mountain-background.jpg');
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: 100%;
+  background-size: 1500px;
 }
 
 
@@ -20,8 +20,8 @@ body {
 
 #mario {
   position: absolute;
-  bottom: -131px;
-  left: 600px;
+  top: 800px;
+  left: 50%;
   background-image: url('images/mario.png');
   background-repeat: no-repeat;
   height: 131px;
@@ -31,8 +31,8 @@ body {
 
 #mario-running {
   position: absolute;
-  bottom: 46px;
-  left: -66px;
+  bottom: 49px;
+  right: 1444px;
   background-image: url("images/mario-running3.gif");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -89,7 +89,7 @@ body {
 
 #flag-pole {
   position: absolute;
-  bottom: 50px;
+  bottom: 52px;
   right: 200px;
   background-image: url("images/flag-pole.png");
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@ body {
 
 #flag {
   position: absolute;
-  bottom: 291px;
+  bottom: 293px;
   right: 225px;
   background-image: url("images/mario-flag.gif");
   background-repeat: no-repeat;
@@ -115,7 +115,8 @@ body {
   position: absolute;
   top: 0px;
   left: -387px;
-  height:100px;
+  right: auto;
+  height:102px;
   width: 80px;
   background-image: url("images/lakitu.gif");
   background-repeat: no-repeat;
@@ -125,8 +126,8 @@ body {
 
 #goomba1 {
   position: absolute;
-  bottom: 116px;
-  right: 75px;
+  bottom: 121px;
+  left: 1350px;
   height: 24px;
   width: 20px;
   background-image: url("images/goomba.gif");
@@ -366,20 +367,9 @@ button {
   -o-animation: flyaway 3s forwards;
 }
 
-@keyframes flyaway {
-  60% {
-    transform: translate3d(0, 0, 0)
-  }
-  70% {
-    transform: translate3d(0px, -50px, 0)
-  }
-  100% {
-    transform: translate3d(1000px, -50px, 0px);
-  }
-}
-
 .inner {
   background-image: url('images/musicNote.png');
+  position: relative;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -507,6 +497,7 @@ button {
               color 0.3s ease-out,
               width 0.4s ease-in;
               z-index: 1000;
+  font-family: marioFont, "Open Sans", sans-serif;
 }
 .ghost-button:hover,
 .ghost-button:active {
