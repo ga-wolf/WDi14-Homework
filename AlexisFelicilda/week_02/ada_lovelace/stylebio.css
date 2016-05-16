@@ -1,0 +1,35 @@
+body {
+	background: url(http://www.zastavki.com/pictures/originals/2014/Backgrounds_Wallpapers_with_gradient_background_082013_.jpg);
+	font-family: Eczar, sans-sarif;
+	font-size: 18px;
+	text-align: center;
+}
+
+.inset {
+    width: 800px;
+    /*border: 20px inset black;*/
+    border-color: black;
+    display: inline-block;
+    
+    box-shadow: 0 0 15px 15px black;
+}
+
+
+/*}*/
+/*
+.textbox {
+    -moz-border-radius-bottomright: 30px;
+    -webkit-border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    -webkit-border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 1px solid #848484;
+    outline: 0;
+    height: 25px;
+    width: 275px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+*/
+

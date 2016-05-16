@@ -1,0 +1,11 @@
+body {
+background-image: url("http://thetechnokittens.com/wp-content/uploads/2015/11/flashing-GIF.gif");
+
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+image();
