@@ -87,5 +87,16 @@ var reset = function() {
 
 };
 
+// var bgFlash = function() {
+//   var red = Math.random() * 255;
+//   var green = Math.random() * 255;
+//   var blue = Math.random() * 255;
+//
+//   var body = document.querySelector( "body" );
+//
+//   body.style.backgroundColor( "rgb(" + red + "," + green "," + blue + ")" );
+//
+// }
+
 greyWalk.style.left = "-250px";
 greyRightTimer = window.setInterval( greyWalkMoveRight, 20 );
