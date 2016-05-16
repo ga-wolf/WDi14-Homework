@@ -1,0 +1,160 @@
+
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+#header {
+  height: 120px;
+  background-color: black;
+  color: white;
+
+  display: -webkit-flex;
+
+}
+
+#header nav {
+  margin-left: 5%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.container1 {
+  height: 700px;
+    background-image: url("images/background-color1.png");
+}
+
+.quoteBox {
+  border: solid gainsboro 2px;
+  border-right-color: white;
+  border-bottom-color: white;
+
+    overflow: auto;
+    padding: 10px;
+    font-size: 20px;
+    padding-left: 30px;
+
+    display: -webkit-flex;
+ -webkit-align-items: center;
+         align-items: center;
+ -webkit-justify-content: center;
+         justify-content: center;
+
+
+}
+#wrapper {
+  background-image: url("images/background-color2.png");
+}
+
+.container2 {
+  height: 700px;
+
+  border-top: 3px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+
+}
+
+.content1 {
+  margin-left: 9%;
+  margin-right: 15%;
+  height: 800px;
+
+}
+
+.content2 {
+  margin-left: 9%;
+  margin-right: 15%;
+  padding-top: 150px;
+}
+
+.homeGridContainer {
+  display: -webkit-flex;
+display: flex;
+padding-top: 50px;
+}
+
+.homeTitle {
+  font-size: 32px;
+  padding-bottom: 25px;
+}
+
+.homeGrid p {
+  margin-right: 15%;
+}
+
+.footer {
+  height: 50px!important;
+  background-color: black;
+}
+
+
+
+.homeGrid img {
+  width: 86%;
+  border: 6px solid gainsboro;
+}
+
+.homeGrid {
+  flex: 1;
+}
+
+.quoteBox img {
+  float: right;
+  padding: 10px;
+  margin-left: 80px;
+  min-width: 300px!important;
+}
+
+.sub-header {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.banner img, .shadow img {
+  width: 100%;
+}
+
+.shadow img{
+  margin-top: -4px;
+}
+
+.logo-wrapper img{
+  height: 70px;
+}
+
+.social-media-wrapper {
+  float:right;
+
+}
+.social-media-wrapper img {
+    height: 60px;
+}
+
+
+
+
+#header li {
+  display: inline-table;
+   border-spacing: 30px;
+  font-size: 23px;
+  color: gainsboro;
+}

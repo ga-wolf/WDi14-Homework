@@ -1,0 +1,28 @@
+.cat {
+  position:absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.evilcat {
+  opacity: 0;
+  display: block;
+   margin: 0 auto;
+   height:500px;
+}
+/*#gif {
+
+text-align: center;
+height: 500px;
+
+}*/
+
+body {
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+image();

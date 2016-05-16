@@ -1,0 +1,142 @@
+body{
+  background: #002573;
+  background: -webkit-linear-gradient(left, #002573 , #0077CF);
+  background: -o-linear-gradient(right, #002573, #0077CF);
+  background: -moz-linear-gradient(right, #002573, #0077CF);
+  background: linear-gradient(to right, #002573 , #0077CF);
+  font-family: 'Nunito', sans-serif;
+}
+.menu{
+  background: #E0E8E8;
+  box-shadow: 10px 10px 5px rgba(71,79,66,0.4);
+  height: 70px;
+  border-radius: 10px;
+  font-size: 45PX;
+  padding-left: 50px;
+}
+.main{
+  width: 100%;
+  position:relative;
+  margin:5px auto;
+  text-align: center;
+}
+.cell{
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-right: 5px;
+  width: 140px;
+  height: 140px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+.cell100{
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+#cellStart{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 45px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.player{
+  position: relative;
+  top: -150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 25px;
+  width: 180px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  visibility: hidden;
+  box-shadow: 10px 10px 5px rgba(71,79,66,0.4)
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+.player:hover, .cell:hover{
+  background: rgba(59,56,64,0.5);
+  -webkit-transform:scale(1.15); /* Safari and Chrome */
+  -moz-transform:scale(1.15); /* Firefox */
+  -ms-transform:scale(1.15); /* IE 9 */
+  -o-transform:scale(1.15); /* Opera */
+   transform:scale(1.15);
+}
+
+.wonCount {
+  width:125px;
+  height: 40px;
+  font-size: 13px;
+  display: inline-block;
+}
+
+#popupcontent{
+   position: absolute;
+   visibility: hidden;
+   overflow: hidden;
+   color: white;
+   font-size: 20px;
+   z-index: 1;
+   text-align: center;
+   border:1px solid #3A9FDA;
+   background-color:#024157;
+   border:1px solid #3A9FDA;
+   padding:50px;
+}
+#cellsNum{
+  margin-top: 10px;
+  padding: 10px;
+  width:500px;
+  display: inline-block;
+
+}
+.nav{
+  margin-top: 10px;
+  padding: 10px;
+  background: #324587;
+  background: -webkit-linear-gradient(45deg, #324587 , #18BAC8);
+  background: -o-linear-gradient(45deg, #324587, #18BAC8);
+  background: -moz-linear-gradient(45deg, #324587, #18BAC8);
+  background: linear-gradient(45deg, #324587 , #18BAC8);
+  border-radius: 10px;
+  color: White;
+  font-size: 25px;
+}
+.animation{
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

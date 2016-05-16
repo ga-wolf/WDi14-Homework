@@ -97,7 +97,6 @@ var tripView = function ( line1, station1, line2, station2 ) {
         console.log('-----  ' + station1 + ' to ' + station2 + '   ------');
 
         // Determine the direction of travel to and from union square
-
         line1Direction = line1UnionSquareIndex - station1index;
         line2Direction =  station2index - line2UnionSquareIndex;
 

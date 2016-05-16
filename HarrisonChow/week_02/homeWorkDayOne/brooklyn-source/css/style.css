@@ -1,0 +1,22 @@
+body{
+	font-size: 12px;
+	line-height: 17px;
+	font-family: "Times New Roman", serif;
+	color: #656565;
+	width: 980px;
+	padding: 15px;
+}
+.press{
+	display: inline-block;;
+	border: 3px solid #c3c3c3;
+	padding: 5px;
+}
+a:hover{
+  color: #20222a;
+}
+a:link{
+	text-decoration:none;
+}
+div #container{
+	align-items: center;
+}

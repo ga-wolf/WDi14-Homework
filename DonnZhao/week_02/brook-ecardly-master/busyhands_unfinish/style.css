@@ -1,0 +1,52 @@
+body {
+  box-shadow: border-box;
+}
+
+#navcontainer {
+  width:100%;
+  height: 60px;
+  position: fixed;
+  left:0;
+  top:0;
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: left;
+background-color: black;
+
+}
+
+#navbar{
+  float:left;
+  margin-left:40px;
+  width:100%;
+  height:60px;
+  background-color: none;
+  overflow: auto;
+  /*position: relative;*/
+}
+/*.navbuttom {
+
+  width:100%;
+overflow:hidden;
+padding-right: 20px;
+  background-color: red;
+
+}*/
+
+ #navbar a{
+  display: inline-block;
+  height:30px;
+  padding: 20px 15px 20px 15px;
+  border: 0px;
+  margin: 0px;
+background-color: none;
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+color:white;
+}
+
+ #navbar a:hover{
+background-image:url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/brook-ecardly-master/busyhands/images/bg_nav_rollover.png);
+}
