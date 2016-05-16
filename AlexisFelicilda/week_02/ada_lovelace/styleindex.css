@@ -1,0 +1,100 @@
+body {
+	background: url(https://wallpaperscraft.com/image/gradient_light_dark_background_51893_3840x2160.jpg);
+	text-align: center;
+  box-shadow: 0 0 8px 8px black inset;
+  font-family: Eczar, sans-sarif;
+
+}
+
+/*img .image-blurred-edge {
+    position: absolute;
+    left: 300px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 15px 15px black inset;
+}
+*/
+.image-blurred-edge {
+  width: 800px;
+  height: 150px; 
+  border:2px solid #fff; 
+  
+  -moz-box-shadow: 10px 10px 5px #ccc; 
+  -webkit-box-shadow: 10px 10px 5px #ccc; 
+  box-shadow: 10px 10px 5px #ccc; 
+  -moz-border-radius:25px; 
+  -webkit-border-radius:25px; 
+  border-radius:25px;
+}
+
+/*"http://i.imgur.com/jQuPMg2.png"
+*//*ul.gallery li a {
+	float: left;
+	padding: 10px 10px 25px 10px;
+	background: papayawhip;
+	border: 1px solid white;
+	-moz-box-shadow: 0px 2px 15px #333;
+	position: relative;
+}
+ul.gallery li a.pic-1 {
+	z-index: 1;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+}*/
+/*border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 63px dashed #000000;*/
+
+
+
+/*MORPH*/
+.relative {
+	position: relative;
+	top: 80px;
+	left: 10px;
+  box-sizing: inherit;
+  
+
+}
+
+.morph img{
+	border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 63px dashed #000000;
+  box-shadow: 0 0 8px 8px silver;
+ /* background-image: -webkit-linear-gradient(right, #8D7B7B 0%, #B0AAAA 100%);*/
+}
+
+.morph {
+	border-radius: 100%;
+  -webkit-transition: all 2s ease;
+     -moz-transition: all 2s ease;
+       -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+          transition: all 2s ease;
+}
+ 
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.focus {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.focus:hover {
+  border: 70px solid #000;
+  border-radius: 50%;
+}
+
+
+

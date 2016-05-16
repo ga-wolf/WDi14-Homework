@@ -1,0 +1,114 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+#headertext{
+  width:80%auto;
+  height:auto;
+  margin: 20px; 20px; 20px;3px;
+}
+
+
+#container1 {
+ width: 80%auto;
+ margin: 20px; 20px; 20px;3px;
+ height: auto;
+ background-color: none;
+}
+#container2 {
+ width: 80%auto;
+ margin: 20px; 20px; 20px;3px;
+ height: auto;
+ background-color: none;
+}
+
+.textcontainer {
+  width:80%auto;
+  height: auto;
+  margin: 20px; 20px; 20px;3px;
+  background-color: none;
+
+
+
+}
+div p {
+  font-size: :30px;
+  line-height: : 30px;
+  font-family: : "Times New Roman", serif;
+  font:red;
+
+}
+
+/*been try to select all the p within div but could not change the fontsize and fontfamily*/
+
+.container3 {
+	width: 80% auto;
+  height: 160px;
+ background-color: none;
+ box-sizing:padding-box;
+ }
+
+/*is there anyanother way to best balance the width of small items within a div and make it fit with the size other parents elements  */
+
+ #left1 {
+   float: left;
+   border-style: solid;
+    border-color: gray;
+    border-width: thick;
+    margin-left: 8px;
+    padding: 3px;
+   display: inline-block;
+ }
+
+#left2 {
+
+  border-style: solid;
+   border-color: gray;
+   border-width: thick;
+   padding: 3px;
+   margin-left: 6px;
+   display: inline-block;
+   float: left;
+ }
+
+
+#right2 {
+  float: right;
+  border-style: solid;
+   border-color: gray;
+   border-width: thick;
+   padding: 3px;
+   margin-right: 8px;
+  display: inline-block;
+ }
+
+ #right1 {
+   float: right;
+   border-style: solid;
+    border-color: gray;
+    border-width: thick;
+    padding: 3px;
+    margin-right: 8px;
+
+   display:inline-block;
+  }
+
+   .footerbox {
+     width:80%auto;
+     height:50px;
+     background-color: none;
+
+   }
+
+  .footerbox p {
+    text-align: left;
+    margin: -10px 0 10px 10px;
+  }

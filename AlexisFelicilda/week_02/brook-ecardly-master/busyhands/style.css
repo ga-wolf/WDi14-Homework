@@ -1,0 +1,37 @@
+body {
+	background-image: url(https://github.com/ga-wolf/brook-ecardly/blob/master/busyhands/images/bg_body.jpg?raw=true);
+	background-repeat: repeat;
+}
+img {
+	position: relative;
+}
+.leftSidebar-float .absolute {
+	float: left;
+
+}
+.rightSidebar-float .absolute {
+	float: right;
+
+}
+
+.boxModel {
+	padding: 10px;
+    border: 2px solid grey;
+    border-bottom: 2px solid white;
+    outline-offset: 8px;
+}
+.collumn1-float{
+	width: 25%;
+	float:left
+	
+}
+.collumn2-float {
+	width: 25%;
+	float: center
+	
+}
+.collumn3-float {
+	width: 25%;
+	float: right
+	
+}

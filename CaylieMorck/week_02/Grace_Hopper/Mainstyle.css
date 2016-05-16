@@ -1,0 +1,135 @@
+@import
+  url(https://fonts.googleapis.com/css?family=Lato:400,700|Roboto:400,700);
+/*
+  header {
+    font-family: "Roboto" sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background-size: cover;
+    background-color: #000;
+    color: black;*/
+
+
+  nav {
+
+    font-family: 'Roboto' sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 10px;
+  }
+  section {
+      width:350px;
+      float:left;
+      padding:10px;
+  }
+
+  a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto' sans-serif;
+
+  }
+  h1 {
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  h2 {
+
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 50px;
+      font-weight: bolder;
+
+  }
+
+
+/*img {
+    margin: 40px 0px 0px 0px;
+    border: 7px solid white;
+    border-radius: 20px;
+    max-height: 150px;
+    max-width: 200px;
+    width: 120px;
+    height: 120px;
+  }*/
+
+  ul {
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+
+}
+    li {
+
+      text-align: center;
+      display: inline;
+      font-family: 'Roboto', sans-serif;
+      padding: 0px 20px 0px 20px;
+
+  }
+
+p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+
+/*
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+p2, p3, p4 {
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+}
+
+header {
+  text-align: center;
+  background-size: cover;
+  color: black;
+}
+a {
+  color: black;
+}
+h1 {
+  font-size: 70px;
+}
+img {
+  margin: 40px 0px 0px 0px;
+  border: 7px solid white;
+  border-radius: 20px;
+}
+ul {
+  padding: 10px;
+  /*background: black;
+}
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+}*/
