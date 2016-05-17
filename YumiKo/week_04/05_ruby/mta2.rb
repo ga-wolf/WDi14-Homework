@@ -41,7 +41,7 @@ def mta(from_l, from_st, to_l, to_st)
     if direction == 0
       paths = from_line[from_index..to_index]
     else
-      paths = from_line.reverse[(from_line.length - 1 - from_index)..(from_line.length - 1 - to_index)]
+      paths = from_line[to_index..from_index].reverse
     end
     paths.shift
     puts "Your journey from #{from_station} to #{to_station} is through #{paths}."
