@@ -22,7 +22,7 @@ $("#pva").change(function(){
   }
 })
 
-//Character Selection screen on load
+//Character Selection screen on load minute addition...
 $("#ken").on("click", function(){
   player1Img = "http://vignette2.wikia.nocookie.net/streetfighter/images/7/7f/Ken-gem-power.gif/revision/latest?cb=20130126134929"
   $(".player1Select").css("visibility", "hidden");
@@ -93,9 +93,9 @@ $(".Box").on("click", function(){
     if(board[index] === "X" || board[index] === "O") {
       alert("Cant do that dawg")
     } else {
-      board[index] = p;
-      $("#box" + index).text(p);
-      dumbassConditionals();
+        board[index] = p;
+        $("#box" + index).text(p);
+        dumbassConditionals();
     }
   } else if(gameMode === "vsPlayer")  {   // this is for player clicks
     var index = $(this).attr("index")
@@ -108,10 +108,10 @@ $(".Box").on("click", function(){
           $(".playerTurn").text(playerTurn + "'s turn");
           $("#box" + index).text(p);
         } else {
-          board[index] = q;
-          playerTurn = "Player 1";
-          $(".playerTurn").text(playerTurn + "'s turn");
-          $("#box" + index).text(q);
+            board[index] = q;
+            playerTurn = "Player 1";
+            $(".playerTurn").text(playerTurn + "'s turn");
+            $("#box" + index).text(q);
         }
         //add click change text player 2
         playerVSConditionals();
@@ -122,7 +122,7 @@ $(".Box").on("click", function(){
 //AI kind of..
 var ai = function (){
   if (gameOver) return;
-  var index = randomNumber();
+    var index = randomNumber();
   if(board[index] === "")  {
     board[index] = q;
     $("#box" + index).text(q);
@@ -134,7 +134,6 @@ var ai = function (){
 //create randdom number
 var randomNumber = function() {
   index = Math.floor(Math.random() * 9);
-  return index;
   // return drawArray[drawIndex++];
 };
 
@@ -142,7 +141,6 @@ var randomNumber = function() {
 var switchTurns = function()  {
   turnTimer++;
     $(".turnTimer").text("Player turn " + turnTimer);
-  return turnTimer;
 };
 
 //Player conditions for Victory
@@ -199,11 +197,11 @@ var player2WinConditions =  function() {
               showConfirmButton: false
             });
     } else if(gameMode === "vsPlayer")  {
-      swal({  title: "Player 2 Winner",
-              text: "Nice!",
-              timer: 2000,
-              showConfirmButton: false
-            });
+        swal({  title: "Player 2 Winner",
+                text: "Nice!",
+                timer: 2000,
+                showConfirmButton: false
+              });
     }
     gameOver = true;
   }
@@ -214,8 +212,8 @@ var drawConditions = function() {
   gameOver = true;
   for(i = 0; i <= board.length; i++)  {
       if(board[i] === "") {
-      gameOver = false;
-      }
+        gameOver = false;
+        }
     }
   if(gameOver === true && winCheck === "no win")  {
     swal({  title: "You Drew",
