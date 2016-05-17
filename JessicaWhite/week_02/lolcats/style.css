@@ -5,7 +5,8 @@ body {
   width: 100vw;
   height: auto;
   background-size: cover;
-
+  z-index: 1;
+  position: absolute;
 }
 
 .vom1 {
@@ -15,6 +16,7 @@ body {
   opacity: 0;
   top: 350px;
   left: 700px;
+  z-index: 1;
 }
 
 .vom2 {
@@ -24,6 +26,7 @@ body {
   opacity: 0;
   top: 350px;
   left: 700px;
+  z-index: 1;
 }
 
 .vom3 {
@@ -33,6 +36,7 @@ body {
   opacity: 0;
   top: 350px;
   left: 700px;
+  z-index: 1;
 }
 
 .vom4 {
@@ -43,6 +47,7 @@ body {
   transform: scaleX(-1);
   top: 350px;
   left: 700px;
+  z-index: 1;
 }
 
 .vom5 {
@@ -53,6 +58,7 @@ body {
   transform: scaleX(-1);
   top: 350px;
   left: 700px;
+  z-index: 1;
 }
 
 /*.vom6 {
@@ -76,8 +82,10 @@ body {
   transform: scaleX(-1);
   max-width: 300px;
   max-height: 300px;
+  z-index: 1;
 }
 
 .fly {
   position: absolute;
+  z-index: 1;
 }
