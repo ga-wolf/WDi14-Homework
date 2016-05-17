@@ -29,7 +29,7 @@ def mta(from_l, from_station, to_l, to_station)
     paths.shift
     puts "Your journey from #{from_station} to #{to_station} is through #{paths}."
     puts "Total stations : #{paths.length}"
-# When the line are different
+# When the lines are different
   else
     if from_index <= first_us_index then prev_us_paths = from_line[from_index..first_us_index]
     else prev_us_paths = from_line[first_us_index..from_index].reverse
