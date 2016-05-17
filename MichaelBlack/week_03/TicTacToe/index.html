@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Norse vs Crosses</title>
+
+  <link rel="stylesheet" type="text/css" href="swal/sweetalert.css">
+  <link rel="stylesheet" href="toggle-switch.css">
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="mainMenuBut">Reset Game</button>
+  <header>
+    <div class="startBG">
+      <img src="images/header.png" class="headImg">
+      <img src="images/title.png" class="titleImg">
+      <div class="buttons">
+        <button class="butSP">Single Player</button>
+        <button class="butMP">Multi Player</button>
+      </div>
+
+<!-- Single Play Select Start -->
+      <div class="singlePlayInput">
+        <h3>Name:</h3>
+        <input id="nameP1" type="text">
+        <h3>Select Faction</h3>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="factionP1" checked="checked">
+          <label class="onoffswitch-label" for="factionP1">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+        <img src="images/preist.png" class="factionImg">
+        <h3> Select your icon </h3>
+        <div class="iconSelectP1">
+          <img src="images/halotp.png">
+          <img src="images/crosstp.png" class="active">
+        </div>
+        <div class="modeButtons">
+          <button class="singlePlaySubmitE">EASY</button>
+          <button class="singlePlaySubmitM">MEDIUM</button>
+          <button class="singlePlaySubmitH">HARD</button>
+        </div>
+      </div>
+<!-- Single Play Select End -->
+
+<!-- Multi Play Select Start -->
+      <div class="multiPlayInput">
+
+        <div class="p1">
+          <h3>Player One Name</h3>
+          <input id="mNameP1" type="text">
+          <h3>Player One faction</h3>
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mFactionP1" checked="checked">
+            <label class="onoffswitch-label" for="mFactionP1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+          <img src="images/preist.png" class="factionImg">
+          <h3> Player One icon </h3>
+          <div class="mIconSelectP1">
+            <img src="images/halotp.png">
+            <img src="images/crosstp.png" class="active">
+          </div>
+        </div>
+
+        <div class="p2">
+          <h3>Player Two Name</h3>
+          <input id="mNameP2" type="text">
+          <h3>Player Two faction</h3>
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mFactionP2">
+            <label class="onoffswitch-label" for="mFactionP2">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+          <img src="images/viking.png" class="factionImg">
+          <h3> Player Two icon </h3>
+          <div class="mIconSelectP2">
+            <img src="images/shieldtp.png">
+            <img src="images/axetp.png" class="active">
+          </div>
+        </div>
+        <button class="multiPlaySubmit">BEGIN!</button>
+
+      </div>
+<!-- Multi Play Select End -->
+
+    </div>
+  </header>
+
+  <div class="flexContainer">
+
+    <!-- <div class="topBar">
+      <p>RESTART</p>
+    </div> -->
+
+    <div class="leftBar">
+      <h4>Player 1</h4>
+      <img src="images/shieldtp.png" class="sideBarImg">
+      <div class="score">
+        <h1>0</h1>
+      </div>
+    </div>
+
+    <div class="gameboard">
+
+      <div class="square" id="00"><img src=""></div>
+      <div class="square" id="01"><img src=""></div>
+      <div class="square" id="02"><img src=""></div>
+      <div class="square" id="10"><img src=""></div>
+      <div class="square" id="11"><img src=""></div>
+      <div class="square" id="12"><img src=""></div>
+      <div class="square" id="20"><img src=""></div>
+      <div class="square" id="21"><img src=""></div>
+      <div class="square" id="22"><img src=""></div>
+
+    </div>
+
+    <div class="rightBar">
+      <h4>Player 2</h4>
+      <img src="images/crosstp.png" class="sideBarImg">
+      <div class="score">
+        <h1>0</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="swal/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
