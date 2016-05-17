@@ -1,0 +1,9 @@
+1) Render a gameboard - individual cell ID's
+2) Start with turn X
+3) Make X appear on screen
+3) Keep a log of where X clicked (use a jQuery on click call back to put it into an object with each row)
+4) Change to O's tur
+5) Make sure O can't click where X did
+6) Keep a log of where O clicked (use a jQuery on click call back to put it into an object with each row)
+7) Make sure X can't click where O did
+8) Once a winning combination is found display this to the user

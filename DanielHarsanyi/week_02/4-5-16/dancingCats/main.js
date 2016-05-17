@@ -114,14 +114,12 @@ var changeCatToRave = function () {
     catGif.style.opacity = 1;
 };
 
-
 window.setInterval(randomCatPosition.vibratingCat, 500);
 window.setInterval(randomCatPosition.lightsaberCat, 500);
 window.setInterval(randomCatPosition.pinkCat, 500);
 window.setInterval(randomCatPosition.beanieCat, 500);
-window.setInterval(catsAppear, 12000);
+window.setInterval(catsAppear, 11500);
 window.setInterval(changeBackground, 11000);
 window.setInterval(changeCatToRave, 11000);
 
-// window.setTimeout()
 pinkCatGrowTimer = window.setInterval(pinkCatGrow, 10);
