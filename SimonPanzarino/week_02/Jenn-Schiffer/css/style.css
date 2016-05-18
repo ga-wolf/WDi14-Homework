@@ -1,0 +1,217 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  font-weight: 300;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation {
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+}
+
+.navigation ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation ul li a.active {
+  color: #edd14f;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url('http://jennmoney.biz/assets/parool.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .title {
+  position: relative;
+  height: 115px;
+  top: 35%;
+}
+
+.hero .title h1 {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+
+.hero .lead {
+  font-size: 22px;
+  margin: 0;
+  padding: 20px 0 0 0;
+  font-weight: 200;
+  color: #edd14f;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 300px;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url('http://jennmoney.biz/assets/parool.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.header .title {
+  position: relative;
+  height: 115px;
+  top: 10%;
+}
+
+.header .title h1 {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+
+.header .lead {
+  font-size: 22px;
+  margin: 0;
+  padding: 20px 0 0 0;
+  font-weight: 200;
+  color: #edd14f;
+  text-transform: uppercase;
+}
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: border-color 0.3s ease-out,
+              color 0.3s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  color: #28a9eb;
+  border-color: #28a9eb;
+  transition: border-color 0.4s ease-in,
+              color 0.4s ease-in;
+}
+
+.info {
+  background-color: #fff;
+  overflow: auto;
+}
+
+.grid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.col-3 {
+
+}
+
+.col-9 {
+}
+
+.info .trivia {
+  text-align: center;
+}
+
+.info .trivia h2 {
+  text-align: center;
+}
+
+.thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.mta.thumbnail {
+  margin-top: 50px;
+  width: 500px;
+}
+
+.info h2 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 300;
+  color: #008bd2;
+}
+
+.projects {
+  overflow: auto;
+}
+
+.project {
+  width: 25%;
+  float: left;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1060px) {
+  .info {
+    background-color: #fff;
+    padding: 150px 50px;
+    overflow: auto;
+  }
+  .grid {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .col-3 {
+    width: 218px;
+    float: left;
+    margin-right: 22px;
+  }
+
+  .col-9 {
+    width: 720px;
+    float: left;
+  }
+}

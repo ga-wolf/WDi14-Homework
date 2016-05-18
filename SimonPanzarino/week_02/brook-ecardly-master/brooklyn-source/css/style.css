@@ -20,6 +20,12 @@ body {
 	width: 964px;
 }
 
+#container {
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+}
+
 h1 {
 	color: #999;
 }
