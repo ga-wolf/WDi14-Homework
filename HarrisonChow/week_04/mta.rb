@@ -19,10 +19,10 @@ def plan_trip(start_line, start_station, stop_line, stop_station )
     if stop_station_index > start_station_index
       station_pass = @all_line[start_line.to_sym][start_station_index+1 .. stop_station_index]
     else
-      station_pass = @all_line[start_line.to_sym][stop_station_index+1 .. start_station_index]
+      station_pass = @all_line[start_line.to_sym][stop_station_index .. start_station_index-1].reverse
     end
   puts "Your must travel through the following stops"
-  puts "#{station_pass.join(' ')}"
+  puts "#{station_pass.join(', ')}"
   puts "on the #{start_line} line"
   puts "#{total_station} stops in total."
 
@@ -34,7 +34,7 @@ def plan_trip(start_line, start_station, stop_line, stop_station )
     if transfer_startline_index > start_station_index
       station_pass_startline = @all_line[start_line.to_sym][start_station_index+1 .. transfer_startline_index]
     else
-      station_pass_startline = @all_line[start_line.to_sym][transfer_startline_index+1 .. start_station_index]
+      station_pass_startline = @all_line[start_line.to_sym][transfer_startline_index .. start_station_index-1].reverse
     end
 
     if stop_station_index > transfer_stopline_index
