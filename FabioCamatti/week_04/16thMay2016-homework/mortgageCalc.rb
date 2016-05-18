@@ -21,13 +21,13 @@ user_choice = menu() # Store whatever was typed as the user_choice variable
 #Create an mortage method
 
 #In C
-// Write a procedural C++ program that calculates and displays the mortgage payment
-//amount given the amount of the mortgage, the term of the mortgage, and the interest rate of the mortgage.
-//In this program, hard code
-//the amount = $200,000
-//the term = 30 years
-//the interest rate = 5.75%.
-//Insert comments in the program to document the program.
+# // Write a procedural C++ program that calculates and displays the mortgage payment
+# //amount given the amount of the mortgage, the term of the mortgage, and the interest rate of the mortgage.
+# //In this program, hard code
+# //the amount = $200,000
+# //the term = 30 years
+# //the interest rate = 5.75%.
+# //Insert comments in the program to document the program.
 
 #include "stdafx.h"
 #include "math.h"
@@ -86,11 +86,12 @@ def mortage
   print "What is the number of installments? "
   installments = gets.to_f
 
-  # Add the two inputs give together and save the result
-  result = first_number + second_number
+   m1 = principal * ((1+interest_rate)**installments)
+   m2 = (1+interest_rate)**(installments-1)
+   main = (m1/m2)
 
   # Print these things out to the screen
-  puts "The result is #{result}"
+  puts "The result is #{main.to_i}"
 
 end
 
