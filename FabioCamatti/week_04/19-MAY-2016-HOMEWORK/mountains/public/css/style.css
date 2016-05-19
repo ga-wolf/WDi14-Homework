@@ -1,0 +1,13 @@
+body{
+  /*font-family: "Comic Sans", fantasy;*/
+  /*font-family: 'Signika', sans-serif;*/
+  /*font-family: 'Righteous', cursive;*/
+  /*font-family: 'Chewy', cursive;*/
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
