@@ -1,0 +1,13 @@
+<h3> WITNESS THE CHANS! <h3/>
+
+<ul>
+<% @chans.each do | chan | %>
+    <li>
+        <a href="/chan/<%= chan["id"] %>">
+        <p><%= chan["title"] %> </p>
+        <p> <img src="<%= chan["image"] %>"/></p>
+        <p> "<%= chan["content"] %>""</p>
+        </a>
+    </li>
+<% end %>
+</ul>
