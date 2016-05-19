@@ -1,0 +1,38 @@
+
+body {
+  background: gainsboro;
+  font-family: 'Abel', sans-serif;
+  color: #100123;
+}
+
+#mainTitle {
+  font-size: 64px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Slabo 27px', serif;
+}
+
+nav {
+  height: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#navbar {
+  color: #1b023c;
+  text-decoration: none;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+a {
+  color: #1b023c;
+  text-decoration: none;
+}

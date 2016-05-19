@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta>
+  <title>Movie Search</title>
+  <!-- Anything in the pubic folder can be accessed with just a slash -->
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Abel' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav>
+    <!-- We rely on these routes being defined in main.rb -->
+    <a href="/" id="navbar">Home</a>
+    <a href="/about" id="navbar">About</a>
+  </nav>
+
+  <!-- This yield statement is where the specified file should be loaded -->
+  <!-- erb :home will load views/home.erb in place of this yield statement -->
+  <%= yield %>
+
+</body>
+</html>
