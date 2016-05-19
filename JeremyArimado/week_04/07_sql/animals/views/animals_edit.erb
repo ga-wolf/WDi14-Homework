@@ -1,0 +1,15 @@
+<form method="POST" action="/animal/<%= @animal["id"] %>">
+    <p>
+        <label> Name: </label>
+        <input type="text" name="species" value="<%= @animal["species"] %>">
+    </p>
+    <p>
+        <label> Image: </label>
+        <input type="text" name="image" value="<%= @animal["image"] %>">
+    </p>
+    <p>
+        <label> Desc: </label>
+        <input type="text" name="description" value="<%= @animal["description"] %>">
+    </p>
+    <input type="submit" value="save changes">
+</form>

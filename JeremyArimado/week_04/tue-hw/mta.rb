@@ -28,4 +28,4 @@ def tripView(line_a, dest_a, line_b, dest_b, station_hash)
 
 end
 
-tripView(:n, 'Times Square', :l, '1st',  station);
+tripView(:n, 'Times Square', :l, '1st',  station); 
