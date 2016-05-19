@@ -1,0 +1,96 @@
+body {
+  font-family: 'Sirin Stencil', cursive;
+  background-color: yellow;
+}
+
+.enterButton {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  color: purple;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  background-image:url("https://cbmultiverso.files.wordpress.com/2016/04/2-equipo.jpg?w=1200");
+  height: 666px;
+  width: 100vw;
+}
+
+h2 {
+  font-size: 70px;
+  text-align: center;
+  color: purple;
+}
+
+nav {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: #100123;
+  font-size: 16px;
+}
+
+br {
+  padding-top: 20px;
+}
+
+a {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: purple;
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 46px;
+  text-align: center;
+  color: purple;
+}
+
+h3, h4, h2 {
+  font-family: 'Bangers', cursive;
+}
+
+h4 {
+  font-size: 33px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+h5 {
+  font-size: 24px;
+  margin-left: 40px;
+}
+
+p {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  padding: 20px;
+}
+
+input {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#bottomButtons {
+  font-family: 'Knewave', cursive;
+  font-size: 20px;
+  padding: 13px;
+  text-decoration: none;
+  color: #100123;
+  margin-left: 27px;
+}
+
+#showImage {
+  margin-left: 45px;
+}

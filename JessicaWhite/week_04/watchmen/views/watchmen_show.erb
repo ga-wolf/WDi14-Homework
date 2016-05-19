@@ -1,0 +1,20 @@
+
+<h4><%= @watchmen["name"] %> AKA: <%= @watchmen["aka"] %></h4>
+
+<img src="<%= @watchmen["image"] %>" id="showImage">
+
+<p>
+  <%= @watchmen["description"] %>
+</p>
+
+<a href="/watchmen/<%= @watchmen["id"] %>/delete" id="bottomButtons">
+  Prefer the dark side? Kill someone
+</a>
+
+<a href="/watchmen/<%= @watchmen["id"] %>/edit" id="bottomButtons">
+  Len Wein, is that you?
+</a>
+
+<a href="/watchmen" id="bottomButtons">
+  Moore
+</a>
