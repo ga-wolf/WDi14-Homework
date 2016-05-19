@@ -1,0 +1,20 @@
+<% if @all_results.length == 1 %>
+  <h3> You searched for '<%= @user_movie %>'</h3>
+  <img src="<%= @poster_of_first_result %>">
+  <h2><a href="/movie">Search for another movie!</a></h2>
+
+<% else %>
+<h3> You searched for '<%= @user_movie %>' however there are several results. Please see all the results below.</h3>
+<h2><a href="/movie">Search for another movie!</a></h2>
+  <ul>
+    <% @all_results.each do |i| %>
+    <% @title = i["Title"] %>
+    <% @poster_of_multiple_result = i["Poster"]  %>
+    <div>
+      <%=@title %>
+      <br>
+      <img src="<%= @poster_of_multiple_result %>">
+    </div>
+    <% end %>
+
+  <% end %>

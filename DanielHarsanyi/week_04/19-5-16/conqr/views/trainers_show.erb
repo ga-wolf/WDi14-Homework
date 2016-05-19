@@ -1,0 +1,37 @@
+
+<h2>
+  <%= @trainer["first_name"] %>
+  <%= @trainer["last_name"] %>
+</h2>
+
+<p>
+  <img class="profile_image" src="<%= @trainer["image"]%>">
+</p>
+
+<h3>
+  Specialties: <%= @trainer["specialties"] %>
+</h3>
+
+<p>
+  Fitness Australia ID: <%= @trainer["registration_id"] %>
+</p>
+
+<hr>
+
+<p>
+  <a href="/trainers/<%= @trainer["id"] %>/edit">
+    Edit this trainer
+  </a>
+</p>
+
+<p>
+  <a href="/trainers/<%= @trainer["id"] %>/delete">
+    Delete this trainer
+  </a>
+</p>
+
+<p>
+  <a href="/trainers">
+    See all of our trainers
+  </a>
+</p>
