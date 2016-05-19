@@ -1,11 +1,9 @@
-<h3>This should show a single mountain</h3>
-
 <h4>
-<p><%= @mountain["name"] %> - Official Elevation <%= @mountain["elevation"] %>m </p>
+<p><%= @mountain["name"] %> - Official Elevation - <%= @mountain["elevation"] %> m </p>
 </h4>
 <p>
   <a href="/mountains/<%= @mountain["id"] %>">
-    <img class="responsive-img" src="<%= @mountain["image"] %>" alt="">
+    <img class="responsive-img z-depth-3" src="<%= @mountain["image"] %>" alt="">
   </a>
 </p>
 
@@ -24,7 +22,7 @@
 </a> -->
 <a class="btn-floating btn-large waves-effect waves-light" href="/mountains/<%= @mountain["id"] %>/delete"><i class="material-icons">delete</i></a>
 <a class="btn-floating btn-large waves-effect waves-light" href="/mountains/<%= @mountain["id"] %>/edit"><i class="material-icons">mode_edit</i></a>
-<a class="btn-floating btn-large waves-effect waves-light" href="/mountains"><i class="material-icons">view_module</i></a>
+<a class="btn-floating btn-large waves-effect waves-yellow" href="/mountains"><i class="material-icons">view_module</i></a>
 
 <!-- <a href="/mountains">
   View All

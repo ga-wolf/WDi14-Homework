@@ -11,24 +11,40 @@
   <title>Mountains</title>
 </head>
 <body>
+  <div class="hiddendiv common"></div>
+  <header class="header indigo teal lighten-3">
+    <h1>My Mountains</h1>
 
-  <h1>My Mountains</h1>
-
-  <nav>
-      <div class="nav-wrapper teal lighten-3">
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="/">Home</a></li>
-          <li><a href="/mountains">All Mountains</a></li>
-          <li><a href="/mountains/new">Create an mountains</a></li>
-        </ul>
-      </div>
-    </nav>
-
+    <nav class="indigo z-depth-0">
+        <div class="nav-wrapper teal lighten-3">
+          <ul id="nav-mobile" class="hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/mountains">All Mountains</a></li>
+            <li><a href="/mountains/new">Create an mountains</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
 
 
   <div class="container">
   <%= yield %>
   </div>
+
+  <!-- <footer class="page-footer teal lighten-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">My Mountains</h5>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright
+            </div>
+          </div>
+        </footer> -->
 
 </body>
 </html>

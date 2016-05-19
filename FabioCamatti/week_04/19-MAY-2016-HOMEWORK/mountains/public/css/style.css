@@ -5,9 +5,58 @@ body{
   /*font-family: 'Chewy', cursive;*/
   font-family: 'Fredoka One', cursive;
   text-align: center;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .container{
   max-width: 960px;
   margin: 0 auto;
+}
+
+.row .col.l6 {
+  width: 100%;
+}
+
+.childContainer{
+  font-size: 1.6em;
+}
+
+.indigo {
+    background-color: #80CBC4;
+}
+
+.nav-wrapper{
+  text-align: center;
+}
+
+.responsive-img{
+  border-radius: 35px;
+}
+header{
+  flex: 1 0 auto;
+  /*width: 100%;*/
+  text-align: center;
+  padding: 2em;
+}
+header nav{
+  margin-right: auto;
+  margin-left: auto;
+}
+header nav ul {
+    margin: 0 auto;
+}
+header nav ul li a{
+  position: relative;
+    color: #000;
+    letter-spacing: -1px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.6em;
+    margin: 0 25px;
+}
+.container form p label{
+  font-size: 1.2em;
 }

@@ -1,18 +1,16 @@
-<hr>
 <% @all_mountains.reverse_each do |mountain| %>
   <h4>
-  <p><%= mountain["name"] %> - Official Elevation <%= mountain["elevation"] %>m </p>
+    <p><%= mountain["name"] %> - Official Elevation - <%= mountain["elevation"] %>m </p>
   </h4>
 
   <p>
     <a href="/mountains/<%= mountain["id"] %>">
-      <img class="responsive-img" src="<%= mountain["image"] %>" alt="">
+      <img class="responsive-img z-depth-5" src="<%= mountain["image"] %>" alt="">
     </a>
   </p>
 
-  <p>
+  <p class="childContainer">
     <%= mountain["location"] %>
   </p>
 
-  <hr>
 <% end %>
