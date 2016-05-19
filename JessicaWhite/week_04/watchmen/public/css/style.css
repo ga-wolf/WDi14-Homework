@@ -1,6 +1,7 @@
 body {
   font-family: 'Sirin Stencil', cursive;
   background-color: yellow;
+  color: #100123;
 }
 
 .enterButton {
@@ -19,6 +20,7 @@ h1 {
 h2 {
   font-size: 70px;
   text-align: center;
+  text-decoration: underline;
   color: purple;
 }
 
@@ -84,13 +86,18 @@ input {
 
 #bottomButtons {
   font-family: 'Knewave', cursive;
-  font-size: 20px;
+  font-size: 18px;
   padding: 13px;
   text-decoration: none;
-  color: #100123;
+  margin-top: 60px;
+  color: purple;
   margin-left: 27px;
 }
 
 #showImage {
   margin-left: 45px;
+}
+
+#alignButton {
+  margin-left: 40px;
 }
