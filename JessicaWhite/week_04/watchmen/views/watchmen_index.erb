@@ -1,0 +1,18 @@
+<h2>The Lineup</h2>
+
+<% @all_watchmen.each do |hero| %>
+  <h5>
+    <%= hero["name"] %> AKA: <%= hero["aka"] %>
+  </h5>
+
+  <p>
+    <a href="/watchmen/<%= hero["id"] %>">
+      <img src ="<%= hero["image"] %>">
+    </a>
+  </p>
+
+  <p>
+    <%= hero["description"] %>
+  </p>
+  <hr>
+<% end %>

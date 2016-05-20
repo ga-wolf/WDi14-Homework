@@ -1,0 +1,22 @@
+<h3>Don't think an existing hero is good enough?</h3>
+<div class="editHeroes">
+  <form action="/watchmen/<%= @watchmen["id"] %>" method="POST">
+    <p>
+      <label>Name: </label>
+      <input type="text" name="name" value="<%= @watchmen["name"] %>">
+    </p>
+    <p>
+      <label>AKA: </label>
+      <input type="text" name="aka" value="<%= @watchmen["aka"] %>">
+    </p>
+    <p>
+      <label>Image: </label>
+      <input type="text" name="image" value="<%= @watchmen["image"] %>">
+    </p>
+    <p>
+      <label>Description: </label>
+      <input type="text" name="description" value="<%= @watchmen["description"] %>" id="describe">
+    </p>
+    <input type="submit" value="Update this Watchman">
+  </form>
+</div>
