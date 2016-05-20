@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Source+Sans+Pro:400,300,700|Oxygen:400,300,700|Open+Sans:400,600);
+
+/*FONT FAMILIES*/
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Quicksand', sans-serif;*/
+
+/*COLOURS:
+navy:#4d5e80;
+charcoal:	#404040;
+grey:#a6a6a6*/
+
+
+
+h1 {
+  position: fixed;
+  font-family: 'Oxygen', sans-serif;
+  color: white;
+  font-size: 150px;
+  /*-webkit-text-stroke: 3px black;*/
+  text-transform: uppercase;
+}
+
+h4{
+  color:white;
+}
+
+.title {
+  margin-left: 150px;
+  z-index: -10;
+}
+
+
+h2{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: 10;
+}
+
+h3 {
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  z-index: 10;
+  color: white;
+}
+
+.PlayerX{
+  width: 250px;
+  margin-top: 70px;
+  margin-left: 50px;
+  color:#d9d9d9;
+  border-bottom:1px solid #d9d9d9;
+  z-index: 1000;
+}
+
+.PlayerO{
+  width: 250px;
+  margin-top: 100px;
+  margin-left: 50px;
+  color:#f76b82;
+  border-bottom:1px solid #f76b82;
+}
+
+a {
+  text-decoration:none;
+   }
+
+.imabutton{
+   border: 2px solid white;
+   font-family:'Source Sans Pro', sans-serif;
+   font-size: 15px;
+   text-transform: uppercase;
+   margin-left: 110px;
+   margin-top: 30px;
+   background: #4d5e80;
+   color:white;
+ }
+
+ .replay{
+  border: 2px solid white;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #4d5e80;
+  color: white;
+  }
+
+ .container{
+  width:1230px;
+  z-index: 100;
+}
+
+
+.bottom {
+  background:#4d5e80;
+  height: 480px;
+  position: relative;
+  z-index:-6;
+}
+
+.top {
+  background: white;
+  height: 420px;
+  position: relative;;
+  z-index: -6;
+}
+
+ .container .leftContent{
+  float: left;
+  background: transparent;
+  width:100vh;
+  height: 60%;
+}
+
+.grid{
+  width:420px;
+  height:420px;
+  /*border: 1px solid black;*/
+  position: absolute;
+  margin: 95px 676px;
+  z-index: 10000;
+}
+
+ .grid .pixel {
+  float:left;
+  width: 98px;
+  height: 98px;
+  background: #404040;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 15px;
+  }
+
+.content {
+  margin-top: 180px;
+  margin-left: 50px;
+  width: 370px;
+  height:150px;
+}
+
+.box {
+  width:50px;
+  height:2px;
+  background: black;
+  margin-top: 35px;
+  margin-left: 60px;
+  background: white;
+}
+
+.grid .playerX {
+  width: 94px;
+  height: 94px;
+  background: transparent;
+  border:2px solid #666666;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url("images/greyxcursor.png");
+  background-size:65px 65px;
+  background-repeat: no-repeat;
+   /*position: relative;*/
+  background-position: center;
+}
+
+.grid .playerO {
+  width: 94px;
+  height: 94px;
+  background: transparent;
+  border:2px solid #666666;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url("images/pinkocursor.png");
+  background-size:65px 65px;
+  background-repeat: no-repeat;
+   /*position: relative;*/
+  background-position: center;
+}
+
+  p{
+  margin-left: 60px;
+  margin-top: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+}
+
+body{
+  overflow: hidden;
+}
+
+.winner {
+  height: 500px;
+  width: 500px;
+  background:#4d5e80;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  margin-top: 425px;
+  margin-left: 50px;
+}
+
+.tie {
+  height: 500px;
+  width: 500px;
+  background:#4d5e80;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  margin-top: 425px;
+  margin-left: 50px;
+}

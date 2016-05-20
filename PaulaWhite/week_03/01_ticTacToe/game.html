@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Source+Sans+Pro:400,300,700|Oxygen:400,300,700|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+
+  <!-- <BODY style="CURSOR: url('images/xcursor')"> tying to add my cursor to the
+html to text if my link works -->
+
+
+<div class="container">
+  <div class="leftContent">
+
+    <!-- <div class="players"> -->
+    <div class="PlayerX"><h2>Player X</h2></div>
+    <div class="PlayerO"><h2>Player O</h2></div>
+  <!-- </div> -->
+
+<div class="content">
+    <h3>Before we start</h3>
+
+    <div class="box"></div>
+
+  <p>A game for two players, X and O, each player takes turns marking the spaces in the grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+  </div>
+
+  <button type="button" class="imabutton">Lets Play</button></div>
+
+  <div class="rightContent"></div>
+
+  <div class="grid">
+    <!-- <div class="pixel1 pixel playerX"><div class="X"></div></div>
+    <div class="pixel2 pixel playerO"><div class="O"></div></div> -->
+    <div class="pixel1 pixel" data-row='0' data-column='0'></div>
+    <div class="pixel2 pixel" data-row='0' data-column='1'></div>
+    <div class="pixel3 pixel" data-row='0' data-column='2'></div>
+    <div class="pixel4 pixel" data-row='1' data-column='0'></div>
+    <div class="pixel5 pixel" data-row='1' data-column='1'></div>
+    <div class="pixel6 pixel" data-row='1' data-column='2'></div>
+    <div class="pixel7 pixel" data-row='2' data-column='0'></div>
+    <div class="pixel8 pixel" data-row='2' data-column='1'></div>
+    <div class="pixel9 pixel" data-row='2' data-column='2'></div>
+  </div>
+  </div>
+
+  <div class="winner" style="display: none;"><h4 id="congratulations"></h4>
+  <button type="button" class="replay">Play again</button></div>
+
+
+    <div class="tie" style="display: none;"><h4>No one wins</h4>
+    <button type="button" class="replay">Play again</button></div>
+
+
+
+
+
+
+
+
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+<script src="dist/sweetalert.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*BACKGROUND IMAGE - MINI SCORE BOARD*/
+
+body {
+  background:
+    url("images/score.jpg");
+    background-repeat: no-repeat;
+    background-position: 350px 45px;
+}
+
+
+h1{
+  position: absolute;
+  text-align: center;
+  margin-left: 475px;
+  margin-top: 150px;
+  font-family: 'Oxygen', sans-serif;
+  color: transparent;
+  /*color: lightgrey;*/
+  font-size: 50px;
+  -webkit-text-stroke: 2px #55595e;
+  text-transform: uppercase;
+}
+
+.horizontal .vertical{
+  display: block;
+}
+/*HORIZONTAL BUTTON LINKS TO PAGE*/
+.horizontal{
+  margin-top: 250px;
+  margin-left: 10px;
+  float: left;
+  text-align: center;
+  border: 2px solid #2d5986;
+  color: #2d5986;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: transparent;
+
+
+}
+/*VERTICAL BUTTON LINKS TO PAGE*/
+.vertical{
+  margin-top: 250px;
+  margin-left: 475px;
+  float: left;
+  text-align: center;;
+  border: 2px solid #00cccc;
+  color: #00cccc;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  background: transparent;
+}
