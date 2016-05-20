@@ -56,6 +56,6 @@ end
 
 # plan_trip :n, "34th", :n, "8th"
 # plan_trip :n, "8th", :n, "28th"
-# plan_trip :n, "Times Square", :l, "8th"
+plan_trip :n, "8th", :l, "8th"
 # plan_trip :n, "Times Square", :l, "1st"
 # plan_trip :n, "Times Square", :"6", "33rd"
