@@ -1,0 +1,9 @@
+<p> movie.erb </p>
+<hr>
+<% @result.each do |key, value| %>
+    <% if value.split(//).last(3).join === 'jpg' %>
+        <p> <img src="<%= value %>"/> </p>
+    <% else %>
+        <p> <%= key %> : <%= value %> </p>
+    <% end %>
+<% end %> 
