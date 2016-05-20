@@ -59,7 +59,8 @@ post "/mountains/:id" do
 
   db.execute "UPDATE mountains SET name='#{params[:name]}', location='#{params[:location]}', elevation='#{params[:elevation]}' , image='#{params[:image]}' WHERE id == #{params[:id]};"
 
-  redirect "/mountains/#{params[:id]}"
+  # redirect "/mountains/#{params[:id]}"
+  redirect '/'
 
 end
 
