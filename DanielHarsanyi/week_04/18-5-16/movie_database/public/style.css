@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(59, 89, 152);
+  text-align: center;
+  color: white;
+  font-family: Arial;
+}
+
+div {
+  display: block;
+  margin: 50px;
+  padding-bottom: 10px;
+  /*max-width: 100px;*/
+  float: left;
+}
+
+img {
+  margin-top: 40px;
+}
+
+h2 > a {
+  font-size: 24px;
+  margin-top: 40px;
+  color: white;
+}
+
+
+h3 {
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+nav {
+  margin-top: -10px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav > :hover {
+  text-decoration: underline;
+}
+
+p > a {
+  color: white;
+}

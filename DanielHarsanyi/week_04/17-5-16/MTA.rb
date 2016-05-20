@@ -85,7 +85,7 @@ end
 
 def plan_trip(depart_line, depart_station, destination_line, destination_station)
   if depart_station == destination_station
-    puts "Walk you lazy fuck."
+    puts "Walk - get some exercise."
   elsif are_lines_same(depart_line, destination_line) == true
     same_line_trip(depart_line, depart_station, destination_station)
   else
