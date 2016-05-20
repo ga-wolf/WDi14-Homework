@@ -1,0 +1,19 @@
+<hr>
+
+<% @cars.reverse_each do |car| %>
+<div class="showList"><p>
+  <a href="cars/<%= car["id"] %>">
+    <div class="hover01 column">
+    		<div>
+    			<figure><img src="<%= car["image"] %>" height="210" width="340"></figure>
+    		</div>
+    </div>
+  </a>
+  <p><%= car["model"] %></p>
+
+</p>
+
+</div>
+
+<% end %>
+<hr>
