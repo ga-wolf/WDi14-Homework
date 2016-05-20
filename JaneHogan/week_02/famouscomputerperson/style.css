@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);
+
+/*Structural elements*/
+
+header {
+  background-color: #D7DCBA;
+  height: 15%;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-style: dotted;
+}
+
+.bigdiv {
+  background-color: #F7F7EB;
+  text-align:center;
+  height: 40vh;
+}
+
+.littledivHome{
+  width: 25%;
+  height: 70%;
+  float: left;
+  background-color: #D7DCBA;
+  box-shadow: 0 0 0 15px #F7F7EB;
+  margin-bottom: 1px;
+}
+
+.littledivPage{
+  width: 25%;
+  height: 20%;
+  float: left;
+  background-color: #D7DCBA;
+  box-shadow: 0 0 0 15px #F7F7EB;
+  margin-bottom: 20px;
+}
+
+article {
+  background-color:#D7DCBA;
+  height:25%;
+  width: 90%;
+  margin: 50px;
+  border-style: dotted;
+
+}
+.maintext{
+  background-color:pink;
+  text-align: center;
+  height: 90%;
+  width: 90%;
+  margin: 5px;
+  border-style: dotted;
+
+}
+
+a {
+  color: #868B6B;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+    color:pink;
+  }
+
+
+footer {
+  color: orange;
+  font-size: 10px;
+  height: 8vh;
+  background-color: #868B6B;
+
+}
+/*Text elements*/
+body {
+font-family: 'Dosis', sans-serif;
+font-weight: 300;
+font-size: 20px;
+color: #868B6B;
+background-color: #F7F7EB;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 60px;
+}
+h2 {
+  font-size:30px;
+  font-weight: 200;
+  text-align: center;
+}
+
+
+p {
+  color: #868B6B;
+  text-align: center;
+}
+
+.myimage {
+    border: 10px;
+    text-align: center;
+  }
+
+}
+i.class {
+  display:inline;
+  font-size: 200px;
+  color: aliceblue;
+}
