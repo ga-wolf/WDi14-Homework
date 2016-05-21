@@ -1,0 +1,7 @@
+<h3>There were multiple results! Choose one!</h3>
+<ul>
+  <% @result["Search"].each do |movie| %>
+    <li><a href="/movie?movie=<%= movie["Title"] %>&bool=true&id=<%= movie["imdbID"] %>"><%= movie["Title"] %></a></li>
+  <% end %>
+</ul>
+<%= @pick %>

@@ -1,0 +1,10 @@
+<h2>All Cards</h2>
+<ul>
+<% @all_cards.each do |card| %>
+  <li>
+    <div class="col-sm-4">
+      <a href="/cards/<%= card["id"] %>" class="thumbnail"><img src="<%= card["image"] %>"></a>
+    </div>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h2><%= @card["name"] %></h2>
+<p><%= @card["description"] %></p>
+<img class="thumbnail responsive" src="<%= @card["image"] %>">
+<div class="row">
+  <div class="col-sm-2 col-sm-offset-4">
+    <a class="btn btn-info btn-block" href="/cards/<%= @card["id"] %>/edit">Edit</a>
+  </div>
+  <div class="col-sm-2">
+    <a class="btn btn-danger btn-block" href="/cards/<%= @card["id"] %>/delete">Delete</a>
+  </div>
+</div>
