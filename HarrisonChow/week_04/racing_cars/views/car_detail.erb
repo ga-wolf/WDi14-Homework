@@ -1,0 +1,17 @@
+
+<!-- <div class="main"> -->
+  <div class="photo">
+    <p><img src="<%= @car[0]["image"] %>">
+      <a href="/<%= @car[0]["id"] %>/delete"> Delete </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/<%= @car[0]["id"] %>/car_update">Modify</a>
+    </p>
+  </div>
+  <div class="details">
+    <p><%= @car[0]["model"] %></p>
+    <p><%= @car[0]["make"] %></p>
+    <p><%= @car[0]["year"] %></p>
+    <p><%= @car[0]["price"] %></p>
+    <p><%= @car[0]["description"] %></p>
+  </div>
+<!-- <div> -->

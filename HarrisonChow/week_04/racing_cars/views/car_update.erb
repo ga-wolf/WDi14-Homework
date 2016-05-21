@@ -1,0 +1,22 @@
+
+<div class="form">
+
+  <form action="/<%= @car[0]["id"] %>/car_update" method="POST">
+    <div class="form_left"><label>Model:</label></div>
+    <div class="form_right"><input type="text" name="model" value="<%= @car[0]["model"] %>"></div>
+    <div class="form_left"><label>Make:</label></div>
+    <div class="form_right"><input type="text" name="make" value="<%= @car[0]["make"] %>"></div>
+    <div class="form_left"><label>Year:</label></div>
+    <div class="form_right"><input type="text" name="year" value="<%= @car[0]["year"] %>"></div>
+    <div class="form_left"><label>Price:</label> </div>
+    <div class="form_right"><input type="text" name="price" value="<%= @car[0]["price"] %>"></div>
+    <div class="form_left"><label>Description:</label></div>
+    <div class="form_right"><textarea name="description"><%= @car[0]["description"] %></textarea></div>
+    <div class="form_left"><label>Image:</label></div>
+    <div class="form_right"><input type="text" name="image" value="<%= @car[0]["image"] %>"></div>
+
+    <div class="form_bottom"><input type="submit" value="UPDATE"></div>
+  </form>
+
+
+</div>
