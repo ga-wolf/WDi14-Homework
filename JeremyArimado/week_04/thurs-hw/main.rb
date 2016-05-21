@@ -2,7 +2,17 @@ require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
 require "sqlite3"
-@dbase = "database.db"
+require 'active_record'
+
+ActiveRecord::Base.establish_connection(
+    :adapter => 'sqlite3',
+    :database => 'database.db'
+);
+
+ActiveRecord::Base.logger = Logger.new(STDERR);
+
+class Chan < ActiveRecord::Base
+end
 
 def commandDb (sqlCommand)
     db = SQLite3::Database.new "database.db";
@@ -11,7 +21,7 @@ def commandDb (sqlCommand)
 end
 
 get '/' do
-    @chans = commandDb("SELECT * FROM chans;");
+    @chans = Chan.all()
     erb :home
 end
 
@@ -23,24 +33,26 @@ post '/new' do
     title = params[:title];
     image = params[:image];
     content = params[:content];
-    sql = "INSERT INTO chans (title, image, content)";
-    sql << " VALUES ('#{title}', '#{image}', '#{content}');";
-    commandDb(sql);
+    Chan.create({
+        :title => title,
+        :image => image,
+        :content => content
+    });
+
     redirect "/"
 end
 
 get '/chan/:id' do
     current_id = params[:id];
-    sql = "SELECT * FROM chans WHERE id == #{current_id};";
-    @chan = commandDb(sql)[0];
+    current_chan = Chan.find(current_id);
+    @chan = current_chan;
     erb :chan;
 end
 
 
 get '/chan/:id/edit' do
     current_id = params[:id];
-    sql = "SELECT * FROM chans WHERE id == #{current_id};";
-    @chan = commandDb(sql)[0];
+    @chan = Chan.find(current_id);
     erb :edit;
 end
 
@@ -49,14 +61,19 @@ post '/chan/:id' do
     title = params[:title];
     image = params[:image];
     content = params[:content]
-    sql = "UPDATE chans SET title = '#{title}', image = '#{image}', content = '#{content}' WHERE id = #{current_id};";
-    commandDb(sql);
+    new_chan = Chan.find(current_id);
+    new_chan.update(
+        :title => title,
+        :image => image,
+        :content => content
+    );
+    new_chan.save;
     redirect "/chan/#{current_id}"
 end
 
 get '/chan/:id/delete' do
     current_id = params[:id];
-    sql = "DELETE FROM chans WHERE id == #{current_id};";
-    @chan = commandDb(sql);
+    kill_chan = Chan.find(current_id);
+    kill_chan.destroy();
     redirect '/';
 end

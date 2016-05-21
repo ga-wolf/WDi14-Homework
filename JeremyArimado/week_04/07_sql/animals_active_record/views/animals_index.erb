@@ -1,0 +1,11 @@
+<h3> This is the index! <h3/>
+
+<ul>
+<% @all_animals.each do | animal | %>
+    <li>
+        <p> ID:  <%= animal["id"] %> </p>
+        <p> SPECIES: <%= animal["species"] %></p>
+        <p> IMG: <img src="<%= animal["image"] %>"/></p>
+    </li>
+<% end %>
+</ul>
