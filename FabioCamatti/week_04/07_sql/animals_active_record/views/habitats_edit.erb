@@ -1,0 +1,12 @@
+<form action="/habitats/<%= @habitat.id %>" method="POST">
+  <p>
+    <label>Landscape:</label>
+    <input type="text" name="landscape" value="<%= @habitat.landscape %>">
+  </p>
+  <p>
+    <label>Climate:</label>
+    <input type="text" name="landscape" value="<%= @habitat.climate %>">
+  </p>
+
+  <input type="submit" value="Edit a record">
+</form>

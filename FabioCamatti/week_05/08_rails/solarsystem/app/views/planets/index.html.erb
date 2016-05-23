@@ -1,0 +1,14 @@
+<h3>app/views/planets/index.html.erb</h3>
+<h4>This should show all of the planets</h4>
+
+<ul>
+<% @planets.each do |planet| %>
+  <li>
+    <a href="/planets/<%= planet.id %>">
+    <%= planet.name %>
+    </a>
+    has <%= pluralize( planet.moons, 'moon' ) %>.
+  </li>
+
+<% end %>
+</ul>

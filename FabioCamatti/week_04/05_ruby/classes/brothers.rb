@@ -4,7 +4,14 @@ require "pry"
 
 class MarxBrother
 
-  attr_writer( :first_name, :last_name, :vice, :best_performance)
+  attr_writer( :first_name, :last_name, :vice, :best_performance )
+
+  def initialize( first_name, last_name  = "Marx", vice  = "Being terrific", best_performance = "Duck Soup")
+    @first_name = first_name
+    @last_name = last_name
+    @vice = vice
+    @best_performance = best_performance
+  end
 
   def full_name
     "#{@first_name} #{@last_name}"
@@ -58,23 +65,40 @@ class MarxBrother
   end
 end
 
-m = MarxBrother.new
-m.first_name=( "Groucho" )
-m.last_name=("Marx")
-m.best_performance=("The Three Stooges")
-m.vice = "Cigars"
+m = MarxBrother.new "Groucho", "Marx", "The Three Stooges", "Cigars"
+# m.first_name=( "Groucho" )
+# m.last_name=("Marx")
+# m.best_performance=("The Three Stooges")
+# m.vice = "Cigars"
 p m.indentify
 
-zeppo = MarxBrother.new
-zeppo.first_name=( "Zeppo" )
-zeppo.last_name=("Marx")
-zeppo.best_performance=("Duck Soup")
-zeppo.vice = "Guitars"
+zeppo = MarxBrother.new "Zeppo", "Marx", "Duck Soup", "Guitars"
+# zeppo.first_name=( "Zeppo" )
+# zeppo.last_name=("Marx")
+# zeppo.best_performance=("Duck Soup")
+# zeppo.vice = "Guitars"
 p zeppo.indentify
 
 class Dog
   attr_accessor :breed, :name, :fur_colour
+
+  def initialize( breed, name, fur_colour)
+    @breed = breed
+    @name = name
+    @fur_colour = fur_colour
+  end
 end
+
+
+# tammy = Dog.new
+# tammy.breed = "Tamaskan"
+# tammy.name = "Tammy"
+# tammy.fur_colour = "Black"
+
+buddy = Dog.new "Labrador", "Buddy", "Golden"
+# buddy.breed = "Labrador"
+# buddy.name = "Buddy"
+# buddy.fur_colour = "Golden"
 
 binding.pry
 puts ""

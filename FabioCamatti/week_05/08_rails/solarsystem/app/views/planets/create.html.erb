@@ -1,0 +1,39 @@
+<h2>Edit <%= @planet.name %></h2>
+
+<form action="/planets/<%= @planet.id %>" method="POST">
+
+  <p>
+    <label >Name:</label>
+    <input type="text" name="planet[name]" value="<%= @planet.name %>">
+  </p>
+
+  <p>
+    <label >Image:</label>
+    <input type="text" name="planet[image]" value="<%= @planet.image %>">
+  </p>
+
+  <p>
+    <label >Orbit:</label>
+    <input type="text" name="planet[orbit]" value="<%= @planet.orbit %>">
+  </p>
+
+  <p>
+    <label >Diameter:</label>
+    <input type="text" name="planet[diameter]" value="<%= @planet.diameter %>">
+  </p>
+
+  <p>
+    <label >Moons:</label>
+    <input type="text" name="planet[moons]" value="<%= @planet.moons %>">
+  </p>
+
+  <input type="submit" value="Update <%= @planet.name %>">
+
+</form>
+
+<p>
+  <%= link_to( " Home", "/planets") %>
+  <%= link_to( "| #{@planet.name} details", "/planets/#{@planet.id}") %>
+</p>
+<p>
+</p>
