@@ -1,0 +1,16 @@
+<!-- Loaded in place of our yield -->
+
+
+<!-- Print out the value of the instance variable result -->
+<div class="results"><h3> Requested Movie: <%= @result["Title"]%></h3></div>
+
+
+
+<div class="poster">
+<% img = @result["Poster"]%><img src="<%= img %>" alt="Poster"></div>
+
+
+
+<!-- Add a link so that we can calculate other things -->
+
+<a href="/movie"><h4>Search for another movie</h4></a>
