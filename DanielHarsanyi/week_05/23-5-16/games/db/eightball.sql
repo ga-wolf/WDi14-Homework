@@ -1,0 +1,4 @@
+CREATE TABLE eightballs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  answer TEXT
+);
