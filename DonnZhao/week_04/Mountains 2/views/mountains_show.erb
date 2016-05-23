@@ -1,0 +1,18 @@
+<p> this is mountain_show</p>
+
+
+
+<%=@all_mountains%>
+
+<hr>
+<p>mountain id: <%=@mountain["id"]%></p>
+<p> mountain name:<%=@mountain["name"]%> </p>
+
+<img src="<%=@mountain["image"]%>">
+
+
+<p><%=@mountain["description"]%></p>
+<a href="/mountains/<%=@mountain["id"]%>/edit">edit</a>
+
+<a href="/mountains">home</a>
+<hr>

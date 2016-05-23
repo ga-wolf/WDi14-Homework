@@ -1,0 +1,22 @@
+<hr>
+
+<p>hello this is the index of mouuntains</p>
+
+
+<%@all_mountains.each do |mountain|%>
+
+
+<hr>
+
+<p> mountain name:<%=mountain["name"]%> </p>
+
+
+<a href="mountains/<%=mountain["id"]%>"><img src="<%=mountain["image"]%>"></a>
+<a href="mountains/<%=mountain["id"]%>/delete">delete</a>
+<a href="mountains/<%=mountain["id"]%>/edit">edit</a>
+
+<p><%=mountain["description"]%> </p>
+
+<hr>
+
+<% end %>
