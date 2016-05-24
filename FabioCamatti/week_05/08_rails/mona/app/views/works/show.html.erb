@@ -1,0 +1,23 @@
+<h1><%= @work.title %></h1>
+<%= image_tag @work.image, :class => 'feature' %>
+<% if @work.artist %>
+<%# unless @work.artist.nil? %>
+  <p>Artist: <%= link_to( @work.artist.name, @work.artist) %></p>
+<% end %>
+  <p>Title: <%= @work.title %></p>
+  <p>Year: <%= @work.year %></p>
+  <p>Medium: <%= @work.medium %></p>
+  <p>Sytle: <%= @work.style %></p>
+
+<div class="controls">
+
+  <%= link_to "Edit Work", edit_work_path( @work ) %>
+  <!-- #Because it was declare resources :works, :artists at routes file you can use the shortcut -->
+
+  <%= link_to "Delete Work", @work, :method => :delete, :data =>
+
+    { :confirm => 'Are you sure?'}
+
+   %>
+
+</div>
