@@ -1,0 +1,28 @@
+<form method="POST" action="/robins/<%= @robins["id"] %>">
+  <p>
+    <label>Full Name: </label>
+    <input type="text" name="full_name" value="<%= @robins["full_name"] %>">
+  </p>
+
+  <p>
+    <label>Alias: </label>
+    <input type="text" name="alias" value="<%= @robins["alias"] %>">
+  </p>
+
+  <p>
+    <label>Biography: </label>
+    <input type="text" name="bio" value="<%= @robins["bio"] %>">
+  </p>
+
+  <p>
+    <label>Cause of death: </label>
+    <input type="text" name="cause_of_death" value="<%= @robins["cause_of_death"] %>">
+  </p>
+
+  <p>
+    <label>Image: </label>
+    <input type="text" name="image" value="<%= @robins["image"] %>">
+  </p>
+
+  <input type="submit" value="Update Robin">
+</form>

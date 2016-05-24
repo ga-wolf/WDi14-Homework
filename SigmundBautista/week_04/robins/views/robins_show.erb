@@ -1,0 +1,14 @@
+<h3><%= @robins["full_name"] %></h3>
+
+<p>
+  <a href="/robins/<%= @robins["id"] %>">
+    <img src="<%= @robins["image"] %>">
+  </a>
+</p>
+
+<p>Alias: <%= @robins["alias"] %></p>
+<p>Bio: <%= @robins["bio"] %></p>
+<p>Cause of Death/s: <%= @robins["cause_of_death"] %></p>
+
+<a href="/robins/<%= @robins["id"] %>/edit">EDIT</a><br>
+<a href="/robins/<%= @robins["id"] %>/delete">DELETE</a>

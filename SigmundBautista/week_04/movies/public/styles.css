@@ -1,0 +1,29 @@
+body {
+  font-family: 'Catamaran', sans-serif;
+}
+
+img {
+  height: 300px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.banner  {
+  background-color: black;
+  background-size: cover;
+  height: 150px;
+  color: white;
+  padding-left: 30px;
+}
+
+#search  {
+  width: 99.5%;
+  font-size: 20px;
+  outline-width: thick;
+}
+
+#button  {
+  width: 100px;
+}
