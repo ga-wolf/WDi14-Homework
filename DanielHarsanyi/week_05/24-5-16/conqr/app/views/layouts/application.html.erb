@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conqr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <%= image_tag "conqr_logo.png", :class => "logo" %>
+    <nav>
+      <%= link_to( "Create client", "/clients/new" ) %>
+      <%= link_to( "Show all clients", "/clients" ) %>
+      <%= link_to( "Create trainer", "/trainers/new") %>
+      <%= link_to( "Show all trainers", "/trainers" ) %>
+    </nav>
+  </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+  <h3><%= @client.name %></h3>
+  <%= image_tag @client.image, :class => "feature" %>
+
+  <% if @client.trainer %>
+  <h4>Trainer: <%=link_to @client.trainer.name, @client.trainer %></h4>
+  <% end %>
+
+  <ul>
+    <li>Interests: <%= @client.interests %> </li>
+    <li>Style: <%= @client.style %> </li>
+    <li>Location: <%= @client.location %> </li>
+  </ul>
+
+<%= link_to("Show all Clients", "/clients") %>
+<%= link_to("Edit #{@client.name}", edit_client_path( @client ) ) %>
+<%= link_to( "Delete #{@client.name}", @client, :method => :delete, :data => {  :confirm => "Are you sure?" } ) %>

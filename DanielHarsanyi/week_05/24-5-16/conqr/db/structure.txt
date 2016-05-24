@@ -1,0 +1,17 @@
+trainers
+- name
+- qualification
+- fitness Australia ID
+- specialties
+- location
+- cost per hour
+- training style
+
+
+
+clients
+- name
+- interest areas
+- preferred training style
+- location
+- trainer_id

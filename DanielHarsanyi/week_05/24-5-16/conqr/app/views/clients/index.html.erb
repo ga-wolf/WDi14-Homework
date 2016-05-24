@@ -1,0 +1,10 @@
+<% @clients.each do |c| %>
+  <h3><%= link_to c.name, "/clients/#{c.id}" %></h3>
+  <%= image_tag c.image, :class => "thumbnail" %>
+  <ul>
+    <li>Interests: <%= c.interests %> </li>
+    <li>Style: <%= c.style %> </li>
+    <li>Location: <%= c.location %> </li>
+  </ul>
+  <hr>
+  <% end %>
