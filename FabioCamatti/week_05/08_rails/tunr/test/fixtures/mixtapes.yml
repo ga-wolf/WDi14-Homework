@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: mixtapes
+#
+#  id         :integer          not null, primary key
+#  title      :text
+#  user_id    :integer
+#  is_fire    :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  user: 1
+  is_fire: false
+
+two:
+  title: MyText
+  user: 1
+  is_fire: false
