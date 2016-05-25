@@ -1,0 +1,15 @@
+<h2>All Authors</h2>
+
+<div>
+  <% @authors.each do |author| %>
+  <div class="author">
+    <%= image_tag author.image, :class => 'thumbnail' %>
+
+    <p>Name: <%= link_to author.name, "/authors/#{author.id}" %></p>
+    <p>Country: <%= author.country %></p>
+
+
+</div>
+</div>
+<% end %>
+</ul>

@@ -1,0 +1,21 @@
+<h3>Edit this post</h3>
+
+<form method="POST" action="/reefs/<%= @reef["id"] %>">
+  <p>
+    <label>Species: </label>
+
+    <input type="text" name="name" value="<%= @reef["name"] %>">
+  </p>
+
+  <p>
+    <label>Image: </label>
+    <input type="text" name="image" value="<%= @reef["image"] %>">
+  </p>
+
+  <p>
+    <label>Description: </label>
+    <input type="text" name="description" value="<%= @reef["description"] %>">
+  </p>
+
+  <input type="submit" value="Update this reef">
+</form>

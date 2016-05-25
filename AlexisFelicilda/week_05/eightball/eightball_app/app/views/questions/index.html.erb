@@ -1,0 +1,14 @@
+
+    <h1>Magic 8 Ball.</h1>
+
+    <h5>Ask a question.</h5>
+
+        <form action="/eightball" method="get">
+
+              <input type="text" name="question"placeholder="question">
+              <span class="input-group-btn"><button type="submit">Submit your question</button></span>
+
+        </form>
+
+  <h2>Your question: <%= params[:question]%></h2>
+  <h2>"<%= flash.now[:alert] %>"</h2>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BooksAuthorsApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <nav>
+    <%= link_to "All Books", "/books" %>
+    <%= link_to "Add a book", "/books/new" %>
+    <%= link_to "All Authors", "/authors" %>
+    <%= link_to "Add a Author", "/authors/new" %>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

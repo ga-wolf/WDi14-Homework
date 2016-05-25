@@ -1,0 +1,20 @@
+<h3>Explore a Reef</h3>
+
+<!-- # <%= @animal %> -->
+
+<h4>
+<%= @reef["name"] %>
+</h4>
+
+<img src="<%= @reef["image"]%>">
+
+<p>
+  <%= @reef["description"] %>
+</p>
+
+<a href="/reefs">See all of our reefs</a>
+<ul class="center hide-on-med-and-down">
+  <li><a class="btn-floating btn-large waves-effect waves-light blue"href="/reefs/<%= @reef["id"]%>/delete"><i class="material-icons">Delete</i></a></li>
+  <li><a class="btn-floating btn-large waves-effect waves-light blue"href="/reefs/<%= @reef["id"]%>/edit"><i class="material-icons">Edit</i></a></li>
+  <li><a class="btn-floating btn-large waves-effect waves-light blue"href="/reefs/new"><i class="material-icons">add</i></a></li>
+</ul>
