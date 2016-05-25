@@ -1,0 +1,38 @@
+<%= form_for @perfume do |f| %>
+  <p>
+    <%= f.label :perfume_name %>
+    <%= f.text_field :perfume_name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+  <p>
+    <%= f.label :year %>
+    <%= f.text_field :year, :required => true %>
+  </p>
+  <p>
+    <%= f.label :top_notes %>
+    <%= f.text_field :top_notes, :required => true %>
+  </p>
+  <p>
+    <%= f.label :mid_notes %>
+    <%= f.text_field :mid_notes, :required => true %>
+  </p>
+  <p>
+    <%= f.label :base_notes %>
+    <%= f.text_field :base_notes, :required => true %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true %>
+  </p>
+
+  <!-- house_id -->
+  <p>
+    <%= f.label :house_id %>
+    <%= f.select :house_id, House.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
