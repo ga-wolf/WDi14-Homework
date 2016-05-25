@@ -1,0 +1,26 @@
+<h1>Edit <%= @artist.name %></h1>
+<%= form_for @artist, :url => "/artists/#{@artist.id}" do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name, :required => true %>
+    </p>
+    <p>
+       <%= f.label :nationality %>
+       <%= f.text_field :nationality, :required => true %>
+    </p>
+    <p>
+       <%= f.label :dob %>
+       <%= f.text_field :dob, :required => true %>
+    </p>
+    <p>
+       <%= f.label :period %>
+       <%= f.text_field :period, :required => true %>
+    </p>
+    <p>
+       <%= f.label :image %>
+       <%= f.url_field :image, :required => true %>
+    </p>
+    <%= f.submit %>
+<% end %>
+<%= link_to( "Edit #{@artist.name}", "/artists/#{@artist.id}/edit") %>
+<%= link_to( "Delete #{@artist.name}", "/artists/#{@artist.id}/delete", :method => :delete, :data => { :confirm => "Are you sure?" }) %>
