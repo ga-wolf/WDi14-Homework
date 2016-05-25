@@ -2,15 +2,21 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get '/numbers' => 'pages#numbers'
+  get '/random' => 'pages#random', :as => 'random'
+  get '/number/:number' => 'pages#single_number', :as => 'single_number'
+  get '/number/:x/:y' => 'pages#two_numbers', :as => 'two_numbers'
 
-  get '/text' => 'pages#text'
+  get '/date' => 'pages#date', :as => 'date'
 
-  get '/railsassets' => 'pages#railsassets'
+  get '/numbers' => 'pages#numbers', :as => 'numbers'
 
-  get '/url' => 'pages#url'
+  get '/text' => 'pages#text', :as => 'text'
 
-  get '/home' => 'pages#home'
+  get '/railsassets' => 'pages#railsassets', :as => 'assets'
+
+  get '/url' => 'pages#url', :as => 'url'
+
+  get '/home' => 'pages#home', :as => 'home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
