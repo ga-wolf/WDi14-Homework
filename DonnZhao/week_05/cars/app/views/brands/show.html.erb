@@ -1,0 +1,33 @@
+
+<h1> This is the show page of brands</h1>
+<h6>no space between link_to and (</h6>
+
+<h5> <%= @brand.name %> </h5>
+
+    <%=image_tag @brand.image, :class=> 'thumbnail' %>
+    <ul>
+
+        <li> name: <%= link_to @brand.name, "/brands/#{@brand.id}" %> </li>
+        <li> headquarters: <%= @brand.headquarters %></li>
+        <li> web:<%= link_to @brand.web, "http://#{@brand.web}" %></li>
+    </ul>
+
+
+
+<div class="edit">
+<%= link_to( "Edit #{@brand.name}", "/brands/#{@brand.id}/edit" ) %>
+<%= link_to( "Delete #{@brand.name}", @brand, :method => :delete, :data => { :confirm => "Are you sure?" } ) %>
+<a href="/brands">Take me back</a>
+
+</div>
+
+<hr>
+<hr>
+<div class="">
+
+<% @brand.models.each do |model| %>
+  <%= link_to(image_tag(model.image, :class => 'thumbnail', :style => 'display:inline-block'), model) %>
+  <%= link_to("explore #{model.name}", model, :class => 'test', :style => 'display:block') %>
+  <% end %>
+
+</div>
