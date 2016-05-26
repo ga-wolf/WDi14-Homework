@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Source+Sans+Pro:400,300,700|Oxygen:400,300,700|Open+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+
+/*font-family: 'Bangers', cursive;*/
+
+
+h1{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 55px;
+  -webkit-text-stroke: 2.5px black;
+  color:#b399ff;
+  text-align: center;
+  }
+
+
+h2{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 120px;
+  -webkit-text-stroke: 3px black;
+  color:white;
+  text-align: center;
+  }
+
+
+h3{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  -webkit-text-stroke: 1.5px black;
+  color:white;
+  text-align: center;
+  }
+
+
+h4{
+  font-family:'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  color: #b399ff;
+  }
+
+  h6{
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: #b399ff;
+  height: 5px;
+  }
+
+
+/*p{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  }*/
+
+  .poster {
+    text-align: center;
+  }
+
+  .results {
+    text-align: center;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 15px;
+  }
+
+.button{
+  /*border: 2px solid black;*/
+  font-family:'Source Sans Pro', sans-serif;
+  /*font-size: 15px;
+  background: white;*/
+  text-align: center;
+  text-transform: uppercase;
+  }
+
+
+a{
+  text-decoration: none;
+  }
+
+input[type=text] {
+  border: 1px solid #b399ff;;
+  text-transform: uppercase;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  text-align: center;
+  margin-left: 530px;
+  width: 175px;
+
+  }
+
+input[type=submit] {
+  margin-top: 15px;
+  border: 2px solid #b399ff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family:'Source Sans Pro', sans-serif;
+  color: #b399ff;
+  font-size: 15px;
+  background-color: white;
+  }
