@@ -1,0 +1,19 @@
+    <h1>Hi, welcome to play rock, paper and scissors</h1>
+
+    <form action="/games/rock_paper_scissors" method="post">
+        <div class="game">
+          <%= image_tag("rock.jpg") %><br>
+          <input type="radio" name="name" value="rock">
+        </div>
+        <div class="game">
+          <%= image_tag("paper.jpg") %><br>
+          <input type="radio" name="name" value="paper">
+        </div>
+        <div class="game">
+          <%= image_tag("scissors.jpg") %><br>
+          <input type="radio" name="name" value="scissors">
+        </div>
+        <p>
+          <input type="submit" value="Select one and Play">
+        </p>
+    </form>

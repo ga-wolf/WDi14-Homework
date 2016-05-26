@@ -1,0 +1,18 @@
+<hr>
+<% @makes.each do |make| %>
+<div class="makes">
+  <p>
+    <%= image_tag(make.image, :class => 'thumbnail')%>
+  </p>
+  <p>
+    <%= link_to(make.name, "/makes/#{make.id}")  %>
+  </p>
+  <p>
+    <%= make.country %>
+  </p>
+  <p>
+    <%= make.founded.strftime("%B, %d, %Y") if make.founded %>
+  </p>
+</div>
+
+<% end %>

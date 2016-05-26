@@ -1,0 +1,20 @@
+
+<% @cars.each do |car|%>
+<div class="cars">
+  <div class="carsimg">
+  <%= link_to(image_tag(car.image, :class => 'thumbnail'), "/cars/#{car.id}")%>
+  </div>
+<div class="carde">
+  <p>
+    Model: <%= car.model%>
+  </p>
+  <p>
+    Year: <%= car.year%>
+  </p>
+  <p>
+    Make: <%= link_to(car.make.name, "/makes/#{car.make_id}") %>
+  </p>
+</div>
+
+</div>
+<% end %>
