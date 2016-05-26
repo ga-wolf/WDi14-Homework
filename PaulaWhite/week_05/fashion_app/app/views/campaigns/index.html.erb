@@ -1,0 +1,16 @@
+<!-- <h2>All campaigns</h2> -->
+
+<ul>
+<% @campaigns.each do |campaign| %>
+<li>
+
+<ul>
+
+<%= link_to(image_tag( campaign.image, :class => 'thumbnail'), campaign) %>
+
+</ul>
+</li>
+
+<% end %>
+
+</ul>
