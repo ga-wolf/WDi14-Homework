@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intro</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>This is our main layout</h1>
+<nav>
+    <a href="/home">HOME</a> |
+    <a href="/about">ABOUT</a> |
+    <a href="/faq">FAQ</a> |
+    <a href="/lol">LOL</a>
+    <a href="/auto/blue">BLUE CAR</a> |
+    <a href="/auto/999/2">NUMBERS</a> |
+    <a href="/calc/999/1/+">999 + 1</a> 
+</nav>
+
+<hr/>
+<%= yield %>
+<hr/>
+</body>
+</html>

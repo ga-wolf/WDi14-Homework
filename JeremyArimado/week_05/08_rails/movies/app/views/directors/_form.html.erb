@@ -1,0 +1,18 @@
+
+<%= form_for @director do |f| %> #note output tag
+  <p>
+      <%= f.label(:title) %>
+      <%= f.text_field(:title, :required => true) %>
+  </p>
+  <p>
+      <%= f.label(:image) %>
+      <%= f.url_field(:image, :required => true) %>
+  </p>
+
+    <p>
+        <%= #f.label :artist_id %>
+        <%= #f.select(:artist_id, Artist.all.map { |a| [a.name, a.id] },  :include_blank => true) %>
+    </p>
+
+  <%= f.submit %>
+<% end %>

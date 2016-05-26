@@ -1,0 +1,9 @@
+id <%= @id %> </br>
+name <%= @planet.name %> </br>
+orbit <%= @planet.orbit %> </br>
+diameter <%= @planet.diameter %> </br>
+moons <%= @planet.moons %> </br>
+
+<p> <%= link_to("Edit Planet", "/planets/#{@id}/edit") %>  </p>
+
+<p> <%= button_to("DESTROY Planet", "/planets/#{@id}/delete", :method => :delete) %>  </p>

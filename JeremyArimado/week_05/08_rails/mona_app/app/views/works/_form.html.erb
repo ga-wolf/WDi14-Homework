@@ -1,0 +1,27 @@
+<h4>This is in _form</h4>
+
+<%= form_for @work do |f| %> #note output tag
+  <p>
+      <%= f.label(:title) %>
+      <%= f.text_field(:title, :required => true) %>
+  </p>
+  <p>
+      <%= f.label(:medium) %>
+      <%= f.text_field(:medium, :required => true) %>
+  </p>
+  <p>
+      <%= f.label(:style) %>
+      <%= f.text_field(:style, :required => true) %>
+  </p>
+  <p>
+      <%= f.label(:image) %>
+      <%= f.url_field(:image, :required => true) %>
+  </p>
+
+    <p>
+        <%= f.label :artist_id %>
+        <%= f.select(:artist_id, Artist.all.map { |a| [a.name, a.id] },  :include_blank => true) %>    
+    </p>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<form action="/planets/<%= @planet.id %>" method="POST">
+    <label for="name"> Name </label>
+    <input type="text" value="<%= @planet.name %>" name="name">
+    <label for="orbit"> Orbit </label>
+    <input type="text" value=" <%= @planet.orbit %>" name="orbit">
+    <label for="diameter"> diameter </label>
+    <input type="text" value=" <%= @planet.diameter %>" name="diameter">
+    <label for="moons"> moons </label>
+    <input type="text" value="<%= @planet.moons %> " name="moons">
+    <input type="submit" value="Update">
+</form>

@@ -1,0 +1,14 @@
+<h2>This is our date helper</h2>
+
+<p>
+    <%= time_ago_in_words( 3.minutes.from_now ) %>
+</p>
+
+<p>
+    <%= time_ago_in_words( Time.now, :include_seconds => true ) %>
+</p>
+
+
+<p>
+    <%= distance_of_time_in_words( Time.now, Time.now + 15.minutes + 24.seconds) %>
+</p>

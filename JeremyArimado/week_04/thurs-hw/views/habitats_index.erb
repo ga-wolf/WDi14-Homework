@@ -1,0 +1,12 @@
+<h1>habitats index erb</h1>
+
+<ul>
+<% @habitats.each do | habitat | %>
+    <li>
+        <a href="/habitats/<%= habitat["id"] %>">
+        <p>landscape: <%= habitat["landscape"] %> </p>
+        <p>climate: <%= habitat["climate"] %></p>
+        </a>
+    </li>
+<% end %>
+</ul>

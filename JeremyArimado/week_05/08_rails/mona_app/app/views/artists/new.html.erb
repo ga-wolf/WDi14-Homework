@@ -1,0 +1,27 @@
+Create Artist
+
+<!-- FORM HELPER -->
+
+<%= form_for @artist do |f| %>
+    <p>
+        <%= f.label :name %>
+        <%= f.text_field :name, :required => true %>
+    </p>
+    <p>
+        <%= f.label :nationality %>
+        <%= f.text_field :nationality, :required => true %>
+    </p>
+    <p>
+        <%= f.label :dob %>
+        <%= f.text_field :dob, :required => true %>
+    </p>
+    <p>
+        <%= f.label :period %>
+        <%= f.text_field :period, :required => true %>
+    </p>
+    <p>
+        <%= f.label :image %>
+        <%= f.url_field :image, :required => true %>
+    </p>
+    <%= f.submit %>
+<% end %>

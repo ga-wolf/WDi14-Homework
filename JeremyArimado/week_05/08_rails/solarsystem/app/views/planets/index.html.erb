@@ -1,0 +1,7 @@
+<ul>
+<% @planets.each do |planet| %>
+    <li><a href="/planets/<%= planet.id %>"><%= planet.name %></a>
+        Moons: <%= pluralize(planet.moons, 'Moon') %>
+    </li>
+<% end %>
+</ul>
