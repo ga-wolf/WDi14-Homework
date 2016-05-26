@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfume App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <h1>The Perfumery</h1>
+
+  <nav>
+    <a href="/perfumes">All Perfumes</a>
+    <a href="/houses">All Perfume Houses</a>
+    <a href="/reviews">All Reviews</a>
+  </nav>
+
+  <hr>
+    <%= yield %>
+  <hr>
+
+</body>
+</html>
