@@ -1,0 +1,27 @@
+<h2>This is our date helpers demo</h2>
+<!-- time_ago_in_words( from_time ) -->
+
+<p>
+  <%= time_ago_in_words( 3.minutes.from_now )  %>
+</p>
+
+<p>
+  <%= time_ago_in_words( Time.now, :include_seconds => true )  %>
+</p>
+
+
+<p>
+  <%= distance_of_time_in_words( Time.now, Time.now + 15.minutes + 31.seconds )  %>
+</p>
+
+<p>
+  <%= distance_of_time_in_words( Time.now, Time.now + 6.months + 3.minutes )  %>
+</p>
+
+<p>
+  <%= distance_of_time_in_words( Time.now, Time.now + 1.year + 3.days )  %>
+</p>
+
+<p>
+  <%= distance_of_time_in_words( Time.now, Time.now + 4.years + 9.days + 30.minutes + 5.seconds )  %>
+</p>

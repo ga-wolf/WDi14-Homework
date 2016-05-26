@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- IMPORTANT: SINATRA will automatically recognise the css file or everything in the public folder. "MVC folder structure" -->
+  <link rel="stylesheet" href="/style.css">
+  <title>Car: The</title>
+</head>
+<body>
+  <nav>
+    <!-- We rely on these routes being defined in main.rb -->
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+  <a href="/calc">Calculate</a>
+  </nav>
+  <!-- This yield statement is where the specified file should be loaded -->
+  <!-- erb :home will load views/home.erb in place of this yield statement -->
+  <%= yield %>
+</body>
+</html>

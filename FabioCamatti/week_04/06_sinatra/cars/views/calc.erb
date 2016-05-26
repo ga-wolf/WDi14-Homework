@@ -1,0 +1,21 @@
+<!-- Loaded in place of our yield -->
+<hr>
+  <!-- We create a from -->
+    <!-- When this form is submitted, it will make a GET request to the url found in the action attribute (in this case is /calculate) -->
+  <form action="/calculate" method="GET">
+    <p>
+    <label>What is the first number</label>
+    <!-- input type number just means that we can't type letters or symbols -->
+      <!-- The name attribute specifies how this value will be stored in the parameter path of the URL and the params hash in main.rb -->
+    <input type="number" name="first">
+    </p>
+    <p>
+      <label>What is the second number</label>
+      <!-- The name attribute specifies how this value will be stored in the parameter path of the URL and the params hash in main.rb -->
+      <input type="number" name="second">
+    </p>
+    <!-- Finally we can submit this form. This will look like a button with the text "Show result" inside it -->
+    <!-- If we click this button, it will submit the form making a GET request to /calculate and save the parameters (the first and second) -->
+    <input type="submit" value="Show result">
+  </form>
+<hr>

@@ -1,0 +1,9 @@
+<h2>All works</h2>
+
+  <% @works.each do |work| %>
+
+    <%# link_to( image_tag( work.image, :class => 'thumbnail'), "/works/#{work.id}" %>
+    <%# link_to( image_tag( work.image, :class => 'thumbnail'), work_path( work.id )) %>
+    <%= link_to( image_tag( work.image, :class => 'thumbnail'), work) %>
+
+  <% end %>

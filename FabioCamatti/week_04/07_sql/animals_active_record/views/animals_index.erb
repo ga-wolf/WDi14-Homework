@@ -1,0 +1,20 @@
+<h3>This should show all of our animals</h3>
+<!-- <%= @all_animals %> -->
+
+<% @all_animals.reverse_each do |animal| %>
+  <h4>
+  <p><%= animal["species"] %></p>
+</h4>
+
+  <p>
+    <a href="/animals/<%= animal["id"] %>">
+      <img src="<%= animal["image"] %>" alt="">
+    </a>
+  </p>
+
+  <p>
+    <%= animal["description"] %>
+  </p>
+
+  <hr>
+<% end %>

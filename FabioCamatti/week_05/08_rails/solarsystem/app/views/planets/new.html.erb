@@ -1,0 +1,38 @@
+<h2>Create a new planet.</h2>
+
+<form action="/planets" method="POST">
+
+  <p>
+    <label >Name:</label>
+    <input type="text" name="planet[name]">
+  </p>
+
+  <p>
+    <label >Image:</label>
+    <input type="url" name="planet[image]">
+  </p>
+
+  <p>
+    <label >Orbit:</label>
+    <input type="text" name="planet[orbit]">
+  </p>
+
+  <p>
+    <label >Diameter:</label>
+    <input type="text" name="planet[diameter]">
+  </p>
+
+  <p>
+    <label >Moons:</label>
+    <input type="text" name="planet[moons]">
+  </p>
+
+  <input type="submit" value="Create planet">
+
+</form>
+
+<p>
+  <%= link_to( " Home", "/planets") %>
+</p>
+<p>
+</p>
