@@ -1,0 +1,9 @@
+
+<h3>You guessed: <%= @user_number %></h3>
+<h3>Computer guessed: <%= @computer_number %></h3>
+
+<% if @user_number == @computer_number %>
+    <p>You Won! Having fun?? Click <%= link_to("here", "/games/secretnumbers") %> to play again!</p>
+  <% else %>
+    <p>You Lost! Click <%= link_to("here", "/games/secretnumbers") %> to try again!</p>
+<% end %>

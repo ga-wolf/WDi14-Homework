@@ -1,0 +1,11 @@
+<% @trainers.each do |t| %>
+  <h3><%= link_to t.name, "/trainers/#{t.id}" %></h3>
+  <%= image_tag t.image, :class => "thumbnail" %>
+    <ul>
+      <li>Qualification: <%= t.qualification %></li>
+      <li>Fitness Australia ID: <%= t.fitness_australia_id %></li>
+      <li>Speciality: <%= t.speciality %> </li>
+      <li>Location: <%= t.location %></li>
+    </ul>
+  <hr>
+<% end %>

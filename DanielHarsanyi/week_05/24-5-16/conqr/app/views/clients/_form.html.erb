@@ -1,0 +1,35 @@
+<%= form_for @client do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :interests %>
+    <%= f.text_field :interests, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :style %>
+    <%= f.text_field :style, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :trainer_id %>
+    <%= f.select :trainer_id, Trainer.all.map { |t| [ t.name, t.id ] }, :include_blank => true, :required => true %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

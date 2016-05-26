@@ -1,0 +1,7 @@
+<% @answers.each do |a| %>
+  <% if a.id == @random_number %>
+      <h3>Magic eightball says: <%= a.answer %></h3>
+  <% end %>
+<% end %>
+
+<%= link_to "Play Again!", "/games/eightballs" %>

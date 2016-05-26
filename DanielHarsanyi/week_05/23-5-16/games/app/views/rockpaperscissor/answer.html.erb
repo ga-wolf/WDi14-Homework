@@ -1,0 +1,22 @@
+<% if @computer_random_num == 1 %>
+    <% @computer_move = "rock" %>
+  <% elsif @computer_random_num == 2 %>
+    <% @computer_move = "paper" %>
+    <% else @computer_move = "scissors" %>
+<% end %>
+
+<h3>You chose: <%= @user_move %> </h3>
+<h3>Computer chose: <%= @computer_move %> </h3>
+
+<% if @user_move == @computer_move %>
+    <p>It's a tie!</p>
+      <% elsif (@user_move == "rock") && (@computer_move == "scissors")  %>
+    <p>You win!</p>
+      <% elsif (@user_move == "scissors") && (@computer_move == "paper")  %>
+    <p>You win!</p>
+      <% elsif (@user_move == "paper") && (@computer_move == "rock")  %>
+    <p>You win!</p>
+    <% else %> <p>You lose</p> 
+<% end %>
+
+<p>Click <%= link_to "here", "/games/rockpaperscissors" %> to play again!</p>
