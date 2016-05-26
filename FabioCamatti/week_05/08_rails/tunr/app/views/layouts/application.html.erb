@@ -8,7 +8,49 @@
 </head>
 <body>
 
+
+  <!-- If I am logged in  -->
+  <!-- A link to all users -->
+  <!-- A link to edit your profile -->
+  <!-- A link to logout -->
+
+  <!-- If I am logged ou -->
+  <!-- A link to sign up -->
+  <!-- A link to log in -->
+
+
+  <nav>
+    <ul>
+      <% if @current_user.present? %>
+      <% if @current_user.admin == true %>
+            <li>
+              <%= link_to "All users", users_path %>
+            </li>
+      <% end %>
+      <li>
+        Your are logged in as <%= @current_user.email %>  and your ID is <%= @current_user.id %>
+      </li>
+      <li>
+        <%= link_to "Edit your profile", edit_users_path %>
+      </li>
+      <li>
+        <%= link_to "Log out", logout_path, :method => :delete %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to "Sign up", new_user_path %>
+      </li>
+      <li>
+        <%= link_to "Log in", login_path %>
+      </li>
+      <% end %>
+    </ul>
+  </nav>
+
+
+
 <%= yield %>
 
 </body>
+
 </html>

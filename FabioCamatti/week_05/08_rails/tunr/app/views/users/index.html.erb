@@ -1,0 +1,11 @@
+<h1>All users: TOP SECRET</h1>
+
+<% if session[:user_id] %>
+
+    <% @user.each do |u|  %>
+      <p>
+          <%= u.email %> created account <%= u.created_at %>.
+      </p>
+    <% end %>
+
+<% end %>

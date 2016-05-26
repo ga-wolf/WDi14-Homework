@@ -8,9 +8,11 @@
 #
 User.destroy_all
 
-u1 = User.create :email => 'craigs@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => true
+u1 = User.create :email => 'craigsy@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => true
 
 u2 = User.create :email => 'jonesy@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => true
+
+u2 = User.create :email => 'fabio@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => false
 
 puts "User count: #{User.all.count}"
 
@@ -66,6 +68,18 @@ g3 = Genre.create :name => 'Chamber pop'
 
 puts "Genres count: #{Genre.all.count}"
 
+g1.songs << s1 << s2
+g2.songs << s2 # This create a new record in the genres_songs table, that will contain the id of the second genre and the id of the second song,
+g3.songs << s3
+
+puts "Genre one song count: #{g1.songs.count}"
+puts "Genre two song count: #{g2.songs.count}"
+puts "Genre three song count: #{g3.songs.count}"
+
+puts "Song one genre count: #{s1.genres.count}"
+puts "Song two genre count: #{s2.genres.count}"
+puts "Song three genre count: #{s3.genres.count}"
+
 
 Artist.destroy_all
 
@@ -109,3 +123,16 @@ puts "User two mixtape count: #{u2.mixtapes.count}"
 puts "User of first mixtape: #{m1.user.email}"
 puts "User of second mixtape: #{m2.user.email}"
 puts "User of third mixtape: #{m3.user.email}"
+
+# These will all create records in the mixtapes_songs table (it will keep track of the mixtape_id and the song_id)
+m1.songs << s1 << s2 << s3
+m2.songs << s2 << s3
+m3.songs << s1
+
+puts "First mixtape song count: #{m1.songs.count}"
+puts "Second mixtape song count: #{m2.songs.count}"
+puts "Third mixtape song count: #{m3.songs.count}"
+
+puts "First song mixtape count: #{s1.mixtapes.count}"
+puts "Second song mixtape count: #{s2.mixtapes.count}"
+puts "Third song mixtape count: #{s3.mixtapes.count}"
