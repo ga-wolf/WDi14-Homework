@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>The Penny Arcade</h1>
+<a href="/">Home</a>
+<a href="/eightball">The Magic Eightball</a>
+<a href="/secret">Secret Number</a>
+
+<%= yield %>
+
+</body>
+</html>

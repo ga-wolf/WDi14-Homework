@@ -1,0 +1,13 @@
+body {
+  color: red;
+  font-family: 'Racing Sans One', cursive;
+  background-color: yellow: ;
+  text-align: center;
+}
+
+.header  {
+  height: 500px;
+  width: 900px;
+  background-image: url("http://media.dcentertainment.com/sites/default/files/imce/2015/06-JUN/BMROB_12_16_600%2B900_558a035a943f45.66920474.jpg");
+  background-repeat: no-repeat;
+}

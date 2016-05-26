@@ -1,0 +1,16 @@
+<% @all_robins.each do |robin| %>
+  <h3><%= robin["full_name"] %></h3>
+
+  <p>
+    <a href="/robins/<%= robin["id"] %>">
+      <img src="<%= robin["image"] %>">
+    </a>
+  </p>
+
+  <p>Alias: <%= robin["alias"] %></p>
+  <p>Bio: <%= robin["bio"] %></p>
+  <p>Cause of Death/s: <%= robin["cause_of_death"] %></p>
+
+  <hr>
+
+<% end %>

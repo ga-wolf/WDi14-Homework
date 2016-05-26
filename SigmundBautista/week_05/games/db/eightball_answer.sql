@@ -1,0 +1,6 @@
+CREATE TABLE answers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  answer TEXT
+
+
+);
