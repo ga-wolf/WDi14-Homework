@@ -1,0 +1,35 @@
+<h3>Edit <%= @book.title %></h3>
+
+
+<%= form_for @book do |f| %>
+
+<p>
+  <%= f.label :title%>
+  <%= f.text_field :title, :required => true %>
+</p>
+
+<p>
+  <%= f.label :author %>
+  <%= f.text_field :author, :required => true %>
+</p>
+
+
+<p>
+  <%= f.label :year %>
+  <%= f.text_field :year, :required => true %>
+</p>
+
+
+<p>
+  <%= f.label :genre %>
+  <%= f.text_field :genre, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+
+
+<%= f.submit %>
+<% end %>
