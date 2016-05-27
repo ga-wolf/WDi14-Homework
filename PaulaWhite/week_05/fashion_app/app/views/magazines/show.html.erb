@@ -1,0 +1,18 @@
+<h3><%= @magazine.name %></h3>
+
+<%= image_tag @magazine.image, :class => 'feature' %>
+
+
+
+<h6><%= link_to( "Campaigns", campaigns_path( @magazine.campaigns ) ) %> </h6>
+
+
+<div class="links">
+<%= link_to "Edit #{@magazine.name}" , "/magazines/#{@magazine.id}/edit" %>
+<%= link_to "Delete #{@magazine.name}" , "/magazines/#{@magazine.id}", :method => :delete,
+:data => { :confirm => "Are you sure?" } %>
+</div>
+
+
+
+<!-- NEED TO LINK THE CAMPAIGN TO THE MAGAZINES INDIVIDUAL CAMPAIGN-->

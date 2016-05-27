@@ -1,0 +1,23 @@
+
+
+
+<%= image_tag( @campaign.image, :class => 'feature' ) %>
+
+<% if @campaign.magazine %>
+
+<div class="links">
+<p><%= link_to(@campaign.magazine.name, @campaign.magazine) %></p>
+<% end %>
+
+<p> Model: <%= @campaign.model %></p>
+
+<p> Photographer: <%= @campaign.photographer %></p>
+
+<div class="links">
+<%= link_to "Edit Editorial" , "/campaigns/#{@campaign.id}/edit" %>
+<%= link_to "Delete Editorial" , "/campaigns/#{@campaign.id}", :method => :delete,
+:data => { :confirm => "Are you sure?" } %>
+</div>
+
+
+<!-- NEED TO CHANGE THE EDIT AND DELETE NAMES -->
