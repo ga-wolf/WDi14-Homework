@@ -1,0 +1,36 @@
+<h4> this is the _from.html.erb</h4>
+
+
+<%= form_for @brand do |f| %>
+<p>
+
+<%= f.label :name %>
+<%= f.text_field :name, :required =>true %>
+</p>
+<p>
+
+<%= f.label :headquarters %>
+<%= f.text_field :headquarters, :required =>true %>
+</p>
+
+<p>
+
+<%= f.label :image %>
+<%= f.text_field :image , :required =>true %>
+</p>
+
+<p>
+
+<%= f.label :web %>
+<%= f.text_field :web, :required =>true %>
+</p>
+
+
+<!-- models_id -->
+
+
+
+<%= f.submit%>
+
+
+<%end %>

@@ -1,0 +1,37 @@
+<h4>this is _form.html.erb</h4>
+
+
+<%= form_for @model do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :dob %>
+  <%= f.text_field :dob, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image, :required => true %>
+</p>
+
+<p>
+  <%= f.label :price %>
+  <%= f.text_field :price, :required => true %>
+</p>
+
+
+
+
+<!-- artist_id -->
+
+<p>
+  <%= f.label :brand_id %>
+  <%= f.select :brand_id, Brand.all.map {|a| [a.name, a.id]}, :include_blank => true %>
+</p>
+
+<%= f.submit %>
+
+<% end  %>

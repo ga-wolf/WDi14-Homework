@@ -1,0 +1,23 @@
+
+<%= link_to(image_tag(@model.image, :class => 'thumbnial'), @model) %>
+<ul>
+
+<% if @model.brand %>
+  <p>
+    Brand : <%= link_to(@model.brand.name, @model.brand) %>
+  </p>
+  <% end  %>
+  <li>Name:<%= @model.name %></li>
+  <li>Dob :<%= @model.dob.strftime("%A, %B %e, %Y") if @model.dob %></li>
+  <li>price:<%=@model.price  %></li>
+
+
+</ul>
+
+
+<div class = "controls">
+<%= link_to "Edit #{@model.name}", "/models/#{@model.id}/edit" %>
+<%= link_to "Delete #{@model.name}", @model, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+<a href="/models">Take me back to model</a>
+
+</div>

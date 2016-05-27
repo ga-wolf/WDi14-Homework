@@ -1,0 +1,15 @@
+<h1>hello this is models index</h1>
+<a href="/models/new">adding new number</a>
+<br>
+  <% @models.each do |model|  %>
+
+
+<%= link_to(image_tag(model.image, :class => 'thumbnial1'), model) %>
+<ul>
+  <li>Name:<%= link_to model.name, model  %></li>
+  <li>Dob :<%= model.dob.strftime("%A, %B %e, %Y") if model.dob %></li>
+  <li>price:<%=model.price  %></li>
+
+</ul>
+
+      <% end %>
