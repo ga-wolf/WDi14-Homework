@@ -1,0 +1,9 @@
+<h2>All Users</h2>
+<hr>
+<% @users.each do |u| %>
+  <ul>
+    <li>Username: <%= link_to( u.name, user_path(u) ) %></li>
+    <li>Email: <%= u.email %></li>
+    <li>Password digest: <%= u.password_digest %></li>
+  </ul>
+<% end %>
