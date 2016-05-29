@@ -23,6 +23,8 @@ def edit
 end
 
 def update
+
+
 end
 
 def destroy
@@ -30,7 +32,7 @@ end
 
 private
 
-def regions_params
+def region_params
   params.require(:region).permit(:name, :address, :description)
 end
 
