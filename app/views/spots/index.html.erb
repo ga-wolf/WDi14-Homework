@@ -2,7 +2,7 @@
 
 <% @spots.each do |spot| %>
 
-<p>Name: <%= spot.name %></p>
+<p>Name: <%= link_to " #{spot.name} ", "/spots/#{spot.id}" %></p>
 <p>Address: <%= spot.address %></p>
 <p><%= spot.description %></p>
 
