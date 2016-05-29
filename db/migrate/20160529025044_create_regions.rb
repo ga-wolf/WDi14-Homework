@@ -1,10 +1,9 @@
-class CreateSpots < ActiveRecord::Migration
+class CreateRegions < ActiveRecord::Migration
   def change
-    create_table :spots do |t|
+    create_table :regions do |t|
       t.text :name
       t.text :address
       t.text :description
-      t.integer :region_id
 
       t.timestamps null: false
     end
