@@ -1,0 +1,17 @@
+
+<%= form_for @spot do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address, :required => true %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description, :required => true %>
+  </p>
+
+<%= f.submit "Submit" %>
+<% end %>

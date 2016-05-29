@@ -1,1 +1,9 @@
 <h1>This page should show all the spots</h1>
+
+<% @spots.each do |spot| %>
+
+<p>Name: <%= spot.name %></p>
+<p>Address: <%= spot.address %></p>
+<p><%= spot.description %></p>
+
+<% end %>
