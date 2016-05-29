@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'session/new'
 
+  resources :reviews
   resources :regions
   resources :spots
   resources :users
