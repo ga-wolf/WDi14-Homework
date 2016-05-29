@@ -6,7 +6,7 @@
 #  rating     :integer
 #  content    :text
 #  user_id    :integer
-#  spot_id    :integer
+#  region_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
