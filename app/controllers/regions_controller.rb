@@ -9,6 +9,9 @@ def show
 
 @region = Region.find params[:id]
 
+@review = Review.new
+@reviews = Review.all
+
 end
 
 def new
