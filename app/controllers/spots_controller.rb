@@ -22,7 +22,7 @@ end
 private
 
 def spots_params
-  params.require(:spot).permit(:name, :address, :description)
+  params.require(:spot).permit(:name, :address, :description, :region_id)
 end
 
 end
