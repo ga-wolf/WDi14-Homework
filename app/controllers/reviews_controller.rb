@@ -25,11 +25,11 @@ def edit
 end
 
 def update
-  region = Region.find_by :id => params[:review][:region_id]
+  # region = Region.find_by :id => params[:review][:region_id]
   review = Review.find params[:id]
   review.update review_params
 
-  redirect_to regions_path
+  redirect_to "/regions/#{review.region_id}"
 end
 
 def destroy
