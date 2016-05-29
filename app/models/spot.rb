@@ -6,7 +6,7 @@
 #  name        :text
 #  address     :text
 #  description :text
-#  reveiw_id   :integer
+#  region_id   :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
