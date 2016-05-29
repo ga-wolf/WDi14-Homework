@@ -8,7 +8,7 @@ end
 
 def show
 
-@spot = Spot.find_by :id => params[:id]
+@spot = Spot.find params[:id]
 
 end
 
@@ -20,7 +20,7 @@ def create
 end
 
 def edit
-  @spot = Spot.find_by :id => params[:id]
+  @spot = Spot.find params[:id]
 end
 
 def update

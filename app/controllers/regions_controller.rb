@@ -7,7 +7,7 @@ end
 
 def show
 
-@region = Region.find_by :id => params[:id]
+@region = Region.find params[:id]
 
 end
 
@@ -19,7 +19,7 @@ def create
 end
 
 def edit
-  @region = Region.find_by :id => params[:id]
+  @region = Region.find params[:id]
 end
 
 def update
