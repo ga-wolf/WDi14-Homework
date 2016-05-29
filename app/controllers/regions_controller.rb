@@ -1,18 +1,25 @@
 class RegionsController < ApplicationController
 
 def index
+@regions = Region.all
+
 end
 
 def show
+
+@region = Region.find_by :id => params[:id]
+
 end
 
 def new
+  @region = Region.new
 end
 
 def create
 end
 
 def edit
+  @region = Region.find_by :id => params[:id]
 end
 
 def update

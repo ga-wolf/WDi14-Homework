@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :regions
   resources :spots
   resources :users
 

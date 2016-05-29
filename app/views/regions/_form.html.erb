@@ -1,0 +1,17 @@
+
+<%= form_for @region do |r| %>
+  <p>
+    <%= r.label :name %>
+    <%= r.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= r.label :address %>
+    <%= r.text_field :address, :required => true %>
+  </p>
+  <p>
+    <%= r.label :description %>
+    <%= r.text_field :description, :required => true %>
+  </p>
+
+<%= r.submit "Submit" %>
+<% end %>
