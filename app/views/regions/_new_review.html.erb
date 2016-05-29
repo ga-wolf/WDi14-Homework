@@ -1,8 +1,8 @@
-<%= form_for @reviews do |f| %>
+<%= form_for @review do |f| %>
 
 <p>
   <%= f.label :rating %>
-  <%= f.integer_field :rating, :required => true %>
+  <%= f.number_field :rating, :required => true %>
 </p>
 <p>
   <%= f.label :content %>
