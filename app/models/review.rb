@@ -13,4 +13,5 @@
 
 class Review < ActiveRecord::Base
   belongs_to :user
+  mount_uploader :avartar, AvatarUploader
 end
