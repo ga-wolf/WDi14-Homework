@@ -2,4 +2,7 @@
 <p><%= review.rating %></p>
 <p><%= review.content %></p>
 <p><%= review.region_id %></p>
+
+<%= link_to "Edit", edit_review_path(review) %>
+<%= link_to "Delete", review_path(review), :method => :delete %>
 <% end %>

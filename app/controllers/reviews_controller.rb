@@ -7,7 +7,6 @@ end
 
 def show
   @review = Review.find params[:id]
-
 end
 
 def new
@@ -15,12 +14,10 @@ def new
 end
 
 def create
-  # binding.pry
+  region = Region.find_by :id => params[:review][:region_id]
+  @review = Review.create review_params
 
-@region = Region.find_by :id => params[:review][:region_id]
-@review = Review.create review_params
-
-redirect_to region_path(@region)
+  redirect_to region_path(region)
 end
 
 def edit
@@ -28,10 +25,19 @@ def edit
 end
 
 def update
+  region = Region.find_by :id => params[:review][:region_id]
+  review = Review.find params[:id]
+  review.update review_params
 
+  redirect_to regions_path
 end
 
 def destroy
+  # region = Region.find_by :id => params[:review][:region_id]
+  review = Review.find params[:id]
+  review.destroy
+
+  redirect_to regions_path
 end
 
 private
