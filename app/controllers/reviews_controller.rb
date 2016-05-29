@@ -15,11 +15,12 @@ def new
 end
 
 def create
-  # @region = Region.find :id => params[:region_id]
+  # binding.pry
+
+@region = Region.find_by :id => params[:review][:region_id]
 @review = Review.create review_params
 
-binding.pry
-redirect_to regions_path
+redirect_to region_path(@region)
 end
 
 def edit
