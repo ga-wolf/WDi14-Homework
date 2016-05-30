@@ -11,5 +11,6 @@
 #
 
 class Region < ActiveRecord::Base
-  has_many :sopts
+  has_many :spots
+  has_many :reviews
 end
