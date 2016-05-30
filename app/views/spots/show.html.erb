@@ -1,4 +1,8 @@
 <h2>This should show one spot</h2>
+<%= link_to "Edit spot", edit_spot_path %>
+<%= link_to "Delete spot", spot_path, :method => :delete %>
+
+
 <p><%= @spot.name %></p>
 <p><%= @spot.address %></p>
 <p><%= @spot.description %></p>

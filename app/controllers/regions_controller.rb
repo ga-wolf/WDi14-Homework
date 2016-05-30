@@ -22,6 +22,9 @@ def new
 end
 
 def create
+  @region = Region.create region_params
+
+  redirect_to regions_path
 end
 
 def edit
@@ -29,11 +32,17 @@ def edit
 end
 
 def update
+  region = Region.find params[:id]
+  region.update region_params
 
-
+  redirect_to region
 end
 
 def destroy
+  region = Region.find params[:id]
+  region.destroy
+
+  redirect_to regions_path
 end
 
 private

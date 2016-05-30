@@ -17,6 +17,9 @@ def new
 end
 
 def create
+  @spot = Spot.create spot_params
+
+  redirect_to spots_path
 end
 
 def edit
@@ -24,10 +27,17 @@ def edit
 end
 
 def update
+  spot = Spot.find params[:id]
+  spot.update spot_params
 
+  redirect_to spot
 end
 
 def destroy
+  spot = Spot.find params[:id]
+  spot.destroy
+
+  redirect_to spots_path
 end
 
 private
