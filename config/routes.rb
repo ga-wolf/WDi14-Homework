@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get 'session/new'
 
   resources :reviews
-  resources :regions
-  resources :spots
+  resources :regions do
+    resources :spots
+  end
   resources :users
 
   get "/login" => 'session#new', :as => 'login'

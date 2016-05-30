@@ -2,9 +2,13 @@
 <%= link_to "Edit region", edit_region_path %>
 <%= link_to "Delete region", region_path, :method => :delete %>
 
+
 <p><%= @region.name %></p>
 <p><%= @region.address %></p>
 <p><%= @region.description %></p>
+
+<%= render :partial => 'spots/index' %>
+
 
 <%= render :partial => 'reviews/new' %>
 <%= render :partial => 'reviews/index' %>

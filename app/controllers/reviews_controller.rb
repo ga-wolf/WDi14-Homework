@@ -14,7 +14,7 @@ def new
 end
 
 def create
-  region = Region.find_by :id => params[:review][:region_id]
+  # region = Region.find_by :id => params[:review][:region_id]
 
   @review = Review.new review_params
 
@@ -22,7 +22,7 @@ def create
 
   @review.save!
 
-  redirect_to region_path(region)
+  redirect_to region_path(@review.region)
 end
 
 def edit

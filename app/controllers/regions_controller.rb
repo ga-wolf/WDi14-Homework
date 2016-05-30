@@ -1,19 +1,17 @@
 class RegionsController < ApplicationController
 
 def index
-  @regions = Region.all
+  @regions = Region.order(:id)
 
 end
 
 def show
-
   @region = Region.find params[:id]
 
+  @spots = @region.spots.order(:id)
+  @reviews = @region.reviews.order(:id)
+
   @review = Review.new
-
-  @reviews = Review.all
-
-# binding.pry
 
 end
 

@@ -1,11 +1,6 @@
 class SpotsController < ApplicationController
 
 
-def index
-@spots = Spot.all
-
-end
-
 def show
 
 @spot = Spot.find params[:id]
@@ -17,9 +12,11 @@ def new
 end
 
 def create
-  @spot = Spot.create spot_params
+  @spot = Spot.new spot_params
+  @spot.region_id = params[:region_id]
+  @spot.save!
 
-  redirect_to spots_path
+  redirect_to @spot.region
 end
 
 def edit
@@ -30,20 +27,21 @@ def update
   spot = Spot.find params[:id]
   spot.update spot_params
 
-  redirect_to spot
+  redirect_to spot.region
 end
 
 def destroy
   spot = Spot.find params[:id]
+  region = spot.region
   spot.destroy
 
-  redirect_to spots_path
+  redirect_to region
 end
 
 private
 
 def spot_params
-  params.require(:spot).permit(:name, :address, :description, :region_id)
+  params.require(:spot).permit(:name, :address, :description)
 end
 
 end
