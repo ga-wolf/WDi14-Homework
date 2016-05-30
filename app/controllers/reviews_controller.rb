@@ -38,11 +38,13 @@ def update
 end
 
 def destroy
-  # region = Region.find_by :id => params[:review][:region_id]
   review = Review.find params[:id]
+  region = review.region_id
   review.destroy
 
-  redirect_to regions_path
+binding.pry
+
+  redirect_to region_path(region)
 end
 
 private
