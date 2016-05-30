@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :locations
   get 'session/new'
 
   resources :reviews
