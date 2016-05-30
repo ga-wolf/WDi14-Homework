@@ -46,4 +46,5 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'carrierwave'
+  gem 'geocoder'
 end
