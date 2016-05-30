@@ -47,4 +47,5 @@ group :development do
   gem 'annotate'
   gem 'carrierwave'
   gem 'geocoder'
+  gem 'gmaps4rails'
 end
