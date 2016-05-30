@@ -15,8 +15,12 @@ end
 
 def create
   region = Region.find_by :id => params[:review][:region_id]
-  @review = Review.create review_params
-  # binding.pry
+
+  @review = Review.new review_params
+
+  @review.avatar = params[:review][:avatar]
+
+  @review.save!
 
   redirect_to region_path(region)
 end
@@ -44,7 +48,7 @@ end
 private
 
 def review_params
-    params.require(:review).permit(:rating, :content, :user_id, :region_id, {avatar: []})
+    params.require(:review).permit(:rating, :content, :user_id, :region_id)
 end
 
 end
