@@ -48,4 +48,5 @@ group :development do
   gem 'carrierwave'
   gem 'geocoder'
   gem 'gmaps4rails'
+  gem 'bootstrap-generators'
 end

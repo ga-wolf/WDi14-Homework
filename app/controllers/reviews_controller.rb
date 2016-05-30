@@ -42,8 +42,6 @@ def destroy
   region = review.region_id
   review.destroy
 
-binding.pry
-
   redirect_to region_path(region)
 end
 
