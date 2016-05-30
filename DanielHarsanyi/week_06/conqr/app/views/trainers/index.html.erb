@@ -1,0 +1,31 @@
+<!-- # t.text :name
+# t.text :email
+# t.text :password_digest
+# t.integer :fitness_australia_id
+# t.boolean :approved_status, :default => "false"
+# t.text :qualifications
+# t.text :training_specialty_areas
+# t.text :training_style
+# t.inet :current_location
+# t.text :preferred_location
+# t.integer :price
+# t.integer :rating
+# t.text :image -->
+
+<h1>All Trainers</h1>
+
+<% @trainers.each do |t| %>
+    <h2>Trainer's Name: <%=link_to( t.name, trainer_path( t.id ) ) %></h2>
+    <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
+    <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
+    <ul>
+      <li>Approved Status: <%= t.approved_status %></li>
+      <li>Qualifications: <%= t.qualifications %></li>
+      <li>Training Specialty Areas: <%= t.training_specialty_areas %></li>
+      <li>Training Style: <%= t.training_style %></li>
+      <li>Price: <%= t.price %></li>
+      <li>Rating: <%= t.rating %></li>
+    </ul>
+    <hr>
+
+<% end %>

@@ -1,0 +1,23 @@
+<!-- # t.text :name
+# t.text :email
+# t.text :password_digest
+# t.text :training_interest_areas
+# t.text :preferred_training_style
+# t.inet :current_location
+# t.text :preferred_location
+# t.text :image -->
+
+
+<h1>All Clients</h1>
+
+<% @clients.each do |c| %>
+    <h3>Client's Name: <%=link_to( c.name, client_path(c.id) ) %></h3>
+    <p><%= image_tag( c.image, :class => "thumbnail" ) %> </p>
+    <ul>
+      <li>Email: <%= c.email %></li>
+      <li>Training Interest Areas: <%= c.training_interest_areas if c.training_interest_areas %></li>
+      <li>Preferred Training Style: <%= c.preferred_training_style if c.preferred_training_style %></li>
+    </ul>
+    <hr>
+
+<% end %>

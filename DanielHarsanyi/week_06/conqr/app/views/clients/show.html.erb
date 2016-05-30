@@ -1,0 +1,25 @@
+<h1><%= @client.name %></h1>
+
+<%= image_tag @client.image, :class => 'feature' %>
+
+<ul>
+  <li>Email: <%= @client.email %></li>
+  <li>Training Interest Areas: <%= @client.training_interest_areas if @client.training_interest_areas %></li>
+  <li>Preferred Training Style: <%= @client.preferred_training_style if @client.preferred_training_style %></li>
+
+</ul>
+
+<div>
+  <%= link_to "Edit #{@client.name}", edit_client_path %>
+  <%= link_to "Delete #{@client.name}", client_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+</div>
+
+<!-- t.text :name
+t.text :email
+t.text :password_digest
+t.text :training_interest_areas
+t.text :preferred_training_style
+t.inet :current_location
+t.text :preferred_location
+t.boolean :admin, :default => "false"
+t.text :image -->

@@ -1,0 +1,60 @@
+<%= form_for @trainer do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, :required => true %>
+  </p>
+  <p>
+    <%= f.label :fitness_australia_id, "Fitness Australia ID" %>
+    <%= f.number_field :fitness_australia_id, :required => true %>
+  </p>
+  <p>
+    <%= f.label :qualifications %>
+    <%= f.text_field :qualifications, :required => true %>
+  </p>
+  <p>
+    <%= f.label :training_specialty_areas %>
+    <%= f.text_field :training_specialty_areas, :required => true %>
+  </p>
+  <p>
+    <%= f.label :training_style %>
+    <%= f.text_field :training_style, :required => true %>
+  </p>
+  <p>
+    <%= f.label :price, "Hourly Rate" %>
+    <%= f.number_field :price, :required => true %>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, :required => true %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image, "Profile Image " %>
+    <%= f.text_field :image, :required => true %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
+
+<!-- t.text :name
+t.text :email
+t.text :password_digest
+t.integer :fitness_australia_id
+t.boolean :approved_status, :default => "false"
+t.text :qualifications
+t.text :training_specialty_areas
+t.text :training_style
+t.inet :current_location
+t.text :preferred_location
+t.integer :price
+t.integer :rating
+t.text :image -->
+
+<!-- params.require(:trainer).permit(:name, :email, :password, :password_confirmation, :fitness_australia_id, :qualifications, :training_specialty_areas, :training_style, :price, :image) -->
