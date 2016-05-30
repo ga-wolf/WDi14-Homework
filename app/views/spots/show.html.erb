@@ -3,7 +3,7 @@
 <%= link_to "Delete spot", region_spot_path, :method => :delete %>
 
 <p><%= @spot.name %></p>
-<p><%= @spot.address %></p>
+<p><%= @spot.lat %> | <%= @spot.lon %></p>
 <p><%= @spot.description %></p>
 
 <%= render :partial => 'disqus' %>

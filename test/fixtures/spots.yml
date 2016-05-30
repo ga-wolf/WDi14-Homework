@@ -4,11 +4,12 @@
 #
 #  id          :integer          not null, primary key
 #  name        :text
-#  address     :text
 #  description :text
 #  region_id   :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  lat         :float
+#  lng         :float
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

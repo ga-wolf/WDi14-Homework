@@ -3,8 +3,12 @@
     <%= f.text_field :name, :required => true %>
   </p>
   <p>
-    <%= f.label :address %>
-    <%= f.text_field :address, :required => true %>
+    <%= f.label :lat, "Latitude" %>
+    <%= f.number_field :lat, :required => true %>
+  </p>
+  <p>
+    <%= f.label :lng, "Longitude" %>
+    <%= f.number_field :lng, :required => true %>
   </p>
   <p>
     <%= f.label :description %>
