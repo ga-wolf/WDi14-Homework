@@ -12,6 +12,7 @@
 #
 
 class Review < ActiveRecord::Base
+  mount_uploader :avatar, AvatarUploader
+  
   belongs_to :user
-  mount_uploader :avartar, AvatarUploader
 end

@@ -8,6 +8,10 @@
   <%= f.label :content %>
   <%= f.text_field :content, :required => true %>
 </p>
+<p>
+  <%= f.label :avatar, "Image" %>
+  <%= f.file_field :avatar, multiple: true %>
+</p>
 
 <%= f.hidden_field :region_id, :value => @region.id %>
 
