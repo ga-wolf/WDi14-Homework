@@ -1,0 +1,12 @@
+<hr>
+<h3>Results</h3>
+
+<% @result["Search"].each do |cur| %>
+  <p>
+    <a href="/soutput?input=<%= cur["Title"]%>">
+    <%= cur["Title"] %>
+    </a>
+  </p>
+<% end %>
+
+<hr>

@@ -1,0 +1,15 @@
+
+<h2><%= @author.name %></h2>
+<%= image_tag( @author.image, :class => 'featured' ) %>
+
+<p>Nationality: <%= @author.nationality %></p>
+<p>Date of Birth: <%= @author.dob.strftime( "%A, %B %e %Y" )%></p>
+<% if @author.alive %>
+  <p>Still kicking!</p>
+<% else %>
+  <p>Lived a full life (or maybe empty, what do I know)</p>
+<% end %>
+
+<%= link_to( "Edit #{@author.name}", "/authors/#{@author.id}/edit" ) %>
+<br>
+<%= link_to( "Destroy #{@author.name}", "/authors/#{@author.id}/delete", :method => :delete, :data => { :confirm => "Really destroy #{@author.name}?" } ) %>

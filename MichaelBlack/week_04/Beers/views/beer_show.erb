@@ -1,0 +1,19 @@
+<h4>This page shows beers by id</h4>
+
+<h4>
+  <%= @beer["brand"] %>
+</h4>
+
+<img src="<%= @beer["image"] %>">
+
+<p>
+  <%= @beer["type"] %>
+</p>
+
+<p><i>
+  <%= @beer["rating"] %> out of 5
+</i></p>
+
+<a href="/beers/<%= @beer["id"] %>/edit">Edit</a>
+  |
+<a href="">Delete</a>

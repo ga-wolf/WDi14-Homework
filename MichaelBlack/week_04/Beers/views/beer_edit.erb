@@ -1,0 +1,18 @@
+<h3>Edit beer here by id</h3>
+
+<form method="POST" action="/beers/<%= @beer["id"] %>">
+
+  <label>Brand: </label>
+  <input type="text" name="brand" value="<%= @beer["brand"] %>">
+
+  <label>Image: </label>
+  <input type="text" name="image" value="<%= @beer["image"] %>">
+
+  <label>Type: </label>
+  <input type="text" name="type" value="<%= @beer["type"] %>">
+
+  <label>Rating (of 5)</label>
+  <input type="number" name="rating" min="0" max="5" value="<%= @beer["rating"] %>">
+
+  <input type="submit" name="Update!">
+</form>
