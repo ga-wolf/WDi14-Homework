@@ -49,4 +49,5 @@ group :development do
   gem 'geocoder'
   gem 'gmaps4rails'
   gem 'bootstrap-generators'
+  gem 'cloudinary'
 end

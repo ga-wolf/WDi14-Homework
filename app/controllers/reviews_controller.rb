@@ -15,11 +15,9 @@ end
 
 def create
   # region = Region.find_by :id => params[:review][:region_id]
-
+  cloudinary = Cloudinary::Uploader.upload( params[:file] )
   @review = Review.new review_params
-
-  @review.avatar = params[:review][:avatar]
-
+  @review.link = cloudinary["url"]
   @review.save!
 
   redirect_to region_path(@review.region)

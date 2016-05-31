@@ -16,3 +16,6 @@ s3 = Spot.create :name => 'Brisbane Water', :lat => '-33.462119', :lng => '151.3
 User.destroy_all
 u1 = User.create :name => 'Josh', :email => 'josh@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => true
 u2 = User.create :name => 'Daisy', :email => 'daisy@ga.co', :password => 'chicken', :password_confirmation => 'chicken'
+
+Review.destroy_all
+r1 = Review.create :rating => '5', :content => 'This is it', :user_id => u1.id, :region_id => r1.id, :link => 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg'

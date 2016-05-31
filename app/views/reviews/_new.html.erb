@@ -1,4 +1,15 @@
-<%= form_for @review do |f| %>
+<%= form_for @review, :html => { :multipart => true } do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 <p>
   <%= f.label :rating %>
@@ -9,8 +20,8 @@
   <%= f.text_field :content, :required => true %>
 </p>
 <p>
-  <%= f.label :avatar, "Image" %>
-  <%= f.file_field :avatar %>
+  <%= f.label :link, "Image" %>
+  <%= cl_image_upload_tag :link %>
 </p>
 
 <%= f.hidden_field :region_id, :value => @region.id %>
