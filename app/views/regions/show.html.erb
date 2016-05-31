@@ -1,6 +1,6 @@
 <h1>This should show one region</h1>
 <%= link_to "Edit region", edit_region_path %>
-<%= link_to "Delete region", region_path, :method => :delete %>
+<%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
 
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>

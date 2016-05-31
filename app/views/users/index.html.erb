@@ -1,9 +1,11 @@
 <h1>This should show all the users</h1>
+<h1>All users: TOP SECRET</h1>
 
 <% @users.each do |user| %>
 
 <p><%= user.name %></p>
 <p><%= user.email %></p>
 <p><%= user.id %></p>
-
+<p><%= user.id %></p>
+<p><%= user.email %> created account at <%= user.created_at %></p>
 <% end %>

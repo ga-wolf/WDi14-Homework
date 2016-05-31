@@ -5,4 +5,4 @@
 <p><%= @user.email %></p>
 
 <%= link_to( "Edit user", edit_user_path(@user) ) %> |
-<%= link_to( "Delete account", user_path(@user), :method => :delete ) %>
+<%= link_to( "Delete account", user_path(@user), :method => :delete, :data => { :confirm => "Are you sure?" } ) %>
