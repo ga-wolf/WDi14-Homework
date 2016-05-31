@@ -39,11 +39,15 @@
           <li class="active"><a href="/">Home</a></li>
           <li><%= link_to "Regions", regions_path %></li>
           <li><%= link_to "Locations", locations_path %></li>
-          <% if @current_user %>
-          <li><%= link_to "Log out", logout_path, :method => :delete %></li>
-          <li><%= link_to "Users", users_path %></li>
+          <% if @current_user && @current_user.admin == true %>
+            <li><%= link_to "Profile", user_path(@current_user) %></li>
+            <li><%= link_to "Users", users_path %></li>
+            <li><%= link_to "Log out", logout_path, :method => :delete %></li>
+          <% elsif @current_user %>
+            <li><%= link_to "Profile", user_path(@current_user) %></li>
+            <li><%= link_to "Log out", logout_path, :method => :delete %></li>
           <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to "Log in", login_path %></li>
           <% end %>
         </ul>
       </div>
