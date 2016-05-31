@@ -2,7 +2,7 @@ class SpotsController < ApplicationController
 
 
 def show
-  binding.pry
+  # binding.pry
 @spot = Spot.find params[:id]
 @hash = Gmaps4rails.build_markers(@spot) do |spot, marker|
   marker.lat spot.lat
