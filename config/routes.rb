@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root 'regions#home'
-  resources :locations
   get 'session/new'
   resources :reviews
   resources :regions do

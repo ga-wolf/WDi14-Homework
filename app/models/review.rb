@@ -13,7 +13,6 @@
 #
 
 class Review < ActiveRecord::Base
-  mount_uploader :avatar, AvatarUploader
   belongs_to :user
   belongs_to :region
 end
