@@ -1,0 +1,19 @@
+<h2>Edit Task</h2>
+
+<%= form_for @task do |f| %>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+  </p>
+
+  <p>
+    <%= f.text_area :description, size: "24x6", :required => true %>
+  </p>
+
+    <%= f.submit "Submit" %>
+<% end %>

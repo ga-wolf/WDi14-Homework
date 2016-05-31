@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @user = User.new user_params
     @user.save
 
+    session[:user_id] = @user.id
+    @current_user = @user
+    flash[:success] = "Now logged in as #{@current_user.username}"
+
     redirect_to users_path
   end
 

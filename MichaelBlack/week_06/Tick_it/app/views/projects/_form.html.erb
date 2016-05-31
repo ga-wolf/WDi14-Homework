@@ -1,0 +1,13 @@
+<%= form_for @project do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </p>
+  <p>
+    <%= f.label :description %>
+  </p>
+    <%= f.text_area :description, size: "24x6", :required => true %>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
