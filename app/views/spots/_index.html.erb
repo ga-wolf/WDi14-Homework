@@ -1,11 +1,11 @@
-<h1>This page should show all the spots</h1>
-
-<%= link_to "New spot", new_region_spot_path(:region_id => @region.id) %>
+<h1><b>Spots</b></h1>
 
 <% @spots.each do |spot| %>
 
 <p>Name: <%= link_to "#{spot.name}", region_spot_path(:region_id => @region.id, :id => spot.id) %></p>
 <p>Latitude: <%= spot.lat %> | Longitude: <%= spot.lng %></p>
 <p><%= spot.description %></p>
+
+<%= link_to "New spot", new_region_spot_path(:region_id => @region.id) %>
 
 <% end %>

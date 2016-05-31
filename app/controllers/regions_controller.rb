@@ -10,6 +10,11 @@ def show
 
   @spots = @region.spots.order(:id)
   @reviews = @region.reviews.order(:id)
+  rating_sum = 0
+  @reviews.each do |r|
+    rating_sum += r.rating
+  end
+  @rating_avg = rating_sum/@reviews.length
 
   @review = Review.new
 
