@@ -14,7 +14,7 @@ def show
   @reviews.each do |r|
     rating_sum += r.rating
   end
-  @rating_avg = rating_sum/@reviews.length
+  @rating_avg = (rating_sum/@reviews.length).round(1)
 
   @review = Review.new
 
