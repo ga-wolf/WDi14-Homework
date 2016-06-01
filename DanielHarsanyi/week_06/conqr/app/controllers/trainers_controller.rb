@@ -1,6 +1,15 @@
 class TrainersController < ApplicationController
   def index
     @trainers = Trainer.all
+
+    if @current_user.is_a?(Trainer)
+      redirect_to @current_user
+    end
+
+    if @current_user == nil
+      redirect_to home_path
+    end
+
   end
 
   def new
@@ -44,9 +53,16 @@ class TrainersController < ApplicationController
     redirect_to trainers_path
   end
 
+  def choose
+    # @matched_trainers = Trainer.all
+    @matched_trainers = Trainer.where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
+    # raise
+  end
+
+
   private
     def trainer_params
-      params.require(:trainer).permit(:name, :email, :password, :password_confirmation, :fitness_australia_id, :qualifications, :training_specialty_areas, :training_style, :price, :image)
+      params.require(:trainer).permit(:name, :email, :password, :password_confirmation, :rating, :fitness_australia_id, :qualifications, :training_specialty_areas, :training_style, :price, :image)
     end
 end
 

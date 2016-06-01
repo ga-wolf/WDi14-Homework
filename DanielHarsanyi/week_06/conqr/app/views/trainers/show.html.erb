@@ -17,16 +17,20 @@
 <%= image_tag @trainer.image, :class => 'feature' %>
 
 <ul>
-  <li>Email: <%= @trainer.email %></li>
+  <li>Email: <%= mail_to(@trainer.email) %></li>
   <li>Fitness Australia ID: <%= @trainer.fitness_australia_id %></li>
   <li>Qualifications: <%= @trainer.qualifications %></li>
   <li>Training Specialty Areas: <%= @trainer.training_specialty_areas %></li>
   <li>Training Style: <%= @trainer.training_style %></li>
-  <li>Price per Hour: <%= @trainer.price %></li>
+  <li>Price per Hour: <%= number_to_currency( @trainer.price, precision: 0 ) %>/hour</li>
   <li>Rating: <%= @trainer.rating %>/5</li>
 </ul>
 
-<div>
-  <%= link_to "Edit #{@trainer.name}", edit_trainer_path %>
-  <%= link_to "Delete #{@trainer.name}", trainer_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
-</div>
+<% if @current_user && @current_user.is_a?(Client) %>
+    <% if @current_user.admin? == true %>
+      <div>
+        <%= link_to "Edit #{@trainer.name}", edit_trainer_path %>
+        <%= link_to "Delete #{@trainer.name}", trainer_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      </div>
+    <% end %>
+  <% end %>

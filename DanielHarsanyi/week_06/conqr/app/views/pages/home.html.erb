@@ -1,7 +1,11 @@
 <div class="hero">
 
   <div class="main_button">
-    <p><%= link_to("Find a personal trainer perfectly matched to you", trainers_path ) %></p>
+    <% if @current_user.is_a?(Trainer) %>
+      <p><%= link_to("Use conqr to increase your number of clients today", new_trainer_path ) %></p>
+    <% else %>
+      <p><%= link_to("Find a personal trainer perfectly matched to you", find_trainer_path ) %></p>
+    <% end %>
   </div>
 
 </div>

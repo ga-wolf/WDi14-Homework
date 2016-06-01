@@ -1,6 +1,21 @@
 class ClientsController < ApplicationController
   def index
       @clients = Client.all
+
+      if @current_user.is_a?(Client)
+        if @current_user && @current_user.admin? == true
+          return
+        end
+      end
+
+      if @current_user.is_a?(Client)
+        redirect_to @current_user
+      end
+
+      if @current_user == nil
+        redirect_to login_path
+      end
+
   end
 
   def new
@@ -9,6 +24,11 @@ class ClientsController < ApplicationController
 
   def show
       @client = Client.find params[:id]
+
+      if @current_user.is_a?(Client)
+        # cronofy = ::Cronofy::Client.new(access_token: 'DBx6L2PDmGIa3B0T1I0WwF42AjTxxZH1')
+        # events = cronofy.read_events
+      end
   end
 
   def create
@@ -41,13 +61,13 @@ class ClientsController < ApplicationController
     client = Client.find params[:id]
     client.destroy
 
-    redirect_to clients_path
+    redirect_to home_path
   end
 
 
   private
     def client_params
-      params.require(:client).permit(:name, :email, :password, :password_confirmation, :training_interest_areas, :preferred_training_style, :image)
+      params.require(:client).permit(:name, :email, :password, :password_confirmation, :preferred_location, :training_interest_areas, :preferred_training_style, :image)
     end
 
 end

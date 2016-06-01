@@ -6,13 +6,16 @@
   <li>Email: <%= @client.email %></li>
   <li>Training Interest Areas: <%= @client.training_interest_areas if @client.training_interest_areas %></li>
   <li>Preferred Training Style: <%= @client.preferred_training_style if @client.preferred_training_style %></li>
+  <li>Preferred Training Location: <%= @client.preferred_location if @client.preferred_location %></li>
 
 </ul>
 
-<div>
-  <%= link_to "Edit #{@client.name}", edit_client_path %>
-  <%= link_to "Delete #{@client.name}", client_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
-</div>
+<% if @current_user.is_a?(Client) %>
+  <div>
+    <%= link_to "Edit #{@client.name}", edit_client_path %>
+    <%= link_to "Delete #{@client.name}", client_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+  </div>
+  <% end %>
 
 <!-- t.text :name
 t.text :email

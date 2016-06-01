@@ -19,12 +19,14 @@
     <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
     <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
     <ul>
-      <li>Approved Status: <%= t.approved_status %></li>
+      <% if @current_user && @current_user.admin? == true %>
+        <li>Approved Status: <%= t.approved_status %></li>
+      <% end %>
       <li>Qualifications: <%= t.qualifications %></li>
       <li>Training Specialty Areas: <%= t.training_specialty_areas %></li>
       <li>Training Style: <%= t.training_style %></li>
-      <li>Price: <%= t.price %></li>
-      <li>Rating: <%= t.rating %></li>
+      <li>Price: <%= number_to_currency( t.price, precision: 0 ) %>/hour</li>
+      <li>Rating: <%= t.rating %>/5</li>
     </ul>
     <hr>
 

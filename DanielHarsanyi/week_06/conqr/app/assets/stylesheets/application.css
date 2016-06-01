@@ -21,6 +21,13 @@ header {
   z-index: 1000;
 }
 
+header p {
+  color: white;
+  position: absolute;
+  left: 200px;
+  top: -15px;
+}
+
 
 .hero {
   background-image: url("/assets/pt_in_rain.png");

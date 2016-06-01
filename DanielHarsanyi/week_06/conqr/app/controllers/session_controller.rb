@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
 
-  before_action :authenticate, :only => [:login]
+  before_action :authenticate, :only => [:new]
 
   #Show the login form
     def new
@@ -16,13 +16,9 @@ class SessionController < ApplicationController
           @current_user = Trainer.find_by( :email => params[:email] )
       end
 
-      if @current_user.present? && @current_user.authenticate( params[:password] ) && @current_user.is_a?(Client)
+      if @current_user.present? && @current_user.authenticate( params[:password] )
         session[:user_id] = @current_user.id
-        flash[:success] = "Successfully logged in as a client"
-        redirect_to @current_user
-      elsif @current_user.present? && @current_user.authenticate( params[:password] ) && @current_user.is_a?(Trainer)
-        session[:user_id] = @current_user.id
-        flash[:success] = "Successfully logged in as a trainer"
+        flash[:success] = "Successfully logged in"
         redirect_to @current_user
       else
         flash[:error] = "Invalid email or password"
@@ -34,7 +30,7 @@ class SessionController < ApplicationController
     def destroy
       session[:user_id] = nil
       flash[:success] = "Successfully logged out"
-      redirect_to login_path
+      redirect_to home_path
     end
 
     private
@@ -43,17 +39,3 @@ class SessionController < ApplicationController
       end
 
 end
-
-
-# if @current_user.present? && @current_user.authenticate( params[:password] ) && @current_user.is_a?(Client)
-#   session[:user_id] = @current_user.id
-#   flash[:success] = "Successfully logged in as a client"
-#   redirect_to @current_user
-# elsif @current_user.present? && @current_user.authenticate( params[:password] ) && @current_user.is_a?(Trainer)
-#   session[:user_id] = @current_user.id
-#   flash[:success] = "Successfully logged in as a trainer"
-#   redirect_to @current_user
-# else
-#   flash[:error] = "Invalid email or password"
-#   redirect_to login_path
-# end

@@ -1,0 +1,13 @@
+<h1>These are the trainers that match your criteria</h1>
+
+  <% @matched_trainers.each do |t| %>
+    <h2>Trainer's Name: <%=link_to( t.name, trainer_path( t.id ) ) %></h2>
+    <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
+    <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
+    <ul>
+      <li>Price: <%=number_to_currency( t.price, precision: 0 ) %>/hour</li>
+      <li>Rating: <%= t.rating %>/5</li>
+    </ul>
+    <hr>
+
+<% end %>
