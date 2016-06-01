@@ -28,6 +28,11 @@ s10 = Spot.create :name => "The Karuah River", :lat => '-32.635473', :lng => '15
 User.destroy_all
 u1 = User.create :name => 'Josh', :email => 'josh@ga.co', :password => 'chicken', :password_confirmation => 'chicken', :admin => true
 u2 = User.create :name => 'Daisy', :email => 'daisy@ga.co', :password => 'chicken', :password_confirmation => 'chicken'
+u3 = User.create :name => 'Mercury', :email => 'mercury@ga.co', :password => 'chicken', :password_confirmation => 'chicken'
+u4 = User.create :name => 'Terry', :email => 'terry@ga.co', :password => 'chicken', :password_confirmation => 'chicken'
 
 Review.destroy_all
-r1 = Review.create :rating => '5', :content => 'This is it', :user_id => u1.id, :region_id => r1.id, :link => 'http://www.medhatspca.ca/sites/default/files/styles/medium/public/news_photos/2014-Apr-15/node-147/cute-little-cat.jpg?itok=ASUgONO7'
+r1 = Review.create :rating => '5', :content => 'This is it', :user_id => u1.id, :region_id => r1.id, :link => 'http://images.all-free-download.com/images/graphiclarge/seahorse_fish_water_221733.jpg'
+r2 = Review.create :rating => '3', :content => 'So so', :user_id => u2.id, :region_id => r1.id, :link => 'http://images.all-free-download.com/images/graphiclarge/lion_fish_water_219341.jpg'
+r3 = Review.create :rating => '2', :content => 'Not that I wanted', :user_id => u2.id, :region_id => r1.id, :link => 'http://images.all-free-download.com/images/graphiclarge/fish_water_fish_swarm_236422.jpg'
+r4 = Review.create :rating => '4', :content => 'It was good', :user_id => u3.id, :region_id => r1.id, :link => 'http://images.all-free-download.com/images/graphiclarge/fish_swarm_fish_aquarium_225341.jpg'
