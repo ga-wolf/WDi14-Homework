@@ -14,7 +14,11 @@ def show
   @reviews.each do |r|
     rating_sum += r.rating
   end
-  @rating_avg = (rating_sum/@reviews.length).round(1)
+  if @reviews.length != 0
+    @rating_avg = (rating_sum/@reviews.length).round(1)
+  else
+    @msg = "Be the first rater"
+  end
 
   @review = Review.new
 

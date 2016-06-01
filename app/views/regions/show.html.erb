@@ -1,4 +1,4 @@
-<h1><b><%= @region.name %></b> | <%= @rating_avg.to_f %></h1>
+<h1><b><%= @region.name %></b> | <% if @rating_avg %><%= @rating_avg.to_f %><% else %><%= @msg %><% end %></h1>
 <%= link_to "Edit region", edit_region_path %>
 <%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
 <div id="weather"></div>
