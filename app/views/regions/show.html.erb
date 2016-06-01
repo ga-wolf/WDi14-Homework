@@ -2,6 +2,8 @@
 <%= link_to "Edit region", edit_region_path %>
 <%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
 
+<div id="weather"></div>
+
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
@@ -11,6 +13,30 @@
 <%= render :partial => 'spots/index' %>
 <%= render :partial => 'reviews/new' %>
 <%= render :partial => 'reviews/index' %>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Austin, TX',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+</script>
+
 
 <script>
 handler = Gmaps.build('Google');
