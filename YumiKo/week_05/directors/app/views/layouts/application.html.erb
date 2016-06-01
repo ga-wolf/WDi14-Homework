@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directors</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>Welcome to MovieWorld</h1>
+
+<nav>
+  <a href="/directors"><li>Directors</li></a>
+  <a href="/movies"><li>Movies</li></a>
+</nav>
+<div class="content">
+<%= yield %>
+<hr>
+</div>
+</body>
+</html>

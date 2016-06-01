@@ -1,0 +1,42 @@
+body {
+  font-family: cursive;
+  text-align: center;
+
+}
+
+h1 {
+  font-family: sans-serif;
+    font-size: 50px;
+}
+
+
+img {
+  border: 10px solid brown;
+  width: 500px;
+  border-radius: 30px;
+}
+
+a {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.larger {
+  width: 55vw;
+}
+
+#home {
+  width:100px;
+  height:100px;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.content {
+  background: pink;
+  width: 60vw;
+  margin: auto;
+}

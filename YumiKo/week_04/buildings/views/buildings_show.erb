@@ -1,0 +1,16 @@
+
+<h2><%= @building["name"] %></h2>
+<p><img class="larger" src="<%= @building["image"] %>"></p>
+<h3><%= @building["address"] %></h3>
+<h3><%= @building["description"] %></h3>
+
+
+
+
+<a href="/buildings/<%= @building["id"] %>/edit">
+  Edit this page
+</a>
+
+<a href="/buildings/<%= @building["id"] %>/delete">
+  Delete this page
+</a>
