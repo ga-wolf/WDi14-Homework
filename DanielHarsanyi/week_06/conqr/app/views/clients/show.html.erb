@@ -7,7 +7,7 @@
   <li>Training Interest Areas: <%= @client.training_interest_areas if @client.training_interest_areas %></li>
   <li>Preferred Training Style: <%= @client.preferred_training_style if @client.preferred_training_style %></li>
   <li>Preferred Training Location: <%= @client.preferred_location if @client.preferred_location %></li>
-
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@client.latitude},#{@client.longitude}" %>
 </ul>
 
 <% if @current_user.is_a?(Client) %>

@@ -27,6 +27,8 @@
       <li>Training Style: <%= t.training_style %></li>
       <li>Price: <%= number_to_currency( t.price, precision: 0 ) %>/hour</li>
       <li>Rating: <%= t.rating %>/5</li>
+      <li>Location:</li>
+      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{t.latitude},#{t.longitude}" %>
     </ul>
     <hr>
 

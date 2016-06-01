@@ -17,6 +17,8 @@
       <li>Email: <%= c.email %></li>
       <li>Training Interest Areas: <%= c.training_interest_areas if c.training_interest_areas %></li>
       <li>Preferred Training Style: <%= c.preferred_training_style if c.preferred_training_style %></li>
+      <li>Location:</li>
+      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{c.latitude},#{c.longitude}" %>
     </ul>
     <hr>
 

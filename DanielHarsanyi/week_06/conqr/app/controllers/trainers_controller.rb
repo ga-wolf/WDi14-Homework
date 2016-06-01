@@ -54,15 +54,18 @@ class TrainersController < ApplicationController
   end
 
   def choose
-    # @matched_trainers = Trainer.all
-    @matched_trainers = Trainer.where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
+    if params[:search].present?
+      @matched_trainers = Trainer.near(params[:search], 20).where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
+    else
+      @matched_trainers = Trainer.where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
+    end
     # raise
   end
 
 
   private
     def trainer_params
-      params.require(:trainer).permit(:name, :email, :password, :password_confirmation, :rating, :fitness_australia_id, :qualifications, :training_specialty_areas, :training_style, :price, :image)
+      params.require(:trainer).permit(:name, :email, :password, :password_confirmation, :rating, :fitness_australia_id, :preferred_location, :qualifications, :training_specialty_areas, :training_style, :price, :image)
     end
 end
 

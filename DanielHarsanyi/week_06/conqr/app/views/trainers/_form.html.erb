@@ -16,6 +16,10 @@
     <%= f.text_field :qualifications, :required => true %>
   </p>
   <p>
+    <%= f.label :preferred_location, "Location" %>
+    <%= f.text_field :preferred_location, :required => true %>
+  </p>
+  <p>
     <%= f.label :training_style, "Training Style" %>
     <%= f.select(:training_style, options_for_select([["Drill Sergeant"],["Encourager"],["Holistic"],["Relaxed"]], (@current_user.training_style if @current_user.is_a?(Trainer)))) %>
   </p>

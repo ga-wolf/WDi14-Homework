@@ -7,16 +7,20 @@
     <%= f.label :email %>
     <%= f.email_field :email, :required => true %>
   </p>
+
   <p>
-    <%= f.label :training_interest_areas %>
-    <%= f.text_field :training_interest_areas, :required => true %>
+    <%= f.label :preferred_training_style, "Training Style" %>
+    <%= f.select(:preferred_training_style, options_for_select([["Drill Sergeant"],["Encourager"],["Holistic"],["Relaxed"]], (@current_user.preferred_training_style if @current_user.is_a?(Client)))) %>
   </p>
   <p>
-    <%= f.label :preferred_training_style %>
-    <%= f.text_field :preferred_training_style, :required => true %>
+    <%= f.label :training_interest_areas, "Training Specialty Area" %>
+      <%= f.select(:training_interest_areas, options_for_select([["Body Building"],["Nutrition"],["Weight Loss"],["Pilates"],["Boxing"],["Cardio"],["Crossfit"],["Yoga"],["Martial Arts"],["Toning"],["Calisthenics"],["Tabata"],["Body Transformation"]], (@current_user.training_interest_areas if @current_user.is_a?(Client)))) %>
   </p>
+
+
+
   <p>
-    <%= f.label :preferred_location %>
+    <%= f.label :preferred_location, "Location" %>
     <%= f.text_field :preferred_location, :required => true %>
   </p>
   <p>

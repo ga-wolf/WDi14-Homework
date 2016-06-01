@@ -24,7 +24,8 @@
   <li>Training Style: <%= @trainer.training_style %></li>
   <li>Price per Hour: <%= number_to_currency( @trainer.price, precision: 0 ) %>/hour</li>
   <li>Rating: <%= @trainer.rating %>/5</li>
-</ul>
+  <li>Location: <%= @trainer.preferred_location %></li>
+  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@trainer.latitude},#{@trainer.longitude}" %></ul>
 
 <% if @current_user && @current_user.is_a?(Client) %>
     <% if @current_user.admin? == true %>
