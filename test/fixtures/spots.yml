@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: spots
+#
+#  id          :integer          not null, primary key
+#  name        :text
+#  description :text
+#  region_id   :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  lat         :float
+#  lng         :float
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  address: MyText
+  description: MyText
+  reveiw_id: 1
+
+two:
+  name: MyText
+  address: MyText
+  description: MyText
+  reveiw_id: 1

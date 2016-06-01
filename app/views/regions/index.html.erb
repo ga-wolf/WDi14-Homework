@@ -1,0 +1,11 @@
+
+<%= link_to "New region", new_region_path %>
+
+<% @regions.each do |region|%>
+<p>Name: <%= link_to " #{region.name} ", "/regions/#{region.id}" %></p>
+<p>Address: <%= region.address %></p>
+<p><%= region.description %></p>
+<% end %>
+
+
+<h1>This will show the forecast</h1>

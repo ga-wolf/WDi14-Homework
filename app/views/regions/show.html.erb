@@ -1,0 +1,23 @@
+<h1><b><%= @region.name %></b> | <%= @rating_avg.to_f %></h1>
+<%= link_to "Edit region", edit_region_path %>
+<%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<p><b><%= @region.name %></b> | <%= @region.address %> | <%= @region.description %></p>
+
+<%= render :partial => 'spots/index' %>
+<%= render :partial => 'reviews/new' %>
+<%= render :partial => 'reviews/index' %>
+
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {
+}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>
