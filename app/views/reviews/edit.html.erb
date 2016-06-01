@@ -2,8 +2,9 @@
 
 <p>
   <%= f.label :rating %>
-  <%= f.number_field :rating, :required => true %>
+  <%= f.select :rating, (1..5).to_a, :include_blank => true %>
 </p>
+
 <p>
   <%= f.label :content %>
   <%= f.text_field :content, :required => true %>
