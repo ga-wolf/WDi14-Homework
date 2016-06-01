@@ -30,6 +30,8 @@ end
 def update
   # region = Region.find_by :id => params[:review][:region_id]
   review = Review.find params[:id]
+  cloudinary = Cloudinary::Uploader.upload( params[:file] )
+  review.link = cloudinary["url"]
   review.update review_params
 
   redirect_to "/regions/#{review.region_id}"
@@ -46,7 +48,7 @@ end
 private
 
 def review_params
-    params.require(:review).permit(:rating, :content, :user_id, :region_id)
+    params.require(:review).permit(:rating, :content, :user_id, :region_id, :link)
 end
 
 end

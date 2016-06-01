@@ -25,10 +25,11 @@
 </p>
 
 <%= f.hidden_field :region_id, :value => @region.id %>
+
 <% if @current_user %>
 <%= f.hidden_field :user_id, :value => @current_user.id %>
 
 <% end %>
 
-<%= f.submit "create review" %>
+<%= f.submit "Create review" %>
 <% end %>
