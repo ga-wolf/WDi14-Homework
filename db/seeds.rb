@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Region.destroy_all
-r1 = Region.create :name => 'Central Coast', :address => 'central coast', :description => 'All the top angling species can be taken from the lakes and along the surfing beaches.'
-r2 = Region.create :name => 'Lake Burrinjuck', :address => 'lake burrinjuck', :description => 'Between the Barren Jack and Black Andrew Mountains lies a significant lake called Burrinjuck. The lake supplies regulated water flows to the entire Murrumbidgee Valley. The catchment area of the dam can hold double the amount of water in Sydney Harbour.'
+r1 = Region.create :name => 'Central Coast', :address => 'Central Coast, NSW', :description => 'All the top angling species can be taken from the lakes and along the surfing beaches.'
+r2 = Region.create :name => 'Lake Burrinjuck', :address => 'New South Wales 2582', :description => 'Between the Barren Jack and Black Andrew Mountains lies a significant lake called Burrinjuck. The lake supplies regulated water flows to the entire Murrumbidgee Valley. The catchment area of the dam can hold double the amount of water in Sydney Harbour.'
 r3 = Region.create :name => 'Port Stephens', :address => 'New South Wales 2324', :description => 'In recent years, both these popular holiday spots have received a steady stream of holidaymakers as well as a growing number of permanent residents. In spite of being well fished, both waterways are well stocked with a great variety of good-sized fish.'
 
 

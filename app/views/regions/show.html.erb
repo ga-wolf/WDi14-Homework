@@ -1,7 +1,6 @@
 <h1><b><%= @region.name %></b> | <%= @rating_avg.to_f %></h1>
 <%= link_to "Edit region", edit_region_path %>
 <%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
-
 <div id="weather"></div>
 
 <div style='width: 800px;'>
@@ -17,16 +16,41 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 
 <script type="text/javascript">
+/* Does your browser support geolocation? */
+if ("geolocation" in navigator) {
+  $('.js-geolocation').show();
+} else {
+  $('.js-geolocation').hide();
+}
+
+/*
+* Test Locations
+* Austin lat/long: 30.2676,-97.74298
+* Austin WOEID: 2357536
+*/
 $(document).ready(function() {
+  loadWeather('<%= @region.address %>',''); //@params location, woeid
+});
+
+function loadWeather(location, woeid) {
   $.simpleWeather({
-    location: 'Austin, TX',
-    woeid: '',
-    unit: 'f',
+    location: location,
+    woeid: woeid,
+    unit: 'c',
     success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+' / '+weather.alt.temp+'&deg;F'+'</h2>';
+      html += '<h4><i class="icon-'+weather.code+'"></i> '+weather.forecast[0].day+' '+weather.forecast[0].date+'</h4>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+      html += '<li>Wind: '+weather.wind.direction+'/'+weather.wind.speed+'</li>';
+      html += '<li>Sunrise: '+weather.sunrise+'</li>';
+      html += '<li>Sunset: '+weather.sunset+'</li>';
+      html += '<b>After 4 days</b>'
+      html += '<li>'+weather.forecast[1].day+': '+weather.high+"/ "+weather.low+' '+weather.forecast[1].text+'</li>';
+      html += '<li>'+weather.forecast[2].day+': '+weather.high+"/ "+weather.low+' '+weather.forecast[2].text+'</li>';
+      html += '<li>'+weather.forecast[3].day+': '+weather.high+"/ "+weather.low+' '+weather.forecast[3].text+'</li>';
+      html += '<li>'+weather.forecast[4].day+': '+weather.high+"/ "+weather.low+' '+weather.forecast[4].text+'</li>';
+      html += 'Last updated: '+weather.updated+'</ul>';
 
       $("#weather").html(html);
     },
@@ -34,9 +58,8 @@ $(document).ready(function() {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
-});
+}
 </script>
-
 
 <script>
 handler = Gmaps.build('Google');
