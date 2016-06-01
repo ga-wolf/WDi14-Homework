@@ -11,26 +11,23 @@
     </div>
   <% end %>
 
-
-<p>
-  <%= f.label :rating %>
-  <%= f.select :rating, (1..5).to_a, :include_blank => true %>
-</p>
-<p>
-  <%= f.label :content %>
-  <%= f.text_field :content, :required => true %>
-</p>
-<p>
-  <%= f.label :link, "Image" %>
-  <%= cl_image_upload_tag :link %>
-</p>
-
-<%= f.hidden_field :region_id, :value => @region.id %>
-
-<% if @current_user %>
-<%= f.hidden_field :user_id, :value => @current_user.id %>
-
-<% end %>
-
-<%= f.submit "Create review" %>
+  <hr>
+  <h3>New Review</h3>
+  <p>
+    <%= f.label :rating %>
+    <%= f.select :rating, (1..5).to_a, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_field :content, :required => true %>
+  </p>
+  <p>
+    <%= f.label :link, "Image" %>
+    <%= cl_image_upload_tag :link %>
+  </p>
+  <%= f.hidden_field :region_id, :value => @region.id %>
+  <% if @current_user %>
+    <%= f.hidden_field :user_id, :value => @current_user.id %>
+  <% end %>
+  <%= f.submit "Create review" %>
 <% end %>

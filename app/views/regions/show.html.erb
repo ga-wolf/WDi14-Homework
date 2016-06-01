@@ -23,11 +23,6 @@ if ("geolocation" in navigator) {
   $('.js-geolocation').hide();
 }
 
-/*
-* Test Locations
-* Austin lat/long: 30.2676,-97.74298
-* Austin WOEID: 2357536
-*/
 $(document).ready(function() {
   loadWeather('<%= @region.address %>',''); //@params location, woeid
 });
