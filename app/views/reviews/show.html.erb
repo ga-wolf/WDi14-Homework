@@ -1,3 +1,13 @@
-<h1>Something will be shown</h1>
-<h1>Please do!</h1>
-<%= @review.content %>
+<img src="<%= @review.link %>" alt="" class="review-show" />
+<a href="/regions/<%= @review.region.id %>">
+  <p>
+    <%= @review.region.name %>
+  </p>
+</a>
+
+<p>
+  Reviewer: <%= link_to "#{@review.user.name}", @review.user %>
+</p>
+<p>
+  <%= @review.content %>
+</p>

@@ -1,8 +1,12 @@
-<h1>This should show one user</h1>
-<h1>This will show user's picture, user's follower</h1>
-
 <p><%= @user.name %></p>
 <p><%= @user.email %></p>
+<% @user.reviews.each do |r| %>
+<a href="/regions/<%= r.region.id %>"><img src="<%= r.link %>" alt="" /></a>
+<% end %>
 
-<%= link_to( "Edit user", edit_user_path(@user) ) %> |
-<%= link_to( "Delete account", user_path(@user), :method => :delete, :data => { :confirm => "Are you sure?" } ) %>
+<% if @current_user && @current_user.name == @user.name %>
+<p>
+  <%= link_to( "Edit user", edit_user_path(@user) ) %> |
+  <%= link_to( "Delete account", user_path(@user), :method => :delete, :data => { :confirm => "Are you sure?" } ) %>
+</p>
+<% end %>
