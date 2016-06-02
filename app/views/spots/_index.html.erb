@@ -3,7 +3,7 @@
 <% @spots.each do |spot| %>
 
 <p>Name: <%= link_to "#{spot.name}", region_spot_path(:region_id => @region.id, :id => spot.id) %></p>
-<p>Latitude: <%= spot.lat %> | Longitude: <%= spot.lng %></p>
+<p>Lat/Lng: <%= spot.lat %> | <%= spot.lng %></p>
 <p><%= spot.description %></p>
 
 <% end %>

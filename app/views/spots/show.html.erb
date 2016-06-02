@@ -1,9 +1,11 @@
-<h2>This should show one spot</h2>
-<%= link_to "Edit spot", edit_region_spot_path %>
-<%= link_to "Delete spot", region_spot_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+<%= link_to "Back to the region", region_path(@spot.region) %>
+<% if @current_user && @current_user.admin == true %>
+  <%= link_to "Edit spot", edit_region_spot_path %> |
+  <%= link_to "Delete spot", region_spot_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+<% end %>
 
-<p><%= @spot.name %></p>
-<p><%= @spot.lat %> | <%= @spot.lng %></p>
+<h1><b><%= @spot.name %></b></h1>
+<p>Lat/Lng: <%= @spot.lat %> | <%= @spot.lng %></p>
 
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
@@ -12,7 +14,6 @@
 <p><%= @spot.description %></p>
 
 <%= render :partial => 'disqus' %>
-
 
 <script>
 handler = Gmaps.build('Google');

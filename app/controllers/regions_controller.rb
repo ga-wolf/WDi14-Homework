@@ -2,7 +2,9 @@ class RegionsController < ApplicationController
 
 def index
   @regions = Region.order(:id)
-
+end
+def home
+  @regions = Region.all
 end
 
 def show

@@ -1,1 +1,8 @@
 <h1>Welcome to Fishing Review App</h1>
+
+<% @regions.each do |region| %>
+  <% region.reviews.each do |review| %>
+    <a href='/regions'><img src="<%= review.link %>" alt="" /></a>
+    <p><%= review.region.name %></p>
+  <% end %>
+<% end %>
