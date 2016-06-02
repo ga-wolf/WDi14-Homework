@@ -1,0 +1,13 @@
+<main class=bs-docs-masthead id=content role=main tabindex=-1>
+    <div class=container>
+        <p class=lead>Picross Adventure Time</p>
+        <h3>All Users</h3>
+        <ul id="puzzles">
+        <% @users.each do |u| %>
+          <li>
+            <%= link_to u.email, user_path(u.id) %>
+          </li>
+        <% end %>
+        </ul>
+    </div>
+</main>

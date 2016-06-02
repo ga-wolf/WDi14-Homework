@@ -1,0 +1,43 @@
+<%= include_gon(watch: true) %>
+<main class=bs-docs-masthead id=content role=main tabindex=-1>
+    <div class=container>
+     <%= form_for @art do |f| %>
+        <p>
+         <%= f.label :name %>
+         <%= f.text_field :name, :required => true %>
+        </p>
+
+        <p>
+         <%= f.label :cells %>
+         <%= f.number_field :cells, :required => true %>
+        </p>
+
+        <%= f.hidden_field :user_id, :value => @user.id %>
+
+        <%= f.submit "Save" %>
+      <% end %>
+        <div id="gameBoard">
+          <ul id="leftHints">
+
+          </ul>
+          <div id="top">
+
+          </div>
+          <table id="cells">
+
+          </table>
+        </div>
+    </div>
+</main>
+
+<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+  Pick text color
+</button>
+
+<div id="save">Save</div>
+
+<%= @newArray %>
+
+<script type="text/javascript">
+  createPuzzle();
+</script>

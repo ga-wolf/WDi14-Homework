@@ -1,0 +1,19 @@
+<%= form_for @artist do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :year %>
+    <%= f.text_field :year, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <!-- Artist_id -->
+
+
+  <%= f.submit %>
+<% end %>

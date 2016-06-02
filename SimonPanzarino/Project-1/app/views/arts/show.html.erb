@@ -1,0 +1,33 @@
+<%= include_gon %>
+
+<div id="main">
+  <div class="menu">
+  <h2><%= @art.name %></h2>
+  <h3><img class="marioLives" src="/assets/lives.png"></h3>
+</div>
+
+<div id="gameBoard">
+  <div id="leftHints">
+
+  </div>
+  <div id="top">
+
+  </div>
+  <table id="cells">
+
+  </table>
+</div>
+
+</div>
+
+<div id="gameOver">
+  <div>
+  <img src="/assets/gameOverMario.png"><br>
+  <h3>Game Over!</h3>
+  <a id ="reset" class="btn btn-warning">Try Again</a>
+</div>
+</div>
+<script type="text/javascript">
+  var id = <%= @save.id %>;
+  startPuzzle();
+</script>

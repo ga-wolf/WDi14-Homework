@@ -547,7 +547,7 @@ button {
 #playerTwo {
   font-family: marioFont, "Open Sans", sans-serif;
   font-size: 40px;
-  color: #black;
+  color: black;
   text-shadow: 0 0 5px 5px #000;
   position: absolute;
   right: 20px;
