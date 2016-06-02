@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: db5orfik4
-  api_key: '344698462367118'
-  api_secret: zRfkQzo8hmpMtSxjt-eSqrKv4Ss
+  cloud_name: <%= Rails.application.secrets["cloud_name"] %>
+  api_key: <%= Rails.application.secrets["api_key"] %>
+  api_secret: <%= Rails.application.secrets["api_secret"] %>
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: db5orfik4
-  api_key: '344698462367118'
-  api_secret: zRfkQzo8hmpMtSxjt-eSqrKv4Ss
+  cloud_name: <%= Rails.application.secrets["cloud_name"] %>
+  api_key: <%= Rails.application.secrets["api_key"] %>
+  api_secret: <%= Rails.application.secrets["api_secret"] %>
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: db5orfik4
-  api_key: '344698462367118'
-  api_secret: zRfkQzo8hmpMtSxjt-eSqrKv4Ss
+  cloud_name: <%= Rails.application.secrets["cloud_name"] %>
+  api_key: <%= Rails.application.secrets["api_key"] %>
+  api_secret: <%= Rails.application.secrets["api_secret"] %>
   enhance_image_tag: true
   static_image_support: false
