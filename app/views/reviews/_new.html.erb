@@ -15,7 +15,7 @@
   <h3>New Review</h3>
   <p>
     <%= f.label :rating %>
-    <%= f.select :rating, (1..5).to_a, :include_blank => true %>
+    <%= f.select :rating, (1..5).to_a, :include_blank => true, :required => true %>
   </p>
   <p>
     <%= f.label :content %>
@@ -25,9 +25,13 @@
     <%= f.label :link, "Image" %>
     <%= cl_image_upload_tag :link %>
   </p>
+
   <%= f.hidden_field :region_id, :value => @region.id %>
   <% if @current_user %>
     <%= f.hidden_field :user_id, :value => @current_user.id %>
+    <%= f.submit "Create review" %>
+  <% else %>
+    <a href="/login"><button type="button" name="button">Login first</button></a>
   <% end %>
-  <%= f.submit "Create review" %>
+  <hr>
 <% end %>

@@ -3,10 +3,11 @@
 <%= link_to "Edit region", edit_region_path %>
 <%= link_to "Delete region", region_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
 <% end %>
-<div id="weather"></div>
-
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div class="map_weather">
+  <div class="map">
+    <div id="map"></div>
+  </div>
+  <div id="weather"></div>
 </div>
 
 <p><b><%= @region.name %></b> | <%= @region.address %> | <%= @region.description %></p>
@@ -36,7 +37,7 @@ function loadWeather(location, woeid) {
     unit: 'c',
     success: function(weather) {
       html = '<h2><img src="'+weather.forecast[0].thumbnail+'">'+weather.temp+'&deg;'+weather.units.temp+' / '+weather.alt.temp+'&deg;F'+'</h2>';
-      html += '<h4>'+weather.forecast[0].day+' '+weather.forecast[0].date+'</h4>';
+      html += '<div class="weathercontent"><h4>'+weather.forecast[0].day+' '+weather.forecast[0].date+'</h4>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>Wind: '+weather.wind.direction+'/'+weather.wind.speed+'</li>';
@@ -46,7 +47,7 @@ function loadWeather(location, woeid) {
       html += '<ul><li>'+weather.forecast[1].day+': '+weather.high+"/ "+weather.low+' '+'<img src="'+weather.forecast[1].thumbnail+'">'+'</li>';
       html += '<li>'+weather.forecast[2].day+': '+weather.high+"/ "+weather.low+' '+'<img src="'+weather.forecast[1].thumbnail+'">'+'</li>';
       html += '<li>'+weather.forecast[3].day+': '+weather.high+"/ "+weather.low+' '+'<img src="'+weather.forecast[1].thumbnail+'">'+'</li>';
-      html += '<li>'+weather.forecast[4].day+': '+weather.high+"/ "+weather.low+' '+'<img src="'+weather.forecast[1].thumbnail+'">'+'</li></ul>';
+      html += '<li>'+weather.forecast[4].day+': '+weather.high+"/ "+weather.low+' '+'<img src="'+weather.forecast[1].thumbnail+'">'+'</li></ul></div>';
       html += '<h6>Last updated: '+weather.updated+'<h6>';
 
       $("#weather").html(html);
