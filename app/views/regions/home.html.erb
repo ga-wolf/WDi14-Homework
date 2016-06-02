@@ -2,7 +2,7 @@
 
 <% @regions.each do |region| %>
   <% region.reviews.each do |review| %>
-    <a href='/reviews/<%= review.id %>'><img src="<%= review.link %>" alt="" class="home-image" />
+    <a href="/regions/<%= region.id %>"><img src="<%= review.link %>" alt="" class="home-image" />
 </a>
   <% end %>
 <% end %>
