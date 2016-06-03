@@ -27,6 +27,7 @@ def show
   @hash = Gmaps4rails.build_markers(@spots) do |spot, marker|
     marker.lat spot.lat
     marker.lng spot.lng
+    marker.infowindow spot.name
   end
 end
 
