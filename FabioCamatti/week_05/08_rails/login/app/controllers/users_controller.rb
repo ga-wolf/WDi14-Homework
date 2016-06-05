@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  #Run the authorise method on every request that goes to index
+  before_action :authorise, :only => [:index]
+
   def index
     @users = User.all
   end
@@ -41,7 +44,11 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
-
-
+    
+    def authorise
+      # Unless someone is logged in, take every request back to the login page
+      flash[:error] = "You need to be logged in for that" unless @current_user.present?
+      redirect_to login_path unless @current_user.present?
+    end
 
 end

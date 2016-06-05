@@ -1,5 +1,7 @@
 class SessionController < ApplicationController
 
+  before_action :authenticate, :only => [:new]
+
   def new
     # Show the login form
   end
@@ -23,5 +25,11 @@ class SessionController < ApplicationController
     flash[:success] = "Successfully logged out"
     redirect_to login_path
   end
+
+  private
+    def authenticate
+      redirect_to users_path if @current_user
+    end
+
 
 end
