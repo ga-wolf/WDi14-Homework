@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie API</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+<h1>Movie API</h1>
+
+<div class="jumbotron">
+  <form>
+      <input type="text" class="form" id="searchBar" placeholder="choose a movie">
+      <input class="btn" type="button" id="button" value="Search">
+  </form>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="panel panel-default">
+        <div class="panel-body">
+        <h1 id="movieTitle"></h1>
+        <p id="year"></p>
+        <img src="" id="poster"></div>
+      </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+<script src="js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
