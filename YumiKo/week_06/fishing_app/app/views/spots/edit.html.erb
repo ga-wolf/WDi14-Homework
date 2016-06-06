@@ -1,0 +1,8 @@
+<h1>Edit Spot</h1>
+
+<%= form_for @spot, url: region_spot_path do |f| %>
+
+<%= render :partial => 'form', locals: {:f => f} %>
+
+<%= f.submit "Submit" %>
+<% end %>

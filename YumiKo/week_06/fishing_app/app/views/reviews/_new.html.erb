@@ -1,0 +1,37 @@
+<%= form_for @review, :html => { :multipart => true } do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <hr>
+  <h3>New Review</h3>
+  <p>
+    <%= f.label :rating %>
+    <%= f.select :rating, (1..5).to_a, :include_blank => true, :required => true %>
+  </p>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_field :content, :required => true %>
+  </p>
+  <p>
+    <%= f.label :link, "Image" %>
+    <%= cl_image_upload_tag :link %>
+  </p>
+
+  <%= f.hidden_field :region_id, :value => @region.id %>
+  <% if @current_user %>
+    <%= f.hidden_field :user_id, :value => @current_user.id %>
+    <%= f.submit "Create review" %>
+  <% else %>
+    <a href="/login"><button type="button" name="button">Login first</button></a>
+  <% end %>
+  <hr>
+<% end %>
