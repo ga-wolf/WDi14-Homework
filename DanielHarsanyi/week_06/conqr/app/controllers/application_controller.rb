@@ -7,12 +7,13 @@ class ApplicationController < ActionController::Base
 
   private
     def fetch_user
-      if Client.find_by( :id => session[:user_id] ).is_a?(Client)
-          @current_user = Client.find_by( :id => session[:user_id] )
-          session[:user_id] = nil unless @current_user
-        else
-          @current_user = Trainer.find_by( :id => session[:user_id] )
-          session[:user_id] = nil unless @current_user
+      if session[:type_of_person] == "Client"
+        @current_user = Client.find_by( :id => session[:user_id] )
+      elsif session[:type_of_person] == "Trainer"
+        @current_user = Trainer.find_by( :id => session[:user_id] )
       end
+      session[:user_id] = nil unless @current_user
     end
 end
+
+      # if Client.find_by_email( params[:email] ) == true

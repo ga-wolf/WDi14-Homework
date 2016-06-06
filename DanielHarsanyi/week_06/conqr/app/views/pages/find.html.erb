@@ -1,27 +1,25 @@
-<h2>Find a Trainer perfectly suited to you</h2>
+<%= stylesheet_link_tag 'pages' %>
 
-<%= form_tag do %>
-<h3>Choose Your Training Interest Style (Select One)</h3>
-<p>
-  <% @unique_areas.each do |area| %>
-    <p>
-      <%= label_tag "Training Interest Areas", area %>
-      <%= check_box_tag :training_specialty_areas, area %>
-    </p>
-  <% end %>
-</p>
-<h3>Choose Your Preferred Training Style (Select One)</h3>
-  <p>
-    <% @unique_styles.each do |style| %>
+<div class="choose_form">
+  <div class="form">
+    <h2>Find a Trainer perfectly suited to you</h2>
+
+    <%= flash[:error] if flash[:error] %>
+
+    <%= form_tag do |f| %>
+
+    <h3>Choose Your Training Interest Style</h3>
+      <%= select_tag :training_style, options_for_select(Trainer.all.map { |t| [ t.training_style] }.uniq) %>
+
+    <h3>Choose Your Training Interest Area</h3>
       <p>
-        <%= label_tag "Preferred Training Style", style %>
-        <%= check_box_tag :training_style, style %>
+    <%= select_tag :training_specialty_areas, options_for_select(Trainer.all.map { |t| [ t.training_specialty_areas] }.uniq) %>
       </p>
+
+      <h3>Where would you like to train near?</h3>
+        <p><%= text_field_tag :search  %></p>
+
+      <%= submit_tag "Find a Trainer" %>
     <% end %>
-  </p>
-
-  <h3>Where would you like to train near?</h3>
-    <p><%= text_field_tag :search  %></p>
-
-  <%= submit_tag "Find a Trainer" %>
-<% end %>
+    </div>
+</div>

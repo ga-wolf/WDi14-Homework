@@ -14,11 +14,13 @@
       <% if @current_user.is_a?(Client) %>
         <%= link_to "Logout", logout_path, :method => :delete %>
         <%= link_to "Edit Profile", edit_client_path(@current_user) %>
+        <%= link_to "View Profile", clients_path %>
         <%= link_to "Find a Trainer", find_trainer_path %>
         <%= link_to "All Trainers", trainers_path %>
       <% elsif @current_user.is_a?(Trainer) %>
         <%= link_to "Logout", logout_path, :method => :delete %>
         <%= link_to "Edit Profile", edit_trainer_path(@current_user) %>
+        <%= link_to "View Profile", trainers_path %>
         <%= link_to "All Clients", clients_path %>
       <% else %>
         <%= link_to( "I'm a PT", new_trainer_path ) %>
@@ -35,10 +37,6 @@
 <br>
 <br>
 <br>
-
-<% if flash[:success] %>
-  <p><%= flash[:success] %></p>
-<% end %>
 
 <%= yield %>
 

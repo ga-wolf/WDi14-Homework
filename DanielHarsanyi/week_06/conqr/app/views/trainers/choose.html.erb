@@ -1,13 +1,51 @@
-<h1>These are the trainers that match your criteria</h1>
+<%= stylesheet_link_tag 'trainers' %>
+
+<h1>These trainers are perfectly matched to you!</h1>
+
+<div class="matched_trainers">
 
   <% @matched_trainers.each do |t| %>
-    <h2>Trainer's Name: <%=link_to( t.name, trainer_path( t.id ) ) %></h2>
-    <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
-    <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
-    <ul>
-      <li>Price: <%=number_to_currency( t.price, precision: 0 ) %>/hour</li>
-      <li>Rating: <%= t.rating %>/5</li>
-    </ul>
-    <hr>
-
+      <div class="one_trainer", id="cell<%=@step%>">
+          <style>
+            #cell<%= @step %>{ background-image: url(<%= t.image %>); }
+          </style>
+        <h2 class="name"><%=link_to( t.name, trainer_path( t.id ) ) %></h2>
+        <p class="price">Price: <%=number_to_currency( t.price, precision: 0 ) %>/hour</p>
+        <p class="location">Location: <%= t.preferred_location %></p>
+        <p class="rating">Rating: <%= t.rating %>/5</p>
+      <% @step += 1 %>
+      </div>
 <% end %>
+
+<br>
+
+<div id="map"></div>
+  <script>
+    function initMap() {
+      var mapDiv = document.getElementById('map');
+      var map = new google.maps.Map(mapDiv, {
+          center: {lat: -33.8386, lng: 151.2071},
+          zoom: 12
+      });
+
+      var conqr = {
+        url: "<%= asset_path('conqr_maps_icon.png') %>"
+      };
+
+      <% @matched_trainers.each do |mt| %>
+
+        var marker = new google.maps.Marker({
+          position: {lat: <%=mt.latitude%>, lng: <%=mt.longitude%>},
+          map: map,
+          icon: conqr
+});
+      <% end %>
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+      async defer></script>
+</div>
+
+
+
+</div>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/home' => 'pages#home', :as => 'home'
 
-  resources :clients, :trainers, :sessions
+  resources :trainers, :clients, :sessions
 
   get '/findtrainer' => 'pages#find', :as => 'find_trainer'
   post '/findtrainer' => 'trainers#choose', :as => 'choose_trainer'

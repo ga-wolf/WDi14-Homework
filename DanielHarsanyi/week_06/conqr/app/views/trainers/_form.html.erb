@@ -1,3 +1,5 @@
+<div class="trainers">
+
 <%= form_for @trainer do |f| %>
   <p>
     <%= f.label :name %>
@@ -52,5 +54,8 @@
     <%= f.text_field :image, :required => true %>
   </p>
 
+  <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@trainer.latitude},#{@trainer.longitude}" %></p>
+
   <%= f.submit %>
 <% end %>
+</div>

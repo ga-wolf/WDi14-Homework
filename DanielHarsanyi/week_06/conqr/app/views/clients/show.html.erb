@@ -1,28 +1,24 @@
-<h1><%= @client.name %></h1>
+<%= stylesheet_link_tag 'clients' %>
 
-<%= image_tag @client.image, :class => 'feature' %>
+<div class="clients_index">
 
-<ul>
-  <li>Email: <%= @client.email %></li>
-  <li>Training Interest Areas: <%= @client.training_interest_areas if @client.training_interest_areas %></li>
-  <li>Preferred Training Style: <%= @client.preferred_training_style if @client.preferred_training_style %></li>
-  <li>Preferred Training Location: <%= @client.preferred_location if @client.preferred_location %></li>
-  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@client.latitude},#{@client.longitude}" %>
-</ul>
+    <h1><%= @client.name %></h1>
 
-<% if @current_user.is_a?(Client) %>
-  <div>
-    <%= link_to "Edit #{@client.name}", edit_client_path %>
-    <%= link_to "Delete #{@client.name}", client_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
-  </div>
-  <% end %>
+    <%= image_tag @client.image, :class => 'feature' %>
 
-<!-- t.text :name
-t.text :email
-t.text :password_digest
-t.text :training_interest_areas
-t.text :preferred_training_style
-t.inet :current_location
-t.text :preferred_location
-t.boolean :admin, :default => "false"
-t.text :image -->
+    <ul>
+      <li>Email: <%= @client.email %></li>
+      <li>Training Interest Areas: <%= @client.training_interest_areas if @client.training_interest_areas %></li>
+      <li>Preferred Training Style: <%= @client.preferred_training_style if @client.preferred_training_style %></li>
+      <li>Preferred Training Location: <%= @client.preferred_location if @client.preferred_location %></li>
+      <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@client.latitude},#{@client.longitude}" %></p>
+    </ul>
+
+    <% if @current_user.is_a?(Client) %>
+      <div>
+        <%= link_to "Edit Your Profile", edit_client_path %>
+        <%= link_to "Delete Your Profile", client_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      </div>
+      <% end %>
+
+</div>

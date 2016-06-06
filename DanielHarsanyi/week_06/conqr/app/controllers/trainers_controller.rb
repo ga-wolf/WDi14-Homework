@@ -24,7 +24,7 @@ class TrainersController < ApplicationController
     @trainer = Trainer.create trainer_params
 
     if @trainer.save
-      redirect_to "/trainers"
+      redirect_to "/trainers/#{@trainer.id}"
     else
       render :new
     end
@@ -55,11 +55,18 @@ class TrainersController < ApplicationController
 
   def choose
     if params[:search].present?
-      @matched_trainers = Trainer.near(params[:search], 20).where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
+      @matched_trainers = Trainer.near(params[:search], 3).where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
     else
       @matched_trainers = Trainer.where training_specialty_areas: params[:training_specialty_areas], training_style: params[:training_style]
     end
-    # raise
+
+    if @matched_trainers.size == 0
+      flash[:error] = "No trainers matched your search. Please try again."
+      redirect_to find_trainer_path
+    end
+
+    @step = 1
+
   end
 
 

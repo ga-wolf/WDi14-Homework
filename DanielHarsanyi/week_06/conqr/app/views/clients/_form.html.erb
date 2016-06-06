@@ -13,16 +13,14 @@
     <%= f.select(:preferred_training_style, options_for_select([["Drill Sergeant"],["Encourager"],["Holistic"],["Relaxed"]], (@current_user.preferred_training_style if @current_user.is_a?(Client)))) %>
   </p>
   <p>
-    <%= f.label :training_interest_areas, "Training Specialty Area" %>
+    <%= f.label :training_interest_areas, "Training Interest Area" %>
       <%= f.select(:training_interest_areas, options_for_select([["Body Building"],["Nutrition"],["Weight Loss"],["Pilates"],["Boxing"],["Cardio"],["Crossfit"],["Yoga"],["Martial Arts"],["Toning"],["Calisthenics"],["Tabata"],["Body Transformation"]], (@current_user.training_interest_areas if @current_user.is_a?(Client)))) %>
   </p>
-
-
-
   <p>
     <%= f.label :preferred_location, "Location" %>
     <%= f.text_field :preferred_location, :required => true %>
   </p>
+
   <p>
     <%= f.label :password %>
     <%= f.password_field :password, :required => true %>
@@ -35,6 +33,8 @@
     <%= f.label :image, "Profile Image " %>
     <%= f.text_field :image, :required => true %>
   </p>
+
+  <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@client.latitude},#{@client.longitude}" %></p>
 
   <%= f.submit %>
 <% end %>

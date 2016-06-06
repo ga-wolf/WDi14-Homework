@@ -1,16 +1,6 @@
-<!-- # t.text :name
-# t.text :email
-# t.text :password_digest
-# t.integer :fitness_australia_id
-# t.boolean :approved_status, :default => "false"
-# t.text :qualifications
-# t.text :training_specialty_areas
-# t.text :training_style
-# t.inet :current_location
-# t.text :preferred_location
-# t.integer :price
-# t.integer :rating
-# t.text :image -->
+<%= stylesheet_link_tag 'trainers' %>
+
+<div class="trainer">
 
 <h1><%= @trainer.name %></h1>
 
@@ -20,12 +10,12 @@
   <li>Email: <%= mail_to(@trainer.email) %></li>
   <li>Fitness Australia ID: <%= @trainer.fitness_australia_id %></li>
   <li>Qualifications: <%= @trainer.qualifications %></li>
-  <li>Training Specialty Areas: <%= @trainer.training_specialty_areas %></li>
+  <li>Training Specialty Area: <%= @trainer.training_specialty_areas %></li>
   <li>Training Style: <%= @trainer.training_style %></li>
-  <li>Price per Hour: <%= number_to_currency( @trainer.price, precision: 0 ) %>/hour</li>
   <li>Rating: <%= @trainer.rating %>/5</li>
+  <li>Price per Hour: <%= number_to_currency( @trainer.price, precision: 0 ) %>/hour</li>
   <li>Location: <%= @trainer.preferred_location %></li>
-  <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@trainer.latitude},#{@trainer.longitude}" %></ul>
+  <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@trainer.latitude},#{@trainer.longitude}" %></ul></p>
 
 <% if @current_user && @current_user.is_a?(Client) %>
     <% if @current_user.admin? == true %>
@@ -35,3 +25,4 @@
       </div>
     <% end %>
   <% end %>
+</div>

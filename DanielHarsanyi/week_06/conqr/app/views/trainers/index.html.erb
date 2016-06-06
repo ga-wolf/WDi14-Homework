@@ -1,35 +1,27 @@
-<!-- # t.text :name
-# t.text :email
-# t.text :password_digest
-# t.integer :fitness_australia_id
-# t.boolean :approved_status, :default => "false"
-# t.text :qualifications
-# t.text :training_specialty_areas
-# t.text :training_style
-# t.inet :current_location
-# t.text :preferred_location
-# t.integer :price
-# t.integer :rating
-# t.text :image -->
+<%= stylesheet_link_tag 'trainers' %>
+
+<div class="trainer">
 
 <h1>All Trainers</h1>
 
-<% @trainers.each do |t| %>
-    <h2>Trainer's Name: <%=link_to( t.name, trainer_path( t.id ) ) %></h2>
-    <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
-    <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
-    <ul>
-      <% if @current_user && @current_user.admin? == true %>
-        <li>Approved Status: <%= t.approved_status %></li>
-      <% end %>
-      <li>Qualifications: <%= t.qualifications %></li>
-      <li>Training Specialty Areas: <%= t.training_specialty_areas %></li>
-      <li>Training Style: <%= t.training_style %></li>
-      <li>Price: <%= number_to_currency( t.price, precision: 0 ) %>/hour</li>
-      <li>Rating: <%= t.rating %>/5</li>
-      <li>Location:</li>
-      <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{t.latitude},#{t.longitude}" %>
-    </ul>
-    <hr>
+    <% @trainers.each do |t| %>
+        <h2>Trainer's Name: <%=link_to( t.name, trainer_path( t.id ) ) %></h2>
+        <h3>Fitness Australia ID: <%= t.fitness_australia_id %></h3>
+        <p><%= image_tag( t.image, :class => "thumbnail" ) %> </p>
+        <ul>
+          <% if @current_user && @current_user.admin? == true %>
+            <li>Approved Status: <%= t.approved_status %></li>
+          <% end %>
+          <li>Qualification: <%= t.qualifications %></li>
+          <li>Training Specialty Area: <%= t.training_specialty_areas %></li>
+          <li>Training Style: <%= t.training_style %></li>
+          <li>Rating: <%= t.rating %>/5</li>
+          <li>Price: <%= number_to_currency( t.price, precision: 0 ) %>/hour</li>
+          <li>Location:</li>
+          <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{t.latitude},#{t.longitude}" %></p>
+        </ul>
+        <hr>
 
-<% end %>
+    <% end %>
+
+</div>

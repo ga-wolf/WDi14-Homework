@@ -1,3 +1,54 @@
-// Place all the styles related to the trainers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  text-align: center;
+  font-size: 45px;
+}
+.one_trainer {
+  margin: auto;
+  width: 800px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid white;
+  // display: flex;
+}
+
+.name a {
+  color: rgb(253,186,73);
+  text-decoration: none;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.one_trainer > p {
+  margin-left: 10px;
+  color: rgb(253,186,73);
+  font-size: 30px;
+}
+
+.price {
+  margin-top: 240px;
+}
+
+.rating {
+}
+
+.matched_trainers {
+  display: flex;
+  flex-direction: column;
+}
+
+.choose {
+  width: 400px;
+}
+
+.trainer {
+  text-align: center;
+}
+
+.trainer ul li {
+  list-style: none;
+}
+
+.trainers_index {
+  text-align: center;
+}

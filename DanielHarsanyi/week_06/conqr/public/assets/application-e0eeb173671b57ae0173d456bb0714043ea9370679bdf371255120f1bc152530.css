@@ -28,9 +28,16 @@ header p {
   top: -15px;
 }
 
+#map {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  margin-top: 80px;
+}
+
 
 .hero {
-  background-image: url("/assets/pt_in_rain.png");
+  background-image: image-url("/assets/pt_in_rain.png");
 }
 
 .about_trainers, .hero {
@@ -98,14 +105,28 @@ a > #logo {
 .how_it_works {
   height: 800px;
   width: 100vw;
-  background-color: lightgrey;
+  background-color: white;
   position: relative;
   left: -8px;
   top: -100px;
+  display: flex;
+}
+
+.how_it_works img {
+  margin: auto;
+  height: 800px;
 }
 
 .about_trainers {
-  background-image: url("/assets/female_bench.png");
+  background-image: image-url("/assets/female_bench.png");
+  flex-direction: column;
+}
+
+.about_trainers h2 {
+  color: rgba(26,45,60,1);
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .field_with_errors {
