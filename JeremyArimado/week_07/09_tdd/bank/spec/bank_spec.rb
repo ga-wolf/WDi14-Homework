@@ -40,6 +40,13 @@ describe Bank do
 
     end
 
+    describe "#balance" do
+        it "should return the current balance for a give person" do
+            bank.create_account "Wes", 80
+            expect(bank.balance("Wes")).to eq 80
+        end
+    end
+
     describe "#deposit" do
         it "should put an amount into a particular customer's account" do
             bank.create_account "Bill Murrat", 2
