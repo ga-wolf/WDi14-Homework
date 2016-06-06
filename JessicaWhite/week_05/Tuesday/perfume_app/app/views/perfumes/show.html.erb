@@ -1,0 +1,25 @@
+<h2><%= @perfume.perfume_name %></h2>
+
+<%= image_tag( @perfume.image, :class => 'feature' ) %>
+
+<% if @perfume.house %>
+  <p>House: <%= link_to( @perfume.house.name, @perfume.house ) %></p>
+<% end %>
+
+<p>Year Created: <%= @perfume.year %></p>
+
+<p>Top Notes: <%= @perfume.top_notes %></p>
+
+<p>Mid Notes: <%= @perfume.mid_notes %></p>
+
+<p>Base Notes: <%= @perfume.base_notes %></p>
+
+<p>Description: <%= @perfume.description %></p>
+
+<div class="controls">
+
+  <%= link_to "Edit Perfume", edit_perfume_path( @perfume ) %>
+
+  <%= link_to "Delete Perfume", @perfume, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+
+</div>

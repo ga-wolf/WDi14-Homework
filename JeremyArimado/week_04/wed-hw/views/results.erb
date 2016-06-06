@@ -1,0 +1,12 @@
+<h1> Result </h1>
+
+
+<ul class="results">
+    <% @result.each do | movie | %>
+            <h3> <a href="/movie/<%= movie["Title"] %>"> <%= movie["Title"] %> </a> </h3>
+            <!-- <p> <%= movie["Year"] %> </p>
+            <p> <%= movie["imdbID"] %> </p>
+            <p> <%= movie["Type"] %> </p>
+            <p> <img src="<%= movie["Poster"] %>" /> </p> -->
+    <% end %>
+</ul>

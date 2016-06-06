@@ -1,0 +1,91 @@
+body {
+  background-image: url("http://vignette1.wikia.nocookie.net/disney/images/c/c7/Aladdin-disneyscreencaps.com-3814.jpg/revision/latest?cb=20140809204752");
+
+  background-color: #0B0B61;
+  width: 100vw;
+  height: auto;
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+}
+
+.vom1 {
+  position: absolute;
+  height: 400px;
+  width : 400px;
+  opacity: 0;
+  top: 350px;
+  left: 700px;
+  z-index: 1;
+}
+
+.vom2 {
+  position: absolute;
+  height: 300px;
+  width : 300px;
+  opacity: 0;
+  top: 350px;
+  left: 700px;
+  z-index: 1;
+}
+
+.vom3 {
+  position: absolute;
+  height: 250px;
+  width : 250px;
+  opacity: 0;
+  top: 350px;
+  left: 700px;
+  z-index: 1;
+}
+
+.vom4 {
+  position: absolute;
+  height: 300px;
+  width : 200px;
+  opacity: 0;
+  transform: scaleX(-1);
+  top: 350px;
+  left: 700px;
+  z-index: 1;
+}
+
+.vom5 {
+  position: absolute;
+  height: 200px;
+  width : 200px;
+  opacity: 0;
+  transform: scaleX(-1);
+  top: 350px;
+  left: 700px;
+  z-index: 1;
+}
+
+/*.vom6 {
+  position: absolute;
+  max-height: 200px;
+  max-width : 200px;
+  opacity: 0;
+}*/
+
+/*.vom7 {
+  position: absolute;
+  max-height: 200px;
+  max-width : 200px;
+  opacity: 0;
+}*/
+
+.sit {
+  position: absolute;
+  top: 370px;
+  left: -10px;
+  transform: scaleX(-1);
+  max-width: 300px;
+  max-height: 300px;
+  z-index: 1;
+}
+
+.fly {
+  position: absolute;
+  z-index: 1;
+}

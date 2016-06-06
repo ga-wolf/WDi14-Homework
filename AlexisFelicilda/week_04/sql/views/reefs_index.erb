@@ -1,0 +1,17 @@
+<h1>Look at this reef!</h1>
+
+<% @all_reefs.reverse_each do |reef| %>
+<h4>
+  <%= reef["name"] %>
+</h4>
+<p>
+  <%= reef["description"] %>
+</p>
+
+<p>
+  <a href="/reefs/<%= reef["id"] %>">
+  <img src="<%= reef["image"] %>">
+</p>
+<hr>
+
+<% end %>

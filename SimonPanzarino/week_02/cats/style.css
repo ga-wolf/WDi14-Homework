@@ -1,0 +1,109 @@
+body {
+  overflow: hidden;
+  margin-top: 0px;
+  margin-left: 0px;
+  background-size: cover;
+}
+
+.album {
+  margin: 0 auto;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+.box {
+  background-color: black;
+}
+
+.album img {
+  width: 300px;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.cat {
+position: absolute;
+top: 30%;
+}
+
+.thrillerCat1 {
+  position: absolute;
+  z-index: -2;
+}
+.thrillerCat2 {
+  position: absolute;
+}
+.thrillerCat3 {
+  position: absolute;
+}
+.thrillerCat4 {
+  position: absolute;
+}
+.thrillerCat5 {
+  position: absolute;
+}
+.thrillerCat6 {
+  position: absolute;
+}
+.thrillerCat7 {
+  position: absolute;
+}
+.thrillerCat8 {
+  position: absolute;
+}
+.thrillerCat9 {
+  position: absolute;
+}
+.thrillerCat10 {
+  position: absolute;
+}
+.thrillerCat11 {
+  position: absolute;
+}
+.thrillerCat12 {
+  position: absolute;
+}
+.thrillerCat13 {
+  position: absolute;
+}
+.thrillerCat14 {
+  position: absolute;
+}
+.thrillerCat15 {
+  position: absolute;
+}
+.shaqCat {
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+.shaqCat2 {
+  position: absolute;
+  right: 0;
+  top: 25%;
+}
+.tranceCat {
+  position: absolute;
+}
+.crazyCat {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.crazyCat2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.crazyCat3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.crazyCat4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

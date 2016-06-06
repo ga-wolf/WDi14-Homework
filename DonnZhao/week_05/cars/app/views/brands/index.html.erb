@@ -1,0 +1,18 @@
+<h1>hello this is the index of car brand list</h1>
+<a href="/brands/new">generates brands :)</a>
+<h5>this have to put into the brands folder</h5>
+<h6>the seed have to be the singular and the migrate have to be the plural</h6>
+
+<ul><%@brands.each do |brand| %>
+  <br>
+    <li>        <%= link_to(image_tag(brand.image, :class => 'thumbnail'), brand) %>
+        <ul>
+            <li>name:<%= link_to brand.name, "/brands/#{brand.id}" %></li>
+            <li>headquarters:<%= brand.headquarters %></li>
+            <li> web: <%= link_to brand.web, "http://#{brand.web}" %> </li>
+        </ul>
+    </li>
+    <br>
+    <hr>
+    <% end %>
+</ul>

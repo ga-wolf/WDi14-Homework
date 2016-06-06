@@ -1,0 +1,23 @@
+<% @all_trainers.reverse.each do |trainer| %>
+  <h2>
+    <%= trainer["first_name"] %>
+    <%= trainer["last_name"] %>
+  </h2>
+
+  <p>
+    <a href="/trainers/<%= trainer["id"] %>">
+    <img class="profile_image" src="<%= trainer["image"] %>">
+    </a>
+  </p>
+
+  <h3>
+    Specialties: <%= trainer["specialties"] %>
+  </h3>
+
+  <p>
+    Fitness Australia ID: <%= trainer["registration_id"] %>
+  </p>
+
+  <hr>
+
+<% end %>

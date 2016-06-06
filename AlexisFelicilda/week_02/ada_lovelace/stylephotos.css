@@ -1,0 +1,233 @@
+
+body{
+	background: url(http://www.zastavki.com/pictures/originals/2014/Backgrounds_Wallpapers_with_gradient_background_082013_.jpg);
+    text-align: center;
+}
+
+.image-blurred-edge {
+    
+    width: 800px;
+    height: 150px; 
+    border:2px solid #fff; 
+  
+  -moz-box-shadow: 10px 10px 5px #ccc; 
+  -webkit-box-shadow: 10px 10px 5px #ccc; 
+  box-shadow: 10px 10px 5px #ccc; 
+  -moz-border-radius:25px; 
+  -webkit-border-radius:25px; 
+  border-radius:25px;
+
+}
+
+
+.photos {
+
+    width: 945px;
+
+    height: 400px;
+
+    margin: 100px auto;
+
+    position:relative;
+
+}
+
+.photos > div {
+
+    background-color: rgba(128, 128, 128, 0.5);
+
+    border: 2px solid #444;
+
+    float: left;
+
+    height: 300px;
+
+    margin: 5px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    width: 300px;
+
+    z-index: 1;
+
+ 
+
+    -webkit-border-radius: 10px;
+
+    -moz-border-radius: 10px;
+
+    -ms-border-radius: 10px;
+
+    -o-border-radius: 10px;
+
+    border-radius: 10px;
+
+     
+
+    -webkit-transform:scale(1.0);
+
+    -moz-transform:scale(1.0);
+
+    -ms-transform:scale(1.0);
+
+    -o-transform:scale(1.0);
+
+    transform:scale(1.0);
+
+ 
+
+    -webkit-transition-duration: 0.5s;
+
+    -moz-transition-duration: 0.5s;
+
+    -ms-transition-duration: 0.5s;
+
+    -o-transition-duration: 0.5s;
+
+    transition-duration: 0.5s;
+
+}
+.photos > div img{
+
+    width: 100%;
+
+}
+
+.photos > div:hover{
+
+    z-index: 10;
+
+ 
+
+    -webkit-transform:scale(2.0);
+
+    -moz-transform:scale(2.0);
+
+    -ms-transform:scale(2.0);
+
+    -o-transform:scale(2.0);
+
+    transform:scale(2.0);
+
+}
+
+.photos > div div {
+
+    background: url(http://www.zastavki.com/pictures/originals/2014/Backgrounds_Wallpapers_with_gradient_background_082013_.jpg) repeat scroll 0 0 transparent;
+
+    cursor: pointer;
+
+    height: 100%;
+
+    left: 0;
+
+    opacity: 0.5;
+
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+
+    z-index: 15;
+
+ 
+
+    -webkit-transition-duration: 0.5s;
+
+    -moz-transition-duration: 0.5s;
+
+    -ms-transition-duration: 0.5s;
+
+    -o-transition-duration: 0.5s;
+
+    transition-duration: 0.5s;
+
+}
+
+.photos > div:nth-child(1):hover div {
+
+    height: 0%;
+
+}
+
+ 
+
+.photos > div:nth-child(2):hover div {
+
+    height: 0%;
+
+    margin-top: 100px;
+
+}
+
+.photos > div:nth-child(3):hover div {
+
+    width: 0%;
+
+}
+
+.photos > div:nth-child(4):hover div {
+
+    margin-left: 300px;
+
+    width: 0%;
+
+}
+
+.photos > div:nth-child(5):hover div {
+
+    height: 0%;
+
+    margin-left: 150px;
+
+    margin-top: 50px;
+
+    width: 0%;
+   }
+.photos > div:nth-child(6):hover div {
+
+    margin-left: 150px;
+
+    width: 0%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

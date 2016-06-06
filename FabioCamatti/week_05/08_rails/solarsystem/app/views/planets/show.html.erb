@@ -1,0 +1,16 @@
+<h3>app/views/planets/show.html.erb</h3>
+<h4>This should show all of the planets</h4>
+<h2><%= @planet.name %></h2>
+<% if @planet.image %>
+  <p>
+    <img src="<%= @planet.image %>" alt="">
+  </p>
+<% end %>
+<p>Orbit: <%= @planet.orbit %></p>
+<p>Diameter: <%= @planet.diameter %></p>
+<p>Moons: <%= @planet.moons %></p>
+<p>
+  <%= link_to( "Home", "/planets") %>
+  <%= link_to( "Edit Planet", "/planets/#{@planet.id}/edit") %>
+  <%= button_to( "Destroy #{@planet.name}", "/planets/#{@planet.id}/delete", :method => :delete) %>
+</p>

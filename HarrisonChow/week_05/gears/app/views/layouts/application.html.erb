@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gears</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <a href="/makes">Makes</a>
+    <a href="/makes/new">New_make</a>
+    <a href="/cars">Cars</a>
+    <a href="/cars/new">New_car</a>
+
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

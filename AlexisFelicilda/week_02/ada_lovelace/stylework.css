@@ -1,0 +1,15 @@
+body{
+	background: url(http://www.zastavki.com/pictures/originals/2014/Backgrounds_Wallpapers_with_gradient_background_082013_.jpg);
+	font-family: Eczar, sans-sarif;
+	font-size: 18px;
+	text-align: center;
+}
+li {
+	height: 150px;
+	width: 300px;
+	font-family: Eczar, sans-sarif;
+	box-shadow: 0 0 3px 3px black;
+	display: inline-block;
+	text-align: center;
+	
+}

@@ -1,0 +1,19 @@
+<h1><%= @house.name %></h1>
+
+<%= image_tag @house.image, :class => 'feature' %>
+
+<ul>
+  <li>Founded: <%= @house.founded %></li>
+  <li>History: <%= @house.history %></li>
+</ul>
+
+<h4>Perfumes:</h4>
+
+<% @house.perfumes.each do |perfume| %>
+  <%= link_to( image_tag(perfume.image, :class => 'thumbnail'), perfume ) %>
+<% end %>
+
+<div>
+  <%= link_to "Edit #{@house.name}", "/houses/#{@house.id}/edit" %>
+  <%= link_to "Delete #{@house.name}", "/houses/#{@house.id}/delete", :method => :delete, :data => { :confirm => "Are you sure?" } %>
+</div>

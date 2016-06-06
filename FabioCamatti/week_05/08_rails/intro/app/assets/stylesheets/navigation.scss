@@ -1,0 +1,21 @@
+nav{
+  background: gainsboro;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+}
+
+nav a{
+  padding: 0 5px;
+  text-decoration: none;
+  color: rebeccapurple;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+nav a:hover{
+  color: hotpink;
+}

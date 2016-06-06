@@ -1,0 +1,20 @@
+<form action="/mountains/<%= @mountain["id"] %>" method="POST">
+
+  <p>
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= @mountain["name"] %>">
+  </p>
+  <p>
+    <label>Location:</label>
+    <input type="text" name="location" value="<%= @mountain["location"] %>">
+  </p>
+  <p>
+    <label>Elevation:</label>
+    <input type="text" name="elevation" value="<%= @mountain["elevation"] %>">
+  </p>
+  <p>
+    <label>Image:</label>
+    <input type="text" name="image" value="<%= @mountain["image"] %>">
+  </p>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Edit</button>
+</form>

@@ -1,0 +1,24 @@
+<div class="cardetails">
+<p>
+  <%= image_tag(@car.image, :class=>'feature')%>
+</p>
+<div class="details">
+
+<p>
+  <%= @car.model%>
+</p>
+<p>
+  <%= @car.year%>
+</p>
+<p>
+  <%= @car.description%>
+</p>
+<p>
+  <%= link_to(@car.make.name, "/makes/#{@car.make_id}")%>
+</p>
+</div>
+<div>
+  <%= link_to('Edit car', edit_car_path(@car))%>
+  <%= link_to('Delete car', @car, :method => :delete, :data=>{:confirm=>'Are you sure?'}) %>
+</div>
+</div>

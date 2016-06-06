@@ -1,0 +1,14 @@
+<h2>This should show all perfume houses</h2>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li>
+      <%= image_tag house.image, :class => 'thumbnail' %>
+      <ul>
+        <li>Name: <%=link_to house.name, "/houses/#{house.id}" %></li>
+        <li>Founded: <%= house.founded %></li>
+        <li>History: <%= house.history %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>

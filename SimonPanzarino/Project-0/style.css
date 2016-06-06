@@ -1,0 +1,595 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('images/mountain-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 -50px;
+}
+
+
+@font-face {
+  font-family: marioFont;
+  src: url('fonts/New Super Mario Font U.ttf');
+}
+
+
+#mario {
+  position: absolute;
+  bottom: -131px;
+  left: 600px;
+  background-image: url('images/mario.png');
+  background-repeat: no-repeat;
+  height: 131px;
+  width: 80px;
+}
+
+#mario-running {
+  position: absolute;
+  bottom: 25px;
+  left: -66px;
+  background-image: url("images/mario-running3.gif");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: -70px 0px;
+  height: 65px;
+  width: 66px;
+}
+
+.mario-run {
+  animation: mario-run 4s forwards;
+  -moz-animation: mario-run 4s forwards;
+  -webkit-animation: mario-run 4s forwards;
+  -o-animation: mario-run 4s forwards;
+}
+
+@keyframes mario-run {
+  0% {
+    animation-timing-function: linear;
+  }
+  40% {
+    transform: translate3d(1100px, 0px, 0px);
+    animation-timing-function: linear;
+    background-position: -70px 0px;
+  }
+  40.01% {
+    background-position: -5px 0;
+    transform: translate3d(1100px, 0px, 0px);
+    animation-timing-function: linear;
+    background-position: -5px 0;
+  }
+  50% {
+    transform: translate3d(1245px, -220px, 0px);
+    animation-timing-function: linear;
+    background-position: -5px 0;
+  }
+  65% {
+    transform: translate3d(1245px, 0, 0);
+    animation-timing-function: ease-in;
+    background-position: -5px 0;
+  }
+  65.01% {
+    background-position: -70px 0;
+  }
+  80% {
+    transform: translate3d(1245px, 0, 0);
+  }
+  100% {
+    transform: translate3d(1600px, 0, 0);
+    animation-timing-function: linear;
+    background-position: -70px 0;
+  }
+}
+
+#flag-pole {
+  position: absolute;
+  bottom: 29px;
+  right: 200px;
+  background-image: url("images/flag-pole.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 300px;
+  width: 32px;
+  z-index: -100;
+}
+
+#flag {
+  position: absolute;
+  bottom: 270px;
+  right: 225px;
+  background-image: url("images/mario-flag.gif");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 44px;
+  width: 55px;
+  z-index: -100;
+}
+
+#lakitu {
+  position: absolute;
+  top: 0px;
+  left: -387px;
+  height:100px;
+  width: 80px;
+  background-image: url("images/lakitu.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#goomba1 {
+  position: absolute;
+  bottom: 95px;
+  right: 55px;
+  height: 24px;
+  width: 20px;
+  background-image: url("images/goomba.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -100;
+}
+
+#goomba2 {
+  position: absolute;
+  bottom: 95px;
+  right: 90px;
+  height: 24px;
+  width: 20px;
+  background-image: url("images/goomba.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -100;
+}
+
+.mario-jump {
+  animation: mario-jump 1s forwards;
+  -moz-animation: mario-jump 1s forwards;
+  -webkit-animation: mario-jump 1s forwards;
+  -o-animation: mario-jump 1s forwards;
+}
+
+@keyframes mario-jump {
+  0% {
+
+  }
+  50% {
+    transform: translate3d(0px, -531px, 0px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+    animation-timing-function: linear;
+  }
+}
+
+.lakitu-fly {
+  animation: lakitu-fly 3s forwards;
+  -moz-animation: lakitu-fly 3s forwards;
+  -webkit-animation: lakitu-fly 3s forwards;
+  -o-animation: lakitu-fly 3s forwards;
+}
+
+@keyframes lakitu-fly {
+  50% {
+    transform: translate3d(995px, 0, 0);
+  }
+  70% {
+    transform: translate3d(995px, 0, 0)
+  }
+  100% {
+    transform: translate3d(1995px, 0px, 0px);
+  }
+}
+
+#piranha {
+  position: absolute;
+  background-image: url("images/piranha.gif");
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 886px;
+  left: -1000px;
+  top: 160px;
+  background-size: auto 100%;
+}
+
+.piranha-eat {
+  animation: piranha-eat 2s forwards;
+  -moz-animation: piranha-eat 2s forwards;
+  -webkit-animation: piranha-eat 2s forwards;
+  -o-animation: piranha-eat 2s forwards;
+}
+
+@keyframes piranha-eat {
+  50% {
+    transform: translate3d(806px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1000, 0, 0);
+  }
+}
+
+.cloud1 {
+  position: absolute;
+  top: 200px;
+  left: -287px;
+  background-image: url('images/cloud1.png');
+  background-repeat: no-repeat;
+  width: 287px;
+  height: 119px;
+  z-index: -10;
+}
+.cloud2 {
+  position: absolute;
+  top: 300px;
+  left: -287px;
+  background-image: url('images/cloud2.png');
+  background-repeat: no-repeat;
+  width: 145px;
+  height: 61px;
+  z-index: -11;
+}
+.cloud3 {
+  position: absolute;
+  top: 100px;
+  left: -106px;
+  background-image: url('images/cloud3.png');
+  background-repeat: no-repeat;
+  width: 106px;
+  height: 47px;
+  z-index: -12;
+}
+
+.fall {
+  background-color: #000;
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  transition: transform 1s ease;
+  transform-origin: bottom left;
+  transform-style: preserve-3D;
+}
+
+.box-rotate {
+  transform: rotate(135deg);
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.gameBoard {
+  margin: 100px auto 0;
+  width: 210px;
+  height: 210px;
+  /*overflow: hidden;*/
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/mushroom.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.miniGameBoard {
+  position: absolute;
+  bottom: 135px;
+  right: 47px;
+  width: 72px;
+  height: 72px;
+  z-index: -100;
+}
+
+.miniCell {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.miniCell .inner {
+  background-image: url("images/block.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+}
+.miniCell .inner-star {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+}
+
+.miniCell .inner-mushroom {
+  background-image: url("images/mushroom.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100%;
+  display: block;
+}
+
+.fallOff {
+  animation: fall-off 5s forwards;
+  -moz-animation: fall-off 5s forwards;
+  -webkit-animation: fall-off 5s forwards;
+  -o-animation: fall-off 5s forwards;
+}
+
+@keyframes fall-off {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+    animation-timing-function: cubic-bezier(0.75, -0.05, 0.74, 1);
+  }
+  30% {
+    transform: rotate(185deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: rotate(115deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  70% {
+    transform: rotate(155deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  90% {
+    transform: rotate(135deg);
+    transform-origin: bottom left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translate3d(-100px, 1000px, 0px);
+    animation-timing-function: ease-in;
+    transform-origin: bottom left;
+  }
+}
+
+.bump {
+  animation: bump 2s forwards;
+  -moz-animation: bump 2s forwards;
+  -webkit-animation: bump 2s forwards;
+  -o-animation: bump 2s forwards;
+}
+
+@keyframes bump {
+  20% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -10px, 0);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translate3d(0, 1000px, 0);
+    animation-timing-function: linear;
+  }
+}
+
+.flyaway {
+  animation: flyaway 3s forwards;
+  -moz-animation: flyaway 3s forwards;
+  -webkit-animation: flyaway 3s forwards;
+  -o-animation: flyaway 3s forwards;
+}
+
+@keyframes flyaway {
+  60% {
+    transform: translate3d(0, 0, 0)
+  }
+  70% {
+    transform: translate3d(0px, -50px, 0)
+  }
+  100% {
+    transform: translate3d(1000px, -50px, 0px);
+  }
+}
+
+.inner {
+  background-image: url('images/musicNote.png');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: block;
+  /*transition: transform 1s cubic-bezier(.62,-0.02,.82,-0.01);
+  transform-origin: bottom left;
+  transform-style: preserve-3D;*/
+  /*animation: fall-off 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -moz-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -webkit-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);
+  -o-animation: fall-off 1s 1s cubic-bezier(.61, -0.02, 0.82, -0.01);*/
+}
+
+#character {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}
+
+#menu {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#logo {
+  background-image: url('images/logo.png');
+  background-repeat: no-repeat;
+  height: 425px;
+  width: 600px;
+  background-size: 100% auto;
+  margin: 100px auto 0;
+}
+
+#menu ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#menu ul li {
+  margin: 10px auto;
+  width: 300px;
+  list-style-type: none;
+}
+
+#menu ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 20px;
+  font-weight: 300;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+#one {
+  background-image: url("images/1-player.png");
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 239px;
+  background-size: auto 100%;
+  background-position: right;
+}
+
+#one.active {
+  background-image: url("images/1-player-active.png");
+}
+
+#two {
+  background-image: url("images/2-player.png");
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 139px;
+  background-size: auto 100%;
+  background-position: right;
+}
+
+#two.active {
+  background-image: url("images/2-player-active.png");
+}
+
+#winner {
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#winner .glowBox h2 {
+  font-size: 60px;
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #e93737;
+  font-weight: 300;
+  -webkit-text-fill-color: #e93737; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: border-color 0.3s ease-out,
+              color 0.3s ease-out,
+              width 0.4s ease-in;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  color: #e93737;
+  border-color: #fff;
+  width: 250px;
+  transition: border-color 0.4s ease-in,
+              color 0.4s ease-in,
+              width 0.4s ease-in;
+}
+
+#frame {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -41px;
+  width: 80px;
+  height: 72px;
+  background-image: url("images/frame.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: none;
+}
+
+.current-player {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/star.png");
+  background-size: 90%;
+  background-position: center;
+}
+
+#playerOne {
+  font-family: marioFont, "Open Sans", sans-serif;
+  font-size: 40px;
+  color: #black;
+  text-shadow: 0 0 5px 5px #000;
+  position: absolute;
+  left: 20px;
+  top: 200px;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+}
+#playerTwo {
+  font-family: marioFont, "Open Sans", sans-serif;
+  font-size: 40px;
+  color: #black;
+  text-shadow: 0 0 5px 5px #000;
+  position: absolute;
+  right: 20px;
+  top: 200px;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+}
+
+#playerOne .won {
+  position: relative;
+  top: -10px;
+  left: -32px;
+}
+
+#playerTwo .won {
+  position: relative;
+  top: -10px;
+  left: 32px;
+}

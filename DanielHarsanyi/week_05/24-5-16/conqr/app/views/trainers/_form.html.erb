@@ -1,0 +1,35 @@
+<%= form_for @trainer do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :qualification %>
+    <%= f.text_field :qualification, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :fitness_australia_id, "Fitness Australia ID" %>
+    <%= f.number_field :fitness_australia_id, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :speciality %>
+    <%= f.text_field :speciality, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

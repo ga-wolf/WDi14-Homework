@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<hr>
+<h1>Games App!</h1>
+
+<nav>
+  <%= link_to "Home", "/games" %>
+  <%= link_to "Play Magic Eightball", "/games/eightballs" %>
+  <%= link_to "Play Secret Number", "/games/secretnumbers" %>
+  <%= link_to "Play Rock, Paper, Scissors", "/games/rockpaperscissors" %>
+</nav>
+
+<hr>
+
+<%= yield %>
+
+</body>
+</html>

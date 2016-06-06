@@ -1,0 +1,4 @@
+<h2>Your search turned up these cards!</h2>
+<% @matches.each do |card| %>
+  <div class="col-sm-4"><a href="/cards/<%= card["id"] %>" class="thumbnail"><img src="<%= card["image"] %>"><a/></div>
+<% end %>

@@ -1,0 +1,15 @@
+<form method="POST" action="/chan/<%= @chan["id"] %>">
+    <p>
+        <label> Name: </label>
+        <input type="text" name="title" value="<%= @chan["title"] %>">
+    </p>
+    <p>
+        <label> Image: </label>
+        <input type="text" name="image" value="<%= @chan["image"] %>">
+    </p>
+    <p>
+        <label> Desc: </label>
+        <input type="text" name="content" value="<%= @chan["content"] %>">
+    </p>
+    <input type="submit" value="save changes">
+</form>

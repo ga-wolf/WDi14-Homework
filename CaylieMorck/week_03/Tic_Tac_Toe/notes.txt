@@ -1,0 +1,78 @@
+ function = takes row & collumn & input (value from user)
+ function2 = compare combinations (win checker w if statements )
+
+  $('.button').on('click', function(){
+    console.log(this);
+    })  end click
+//
+// array1[0].toString() === array1[1].toString && array1[1] === array1[2]
+//  if winner by row
+//
+// array1[0].toString() === array2[0].toString() && array3[0].toString()
+//   if winner by collumn
+//
+//   array1[0].toString() === array2[1].toString() && array3[2].toString()
+//     if winner by diagonal
+//
+//
+//     if ( win ) {
+//       winner = array[x].toString()
+//     }
+//
+// var playerMove = function () {
+//   var $curSqu =
+//   var $curID =
+// }
+// $(".button").on("click", playerMove )
+
+
+/*ul.rowA li {
+  text-align: center;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background-color: #663399;
+  color: white;
+}
+
+ul.rowB li {
+  text-align: center;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background-color: #663399;
+  color: white;
+}
+
+ul.rowC li {
+  text-align: center;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  background-color: #663399;
+  color: white;
+}*/
+
+
+
+
+
+
+
+//creating gameboard to be an empty array0
+//turn counter - think math and divisible by 2 = os trune etc etc
+// everytime the button is clicked, run the .... function
+//playersturn += 1
+//unbind click so player cant click again. mention in both player functions
+// find index of id within the gameboard array
+// switch it to the "player" variable
+//write for loop that will look through the arrays within the arrays, for the playerMove
+// 1) Render a gameboard - individual cell ID's
+// 2) Start with turn X
+// 3) Make X appear on screen
+// 3) Keep a log of where X clicked - using array of arrays "set array function"
+// 4) Change to O's tur
+// 5) Make sure O can't click where X did
+// 6) Keep a log of where O clicked - using array of arrays "set array function"
+// 7) Make sure X can't click where O did
+// 8) Once a winning combination is found display this to the user

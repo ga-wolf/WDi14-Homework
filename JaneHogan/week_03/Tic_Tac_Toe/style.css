@@ -1,0 +1,84 @@
+//layout elements
+
+body {
+  text-align: center;
+  background-color:blue;
+}
+h1{
+  color: pink;
+  text-align:center;
+}
+
+.board {
+   width: 80vw;
+   height: 15vh;
+   background-color:none;
+   border-spacing:0;
+   margin: 0 auto;
+
+}
+
+.square {
+float: left;
+width: 25%;
+height: 90%;
+padding: 25px;
+border: 25px chartreuse;
+border-radius: 50px;
+margin: 5px;
+background-color: aliceblue;
+font-size: 50px;
+text-align: center;
+}
+
+
+.square:hover {
+	background-color: grey;
+}
+
+.clicked {
+  background-color: pink;
+}
+
+.x {
+  background: gainsboro;
+}
+
+.0 {
+  background: hotpink;
+}
+
+/*.x {
+  background-image: url('images/x.jpg');
+
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*width: 50%;
+  height: 20px;*/
+/*}
+.o {
+  background-image: url('images/o.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}*/*/
+
+button {
+  background-color:pink;
+  width: 100px;
+  height: 200px;
+
+}
+
+footer{
+  float: left;
+
+}
+
+}
+/*.o {
+    width: 20%%;
+    height: 100%;
+    background-color: red;
+}*/

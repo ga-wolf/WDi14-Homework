@@ -1,0 +1,2 @@
+module RockPaperScissorsHelper
+end

@@ -1,0 +1,19 @@
+<%= form_for @house do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+  <p>
+    <%= f.label :founded %>
+    <%= f.text_field :founded, :required => true %>
+  </p>
+  <p>
+    <%= f.label :history %>
+    <%= f.text_field :history, :required => true %>
+  </p>
+  <%= f.submit %>
+<% end %>

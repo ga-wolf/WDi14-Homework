@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700italic,700,400);
+
+
+
+
+.hero
+ {
+  position: relative;
+  height: 900px;
+  background:;
+}
+
+.hero_background {
+  background-size:100% 900px;
+  background-image:url(file:///Users/Dongyang/wdi-14/WDi14-Homework/DonnZhao/week_02/Ada_Lovelace/image/large_person.jpeg);
+  height:900px;
+  width: 100%;
+  min-width: 800px;
+  position: center absolute;
+  top:0
+  left:0
+  right:0
+}
+ /*100vh*/
+
+.topnav {
+  width: 100%;
+  height:60px;
+  position:absolute;
+  top:400px;}
+
+ .topnav li{
+  list-style-type: none;
+      display: inline;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 2px 16px 5px 16px;
+      /*border-style: groove;
+      border-bottom-color: azure;
+      border-width: 2px;*/
+      margin-left: 10px;
+
+
+}
+
+.topnav li:hover {
+  border-width: thin;
+  border-style: outset;
+  border-color: black;
+}
+
+
+.topnav>li:first-child{
+  margin-left:-3px;
+}
+
+a {
+  color:#000000;
+  text-decoration:none;
+
+}
+
+
+
+#maintext {
+  height:0px;
+  font-family: 'Lato', sans-serif;
+  font-size:30px;
+  position:absolute;
+  top:327px;
+  left:71px;
+  color:white;
+  background-color: yellow;
+}
+@keyframes textmove {
+  0% {left:85px;}
+  100%(left:100px;)
+
+}
+#maintext:hover {
+  animation:1s;
+  animation-name:textmove;
+  animation-fill-mode: forwards;
+
+}
+
+.Bio {
+  margin-top:62px;
+  height:auto;
+  background-color:rgba(33, 33, 33, 1);
+
+
+}
+
+.topnav_b {
+  left:0
+  right:0;
+  width: 100%;
+  height:50px;
+  position:fixed;
+  top:0px;
+    background-color: white;
+    border-bottom-width:8px;
+    border-bottom-style:groove;
+    border-bottom-color: black;
+
+
+}
+
+.topnav_b li {
+  list-style-type: none;
+  top:-5px;
+margin-top: -5px;
+margin-left: -0px;
+margin-right: 3px;
+      display: inline;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+  border-style: none;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+}
+
+.topnav_b li:hover {
+  border-width: 2px;
+  border-style: outset;;
+  border-color: black;
+}
+
+#fistBli{
+  border-left: 20px;
+  margin-left: 0px;
+}
+
+.comic {
+  list-style:none;
+  margin:0 auto;
+  width:1100px;
+  height:1500px;
+  background-color;
+  position:static;
+}
+#comic1{
+  width: 500px;
+  height: 600px;
+  margin: 40px 0px 60px 0;
+  float: left;
+}
+
+
+#comic2{
+  width: 500px;
+  height: 600px;
+  margin: 40px 0px 60px 0;
+  float: right;
+}
+#comic3{
+  width: 500px;
+  height: 800px;
+  margin: 20px 0px 60px 0;
+float: left;
+}
+
+#comic4{
+  width: 500px;
+  height: 800px;
+  margin: 20px 0px 60px 0;
+float: right;
+}
+
+
+
+.biofooter {
+  top: 1600px;
+  width :200vh;
+  height:40px;
+  font-family:'Roboto', sans-serif;
+  font-weight:900;
+  font-style: italic;
+  background-color:rgba(250, 250, 250, 0.5);
+  font-size: 16px;
+  position: absolute;
+  text-align: right;
+  background-color: white;
+  border-width:10px;
+  border-style:groove;
+  border-color: black;
+  padding: 0 50px 7px 0;
+
+}
+
+
+.achivepicure {
+  list-style:none;
+  margin:0 auto;
+  width:100%;
+  height:1500px;
+  position:static;
+  text-align: center;
+
+}
+
+#achivepic1, #achivepic2, #achivepic4, #achivepic3{
+  width: 1000px;
+  height: 600px;
+  margin: 50px 0px 60px 0;
+  display:inline-block;
+}

@@ -1,0 +1,232 @@
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cell {
+  border: 3px solid black;
+  border-radius: 15px;
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 145px;
+
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+}
+
+p {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+i.fa {
+  font-size: 50px;
+  margin: auto;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-top: 12px;
+}
+
+.tictactoe {
+  /*border: 1px dashed red;
+  border-radius: 15px;*/
+  width: 430px;
+  height: 430px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.mainTic {
+
+  /*border: 3px solid blue;*/
+  padding: 5px;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.playerS {
+  text-align: center;
+  /*border: 3px solid pink;*/
+  margin-bottom: 20px;
+}
+
+.playerChoice1 {
+
+
+  /*border: 3px solid green;*/
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 5px 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.playerChoice2 {
+
+
+  /*border: 3px solid green;*/
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 5px 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.newGameButton {
+      display: inline-block;
+      margin-bottom: 3px;
+      padding: 10px 23px;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      text-align: center;
+
+      border-radius: 10px;
+      color: black;
+      background-color: silver;
+      text-decoration: none;
+      margin-top: 10px;
+      border: 3px solid black;
+      border-bottom: none;
+}
+
+.newGameButton:focus {
+  outline:0;
+}
+
+.allWins {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 23px;
+
+  font-size: 16px;
+
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 10px;
+  color: black;
+  background-color: silver;
+
+  text-decoration: none;
+  border: 3px solid black;
+}
+
+.player2Wins {
+  border-right: none;
+  border-top: none;
+}
+
+.player1Wins {
+  border-left: none;
+  border-top: none;
+}
+
+
+
+.number0 {
+  border-top: none;
+  border-left: none;
+}
+
+.number1 {
+  border-top: none;
+}
+
+.number2 {
+  border-top: none;
+  border-right: none;
+}
+
+.number3 {
+  border-left: none;
+}
+
+.number5 {
+  border-right: none;
+}
+
+.number6 {
+  border-bottom: none;
+  border-left: none;
+}
+
+.number7 {
+  border-bottom: none;
+}
+
+.number8 {
+  border-bottom: none;
+  border-right: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    line-height: 91px;
+
+  }
+  .tictactoe {
+    width: 270px;
+    height: 270px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .playerS {
+    margin-bottom: 0px;
+  }
+
+  i.fa {
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+
+  body {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .allWins {
+    display: inline-block;
+    margin: 10px;
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+
+  .newGameButton {
+    padding: 7px 15px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .playerChoice1 {
+    margin: 1px 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .playerChoice2 {
+    margin: 1px 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+}

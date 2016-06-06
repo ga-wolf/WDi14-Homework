@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Source+Sans+Pro:400,300,700|Oxygen:400,300,700|Open+Sans:400,600);
+
+/*FONT FAMILIES*/
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Quicksand', sans-serif;*/
+
+/*COLOURS:
+navy:#2d5986
+charcoal:#55595e
+grey:#a6a6a6*/
+
+
+/*PLAYERS TITLE*/
+h2{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/*BEFORE WE START TITLE*/
+h3 {
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.PlayerX{
+  width: 250px;
+  margin-top: 70px;
+  margin-left: 50px;
+  color:#2d5986;
+  border-bottom:1px solid #2d5986;
+
+}
+
+.PlayerO{
+  width: 250px;
+  margin-top: 100px;
+  margin-left: 50px;
+  color:	#a6a6a6;
+  border-bottom:1px solid 	#a6a6a6;
+}
+/*LINKS ON INDEX PAGE*/
+a {
+  text-decoration:none;
+   }
+/*LETS PLAY BUTTON*/
+.imabutton{
+   border: 2px solid black;
+   font-family:'Source Sans Pro', sans-serif;
+   font-size: 15px;
+   text-transform: uppercase;
+   margin-left: 110px;
+   margin-top: 30px;
+   background: white;
+ }
+/*PLAY AGAIN BUTTON*/
+ .replay{
+    border: 2px solid black;
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    background: white;
+  }
+
+ .container{
+  width:1230px;
+}
+
+ .container .leftContent{
+  float: left;
+  background: white;
+  height:100vh;
+  width: 60%;
+  display: inline-block;
+}
+
+.container .rightContent{
+  float: left;
+  background: black;
+  height: 100vh;
+  width: 40%;
+  display: inline-block;
+}
+/*GRID THATS KEEPING THE CIRCLES IN ALIGNMENT*/
+.grid{
+  width:420px;
+  height:420px;
+  /*border: 1px solid black;*/
+  position: absolute;
+  margin: 95px 676px;
+}
+
+/*CIRCLES INSIDE THE GRID*/
+ .grid .pixel {
+  float:left;
+  width: 98px;
+  height: 98px;
+  background: #00cccc;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 15px;
+  }
+
+.content {
+  margin-top: 180px;
+  margin-left: 50px;
+  width: 370px;
+  height:150px;
+}
+
+.box {
+  width:50px;
+  height:2px;
+  background: black;
+  margin-top: 35px;
+  margin-left: 60px;
+}
+/*WHEN PLAYER X TAKES THEIR TURN*/
+.grid .playerX {
+  width: 94px;
+  height: 94px;
+  background: transparent;
+  border:2px solid #00cccc;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url("images/xcursor.png");
+  background-size:65px 65px;
+  background-repeat: no-repeat;
+   /*position: relative;*/
+  background-position: center;
+}
+/*WHEN PLAYER O TAKES THEIR TURN*/
+.grid .playerO {
+  width: 94px;
+  height: 94px;
+  background: transparent;
+  border:2px solid #00cccc;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url("images/ocursor.png");
+  background-size:65px 65px;
+  background-repeat: no-repeat;
+   /*position: relative;*/
+  background-position: center;
+}
+
+  p{
+  margin-left: 60px;
+  margin-top: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+/*DE ACTIVATING THE SCROLL BARS*/
+body{
+  overflow: hidden;
+}
+/*DIV ALERT STATING THE WINNER*/
+.winner {
+  height: 500px;
+  width: 500px;
+  background:white;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  margin-top: 425px;
+  margin-left: 50px;
+}
+/*DIV ALERT STATING THE TIE*/
+.tie {
+  height: 500px;
+  width: 500px;
+  background:white;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  margin-top: 425px;
+  margin-left: 50px;
+}

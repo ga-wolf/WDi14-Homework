@@ -1,0 +1,13 @@
+<h2>All Reviews</h2>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li>
+      <ul>
+        <li>Title: <%= link_to review.title, "/reviews/#{review.id}" %></li>
+        <li>User: <%= review.username %></li>
+        <li>Review: <%= review.review %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>

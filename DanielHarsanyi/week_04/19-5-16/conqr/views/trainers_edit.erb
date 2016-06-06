@@ -1,0 +1,29 @@
+<form method ="POST" action="/trainers/<%= @trainer["id"] %>">
+
+  <p>
+    <label>First Name:</label>
+    <input type="text" name="first_name" value="<%= @trainer["first_name"] %>">
+  </p>
+
+  <p>
+    <label>Last Name:</label>
+    <input type="text" name="last_name" value="<%= @trainer["last_name"] %>">
+  </p>
+
+  <p>
+    <label>Fitness Australia Registration ID:</label>
+    <input type="text" name="registration_id" value="<%= @trainer["registration_id"] %>">
+  </p>
+
+  <p>
+    <label>Image Source:</label>
+    <input type="text" name="image" value="<%= @trainer["image"] %>">
+  </p>
+
+  <p>
+    <label>Specialties:</label>
+    <input type="text" name="specialties" value="<%= @trainer["specialties"] %>">
+  </p>
+
+  <input type="submit" value="Update trainer details">
+</form>

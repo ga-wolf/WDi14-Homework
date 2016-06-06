@@ -1,0 +1,81 @@
+@font-face {
+  url: ("https://www.behance.net/gallery/14209843/SIMPLIFICA-Typeface-Free")
+}
+
+
+#title {
+  font-family: "simplifica", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  width: 230px;
+  margin: 0 auto;;
+
+}
+
+#page-wrap {
+  width: 430px;
+  margin: 0 auto;
+}
+
+.h1 {
+  text-align: center;
+}
+.button {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  list-style-position:inside;
+  border: 5px solid black;
+
+}
+
+.classX {
+  /*list-style-image: url('PsKYEid.png');*/
+  background-color: red;
+}
+
+.classO {
+  font-family: "simplifica", sans-serif;
+  font-size: 80px;
+  content: "O";
+  background-color: gainsboro;
+
+
+}
+
+.OPlayer {
+  font-family: "simplifica", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 56px;
+  color: black;
+  width: 300px;
+  height: 50px;
+  background-color: gainsboro;
+  list-style-position:inside;
+  border: 5px solid black;
+
+}
+
+/*text-align: center;
+vertical-align: middle;
+line-height: 90px;*/
+
+
+.XPlayer {
+  font-family: "simplifica", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 56px;
+  color: black;
+  width: 300px;
+  height: 50px;
+  background-color: red;
+  list-style-position:inside;
+  border: 5px solid black;
+
+}

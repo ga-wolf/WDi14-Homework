@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,700);
+
+body {
+  font-family: Raleway;
+  font-weight: 400;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul > li {
+  display: inline;
+}
+
+.menuBar {
+    font-weight: 500;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    float: right;
+    font-size: 18px;
+    padding: 2px;
+    margin-right: 20px;
+}
+
+.menuBar:hover {
+    background-color: white;
+    color: #181B21;
+}
+
+
+.topHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #181B21;
+  width: 100vw;
+  height: 400px;
+}
+
+.topHeaderHome {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #181B21;
+  width: 100vw;
+  height: 500px;
+}
+
+ h1 {
+    color: white;
+    position: relative;
+    font-size: 40px;
+    margin-top: 120px;
+    margin-left: 40px;
+    text-align: left;
+ }
+
+ .regularPage {
+    position: relative;
+    margin-top: 450px;
+    color: #181B21;
+    font-size: 26px;
+    font-weight: 400;
+ }
+
+ .bioPage {
+    position: relative;
+    margin-top: 600px;
+    color: #181B21;
+    font-size: 26px;
+    font-weight: 400;
+ }
+
+ .homePageBio {
+    position: relative;
+    margin-top:800px;
+    color: #181B21;
+    font-size: 26px;
+    font-weight: 400;
+ }
+
+ .topHeader > p {
+   color: white;
+   display: relative;
+   float: right;
+   margin-top: -20px;
+   margin-right: 250px;
+   font-size: 30px;
+ }
+
+ .topHeaderHome > p {
+   color: white;
+   display: relative;
+   float: right;
+   margin-top: -20px;
+   margin-right: 250px;
+   font-size: 30px;
+ }
+
+.homePageImage {
+    position: relative;
+    display: inline-block;
+    margin-left: 500px;
+    max-width: 500px;
+    top: 70px;
+}
+
+.bioPageImage {
+    position: relative;
+    display: inline-block;
+    margin-left: 500px;
+    max-width: 300px;
+    top: 60px;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 100%;
+    top: 20px;
+}
+
+.tileImage {
+  float: left;
+  width: 436px;
+  height: 436px;
+  padding: 4px;
+  overflow: hidden;
+}
+/*
+.bioParagraph {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  float: left;
+  max-width: 500px;
+}*/
+
+.biography .bioParagraph {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.grow img {
+  width: 440px;
+  height: 440px;
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+
+}
+
+.grow > .text {
+  position: relative;
+  bottom: 350px;
+  left: 6px;
+  visibility: hidden;
+  color: #181B21;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.grow:hover > .text {
+  visibility: visible;
+}
+
+.grow img:hover{
+  opacity: 0.4;
+  width: 480px;
+  height: 480px;
+}

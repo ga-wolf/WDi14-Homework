@@ -1,0 +1,23 @@
+
+<h1><%= @make.name %></h1>
+<div class="makedetail">
+  <p>
+    <%= image_tag(@make.image, :class => 'feature')%>
+  </p>
+  <p>
+    Country: <%= @make.country%>
+  </p>
+  <p>
+    Founded: <%= @make.founded.strftime("%B, %d, %Y") if @make.founded %>
+  </p>
+  <p><% @make.cars.each do |car|%>
+    <%= link_to(image_tag(car.image, :class=>'thumbnail'),car)%>
+    <% end %>
+  </p>
+
+
+</div>
+<div>
+  <%= link_to('Edit make', edit_make_path(@make))%>
+  <%= link_to('Delete make', @make, :method => :delete, :data=>{:confirm =>'Are your sure?'}) %>
+</div>

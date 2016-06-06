@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fashion Editorials</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,100|Poppins:400,600|Varela' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <h1>Editorials</h1>
+      <nav>
+          <a href="/magazines">All Magazines</a>
+          <a href="/campaigns">All Editorials</a>
+          <a href="/magazines/new">Add Magazines</a>
+          <a href="/campaigns/new">Add Editorials</a>
+      </nav>
+  </header>
+<br>
+
+
+
+
+
+<%= yield %>
+
+</body>
+</html>

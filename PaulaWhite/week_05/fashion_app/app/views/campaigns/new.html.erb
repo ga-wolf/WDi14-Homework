@@ -1,0 +1,28 @@
+<h2> Create a new Editorial </h2>
+
+<!-- <%#= render :partial => 'form' %> -->
+
+<%= form_for @campaign do | f | %>
+<p>
+  <%= f.label :model %>
+  <%= f.text_field :model, :required => true %>
+</p>
+
+<p>
+  <%= f.label :photographer %>
+  <%= f.text_field :photographer, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+
+<!--magazine_id  -->
+<p>
+  <%= f.label :magazine_id %>
+  <%= f.select :magazine_id, Magazine.all.map { |a| [ a.name, a.id ]}, :include_blank => true %>
+</p>
+
+<%= f.submit %>
+<% end %>
