@@ -4,7 +4,7 @@
 - 'API : geocoder, gmaps4rails, weather api'
 - 'image uploader'
 - postgresql
-- gem : cloudinary, 
+- gem : cloudinary,
 
 How to use it
 What each pages do

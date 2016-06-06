@@ -40,7 +40,7 @@ function loadWeather(location, woeid) {
       html += '<div class="weathercontent"><h4>'+weather.forecast[0].day+' '+weather.forecast[0].date+'</h4>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>Wind: '+weather.wind.direction+'/'+weather.wind.speed+'</li>';
+      html += '<li>Wind: '+weather.wind.direction+'/'+weather.wind.speed+'mph</li>';
       html += '<li>Sunrise: '+weather.sunrise+'</li>';
       html += '<li>Sunset: '+weather.sunset+'</li></ul>';
       html += '<h4>After 4 days</h4>'

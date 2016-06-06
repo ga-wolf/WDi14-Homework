@@ -13,7 +13,6 @@
 !/log/.keep
 /tmp
 /public/uploads
-readme.md
 /config/secrets.yml
 =======
 # OS generated files #
