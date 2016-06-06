@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700italic|Source+Sans+Pro|Raleway|Droid+Serif|Playfair+Display|Libre+Baskerville|Archivo+Narrow);
+
+body {
+  font-family: 'Libre Baskerville', sans-serif;
+
+  background-image: url("image/pipe_church.jpg");
+  background-size: 100%;
+
+}
+
+ul {
+  text-align: right;
+  background-color: rgba(200,200,200, 0.3);
+  border-radius: 30px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 30px;
+  color: black;
+  font-size: 20px;
+}
+
+header {
+  width: 50%;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: rgba(200,200,200,0.7);
+  margin: 10px 25% 20px 25%;
+}
+
+.container {
+    margin: 0px 0px 0px 0px;
+    border-radius: 30px;
+    background-color: rgba(200,200,200,0.7);
+    text-align: center;
+    padding-bottom: 300px;
+
+}
+
+.firstParagraph {
+  padding-top: 30px;
+}
+
+.hover {
+  opacity: 0;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.hover:hover {
+  opacity: 1;
+}
+
+h3 {
+  font-size: 30px;
+  width: 50%;
+  margin: auto;
+}

@@ -1,0 +1,9 @@
+<% @directors.each do |director| %>
+<p><a href="/directors/<%= director[:id] %>"><%= director.name %></a></p>
+<p><a href="/directors/<%= director[:id] %>"><img src="<%= director.image %>" class="index"></a></p>
+<hr>
+<% end  %>
+
+<a href="/directors/new">
+<h3>New Director</h3>
+</a>

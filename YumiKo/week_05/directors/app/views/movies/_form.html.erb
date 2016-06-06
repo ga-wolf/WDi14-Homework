@@ -1,0 +1,33 @@
+<%= form_for @movie do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title, :required => true %>
+</p>
+<p>
+  <%= f.label :poster %>
+  <%= f.url_field :poster, :required => true %>
+</p>
+<p>
+  <%= f.label :year %>
+  <%= f.text_field :year, :required => true %>
+</p>
+<p>
+  <%= f.label :genre %>
+  <%= f.text_field :genre, :required => true %>
+</p>
+<p>
+  <%= f.label :running_time, "Running time" %>
+  <%= f.text_field :running_time, :required => true %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description, :required => true %>
+</p>
+
+<p>
+  <%= f.label :director_id %>
+  <%= f.select :director_id, Director.all.map{ |d| [ d.name, d.id ] }, :include_blank => true %>
+</p>
+
+  <%= f.submit %>
+<% end %>
