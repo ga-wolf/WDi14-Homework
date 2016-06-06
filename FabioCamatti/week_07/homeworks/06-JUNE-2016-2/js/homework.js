@@ -27,7 +27,6 @@ request.onreadystatechange = function() {
           }
         }
     } else {
-      debugger
       if (dataAsObject.Poster && dataAsObject.Poster !== "N/A") {
           var img = document.createElement('img');
           img.src = dataAsObject.Poster;
@@ -37,8 +36,13 @@ request.onreadystatechange = function() {
         console.log("No poster found for this image");
 
       }
-      var p = document.createElement('p');
-      ["Title", "Type", "Year"].forEach(logArrayElements);
+      var elements = function (element) {
+        var p = document.createElement('p');
+        p.innerHTML = element + ": " + dataAsObject[element];
+        
+        document.querySelector("#content").appendChild(p);
+      };
+      (["Title", "Type", "Year"]).forEach( elements );
     }
 
 
