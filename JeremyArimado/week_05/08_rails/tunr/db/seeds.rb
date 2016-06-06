@@ -100,3 +100,12 @@ puts "Mixtape-3 song count: #{m3.songs.count}"
 puts "Song-1 mixtape count: #{s1.mixtapes.count}"
 puts "Song-2 mixtape count: #{s2.mixtapes.count}"
 puts "Song-3 mixtape count: #{s3.mixtapes.count}"
+
+puts "\n\n Testing has_many :through relationships...\n"
+puts "First artist genre count: #{r1.genres.count}"
+puts "Second artist genre count: #{r2.genres.count}"
+puts "Third artist genre count: #{r3.genres.count}"
+
+puts "First artist album count: #{r1.albums.count}"
+puts "Second artist album count: #{r2.albums.count}"
+puts "Third artist album count: #{r3.albums.count}"
