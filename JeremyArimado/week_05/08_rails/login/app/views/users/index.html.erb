@@ -1,0 +1,10 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<% @users.each do |u| %>
+    <ul>
+        <li>Username: <%= link_to(u.name, user_path(u)) %></li>
+        <li>Email: <%= u.email %></li>
+        <li>Password digest: <%= u.password_digest %></li>
+    </ul>
+<% end %>

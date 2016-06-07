@@ -1,0 +1,16 @@
+<h1>Pages#text</h1>
+<p>Find me in app/views/pages/text.html.erb</p>
+
+<p> I have <%= pluralize( @friends, "friend") %> </p>
+
+<p> I have <%= pluralize( @enemies, "enemy") %> </p>
+
+<p> <%= truncate( @fairytale, :length => 20) %> </p>
+
+<ul>
+    <% @numbers.each do |n| %>
+        <li style="font-size: " <%= cyle() %> >
+            <%= n %>
+        </li>
+    <% end %>
+</ul>

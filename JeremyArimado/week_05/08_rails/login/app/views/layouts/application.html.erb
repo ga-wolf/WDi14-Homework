@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <nav>
+        <%= link_to('ALL USERS', users_path) %> |
+        <% if @current_user %>
+            <%= link_to('View profile', @current_user) %> |
+            <%= link_to('Edit profile', edit_user_path) %> |
+            <%= link_to('Delete profile', user_path(@current_user), :method => :delete) %> |
+            <%= link_to('LOG OUT', logout_path, :method => :delete) %>
+        <% else %>
+            <%= link_to('SIGN UP', new_user_path) %> |
+            <%= link_to('Login UP', login_path) %>
+        <% end %>
+
+
+
+
+    </nav>
+
+    <% if @current_user %>
+    <p>Your user ID is <%= @current_user.email %> ----- <%= @current_user.name %> ----- <%= @current_user.password_digest %></p>
+  <% end %>
+
+  <% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+  <% end %>
+
+  <% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+  <% end %>
+
+<hr>
+
+<%= yield %>
+
+</body>
+</html>

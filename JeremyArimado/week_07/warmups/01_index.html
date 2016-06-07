@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accumulate</title>
+</head>
+<body>
+
+<script>
+
+var mapStuff = function (array, callback) {
+    var results = [];
+    for ( var i = 0; i < array.length; i++ ) {
+        results.push(callback(array[i]));
+    }
+    console.log(results);
+    return results;
+};
+
+mapStuff([1, 2, 3, 4, 5], function(item) {
+    return item * item;
+});
+
+
+</script>
+
+
+</body>
+</html>

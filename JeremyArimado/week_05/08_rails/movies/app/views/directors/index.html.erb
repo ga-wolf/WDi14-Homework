@@ -1,0 +1,10 @@
+index.html.erb
+<hr/>
+<ul>
+<% @directors.each do | director | %>
+    <li>
+        <p> <%= link_to( director.name , director_path(director.id)) %> </p> 
+        <p> <%= link_to(image_tag( director.img, :class => 'thumbnail'), director_path(director.id)) %> </p>
+    </li>
+<% end %>
+</ul>
