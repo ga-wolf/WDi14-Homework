@@ -34,7 +34,7 @@ var people = function() {
 
 var moveISS = function() {
     $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
-        var lat += "Latitudedata['iss_position']['latitude'];
+        var lat = data['iss_position']['latitude'];
         var lon = data['iss_position']['longitude'];
 
         // See leaflet docs for setting up icons and map layers
@@ -44,11 +44,13 @@ var moveISS = function() {
         // map.panTo([lat, lon], animate = true);
         // debugger;
         if ( !$("#lat").length && !$("#lon").length){
-          $('<p>').attr('id', 'lat').appendTo('.longi');
-          $('<p>').attr('id', 'lon').appendTo('.longi');
+          $('<p>').attr('id', 'lats').appendTo('.longi');
+          $('<p>').attr('id', 'lons').appendTo('.longi');
         };
-        $('.longi p').text(lat);
-        $('.longi p').text(lon);
+        // debugger;
+        // lat = lat.toString() + "fabio";
+        $('#lats').text("Latitude: " + lat.toFixed(4) + "\xB0");
+        $('#lons').text("Longitude: " + lon.toFixed(4) + "\xB0");
 
     });
     setTimeout(moveISS, 5000);
