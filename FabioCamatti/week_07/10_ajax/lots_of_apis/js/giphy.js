@@ -1,28 +1,37 @@
-var baseGif = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
-
+var baseGif = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC"
+// debugger;
 var $baseGifElement = $(".giphy");
 var $baseGifContent = $(".giphy .content");
 var gifTimer = null;
 
 var displayGifInformation = function(data) {
-    debugger;
     var $img = $('<img />', {
         src: data.data.image_original_url
     });
-    debugger;
+    // debugger;
     // $p.text( quoteGif );
     //prepend($('<img>',{id:'theImg',src:'theImg.png'}))
-    $baseGifContent.prepend($img, {
-        class: "giphy",
-        src: ''
-    });
+    $baseGifContent.prepend( $img );
+
+    // var imageURL = data
+    // var $img = $('<img>').attr( "src", imgURL);
 
 };
 
 var getGifInformation = function() {
 
+    var url = baseGif;
+    var currentValue = $("input").val();
+
+    if ( currentValue !== "" ) {
+      // Add more information - &tag=hotdogs
+      url += "&tag=";
+      url += currentValue;
+    }
+
+
     $.ajax({
-        url: baseGif,
+        url: url,
         dataType: "JSON",
         type: "GET"
     }).done(displayGifInformation);
@@ -32,9 +41,11 @@ var getGifInformation = function() {
 
 $(document).ready(function() {
     getGifInformation();
-    gifTimer = window.setInterval(getGifInformation, 1000);
+    gifTimer = window.setInterval( getGifInformation, 1000 );
 
-    $(".giphy button").on("click", function() {
-        window.clearInterval(gifTimer);
+    $(".giphy button").on("click", function () {
+      window.clearInterval( gifTimer );
     });
+
+    $(".giphy#search").on("click", getGifInformation );
 });
