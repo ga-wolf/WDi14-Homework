@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>callbacks</title>
+
+</head>
+<body>
+<h1>Lorem was a shit</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, beatae quam, ad aspernatur earum architecto praesentium similique minus atque velit quo odit voluptatum, incidunt asperiores distinctio excepturi quae ea accusamus.</p>
+<p>Facilis minus est iure provident qui dolorum. Perspiciatis odio consectetur nesciunt praesentium quo quas facere, soluta quisquam eligendi modi expedita illo, debitis ullam perferendis sit fugit cumque consequatur. Enim, necessitatibus!</p>
+<p>Officiis dolorem cupiditate a alias voluptatem! Quis placeat corrupti ipsam! Autem inventore quis quo nam facilis earum reiciendis mollitia aliquid molestias expedita! Debitis minus eos tempore, illum obcaecati amet odio.</p>
+
+<script src="js/jquery.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+// var doFirst = () => {
+//     window.setTimeout(() => {
+//         console.log('this should happen first');
+//     }, 100)
+// }
+//
+// var doFirstAndSecond = ( cb ) => {
+//     window.setTimeout(() => {
+//         console.log('this should happen first');
+//         cb();
+//     }, 100)
+// }
+//
+// var doSecond = () => {
+//     console.log('this should happen second');
+// }
+//
+// doFirstAndSecond(doSecond);
+//
+// // doFirst();
+// // doSecond();
+
+console.log('start of main')
+
+$(document).ready(() => {
+    console.log('dom ready')
+    $('h1').text('Hotdogs');
+
+    const annoy = () => {
+        alert('annoy this');
+    }
+
+    $('h1').on("click", annoy);
+
+    // $("p").each(() => {
+    //     console.log('within the each() callback');
+    //     $(this).text(Math.random());
+    // })
+
+    $("p").each(function () {
+        console.log('hi')
+        $(this).text(Math.random());
+    })
+
+});
+
+var totals = [5, 6, 2, 7, 42, 8];
+
+for (var i = 0; i < totals.length; i++ ) {
+    var currentElement = totals[i];
+    console.log(currentElement + '!!!');
+}
+
+
+
+console.log('end main');
+
+
+</script>
+</body>
+</html>
