@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    text-align: center;
+}
+.col {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: calc( 100% / 3);
+    min-height: 200px;
+    border: 1px solid #000;
+}
+h2 {
+    border-bottom: 1px solid #000;
+}
+@media (max-width: 600px) {
+    .col {
+        width: 100%;
+    }
+}

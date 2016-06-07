@@ -18,14 +18,7 @@ request.onreadystatechange = function() {
     var dataAsString = request.responseText;
     var dataAsObject = JSON.parse(dataAsString);
 
-    var redirection = function(movie) {
-        console.log('redirection')
-        // debugger;
-        document.querySelector("#content").innerHTML = "";
-        request.open("GET", "http://omdbapi.com?t=" + movie);
-        request.send();
 
-    }
 
     if (dataAsObject.Search) {
         for (var i = 0; i < dataAsObject.Search.length; i++) {
@@ -34,24 +27,22 @@ request.onreadystatechange = function() {
                 if (key === "Poster" || key === "Title" || key === "Type" || key === "Year") {
                     if (key === "Poster") {
                         var a = document.createElement('a');
-                        // a.className = obj.Title
+                        // a.href = obj["Title"];
+                        // a.onclick = "fabio";
+                        // (a.href === "N/A") ? a.href = 'https://www.google.com' : a.href;
                         // debugger;
-                        // var address = obj["Title"];
-                        a.href = obj["Title"];
-                        (a.href === "N/A") ? a.href = 'https://www.google.com' : a.href;
-                        debugger;
-                        a.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            document.querySelector("#content").innerHTML = "";
-                            var saber = document.getElementsbyTagName('a').getAttribute("href");
-                            debugger;
-                            request.open("GET", "http://omdbapi.com?t=" + a.href);
-                            request.send();
-                            // console.log('i work');
-
-                        });
+                        // a.addEventListener('click', function(e) {
+                        //     e.preventDefault();
+                        //     // console.log('i work');
+                        //     debugger;
+                        //     console.log(a.href);
+                        //     redirection(a.href);
+                        //
+                        // });
 
                         document.querySelector('#content').appendChild(a);
+                        document.getElementsByTagName("a")[0].setAttribute("onclick", "redirection(" + obj['Title'] + ")");
+                        // debugger;
                         var img = document.createElement('img');
                         img.src = obj[key];
                         a.appendChild(img);
@@ -105,6 +96,21 @@ window.onload = function() {
         } else {
             console.log("Error");
         }
-
     });
+
+
 };
+
+var redirection = function(movie) {
+    // console.log('redirection')
+    console.log(movie);
+    // var film = movie.toString();
+    // // debugger;
+    // var fabio = function (film) {
+    // document.querySelector("#content").innerHTML = movie;
+    // request.open("GET", "http://omdbapi.com?t=" + film);
+    // request.send();
+    // }
+    // fabio(kaka);
+
+}
