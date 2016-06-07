@@ -1,0 +1,33 @@
+body {
+  background-image: url('../assets/astronaut_space.png');
+  background-color: rgba(255,255,255,0.5);
+  font-family: 'Muli', sans-serif;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+p {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+}
+
+.astronauts {
+  text-align: center;
+}
+
+#map {
+    width: 100vw;
+    height: 60vh;
+    opacity: 0.9;
+  }
