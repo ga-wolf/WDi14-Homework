@@ -1,0 +1,33 @@
+body {
+  color: #fff;
+}
+.row {
+    height: 100%;
+    /*background-image: url("../images/iss.jpg");*/
+}
+#map {
+    margin: 0 auto;
+    height: 99%;
+    width: 100%;
+    top: 1%;
+    padding: 1px auto 1px auto;
+}
+.row .col.l3 {
+    height: 760px;
+}
+.row .col.l6 {
+    height: 760px;
+}
+li {
+    list-style-type: none;
+}
+.longi ul {
+    margin-top: 10%;
+    text-align: left;
+}
+table {
+    margin-top: 10%;
+}
+caption {
+    font-weight: bold;
+}
