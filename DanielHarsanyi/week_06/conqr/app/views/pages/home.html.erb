@@ -1,0 +1,53 @@
+<%= stylesheet_link_tag 'pages' %>
+
+<div class="hero">
+
+  <div class="main_button">
+    <% if @current_user.is_a?(Trainer) %>
+      <p><%= link_to("Use conqr to increase your number of clients today", clients_path) %></p>
+    <% else %>
+      <p><%= link_to("Find a personal trainer perfectly matched to you", find_trainer_path ) %></p>
+    <% end %>
+  </div>
+
+</div>
+
+<div class="how_it_works">
+  <%= image_tag(image_path("how_works.png")) %>
+</div>
+
+<div class ="about_trainers">
+  <h2>We have trainers all over Sydney</h2>
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: -33.8386, lng: 151.2071},
+            zoom: 12
+        });
+
+        var conqr = {
+          url: "<%= asset_path('conqr_maps_icon.png') %>"
+        };
+
+        <% @trainers.each do |t| %>
+
+          var marker = new google.maps.Marker({
+            position: {lat: <%=t.latitude%>, lng: <%=t.longitude%>},
+            map: map,
+            icon: conqr
+});
+        <% end %>
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+</div>
+
+<div class="as_seen_in">
+  <h2>Featured in</h2>
+    <div class="logos">
+        <%= image_tag(image_path("logos.png")) %>
+    </div>
+</div>

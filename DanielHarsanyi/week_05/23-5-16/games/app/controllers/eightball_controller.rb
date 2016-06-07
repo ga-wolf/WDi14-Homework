@@ -4,8 +4,8 @@ class EightballController < ApplicationController
   end
 
   def answer
-      @random_number = Random.new.rand(21..40)
-      @answers = Eightball.all
+      @random_number = Random.new.rand(21..40) #first to last
+      @answers = Eightball.all #find by
   end
 
 end

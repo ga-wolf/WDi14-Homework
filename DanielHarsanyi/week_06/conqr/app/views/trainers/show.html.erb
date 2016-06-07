@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag 'trainers' %>
+
+<div class="trainer">
+
+<h1><%= @trainer.name %></h1>
+
+<%= image_tag @trainer.image, :class => 'feature' %>
+
+<ul>
+  <li>Email: <%= mail_to(@trainer.email) %></li>
+  <li>Fitness Australia ID: <%= @trainer.fitness_australia_id %></li>
+  <li>Qualifications: <%= @trainer.qualifications %></li>
+  <li>Training Specialty Area: <%= @trainer.training_specialty_areas %></li>
+  <li>Training Style: <%= @trainer.training_style %></li>
+  <li>Rating: <%= @trainer.rating %>/5</li>
+  <li>Price per Hour: <%= number_to_currency( @trainer.price, precision: 0 ) %>/hour</li>
+  <li>Location: <%= @trainer.preferred_location %></li>
+  <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@trainer.latitude},#{@trainer.longitude}" %></ul></p>
+
+<% if @current_user && @current_user.is_a?(Client) %>
+    <% if @current_user.admin? == true %>
+      <div>
+        <%= link_to "Edit #{@trainer.name}", edit_trainer_path %>
+        <%= link_to "Delete #{@trainer.name}", trainer_path, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>GA Movie Search</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+      <form class="col l8">
+           <div class="input-field">
+             <i class="material-icons prefix">theaters</i>
+             <input id="search" type="search" class="searchBox" required>
+             <label for="search">Movie search:</label>
+             <i class="material-icons">close</i>
+           </div>
+      </form>
+
+      <div class="col l2"> </div>
+
+      <button class="btn waves-effect waves-light searchButton col l2" type="submit" name="action">
+        Search
+      </button>
+
+    </div>
+
+        <form id="searchType">
+          <p>
+            <input name="searchType" type="radio" id="test1" value="singleresult" checked />
+            <label for="test1">Single Result</label>
+          </p>
+          <p>
+            <input name="searchType" type="radio" id="test2" value="multipleresults" />
+            <label for="test2">Multiple Results</label>
+          </p>
+        </form>
+
+
+        <div id="content" class="row">
+            <div class="col s12 center-align"><h1 class="name"></h1></div>
+            <div class="col s12 center-align"><img class="poster"></div
+            <div class="col s12"><p class="plot"></p></div>
+        </div>
+
+      <table id="searchResults" class="highlight">
+        <thead>
+          <tr>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+
+
+        <!-- <div id="list">
+          <ul>
+          </ul>
+        </div>
+      </div> -->
+
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

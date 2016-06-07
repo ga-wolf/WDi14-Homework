@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'pages' %>
+
+<div class="choose_form">
+  <div class="form">
+    <h2>Find a Trainer perfectly suited to you</h2>
+
+    <%= flash[:error] if flash[:error] %>
+
+    <%= form_tag do |f| %>
+
+    <h3>Choose Your Training Interest Style</h3>
+      <%= select_tag :training_style, options_for_select(Trainer.all.map { |t| [ t.training_style] }.uniq) %>
+
+    <h3>Choose Your Training Interest Area</h3>
+      <p>
+    <%= select_tag :training_specialty_areas, options_for_select(Trainer.all.map { |t| [ t.training_specialty_areas] }.uniq) %>
+      </p>
+
+      <h3>Where would you like to train near?</h3>
+        <p><%= text_field_tag :search  %></p>
+
+      <%= submit_tag "Find a Trainer" %>
+    <% end %>
+    </div>
+</div>
