@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlickrApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <img src="http://www.nomarket.org/wp-content/uploads/2014/12/Flickr-Logo.jpeg">
+  <nav>
+    <div class="nav-wrapper">
+      <form class="search">
+        <div class="input-field">
+          <input type="text" id="search" placeholder="Search term">
+        </div>
+        <input type="submit" id="searchBtn" class="waves-effect blue-grey darken-3 btn" value="Search Flickr">
+      </form>
+        <button type="button" class="waves-effect blue-grey darken-3 btn" id="clear">Clear All</button>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <button type="button" id="toTop" class="btn-floating btn-large waves-effect blue-grey darken-3">TOP</button>
+
+  <%= yield %>
+
+</body>
+</html>

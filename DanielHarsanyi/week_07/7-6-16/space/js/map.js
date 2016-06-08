@@ -14,7 +14,6 @@ var clear = function(){
 };
 
 var getLocation = function(data){
-  clear();
   currentLatitude = parseFloat(data.iss_position.latitude);
   currentLongitude = parseFloat(data.iss_position.longitude);
   $lat.append(currentLatitude);
@@ -36,7 +35,7 @@ var spaceApiCall = function(){
 };
 
   var initMap = function(){
-      worldMap = L.map('map').setView([currentLatitude, currentLongitude], 3);
+      worldMap = L.map('map').setView([currentLatitude, currentLongitude], 5);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
           id: 'mapbox.streets'
       }).addTo(worldMap);
