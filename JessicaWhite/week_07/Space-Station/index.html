@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISS Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
+
+  <h1>International Space Station</h1>
+  <hr>
+
+  <div class="container">
+    <div class="col people">
+      <h2>People in space</h2>
+      <div class="content"></div>
+    </div>
+    <div class="col latlong">
+      <h2>ISS current latitude and longitude</h2>
+      <div class="content">
+        <h3 class="latitude"></h3>
+        <h3 class="longitude"></h3>
+      </div>
+    </div>
+    <div class="col map">
+      <h2>Map</h2>
+      <div class="content">
+        <div id="mapid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="js/latlong.js"></script>
+  <script src="js/people.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+</html>

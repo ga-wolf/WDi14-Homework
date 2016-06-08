@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  text-align: center;
+  color: gainsboro;
+  background-color: black;
+  background: url("https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ff792d7d99d4f05cc7110ead7768852d");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: helvetica;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 25px;
+  color: #DD4B16;
+  transition: all 0.2s;
+}
+
+h2:hover {
+  color: #EB6534;
+}
+
+h3 {
+  margin-top: 30px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+h3:hover {
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  transition: all 0.5s;
+}
+
+p:hover {
+  color: orange;
+}
+
+.col {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  min-height: calc(100vh / 3);
+}
+
+#mapid {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 150px;
+}
