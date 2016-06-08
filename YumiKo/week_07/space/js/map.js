@@ -1,5 +1,5 @@
-
 var getMapInformation = function () {
+
   var baseMapURL = "http://api.open-notify.org/iss-now"
   $.ajax({
     url: baseMapURL,
@@ -14,7 +14,6 @@ var handleMapInformation = function (result) {
 
   displayMapInformation(latitude, longitude);
   initMap(latitude, longitude)
-
 }
 
 var displayMapInformation = function (latitude, longitude) {
@@ -24,11 +23,11 @@ var displayMapInformation = function (latitude, longitude) {
 }
 
 var initMap = function (latitude, longitude) {
-    var mapDiv = document.getElementById('map');
-    var map = new google.maps.Map(mapDiv, {
-      center: {lat: latitude, lng: longitude},
-      zoom: 5
-    });
+  var mapDiv = document.getElementById('map');
+  var map = new google.maps.Map(mapDiv, {
+    center: {lat: latitude, lng: longitude},
+    zoom: 2
+  });
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     var myIcon = iconBase + 'airports.png'
     var marker = new google.maps.Marker({
@@ -41,6 +40,7 @@ var initMap = function (latitude, longitude) {
 $(document).ready( function () {
   getMapInformation();
   var mapTimer = window.setInterval(getMapInformation, 1000);
+
 
   $(".coordinates button").on("click", function () {
     window.clearInterval(mapTimer)
