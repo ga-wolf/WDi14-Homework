@@ -1,0 +1,11 @@
+<div class="single_activity">
+  <h1><%= @activity.title %></h1>
+  <p><img src=<%= @activity.image %>></p>
+  <p><%= @activity.description %></p>
+  <p>Equipment Needed: <%= @activity.equipment_list %></p>
+</div>
+
+<div class="bottom_activity_links">
+  <%= link_to( "Edit Activity", edit_activity_path(@activity) ) %>
+  <%= link_to( "Delete Activity", activity_path(@activity), :method => :delete ) %>
+</div>

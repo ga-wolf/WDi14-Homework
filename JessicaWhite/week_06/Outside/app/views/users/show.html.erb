@@ -1,0 +1,13 @@
+<div class="user_profile">
+  <h1><%= @user.username %></h1>
+
+  <p><%= image_tag(@user.image) %></p>
+  <h2>Details:</h2>
+  <p>Name: <%= @user.name %></p>
+  <p>Email: <%= @user.email %></p>
+</div>
+
+<div class="bottom_user_links">
+  <%= link_to( "Edit Profile", edit_user_path(@user) ) %>
+  <%= link_to( "Delete Profile", user_path(@user), :method => :delete ) %>
+</div>

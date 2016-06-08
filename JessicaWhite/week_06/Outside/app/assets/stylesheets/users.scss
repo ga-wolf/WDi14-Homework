@@ -1,0 +1,109 @@
+.field_with_errors {
+  display: inline-block;
+}
+
+.field_with_errors input {
+  border: 1px solid red;
+}
+
+.homepage {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: url("https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=3e19d806aa238cab96854524f37595a0");
+  // background: image-url('makedoprettynicethingsplease.jpg');
+  background-size: cover;
+  background-color: #152303;
+}
+
+.homepage h1, .homepage h2, .homepage h3 {
+  max-width: 80%;
+  text-align: center;
+}
+
+.homepage h1 {
+  flex: 1;
+  font-family: 'Amatic SC', cursive;
+  color: #090F01;
+  text-align: center;
+  position: relative;
+  left: 6px;
+  vertical-align: text-bottom;
+  font-size: 220px;
+  margin: 10px;
+  margin-top: 60px;
+}
+
+.homepage h2 {
+  flex: 1;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 60px;
+  margin: 10px;
+  margin-top: 0px;
+  vertical-align: text-top;
+  color: #090F01;
+  border-bottom: 1px solid #f4f2f2;
+}
+
+.homepage h3 {
+  flex: 1;
+  font-family: 'Neucha', cursive;
+  font-size: 40px;
+  margin-top: 110px;
+  margin-bottom: 0px;
+  color: #090F01;
+  text-shadow: 0 0 2px #f4f2f2;
+}
+
+.homepage h3, .homepage ul {
+  font-weight: 400;
+}
+
+.homepage ul {
+  flex: 1;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 25px;
+  padding: 20px;
+  margin-top: 0px;
+  margin-left: 120px;
+  margin-right: 120px;
+  color: #f4f2f2;
+  text-shadow: 0 0 6px #090f01;
+}
+
+.bottom_user_links {
+  padding-top: 50px;
+}
+
+.user_profile {
+  padding: 20px;
+}
+
+.user_profile img {
+  max-width: 45vw;
+  max-height: 400px;
+}
+
+.user_form {
+  padding: 20px;
+}
+
+.user_form label {
+  padding-right: 8px;
+}
+
+.sign_up_title h1 {
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+.edit_profile_title h1 {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}

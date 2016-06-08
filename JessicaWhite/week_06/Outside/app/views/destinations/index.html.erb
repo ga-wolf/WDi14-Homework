@@ -1,0 +1,16 @@
+<div class="destinations_all">
+  <div class="searchbar">
+    <%= form_tag '/destinations', :method => :get do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag "Search Nearby"%>
+    <% end %>
+  </div>
+  <div class="country_list">
+    <% @destinations.each do |key, value| %>
+      <h1><%= key %></h1>
+        <% value.each do |v| %>
+          <p><%= link_to(v.title, destination_path(v)) %></p>
+        <% end %>
+    <% end %>
+  </div>
+</div>

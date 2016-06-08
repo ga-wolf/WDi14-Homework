@@ -1,0 +1,40 @@
+<div class="destination_form">
+  <%= form_for @destination, :html => { :multipart => true } do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title, :required => true %>
+    </p>
+    <p>
+      <%= f.label :address %>
+      <%= f.text_field :address, :required => true %>
+    </p>
+    <p>
+      <%= f.label :image %>
+      <%= cl_image_upload_tag :image, :required => true %>
+    </p>
+    <p>
+      <%= f.label :terrain %>
+      <%= f.text_field :terrain, :required => true %>
+    </p>
+    <p>
+      <%= f.label :country %>
+      <%= f.text_field :country, :required => true %>
+    </p>
+    <p>
+      <%= f.label :description %> <br>
+      <%= f.text_area :description, size: "30x8", :required => true %>
+    </p>
+    <p>
+      <% activity_arr = [] %>
+      <% @activities.each do |a| %>
+        <% x = [a.title, a.id] %>
+        <% activity_arr.push x %>
+      <% end %>
+      Activities
+      <br>
+      <%= f.select( :activity_ids, activity_arr, {}, {:multiple => true} ) %>
+    </p>
+
+    <%= f.submit "Go on" %>
+  <% end %>
+</div>

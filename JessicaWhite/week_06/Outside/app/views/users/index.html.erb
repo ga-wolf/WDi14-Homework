@@ -1,0 +1,6 @@
+<% @users.each do |u| %>
+  <div>
+    <p>Username: <%= link_to(u.username, user_path(u)) %></p>
+    <p><img src=<%= u.image %>></p>
+  </div>
+<% end %>
