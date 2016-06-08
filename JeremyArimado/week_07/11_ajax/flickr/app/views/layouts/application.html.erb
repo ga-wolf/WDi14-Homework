@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flickr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1> Flickr infinite </h1>
+
+<nav>
+    <form>
+        <input type="text" id="search" placeholder="Search term">
+        <input type="button" value="Search Flickr">
+    </form>
+</nav>
+
+<hr /> 
+
+<%= yield %>
+
+</body>
+</html>
