@@ -1,9 +1,9 @@
-// Search Flickr
-// Display Photo
-// Generate URL
-
-
-
+// // Search Flickr
+// // Display Photo
+// // Generate URL
+//
+//
+//
 // var page = 1;
 //
 // var generateURL = function (photo) {
@@ -35,6 +35,11 @@
 // var handleFlickrResponse = function ( data ) {
 //   if (data.photos.pages>1){
 //     $(".nextPage").css("display", "initial")
+//   }
+//   if (data.photos.page>=2){
+//     $(".prevPage").css("display", "initial")
+//   } else {
+//     $(".prevPage").css("display", "none")
 //   }
 //   var photos=data.photos.photo;
 //
@@ -83,4 +88,14 @@
 //     searchFlickr( searchTerm );
 //     return page;
 //   })
+//
+//   $(".prevPage").on("click", function (event) {
+//     event.preventDefault();
+//     document.getElementById("content").innerHTML = "";
+//     page -= 1;
+//     var searchTerm = $("form input").val();
+//     searchFlickr( searchTerm );
+//     return page;
+//   })
+//
 // })
