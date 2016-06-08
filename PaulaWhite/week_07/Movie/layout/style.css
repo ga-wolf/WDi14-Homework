@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700|Source+Sans+Pro:400,300,700|Oxygen:400,300,700|Open+Sans:400,600);
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+
+h1{
+  font-family: 'Oxygen', sans-serif;
+  text-transform: uppercase;
+  font-size: 55px;
+  -webkit-text-stroke: 2.5px black;
+  color:lightgrey;
+  text-align: center;
+  }
+
+  .poster {
+  text-align: center;
+  }
+
+.button{
+  color: blue;
+}

@@ -1,0 +1,29 @@
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Varela);
+
+
+body{
+  background-image: url("../images/space_11.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  margin: 0;
+  }
+
+
+h1{
+  font-size: 60px;
+  font-family: 'Varela', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-stroke: .2px #475d85;
+  color: transparent;
+  }
+
+
+p{
+  font-size: 20px;
+  color: white;
+  font-family: 'Varela', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  }
