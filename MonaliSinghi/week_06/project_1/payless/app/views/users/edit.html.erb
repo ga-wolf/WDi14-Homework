@@ -1,0 +1,13 @@
+<div class="content">
+<h1>Edit User</h1>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+
+
+  <%= f.submit "Update user" %>
+<% end %>
+</div>

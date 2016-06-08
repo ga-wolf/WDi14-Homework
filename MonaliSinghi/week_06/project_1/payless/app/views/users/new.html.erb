@@ -1,0 +1,30 @@
+<div class="box">
+  <h1>Sign up</h1>
+<% if @user.errors.any? %>
+  <ol>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, :required => true %>
+  </p>
+
+  <p>
+    <!-- :password means the text shown will be Password:, and also in params this will be stored as :password -->
+    <%= f.label :password %>
+    <%= f.password_field :password, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :required => true %>
+  </p>
+
+  <%= f.submit "Sign up" %>
+<% end %>
+</div>

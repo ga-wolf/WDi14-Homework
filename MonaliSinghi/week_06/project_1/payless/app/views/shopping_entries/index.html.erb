@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shopping Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shopping_entries.each do |shopping_entry| %>
+      <tr>
+        <td><%= shopping_entry.product_id %></td>
+        <td><%= shopping_entry.quantity %></td>
+        <td><%= link_to 'Show', shopping_entry %></td>
+        <td><%= link_to 'Edit', edit_shopping_entry_path(shopping_entry) %></td>
+        <td><%= link_to 'Destroy', shopping_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shopping entry', new_shopping_entry_path %>
