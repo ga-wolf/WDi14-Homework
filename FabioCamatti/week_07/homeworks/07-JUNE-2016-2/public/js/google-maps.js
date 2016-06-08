@@ -4,10 +4,12 @@ var init = function() {
     var latlng = new google.maps.LatLng(51.48931, -0.08819);
     var mapOptions = {
         center: latlng,
-        zoom: 3,
-        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        zoom: 8,
+        // mapTypeId: google.maps.MapTypeId.TERRAIN,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
         disableDefaultUI: false
     };
+
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     marker = new google.maps.Marker({
         position: latlng,
@@ -20,7 +22,7 @@ var init = function() {
     // map.setHeading(heading + 90);
 }
 
-google.maps.event.addDomListener(window, 'load', init);
+ google.maps.event.addDomListener(window, 'load', init);
 
 var draw_flight_path = function(latlng) {
     if (last_latlng == undefined) {

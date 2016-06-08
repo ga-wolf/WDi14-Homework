@@ -1,26 +1,6 @@
-// var basePeople = "http://api.open-notify.org/astros.json?callback=CALLBACK";
-//
-// var displayPeopleInformation =  function () {
-//   console.log("FABIO");
-// };
-//
-//
-// var getPeopleInformation = function () {
-//
-//   $.ajax({
-//     url: basePeople,
-//     dataType: "JSON",
-//     type: "GET"
-//   }).done( displayPeopleInformation ) ;
-// };
-//
-// $(document).ready(function () {
-//   getPeopleInformation();
-// });
 var people = function() {
     $.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
         var number = data['number'];
-        // debugger;
         var table = $('<table></table>').addClass('table-astronaut');
         var caption = $('<caption></caption>').addClass('caption').text("Number of Astronauts in the Space: " + number);
         var thead = $('<thead></thead>').addClass('thead');
@@ -66,12 +46,13 @@ var moveISS = function() {
         // isscirc.setLatLng([lat, lon]);
         // map.panTo([lat, lon], animate = true);
         // debugger;
+        
         if (!$('.longi table').length) {
             $('<table>').appendTo('.longi');
             $('<tr>').attr('id', 'lats').appendTo('.longi table');
             $('<tr>').attr('id', 'lons').appendTo('.longi table');
         };
-        
+
         $('#lats').text( "Lat: " + lat.toFixed(3) + "\xB0" );
         $('#lons').text( "Long: " + lon.toFixed(3) + "\xB0" );
 
