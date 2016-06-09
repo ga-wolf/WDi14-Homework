@@ -6,7 +6,7 @@ var arrToTransform = [[ "age", "location" ], [ NaN, undefined ]];
 
 
 // Create an array of every five numbers between 30 and 101
-var arr_range = _.range(30,101,5);
+var arr_range = _.range(30,102,5);
 console.log(arr_range);
 
 console.log("\n");
