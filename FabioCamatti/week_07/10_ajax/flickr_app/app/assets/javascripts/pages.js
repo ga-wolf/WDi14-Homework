@@ -1,3 +1,6 @@
+var searchTerm;
+var page_number = 1;
+
 //Search Flickr Function
 
 //Generate URL
@@ -27,11 +30,17 @@ var generateURL = function(photo) {
 var displayPhoto = function(url) {
     var $img = $("<img>").addClass("circle");
     $img.attr("src", url);
-    $("#content").append($img);
+    $(".carousel").
+    var $a = $("<a>").addClass("carousel-item").attr("href", url);
+    $(".carousel").append($a);
+    // debugger;
+    $("a.carousel-item").append($img);
 };
 
 var handleFlickrResponse = function(data) {
-  ;
+
+    page_number++
+
     var photos = data.photos.photo;
     for (var i = 0; i < photos.length; i++) {
         var currentPhoto = photos[i];
@@ -40,16 +49,11 @@ var handleFlickrResponse = function(data) {
     };
 };
 
-// var page_number;
 
-var searchFlickr = function(searchTerm, page_number) {
-    // ;
+var searchFlickr = function(searchTerm) {
 
-    if (!page_number){
-      page_number = 1;
-    }else {
-      page_number += 1;
-    };
+
+
     console.log(page_number);
     // http://stackoverflow.com/questions/24671709/how-to-get-correct-json-object-from-flickr-api
 
@@ -72,24 +76,29 @@ var searchFlickr = function(searchTerm, page_number) {
 
 $(document).ready(function() {
     // searchFlickr("cat");
-    var searchTerm;
+
 
     $("form").on("submit", function(e) {
+        page_number = 1;
         e.preventDefault();
         $('.carousel').empty();
         searchTerm = $("form input").val();
         searchFlickr(searchTerm);
     });
-    $(window).scroll(function() {
-      // ;
+
+    var throttled = _.throttle(function() {
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-            // console.log("Fabio");
-
-
-            (!searchTerm)? "cat" : searchTerm = $("form input").val();;
+            // (!searchTerm) ? "cat" : searchTerm = $("form input").val();;
             searchFlickr(searchTerm);
         };
-    });
+    }, 2000);
+
+    // Infinite scrolling function
+    $(window).scroll(throttled);
+
+    // MaterializeCSS Initialization
+    $('.carousel').carousel();
+
 });
 
 
