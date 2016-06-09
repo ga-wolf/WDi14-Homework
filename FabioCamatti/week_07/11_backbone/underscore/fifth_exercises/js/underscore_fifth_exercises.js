@@ -64,11 +64,17 @@ $(document).ready(function() {
 
     var peopleString = "";
 
-    jQuery.each(insertPeopleTemplate, function(i, val) {
-        peopleString += val;
-    });
+    for (var i = insertPeopleTemplate.length; i >= 0; i--) {
 
-    $(peopleString).insertAfter("h1");
+        $(insertPeopleTemplate[i]).insertAfter("h1");
+    };
+
+
+    // jQuery.each(insertPeopleTemplate, function(i, val) {
+    //     peopleString += val;
+    // });
+
+    // $(peopleString).insertAfter("h1");
 
     var startingData = [
         [
@@ -125,6 +131,6 @@ $(document).ready(function() {
     });
 
     $("p").last().append(pessoasString);
-      // $(pessoasString).insertAfter("h1");
+    // $(pessoasString).insertAfter("h1");
 
 });
