@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-  root 'pages#index'
 
-  get '/index', :to => "pages#index"
-  get '/lotto_numbers', :to => "pages#lotto_numbers"
-  get '/uptime', :to => "pages#uptime"
-  get '/info', :to => "pages#info"
+  root "pages#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
