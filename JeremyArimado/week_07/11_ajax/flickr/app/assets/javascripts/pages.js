@@ -61,8 +61,10 @@ var generateURL = function (photo) {
 
 
 var debounce = function() {
+    // DISABLE FETCHING
     fetchTimeout = true;
     $('body').css('background', 'grey')
+    // ENABLE AFTER 5 SECONDS
     setTimeout(function(){
         fetchTimeout = false;
         $('body').css('background', 'white')
@@ -80,6 +82,8 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+           // IF there is a timeout exit out of this function at this point
            if (fetchTimeout) return;
            var searchTerm = $("form input").val();
            searchFlickr(searchTerm);

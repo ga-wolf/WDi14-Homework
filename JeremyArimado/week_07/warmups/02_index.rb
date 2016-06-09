@@ -9,7 +9,7 @@ class Luhn
         @number = num
     end
 
-    def luhnify
+    def translate
         digits = []
 
         @numbers.to_s.chars.reverse.each_with_index do |num, i|
@@ -23,7 +23,7 @@ class Luhn
     end
 
     def valid?
-        puts luhnify
+        puts translate
     end
 end
 
