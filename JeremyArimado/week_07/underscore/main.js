@@ -130,6 +130,9 @@ oneTime();
 
 // Append a paragraph tag to the body for every person in people. It should end up looking something like this - <p> Hello A, you don't look a day over 20 </p>
 
+
+
+
 var templateString = "<p> Hello <%= name %>! </p>";
 var template = _.template( templateString );
 
@@ -137,6 +140,16 @@ _.each(people, function(person) {
     var compiledTemplate = template( { name: person.username } );
     console.log(compiledTemplate);
 })
+
+
+
+
+
+
+
+
+
+
 
 
 var final = _.chain(startingData)
