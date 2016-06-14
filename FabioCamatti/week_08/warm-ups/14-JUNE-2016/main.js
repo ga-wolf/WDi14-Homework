@@ -9,6 +9,22 @@
 //
 // Do it in JS (why not use Underscore to take advantage of some of its helpful, Ruby-esque methods?). When you're done, implement a simple HTML UI (feel free to use jQuery).
 
-var exponents = Array(64).fill().map((x,i)=>i);
-var grainsPerSquare = exponents.map(function(num){ return Math.pow(2, num);});
-var totalGrains = grainsPerSquare.reduce(function(a, b) { return a + b; }, 0).toExponential(3);
+
+
+// 64 Squares in a chessboard
+var exponents = Array(64).fill().map((x, i) => i);
+
+
+
+var grainsPerSquare = function(square) {
+
+    var arrAux = exponents.map(function(num) {
+        return Math.pow(2, num);
+    });
+    return arrAux[square];
+};
+
+
+var totalGrains = grainsPerSquare.reduce(function(a, b) {
+  return a + b;
+}, 0).toExponential(3);
