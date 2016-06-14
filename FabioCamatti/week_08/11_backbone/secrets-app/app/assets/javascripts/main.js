@@ -29,16 +29,20 @@
 //
 // });
 
-var secretsCollection = new app.Secrets();
+app.secrets = new app.Secrets();
 
 //Wait until the document is ready
 $(document).ready(function() {
-    // Wait until the secretsCollection has finished fetching
-    secretsCollection.fetch().done(function() {
 
-        //Creat a new instance of the router
-        app.router = new app.AppRouter();
-        //Gets the router to start listening to client side URLs
-        Backbone.history.start();
-    })
+    //Create a new instance of the router
+    app.router = new app.AppRouter();
+    //Gets the router to start listening to client side URLs
+    Backbone.history.start();
+
+    // Wait until the secretsCollection has finished fetching
+    app.secrets.fetch();
+
+    // window.setInterval(function () {
+    //   app.secrets.fetch();
+    // }, 3000 );
 });

@@ -9,25 +9,48 @@
 // Create the instance
 // Call render on the instance
 
-var app = app || {}
+var app = app || {};
 
 app.SecretInputView = Backbone.View.extend({
 
-  events: {
-    'click button' : 'createSecret'
-  },
+    events: {
+        'click button': 'createSecret'
+    },
 
-  createSecret: function () {
-    console.log("A secret should be created");
-  },
-  
-  el: "#secretForm",
+    checkForEnter: function ( event ) {
+        app.ENTER_KEY = 13;
+        if (event.which === app.ENTER_KEY) {
+          event.preventDefault();
+          this.createSecret();
+        }
+    },
 
-  render: function () {
-    console.log("Secret Input view should be rendered now");
-    var SecretInputViewTemplate = $("#secretInputViewTemplate").html();
-    //Set the HTML of the element with the ID of main  to be that appViewTemplate, making sure to use the keyword `this`
-    this.$el.html( SecretInputViewTemplate );
-  }
+    createSecret: function() {
+        console.log("A secret should be created");
+        // Create a new instance of app.Secret
+
+        var secret = new app.Secrets();
+
+        var content = this.$el.find("textarea").val();
+        // Set the content to be the value that the textarea has
+        secret.set({
+            content: content
+        });
+        // save the new instance
+        secret.save();
+        // Add that into the collection
+        app.secrets.add(secret);
+        this.$el.find("textarea").val('').focus();
+
+    },
+
+    el: "#secretForm",
+
+    render: function() {
+        console.log("Secret Input view should be rendered now");
+        var SecretInputViewTemplate = $("#secretInputViewTemplate").html();
+        //Set the HTML of the element with the ID of main  to be that appViewTemplate, making sure to use the keyword `this`
+        this.$el.html(SecretInputViewTemplate);
+    }
 
 });
