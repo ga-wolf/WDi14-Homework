@@ -29,12 +29,12 @@ app.SecretInputView = Backbone.View.extend({
         console.log("A secret should be created");
         // Create a new instance of app.Secret
 
-        var secret = new app.Secrets();
+        var secret = new app.Secret();
 
-        var content = this.$el.find("textarea").val();
+        var userContent = this.$el.find("textarea").val();
         // Set the content to be the value that the textarea has
         secret.set({
-            content: content
+            content: userContent
         });
         // save the new instance
         secret.save();
