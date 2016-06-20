@@ -1,8 +1,9 @@
-
+var request = new XMLHttpRequest();
+window.onload = function () {
 var movie = function () {
   var search = document.getElementById("searchBar").value;
   var url = "http://omdbapi.com?t=" + search;
-  var request = new XMLHttpRequest(); // State 0
+
   request.open( "GET", url );
   request.send();
   request.onreadystatechange = function () {
@@ -17,7 +18,7 @@ var movie = function () {
       }
     };
   };
-window.onload = function () {
+
   var button = document.getElementById("button");
   button.addEventListener('click', movie);
 };
