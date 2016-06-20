@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Outside</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Arapey:400,400italic|Neucha|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path %> </li>
+        <% if @current_user %>
+          <li><%= link_to "Your Profile", @current_user %></li>
+          <li><%= link_to "Destinations", destinations_path %></li>
+          <li><%= link_to "Create A Destination", new_destination_path %></li>
+          <li><%= link_to "Activities", activities_path %></li>
+          <li><%= link_to "Create An Activity", new_activity_path %></li>
+          <li><%= link_to "Log out", logout_path, :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Create Account", new_user_path %></li>
+          <li><%= link_to "Login", login_path %></li>
+        <% end %>
+      <li class="sign_in">
+        <% if @current_user %>
+          Signed in as <%= @current_user.username %>
+        <% end %>
+      </li>
+    </ul>
+    <div class="bottom_nav">
+      <% if flash[:success] %>
+        <p><%= flash[:success] %></p>
+      <% end %>
+      <% if flash[:error] %>
+        <p><%= flash[:error] %></p>
+      <% end %>
+    </div>
+  </nav>
+
+
+
+  <%= yield %>
+
+</body>
+</html>

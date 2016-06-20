@@ -1,0 +1,148 @@
+// Place all the styles related to the Destinations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+p {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  color: #C9C9C9;
+}
+
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+  color: #f4f2f2;
+}
+
+.title_new_destination {
+  margin-left: 20px;
+}
+
+a {
+  position: relative;
+  color: #f4f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Amatic SC', cursive;
+  padding: 20px;
+}
+
+.destination_form {
+  padding: 20px;
+}
+
+.destination_form label {
+  padding-right: 8px;
+}
+
+.searchbar {
+  float: right;
+  position: relative;
+  padding: 20px;
+  padding-right: 35px;
+  flex: 1;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 25px;
+}
+
+.country_list {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #f4f2f2;
+  display: list-item;
+  padding: 20px;
+}
+
+.edit_title {
+  padding: 20px;
+  font-size: 40px;
+}
+
+.edit_title h2 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+}
+
+.country_list a {
+  font-family: 'PT Sans Narrow', sans-serif;
+  flex: 1;
+  position: relative;
+  color: #f4f2f2;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.single_destination {
+  padding: 20px;
+}
+
+.single_destination img {
+  max-width: 45vw;
+  max-height: 400px;
+}
+
+.nearby_list h3 {
+  font-family: 'Neucha', cursive;
+}
+
+.nearby_list {
+  color: #f4f2f2;
+}
+
+.nearby_list a, .nearby_list li {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-decoration: none;
+  color: #c9c9c9;
+}
+
+.bottom_destination_links {
+  padding-top: 50px;
+}
+
+.destinations_all {
+  background: url("https://images.unsplash.com/photo-1418227165283-1595d13726cd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f26fcc4841661f3269ca96271cfb9212");
+  text-shadow: 0 0 5px #090f01;
+  background-size: cover;
+  height: 100vh;
+}
+
+.destinations_all a {
+  transition: all 0.5s;
+}
+
+.destinations_all a:hover {
+  color: #BF5A28;
+}
+
+.do_make_pretty_activity {
+  width: 45%;
+  float: right;
+}
+
+.activities_at_place {
+  padding: 20px;
+  text-align: center;
+}
+
+.activities_at_place li {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.activities_at_place a {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.activities_at_place a:hover {
+  color: #BF5A28;
+  font-size: 35px;
+}
+
+.make_pretty_big_show {
+  float: left;
+  width: 45%;
+}

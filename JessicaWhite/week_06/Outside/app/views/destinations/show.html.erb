@@ -1,0 +1,40 @@
+<div class="make_pretty_big_show">
+  <div class="single_destination">
+    <h1><%= @destination.title %></h1>
+    <p><%= @destination.description %></p>
+
+    <p><img src=<%= @destination.image %>></p>
+    <p>Address: <%= @destination.address %></p>
+    <p>Country: <%= @destination.country %></p>
+    <p>Terrain: <%= @destination.terrain %></p>
+    <p><%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=#{@destination.latitude},#{@destination.longitude}" %></p>
+
+    <!-- if destination has nearbys do this -->
+    <div class="nearby_list">
+      <% unless @destination.nearbys(30).nil? %>
+        <% @destination.nearbys(30).each do |location| %>
+          <h3>Destinations nearby: </h3>
+          <li><%= link_to location.title, location %> (<%= @destination.distance_to(location).round(2) %> miles)</li>
+        <% end %>
+      <% end %>
+    </div>
+    <!-- else do nothing -->
+  </div>
+
+  <div class="bottom_destination_links">
+    <%= link_to( "Edit Destination", edit_destination_path(@destination) ) %>
+    <%= link_to( "Delete Destination", destination_path(@destination), :method => :delete ) %>
+  </div>
+</div>
+
+<div class="do_make_pretty_activity">
+  <!-- @destination.activity.each.do -->
+  <div class="activities_at_place">
+    <% unless @destination.activities.nil? %>
+    <h1>Fun Things</h1>
+      <% @destination.activities.each do |s| %>
+        <li><%= link_to s.title, s %></li>
+      <% end %>
+    <% end %>
+  </div>
+</div>

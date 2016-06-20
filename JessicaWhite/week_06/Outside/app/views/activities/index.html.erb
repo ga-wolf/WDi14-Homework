@@ -1,0 +1,6 @@
+<div class="activity_list">
+  <h1>G.O. Get Active</h1>
+  <% @activities.each do |l| %>
+    <h3><%= link_to(l.title, activity_path(l)) %></h3>
+  <% end %>
+</div>
