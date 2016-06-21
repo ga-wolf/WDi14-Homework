@@ -32,7 +32,7 @@ t1 = Task.create :title => "Step 1", :description => "Create cure"
 t2 = Task.create :title => "Step 2", :description => "Distribute cure"
 t3 = Task.create :title => "Step 3", :description => "?????"
 t4 = Task.create :title => "Step 4", :description => "Profit"
-t5 = Task.create :title => "Call Sherif", :description => "Get Sherif on the phone, tell him to get cracking on worl peace."
+t5 = Task.create :title => "Call Sherif", :description => "Get Sherif on the phone, tell him to get cracking on world peace."
 
 p1.tasks << t1 << t2 << t3 << t4
 p2.tasks << t5

@@ -1,15 +1,21 @@
-<h2>Projects Index</h2>
-
-<% @current_user.projects.each do |p| %>ggggggg
-
-  <h4><%= link_to p.title, p %></h4>
-  <p><%= p.description %></p>
-  <p>
-    Tasks:
-  <ol>
-    <% p.tasks.each do |t| %>
-      <li><%= t.title %>: <%= t.description %></li>
-    <% end %>
-  </ol>
-  </p>
-<% end %>
+<h2>Projects</h2>
+<div class="projects_container">
+  <% @current_user.projects.each do |p| %>
+    <div class="project_display">
+      <h3><%= link_to p.title, p %></h3>
+      <p><%= p.description %></p>
+      <p>
+        Tasks:
+        <% p.tasks.each do |t| %>
+          <% if t.complete %>
+            <div class="task_container_done">
+              <%= t.title %><img src="http://i.imgur.com/3CSqyT5.png">
+            </div>
+          <% else %>
+            <div class="task_container"><%= t.title %></div>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+</div>

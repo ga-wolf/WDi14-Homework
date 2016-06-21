@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     task = Task.new task_params
     task.save
 
-    redirect_to projects_path
+    redirect_to project_path(task_params[:project_id])
   end
 
   def edit
@@ -20,7 +20,7 @@ class TasksController < ApplicationController
     task = Task.find params[:id]
     task.update task_params
 
-    redirect_to projects_path
+    redirect_to project_path(task_params[:project_id])
   end
 
   def destroy
@@ -32,6 +32,6 @@ class TasksController < ApplicationController
 
   private
     def task_params
-      params.require(:task).permit(:title, :description, :project_id)
+      params.require(:task).permit(:title, :description, :project_id, :complete)
     end
 end

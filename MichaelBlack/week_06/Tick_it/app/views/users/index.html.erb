@@ -1,9 +1,11 @@
-<h2>All Users</h2>
+<div class="hero_container">
+  <h2>All Users</h2>
 
-<% @users.each do |u| %>
-  <ul>
-    <li>Username: <%= link_to(u.username, user_path(u))%></li>
-    <li>Email: <%= u.email %></li>
-    <li>Password Digest: <%= u.password_digest %></li>
-  </ul>
-<% end %>
+  <% @users.each do |u| %>
+    <ul>
+      <li>Username: <%= link_to(u.username, user_path(u))%></li>
+      <li>Email: <%= u.email %></li>
+      <li>Password Digest: <%= u.password_digest %></li>
+    </ul>
+  <% end %>
+</div>

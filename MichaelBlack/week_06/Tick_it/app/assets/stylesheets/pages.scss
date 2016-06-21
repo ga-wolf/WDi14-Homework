@@ -1,3 +1,19 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.CTA {
+  width: 200px;
+  height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #599bb3;
+  opacity: 0.8;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.CTA span {
+  font-size: 30px;
+}

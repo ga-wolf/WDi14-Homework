@@ -1,19 +1,21 @@
-<h2>User profile</h2>
+<div class="hero_container">
+  <h2>User profile</h2>
 
-<% if flash[:success] %>
-  <p><%= flash[:success] %></p>
-<% end %>
+  <% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+  <% end %>
 
-<% if flash[:error] %>
-  <p><%= flash[:error] %></p>
-<% end %>
+  <% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+  <% end %>
 
-<h4><%= @user.username %></h4>
-<img src="<%= @user.image %>">
-<p><%= @user.email %></p>
-<p>
-  <%= link_to( "Edit profile", edit_user_path(@user) ) %>
-</p>
-<p>
-  <%= link_to( "Delete account", user_path(@user), :method => :delete ) %>
-</p>
+  <h4><%= @user.username %></h4>
+  <img src="<%= @user.image %>">
+  <p><%= @user.email %></p>
+  <p>
+    <%= link_to( "Edit profile", edit_user_path(@user) ) %>
+  </p>
+  <p>
+    <%= link_to( "Delete account", user_path(@user), :method => :delete ) %>
+  </p>
+</div>

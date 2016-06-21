@@ -6,12 +6,21 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @users = User.all
   end
 
   def create
     project = Project.new project_params
     project.users << @current_user
     project.save
+
+    params[:project][:user_ids].shift
+    user_ids = params[:project][:user_ids]
+
+    user_ids.each do |u|
+      x = User.find u
+      project.users << x unless project.users.include? x
+    end
 
     redirect_to projects_path
   end
@@ -23,20 +32,22 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find params[:id]
+    @users = User.all
   end
 
   def update
     project = Project.find params[:id]
     project.update project_params
+    project.save
 
-    redirect_to project_path
-  end
-
-  def adduser
-    project = Project.find params[:id]
-    user = User.find params [:u_id]
-
-    project << user
+    project.users.delete_all
+    project.users << @current_user
+    params[:project][:user_ids].shift
+    user_ids = params[:project][:user_ids]
+    user_ids.each do |u|
+      x = User.find u
+      project.users << x unless project.users.include? x
+    end
 
     redirect_to project_path
   end
@@ -54,7 +65,7 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:title, :description)
+      params.require(:project).permit(:title, :description, :user_ids)
     end
 
 end
