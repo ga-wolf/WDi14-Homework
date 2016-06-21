@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background: gainsboro;
+}
+
+.flexBody {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.btns{
+  margin: 10px;
+}
+
+.container {
+  width: 75vw;
+  margin: auto;
+}
+
+input {
+  font-size: 18px;
+  box-shadow: none;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+button {
+  border-radius: 0px;
+  box-shadow: none;
+}

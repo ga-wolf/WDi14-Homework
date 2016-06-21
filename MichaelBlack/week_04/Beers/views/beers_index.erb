@@ -1,0 +1,23 @@
+<h3>List ALL of the beers</h3>
+
+<%= @all_beers %>
+
+<% @all_beers.each do |beer| %>
+
+  <h4>
+    <%= beer["brand"] %>
+  </h4>
+
+  <a href="/beers/<%= beer["id"] %>">
+  <img src="<%= beer["image"] %>">
+  </a>
+
+  <p>
+    <%= beer["type"] %>
+  </p>
+
+  <p><i>
+    <%= beer["rating"] %> out of 5
+  </i></p>
+
+<% end %>

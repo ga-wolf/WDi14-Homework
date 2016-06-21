@@ -1,0 +1,33 @@
+<h1>Authors#edit</h1>
+<p>Find me in app/views/authors/edit.html.erb</p>
+
+<%= form_for @author, :url => "/authors/#{@author.id}" do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :dob %>
+    <%= f.date_field :dob, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :alive %>
+    <%#= f.select :alive, [["Yes", true]["No", false]], :required => true %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,24 @@
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username, :required => true %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.text_field :image%>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, :required => true %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :required => true %>
+  </p>
+
+  <%= f.submit "Submit" %>
+<% end %>
