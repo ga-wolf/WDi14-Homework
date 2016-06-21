@@ -136,7 +136,7 @@ var noChangeRoute = function (changeNeeded, startStationNumber, endStationNumber
     }
   console.log ("The stations you will travel on are " + travellingRoute)
  }
-// HELP This bit here was really doing my head in.  I hope I'm on the right direction.  I didn't get time to really test, so will keep working on it. 
+// HELP This bit here was really doing my head in.  I hope I'm on the right direction.  I didn't get time to really test, so will keep working on it1 ``` 1     1 1 1=/ `````. 
 
 var changeNeededRoute = function (){
   var stage1;

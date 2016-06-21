@@ -1,6 +1,6 @@
 //need to put this in for  the document ready for JS thing
 $(document).ready(console.log("Are we ready? Yep. I'm ready"));
-console.log ("Hello Jane and Betty. Welcome to Tic Tac Toe my second version!");
+console.log("Hello Jane and Betty. Welcome to Tic Tac Toe my second version!");
 
 // //COMPONENT 1  - creating a visual layout for the Board.  This will be done through the use of the index.html and css file.  Currently using the following to create a DOM hieararchy
 // <div class="board">
@@ -13,7 +13,7 @@ console.log ("Hello Jane and Betty. Welcome to Tic Tac Toe my second version!");
 // // 1   create an event on-click in a square
 //    2 Check if can click in the square.  Need to include something to stop them from clicking in the square
 //    3 Provide user with visual feedback that the square has been clicked
-    // 4 toggle between users
+// 4 toggle between users
 
 
 //this function is supposed to toggle between x and 0.  Can't get it to pass in the new value of the playersMove
@@ -26,14 +26,14 @@ console.log ("Hello Jane and Betty. Welcome to Tic Tac Toe my second version!");
 
 
 var playersMove = "x";
-var togglePlayer = function () {
-  if (playersMove === "x") {
-    console.log("The move to be played is " + playersMove);
-    playersMove = "0";
-  } else if (playersMove ==="0"){
-    console.log ("The move to be played is " + playersMove);
-    playersMove = "x";
-  }
+var togglePlayer = function() {
+    if (playersMove === "x") {
+        console.log("The move to be played is " + playersMove);
+        playersMove = "0";
+    } else if (playersMove === "0") {
+        console.log("The move to be played is " + playersMove);
+        playersMove = "x";
+    }
 };
 
 // // There needs to be a function that determines a valid move
@@ -41,118 +41,109 @@ var togglePlayer = function () {
 // // If that has the class of clicked, return false
 // // Otherwise return true
 
-var validMove = function ( $el ) {
-  if ( $el.hasClass("clicked") ) {
-    return false;
-  } else {
-    return true;
-  }
+var validMove = function($el) {
+    if ($el.hasClass("clicked")) {
+        return false;
+    } else {
+        return true;
+    }
 };
 
 
-var checkWin = function () {
-  // go through each one of the winning combinations
-  // If (for example), the first 3 squares have the class x, we know that that is a win
-  // Select the first square, .hasClass("x"), then the second
+var checkWin = function() {
+    // go through each one of the winning combinations
+    // If (for example), the first 3 squares have the class x, we know that that is a win
+    // Select the first square, .hasClass("x"), then the second
 
-  //rows win by x
-          if ( $(".square").eq( 0 ).hasClass("x") && $(".square").eq( 1 ).hasClass("x") && $(".square").eq( 2 ).hasClass("x") ) {
-              alert( "X you rock.  You won!" );
-              newGame();
-            }
-          else if  ( $(".square").eq( 3 ).hasClass("x") && $(".square").eq( 4 ).hasClass("x") && $(".square").eq( 5 ).hasClass("x") ) {
-            alert( "X you rock.  You won!" );
-            newGame();
-          }
-         else if ( $(".square").eq( 6 ).hasClass("x") && $(".square").eq( 7 ).hasClass("x") && $(".square").eq( 8 ).hasClass("x") ) {
-                  alert( "X you rock.  You won!!" );
-                }
+    //rows win by x
+    if ($(".square").eq(0).hasClass("x") && $(".square").eq(1).hasClass("x") && $(".square").eq(2).hasClass("x")) {
+        alert("X you rock.", " You won!", "Success");
+        newGame();
+    } else if ($(".square").eq(3).hasClass("x") && $(".square").eq(4).hasClass("x") && $(".square").eq(5).hasClass("x")) {
+        alert("X you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(6).hasClass("x") && $(".square").eq(7).hasClass("x") && $(".square").eq(8).hasClass("x")) {
+        alert("X you rock.  You won!!");
+    }
 
-// rows win by 0
+    // rows win by 0
+    else if ($(".square").eq(0).hasClass("0") &&
+            $(".square").eq(1).hasClass("0") &&
+            $(".square").eq(2).hasClass("0")) {
+        alert("We have a winner!");
+        newgame();
+    } else if ($(".square").eq(3).hasClass("0") && $(".square").eq(4).hasClass("0") && $(".square").eq(5).hasClass("0")) {
+        alert("We have a winner!");
+        newGame();
+    } else if ($(".square").eq(6).hasClass("0") && $(".square").eq(7).hasClass("0") && $(".square").eq(8).hasClass("0")) {
+        alert("We have a winner!");
+        newGame();
+    }
 
-        else if ( $(".square").eq( 0 ).hasClass("0") && $(".square").eq( 1 ).hasClass("0") && $(".square").eq( 2 ).hasClass("0") ) {
-                    alert( "We have a winner!" );
-                    newgame();
-                  }
-        else if  ( $(".square").eq( 3 ).hasClass("0") && $(".square").eq( 4 ).hasClass("0") && $(".square").eq( 5 ).hasClass("0") ) {
-                  alert( "We have a winner!" );
-                  newGame();
-                }
-        else if ( $(".square").eq( 6 ).hasClass("0") && $(".square").eq( 7 ).hasClass("0") && $(".square").eq( 8 ).hasClass("0") ) {
-        alert( "We have a winner!" );
-          newGame();
-                        }
+    //columns win by X
+    else if ($(".square").eq(0).hasClass("x") && $(".square").eq(3).hasClass("x") && $(".square").eq(6).hasClass("x")) {
+        alert("X you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(1).hasClass("x") && $(".square").eq(4).hasClass("x") && $(".square").eq(7).hasClass("x")) {
+        alert("X you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(2).hasClass("x") && $(".square").eq(5).hasClass("x") && $(".square").eq(8).hasClass("x")) {
+        alert("X you rock.  You won!!");
+        newGame();
+    }
 
-        //columns win by X
+    //column win by 0
+    else if ($(".square").eq(0).hasClass("0") && $(".square").eq(3).hasClass("0") && $(".square").eq(6).hasClass("0")) {
+        alert("0 you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(1).hasClass("0") && $(".square").eq(4).hasClass("0") && $(".square").eq(7).hasClass("0")) {
+        alert("0 you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(2).hasClass("0") && $(".square").eq(5).hasClass("0") && $(".square").eq(8).hasClass("0")) {
+        alert("0 you rock.  You won!!");
+        newGame();
+    }
 
-        else if ( $(".square").eq( 0 ).hasClass("x") && $(".square").eq( 3 ).hasClass("x") && $(".square").eq( 6 ).hasClass("x") ) {
-                            alert( "X you rock.  You won!" );
-                          newGame();
-                          }
+    //diagonoal win by X
+    else if ($(".square").eq(0).hasClass("x") && $(".square").eq(4).hasClass("x") && $(".square").eq(8).hasClass("x")) {
+        alert("X you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(2).hasClass("x") && $(".square").eq(4).hasClass("x") && $(".square").eq(6).hasClass("x")) {
+        alert("X you rock.  You won!");
+        newGame();
+    }
+    //diagonoal win by 0
+    else if ($(".square").eq(0).hasClass("0") && $(".square").eq(4).hasClass("0") && $(".square").eq(8).hasClass("0")) {
+        alert("0  you rock.  You won!");
+        newGame();
+    } else if ($(".square").eq(2).hasClass("0") && $(".square").eq(4).hasClass("0") && $(".square").eq(6).hasClass("0")) {
+        alert("0 you rock.  You won!");
+        newGame();
+    }
 
-        else if  ( $(".square").eq( 1 ).hasClass("x") && $(".square").eq( 4 ).hasClass("x") && $(".square").eq( 7 ).hasClass("x") ) {
-                          alert( "X you rock.  You won!" );
-                          newGame();
-                        }
-
-        else if ( $(".square").eq( 2 ).hasClass("x") && $(".square").eq( 5 ).hasClass("x") && $(".square").eq( 8 ).hasClass("x") ) {
-                                alert( "X you rock.  You won!!" );
-                              newGame();
-                              }
-
-        //column win by 0
-
-        else if ( $(".square").eq( 0 ).hasClass("0") && $(".square").eq( 3 ).hasClass("0") && $(".square").eq( 6 ).hasClass("0") ) {
-                                                  alert( "0 you rock.  You won!" );
-                                                    newGame();
-                                                }
-
-
-        else if  ( $(".square").eq( 1 ).hasClass("0") && $(".square").eq( 4 ).hasClass("0") && $(".square").eq( 7 ).hasClass("0") ) {
-                                                alert( "0 you rock.  You won!" );
-                                                  newGame();
-                                              }
-
-        else if ( $(".square").eq( 2 ).hasClass("0") && $(".square").eq( 5 ).hasClass("0") && $(".square").eq( 8 ).hasClass("0") ) {
-                                                      alert( "0 you rock.  You won!!" );
-                                                      newGame();
-                                                    }
-
-        //diagonoal win by X
-        else if ( $(".square").eq( 0 ).hasClass("x") && $(".square").eq( 4 ).hasClass("x") && $(".square").eq( 8 ).hasClass("x") ) {
-                            alert( "X you rock.  You won!" );
-                              newGame();
-                          }
-        else if  ( $(".square").eq( 2 ).hasClass("x") && $(".square").eq( 4 ).hasClass("x") && $(".square").eq( 6 ).hasClass("x") ) {
-                          alert( "X you rock.  You won!" );
-                            newGame();
-                }
-        //diagonoal win by 0
-        else if ( $(".square").eq( 0 ).hasClass("0") && $(".square").eq( 4 ).hasClass("0") && $(".square").eq( 8 ).hasClass("0") ) {
-                                    alert( "0  you rock.  You won!" );
-                                      newGame();
-                                  }
-
-        else if  ( $(".square").eq( 2 ).hasClass("0") && $(".square").eq( 4 ).hasClass("0") && $(".square").eq( 6 ).hasClass("0") ) {
-                                  alert( "0 you rock.  You won!" );
-                                    newGame();
-                        }
-                        
-      //Tie - why is this not working!
-      if ( ($(".clicked").length === 9)) {
-        console.log ("The game is a tie");
-        alert ("It's a tie! Do you want to play a new game?");
-          newGame();
-      }
+    //Tie - why is this not working!
+    if (($(".clicked").length === 9)) {
+        console.log("The game is a tie");
+        alert("It's a tie! Do you want to play a new game?");
+        newGame();
+    }
 };
 
 var newGame = function() {
-  swal({   title: "Do you want to play a new game?",   text: "Everything will be reset!",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Yes!",   closeOnConfirm: true }, function(){
-    $('.square').removeClass("x");
-    $('.square').removeClass("o");
-    $('.square').removeClass ("clicked");
-    $('.square').empty();
-  });
+    swal({
+        title: "Do you want to play a new game?",
+        text: "Everything will be reset!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes!",
+        closeOnConfirm: true
+    }, function() {
+        $('.square').removeClass("x");
+        $('.square').removeClass("0");
+        $('.square').removeClass("clicked");
+        $('.square').empty();
+    });
 };
 
 // // There needs to be a function that runs every time a square is clicked
@@ -162,23 +153,23 @@ var newGame = function() {
 //   // ( checkWin() )
 //   // Toggle the player using the function up the top
 
-$(".square").on("click", function () {
+$(".square").on("click", function() {
 
-  var $theClickedSquare = $(this);
-  var isValid = validMove( $theClickedSquare );
+    var $theClickedSquare = $(this);
+    var isValid = validMove($theClickedSquare);
 
-  if ( isValid !== true ) {
-    alert("Play a different move!");
-  } else {
-    // The right move part
-    $theClickedSquare.addClass("clicked");
-    $theClickedSquare.addClass( playersMove );
-    $theClickedSquare.text( playersMove );
-    checkWin();
-    togglePlayer();
-  }
+    if (isValid !== true) {
+        alert("Play a different move!");
+    } else {
+        // The right move part
+        $theClickedSquare.addClass("clicked");
+        $theClickedSquare.addClass(playersMove);
+        $theClickedSquare.text(playersMove);
+        checkWin();
+        togglePlayer();
+    }
 
-  console.log( "Is this a valid move? ", isValid );
+    console.log("Is this a valid move? ", isValid);
 });
 
 

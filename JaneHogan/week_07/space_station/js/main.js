@@ -13,6 +13,8 @@ var displaySpaceInformation = function (data){
   var people = data.people;
     for (var i = 0; i <  people.length; i++){
       var names = people[i].name;
+      var $p = $("<p>").text(names);
+      $basePeopleContent.prepend( $p );
       console.log(names);
     };
 

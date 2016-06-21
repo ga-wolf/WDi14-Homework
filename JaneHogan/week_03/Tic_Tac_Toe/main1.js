@@ -101,6 +101,8 @@ var lastSquareClickedforWinCheck= $(".square").on("click",function (){
   var squareClicked = [row,column];
     console.log ("The last square that was clicked is " + squareClicked);
     lastSquareClicked = squareClicked;
+    checkWinner(row, column);
+
     return {row,column};
   }
 )

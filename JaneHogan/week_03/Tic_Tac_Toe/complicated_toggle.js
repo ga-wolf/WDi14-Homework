@@ -15,7 +15,7 @@ if
       console.log ("The move to be played is " + playersMove);
       console.log ("The next move will be " + nextMove);
       console.log ("The new last move is now "  + lastMove);
-      return console.log ("Betty remember now the last is " + lastMove;
+      return console.log ("Betty remember now the last is " + lastMove);
     }
 
     else {
