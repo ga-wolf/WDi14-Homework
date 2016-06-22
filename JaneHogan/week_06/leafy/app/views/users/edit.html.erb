@@ -1,0 +1,14 @@
+<h1>Edit User</h1>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :your_entity %>
+    <%= f.url_field :name %>
+  </p>
+
+  <%= f.submit "Update user" %>
+<% end %>

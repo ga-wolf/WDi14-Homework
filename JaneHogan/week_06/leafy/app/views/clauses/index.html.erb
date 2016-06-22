@@ -1,0 +1,18 @@
+<h1>This is the clause index.  It lists all the clauses </h1>
+
+
+
+<h2>Number of clauses</h2>
+
+<p>The number of clauses we have stored in the database is:
+<strong><%= Clause.count %> </strong></p>
+
+<hr>
+<h2>This is a list of each of the clauses</h2>
+
+
+  <% @clauses.each do |c| %>
+    <h3>Clause name: <%= c.name %></h3>
+    <p>Clause date: <%= c.description%></p>
+    <p>Clause database number <%= c.id %></p>
+  <% end %>

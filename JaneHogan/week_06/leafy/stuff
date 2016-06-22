@@ -1,0 +1,8 @@
+When we create a clause, we need to select at least one entity
+
+When we create a task, we need to select one clause
+
+  <p>
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.all.map { |a| [ a.name, a.id ] },                            :include_blank => true %>
+  </p>

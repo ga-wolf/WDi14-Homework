@@ -1,0 +1,19 @@
+<h1>All your obligations</h1>
+
+<h2>It's a cruel world, and yes you have obligations</h2>
+
+<h2>Number of agreements</h2>
+
+<p>The number of agreements we have stored in the database is:
+<strong><%= Obligation.count %> </strong></p>
+
+
+<h1>All your agreements</h1>
+
+
+
+  <% @obligations.each do |agreement| %>
+    <h2>Agreement name: <%= link_to agreement.agreement_name, agreement %></h2>
+    <p>Agreement date: <%= agreement.agreement_date%></p>
+    <p>Agreement number <%= agreement.id %></p>
+  <% end %>

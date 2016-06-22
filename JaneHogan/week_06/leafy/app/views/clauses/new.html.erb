@@ -1,0 +1,31 @@
+<h1>Hello! Create new clause</h1>
+
+<p>Go on please create something new. Phew. we got there. We finally have a page!
+</p>
+
+<p>Want to also add on this page options to create add parties and types of key clauses
+</p>
+
+<%= form_for @clause do |f| %>
+<p>
+    <%= f.label :Name_of_clause %>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    <%= f.label :Description %>
+    <%= f.text_field :description %>
+</p>
+
+<h2>What's tasks does it create for us</h2>
+
+<p><%= f.label :task %>
+    <%= f.select :task_ids, Task.all.map { |t| [ t.description, t.id ] },
+                                  {}, multiple: true %>
+</p>
+
+
+
+<%= f.submit "Really new clause" %>
+
+<% end %>

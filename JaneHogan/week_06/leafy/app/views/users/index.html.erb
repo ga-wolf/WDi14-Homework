@@ -1,0 +1,7 @@
+<h1>All users: TOP SECRET</h1>
+
+<% @users.each do |u| %>
+  <p>
+    <%= u.email %> created account at <%= u.created_at %>.
+  </p>
+<% end %>

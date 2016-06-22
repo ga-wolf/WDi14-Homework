@@ -1,0 +1,29 @@
+<h2>This is going to be show page - wait it finally is the show page!</h2>
+<p>This page will show people what they have just entered</p>
+
+<hr>
+
+<p>The clause you just entered was: <%= @clauses.name %> </p>
+
+<p>
+The date of the clause was  <%= @clauses.description %>
+</p>
+
+<p>
+The number of the clause was  <%= @clauses.id %>
+</p>
+
+<div>
+
+<ul>
+
+
+
+  <%= link_to "Edit clause", edit_clause_path %>
+  <li><%= link_to "Delete clause", @clause, :method => :delete, :data => {:confirm => 'Are you sure'}%> </li>
+
+  </ul>
+
+
+
+</div>

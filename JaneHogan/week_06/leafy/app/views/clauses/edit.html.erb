@@ -1,0 +1,23 @@
+<h2>Okey dokey now we want to edit an clause</h2>
+
+
+<hr>
+
+<%= form_for @clause do |f| %>
+
+<p>You are editing this clause: <%=  @clause.name %> with this number <%= @clause.id %></p>
+
+  <p>
+    <%= f.label :Name_of_clause %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :Type_of_clause %>
+    <%= f.text_field :description %>
+  </p>
+
+
+<%= f.submit "Update this clause" %>
+
+<% end %>

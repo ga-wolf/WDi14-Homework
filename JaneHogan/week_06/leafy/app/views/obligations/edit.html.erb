@@ -1,0 +1,26 @@
+<h2>Okey dokey now we want to edit an obligation</h2>
+
+
+
+<p>Want to also add on this page options to create add parties and types of key obligations </p>
+
+<hr>
+
+<%= form_for @obligation do |f| %>
+
+<p>You are editing this agreement: <%=  @obligation.agreement_name %> with this number <%= @obligation.id %></p>
+
+  <p>
+    <%= f.label :Name_of_agreement %>
+    <%= f.text_field :agreement_name %>
+  </p>
+
+  <p>
+    <%= f.label :Date_of_agreement %>
+    <%= f.text_field :agreement_date %>
+  </p>
+
+
+<%= f.submit "Update this agreement" %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<h1>All your tasks </h1>
+
+<h2>Number of tasks <%= Task.count %> </h2>
+
+
+<h2>Your tasks</h2>
+
+
+<% @tasks.each do |task| %>
+  <h1>Task: <%= link_to task.description, task %></h1>
+  <p>Task date: <%= task.date%></p>
+  <p>Task number <%= task.id %></p>
+
+  <% end %>
