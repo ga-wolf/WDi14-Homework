@@ -1,14 +1,8 @@
 <%= include_gon(watch: true) %>
 <main class=bs-docs-masthead id=content role=main tabindex=-1>
     <div class=container>
-        <h2><%= @puzzle.name %></h2>
+        <h2 class="marioFont"><%= @puzzle.name %></h2>
         <div id="gameBoard">
-          <ul id="leftHints">
-
-          </ul>
-          <div id="top">
-
-          </div>
           <table id="cells">
 
           </table>
@@ -16,9 +10,9 @@
     </div>
 </main>
 
-<div class="panel bgcolor">
-		<button id="bgcolor-button">Choose Cell Colour</button>
-		<table>
+<div class="panel bgcolor" style="background-color: transparent">
+		<button id="bgcolor-button" style="margin: 0 auto; display: block">Choose Cell Colour</button>
+		<table style="margin: 20px auto 0">
 			<tr><th>RGB</th><td><input id="bgcolor-rgb" onchange="setString('bgcolor', this.value)" /></td></tr>
 			<tr><th>HEX</th><td><input id="bgcolor-hex" onchange="setString('bgcolor', this.value)" /></td></tr>
 
@@ -84,4 +78,16 @@
 <script type="text/javascript">
   var id = <%= @puzzle.id %>;
   editPuzzle();
+  var gameBoardSize = gon.artwork.cells.length * 20;
+  var gameBoardLeft = window.innerWidth / 2 - gameBoardSize;
+
+  $('#gameBoard').css({
+      "left": gameBoardLeft
+  });
+  $(window).resize(function () {
+      var gameBoardLeft = window.innerWidth / 2 - gameBoardSize;
+      $('#gameBoard').css({
+        left: gameBoardLeft
+      })
+  });
 </script>

@@ -4,20 +4,21 @@ class ArtsController < ApplicationController
   def index
     @your_puzzles = Art.where(:user_id => @current_user)
     @puzzles = Art.all
+    @saves = SaveState.where(:user_id => @current_user)
   end
 
   def show
     @art = Art.find params[:id]
-    if Save.where(:user_id => @current_user, :name => @art.name).exists?
-      gon.artwork = Save.where(:user_id => @current_user, :name => @art.name).first
+    if SaveState.where(:user_id => @current_user, :name => @art.name).exists?
+      gon.artwork = SaveState.where(:user_id => @current_user, :name => @art.name).first
       @save = gon.artwork
     else
       new_puzzle = @art.dup
       dupCells = new_puzzle.cells
 
-      Save.create(:user_id => @current_user.id, :name => new_puzzle.name, :cells => dupCells, :finished => false )
+      SaveState.create(:user_id => @current_user.id, :name => new_puzzle.name, :cells => dupCells, :finished => false, :art_id => @art.id )
       # binding.pry
-      gon.artwork = Save.where(:user_id => @current_user, :name => new_puzzle.name).first
+      gon.artwork = SaveState.where(:user_id => @current_user, :name => new_puzzle.name).first
     end
   end
 
@@ -57,9 +58,17 @@ class ArtsController < ApplicationController
 
   def save
 
-    @puzzle_state = Save.find params[:id]
+    @puzzle_state = SaveState.find params[:id]
     parsed_data = JSON.parse( params[:data_value] )
-    Save.update(params[:id], :cells => parsed_data )
+    SaveState.update(params[:id], :cells => parsed_data )
+
+    render :json => { :success => true }
+  end
+
+  def win
+
+    @puzzle_state = SaveState.find params[:id]
+    SaveState.update(params[:id], :finished => params[:data_value] )
 
     render :json => { :success => true }
   end

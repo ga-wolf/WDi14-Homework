@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy', :as => 'logout'
 
   put '/art/:id/save' => 'arts#save'
+  put '/art/:id/win' => 'arts#win'
 
 
   resources :arts

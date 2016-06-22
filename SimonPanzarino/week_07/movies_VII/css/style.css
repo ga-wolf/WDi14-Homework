@@ -1,0 +1,41 @@
+.main {
+  margin-top: 50px;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.image {
+  text-align: right;
+}
+
+#searchTitle {
+  text-align: center;
+}
+
+#singleTitle {
+  text-align: left;
+  margin-top: 0;
+}
+
+.btn {
+  margin-top: 0px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+.single {
+  margin-top: 30px;
+}
+
+.thumbnail {
+  margin: 0 auto;
+}
+
+#misc {
+  margin-top: 0;
+  margin-bottom: 20px;
+}

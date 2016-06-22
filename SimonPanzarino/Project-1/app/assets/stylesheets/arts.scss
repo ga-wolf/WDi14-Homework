@@ -4,16 +4,15 @@
 
 @font-face {
   font-family: marioFont;
-  src: url('/assets/New Super Mario Font U.ttf');
+  src: font-url('NewSuperMarioFontU.ttf');
 }
 
 #main {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100%;
-  background: url('/assets/2884.jpg');
+  background: image-url('mountain-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,17 +40,24 @@
    font-size: 31px;
 }
 
+.home h2 {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fff;
+  -webkit-text-fill-color: #e93737; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+   font-size: 60px;
+   margin-top: 100px;
+}
+
 #gameBoard {
  position: relative;
-  margin: 50px auto 0px;
-  left: -141px;
   width: 300px;
   height: 400px;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
 }
 
 #cells {
@@ -181,6 +187,7 @@
 
 #leftHints {
   height:300px;
+  width: 300px;
   line-height: 300px;
   position: absolute;
   top: -300px;
@@ -235,4 +242,120 @@
 .marioLives {
   width: 30px;
   height: auto;
+}
+
+#selector {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#fill, #break, #hardReset {
+  background-color: rebeccapurple;
+  color: #fff;
+  margin: 0 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+#fill a, #break a, #hardReset a {
+  color: #fff;
+}
+
+.home {
+  background-image: image-url('fullBackground.jpg') !important;
+  background-size: 1700px auto !important;
+  background-position: bottom;
+  background-repeat: no-repeat !important;
+  height: 600px;
+}
+
+#marioPuzzle {
+  position: absolute;
+  bottom: 95px;
+  left: 46.5%;
+  width: 120px;
+  height: 120px;
+}
+
+#piranhaPuzzle {
+  position: absolute;
+  bottom: 307px;
+  left: 69.8%;
+  width: 140px;
+  height: 140px;
+}
+
+#coinPuzzle {
+  position: absolute;
+  bottom: 486px;
+  left: 40%;
+  width: 100px;
+  height: 100px;
+}
+
+.nineBnine {
+  background-image: image-url('9x9.png');
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: box-shadow 0.2s linear;
+}
+
+.nineBnine:hover {
+  box-shadow: 0px 0px 10px #000;
+}
+
+.marioPuzzleFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.coinFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.piranhaPuzzleFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.master {
+  padding: 15px 30px !important;
+  font-size: 20px !important;
+}
+
+.heroku {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 !important;
+}
+
+.puzzleLink {
+  color: white;
+  font-size: 14px;
+  margin: 20px;
+  transition: color 0.5s linear;
+}
+
+.puzzleLink:hover {
+  color: #fcc630;
+  text-decoration: none;
+}
+
+.marioFont {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fcc630;
+  -webkit-text-fill-color: #fcc630; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+   font-size: 40px;
 }

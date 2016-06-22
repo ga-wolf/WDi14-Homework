@@ -13,5 +13,5 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :arts
-  has_many :saves
+  has_many :save_states
 end

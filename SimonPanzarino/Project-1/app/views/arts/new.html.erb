@@ -1,42 +1,40 @@
 <%= include_gon(watch: true) %>
 <main class=bs-docs-masthead id=content role=main tabindex=-1>
     <div class=container>
-     <%= form_for @art do |f| %>
-        <p>
-         <%= f.label :name %>
-         <%= f.text_field :name, :required => true %>
-        </p>
+      <div class="row">
 
-        <p>
-         <%= f.label :cells %>
-         <%= f.number_field :cells, :required => true %>
-        </p>
+      <div class="col-sm-8 col-sm-offset-4">
+
+      <h3 class="marioFont" style="text-align: left">Create your Puzzle!</h3>
+
+      </div>
+    </div>
+      <%= form_for @art, :html => { :class => 'form-horizontal' } do |f| %>
+
+        <div class="form-group">
+          <%= f.label :name, nil, class: 'col-sm-4 control-label' %>
+          <div class="col-sm-8">
+            <%= f.text_field :name, class: "form-control", placeholder: "Name", :required => true%>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :cells, nil, class: 'col-sm-4 control-label' %>
+          <div class="col-sm-8">
+            <%= f.number_field :cells, class: "form-control", placeholder: "Cells", :required => true %>
+          </div>
+        </div>
 
         <%= f.hidden_field :user_id, :value => @user.id %>
 
-        <%= f.submit "Save" %>
-      <% end %>
-        <div id="gameBoard">
-          <ul id="leftHints">
-
-          </ul>
-          <div id="top">
-
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8" style="text-align: left">
+            <%= submit_tag "Save", class: "btn btn-info" %>
           </div>
-          <table id="cells">
-
-          </table>
         </div>
+
+      <% end %>
     </div>
 </main>
-
-<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
-  Pick text color
-</button>
-
-<div id="save">Save</div>
-
-<%= @newArray %>
 
 <script type="text/javascript">
   createPuzzle();
