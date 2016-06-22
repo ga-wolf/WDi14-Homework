@@ -1,0 +1,13 @@
+<% @reviews.each do |review| %>
+  Name:
+  <%= link_to review.user.name, review.user %>
+  <p>Rating: <%= review.rating.round(0) %></p>
+  <td><img src = <%= review.link %> alt="" /></td>
+  <p><%= review.content %></p>
+
+  <% if @current_user && (@current_user.id == review.user_id || @current_user.admin == true) %>
+    <%= link_to "Edit", edit_review_path(review) %>
+    <%= link_to "Delete", review_path(review), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+  <% end %>
+  <hr>
+<% end %>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlickrApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<h1>My Own Private Flickr Gallery</h1>
+<nav>
+  <form>
+    <input type="text" id="search" placeholder="Search term">
+    <input class="search" type="submit" value = "Search Flickr">
+    <div class="page"></div>
+    <div class="pageCtrl">
+    <input class="prevPage" type="submit" value = "Previous page">
+    <p></p>
+    <input class="nextPage" type="submit" value = "Next page">
+    </div>
+  </form>
+</nav>
+<hr>
+
+<%= yield %>
+
+</body>
+</html>

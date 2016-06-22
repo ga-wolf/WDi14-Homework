@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  font-family: fantasy;
+
+}
+
+.col {
+  float: none;
+  width: 50%;
+  min-height: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+
+@media (max-width: 680px) {
+  .col {
+    width: 100%;
+  }
+}
+
+#map {
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;
+      }
