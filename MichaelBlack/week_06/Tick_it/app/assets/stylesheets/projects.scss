@@ -1,0 +1,68 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.projects_container {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  background: gainsboro;
+  opacity: 0.9;
+  justify-content: space-around;;
+}
+
+.project_display {
+  width: 300px;
+  margin: 40px auto;
+  // padding: 10px;
+  opacity: 1;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.task_container {
+  width: 200px;
+  margin: 1px auto;
+  border: 1px solid darkgrey;
+}
+
+.task_container_done {
+  width: 200px;
+  margin: 1px auto;
+  border: 1px solid darkgrey;
+  text-decoration: line-through;
+}
+
+.task_container_done img {
+  height: 20px;
+}
+
+.project_show {
+  width: 600px;
+  margin: 40px auto;
+  padding: 10px;
+  opacity: 1;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.task_container_show {
+  background: gainsboro;
+  margin: 1px auto;
+  border: 1px solid darkgrey;
+}
+
+.task_container_show_done {
+  margin: 1px auto;
+  border: 1px solid darkgrey;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.task_container_show span,
+.task_container_show_done span {
+  position: relative;
+  right: -43%;
+  text-decoration: none;
+}

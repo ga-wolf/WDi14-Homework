@@ -1,0 +1,288 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+  font-family: "Oxygen", sans-serif;
+}
+
+.mainMenuBut {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+}
+
+.flexContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+/*.topBar {
+  position: fixed;
+  top: 0px;
+}*/
+
+.gameboard {
+  margin: auto;
+  flex-shrink: 0;
+  width: 618px;
+  height: 618px;
+}
+
+.leftBar,
+.rightBar {
+  margin: auto;
+  flex-grow: 1;
+  height: 618px;
+  /*border: 1px solid red;*/
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sideBarImg {
+  width: 50px;
+  height: 50px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background: gainsboro;
+  border: 3px solid white;
+  float: left;
+}
+
+.square img {
+  position: relative;
+  margin: 45px;
+  -webkit-animation-duration: 0.3s;
+}
+
+.coverBG {
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(150,150,150,0.5);
+  z-index: 1;
+}
+
+.menu {
+  position: relative;
+  height: 450px;
+  width: 300px;
+  margin: auto;
+  border: 3px solid orange;
+}
+
+.startBG {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(150,150,150,0.5);
+  z-index: 1;
+}
+
+.headImg, .titleImg {
+  margin: auto;
+  margin-top: 0;
+}
+
+.title {
+  text-align: center;
+  font-family: "Oxygen", sans-serif;
+  font-size: 20px;
+}
+
+.buttons {
+  flex-basis: 600px;
+  margin: 25px auto;
+}
+
+.butSP,
+.butMP {
+  width: 150px;
+  height: 50px;
+}
+
+.singlePlayInput {
+  flex-basis: 600px;
+  display: none;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.startBG h3{
+  margin-bottom: 5px;
+}
+
+.multiPlayInput {
+  flex-basis: 600px;
+  display: none;
+  /*flex-direction: column;*/
+  margin: auto;
+  align-items: center;
+}
+
+.p1, .p2 {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  margin-top: 0px;
+  align-items: center;
+}
+
+.factionImg {
+  height: 200px;
+}
+
+.active {
+  border: 2px inset blue;
+  box-sizing: border-box;
+}
+
+.singlePlaySubmitE,
+.singlePlaySubmitM,
+.singlePlaySubmitH {
+  width: 150px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.multiPlaySubmit {
+  position: absolute;
+  bottom: 10px;
+  left: 45vw;
+  width: 150px;
+  height: 50px;
+  margin: auto;
+}
+
+/*.nameInP1,
+.nameInP2 {
+  display: none;
+  flex-basis: 600px;
+  margin: auto;
+}*/
+
+/*Start loading spinner*/
+.loader {
+  color: #ffffff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease;
+  animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+/*End loading spinner*/
+
+/*Start toggle checkbox*/
+.onoffswitch {
+    position: relative; width: 122px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "CHRISTIAN";
+    padding-left: 10px;
+    background-color: #EDE509; color: #121212;
+}
+.onoffswitch-inner:after {
+    content: "NORSE";
+    padding-right: 10px;
+    background-color: #ED7B09; color: #121212;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 17px; margin: 6.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 88px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+/*End toggle checbox*/
