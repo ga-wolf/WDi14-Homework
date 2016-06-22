@@ -1,0 +1,14 @@
+<h1>List of all the entities in the DB </h1>
+<p>Find me in app/views/entity/index.html.erb</p>
+
+<p>
+  <% @entities.each do |entity| %>
+    <h2>Company name: <%= link_to entity.name, entity %></h2>
+    <p>Company contact: <%= entity.contact%></p>
+    <p>Contat number <%= entity.id %></p>
+
+
+
+
+    <% end %>
+</p>

@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: entities
+#
+#  id             :integer          not null, primary key
+#  name           :text
+#  ACN            :integer
+#  address        :text
+#  contact        :text
+#  contact_number :integer
+#  contact_email  :text
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  ACN: 1
+  address: MyText
+  contact: MyText
+  contact_number: 1
+  contact_email: MyText
+
+two:
+  name: MyText
+  ACN: 1
+  address: MyText
+  contact: MyText
+  contact_number: 1
+  contact_email: MyText

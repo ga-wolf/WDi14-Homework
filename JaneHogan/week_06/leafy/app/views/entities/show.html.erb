@@ -1,0 +1,22 @@
+<!-- Show all obligations for this entity -->
+
+<h1>These are all the tasks you have with blob</h1>
+
+<% @entity.obligations.each do |obligation| %>
+  <h2><%= obligation.agreement_name %></h2>
+
+  <p>From these clauses:</p>
+  <% obligation.clauses.each do |clause| %>
+    <p><%= clause.name %></p>
+
+    <ul>
+      <% clause.tasks.each do |task| %>
+      <h1>
+        Your task is  [need to use the pluralise helper]
+      </h1>
+        <h2><%= task.description %></h2>
+      <% end %>
+    </ul>
+  <% end  %>
+<% end  %>
+  <!-- For each obligation, we need to show all of the tasks -->

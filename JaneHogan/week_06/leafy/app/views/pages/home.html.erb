@@ -1,0 +1,18 @@
+
+
+<% unless @current_user %>
+
+  <h2>Login</h2>
+  <p>link to the session user new page</p>
+
+
+  <li><%= link_to "Login ", login_path  %></li>
+
+
+
+  <h2>Register</h2>
+  <p>Link to the new user page </p>
+
+  <%= link_to "Register user", new_user_path%>
+
+<% end %>

@@ -1,0 +1,22 @@
+<h2>Okey dokey now we want to create a task</h2>
+
+<hr>
+
+<%= form_for @task do |f| %>
+
+<p>You are editing this task: <%=  @task.name %> with this number <%= @obligation.id %></p>
+
+  <p>
+    <%= f.label :Name_of_agreement %>
+    <%= f.text_field :agreement_name %>
+  </p>
+
+  <p>
+    <%= f.label :Date_of_agreement %>
+    <%= f.text_field :agreement_date %>
+  </p>
+
+
+<%= f.submit "Update this task" %>
+
+<% end %>

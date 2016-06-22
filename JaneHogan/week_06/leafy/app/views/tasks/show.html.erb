@@ -1,0 +1,42 @@
+<h1>Show me what I've just done!</h1>
+
+
+<h2>The task you just entered was: <br>"<%= @task.description %>" </h2>
+
+<p>
+The date of the task was <%= @task.date %>
+</p>
+
+<p>
+The number of the task was  <%= @task.id %>
+</p>
+
+
+<!-- entity, obligation, clause -->
+
+<h2>CLAUSE:</h2>
+<p>
+  <%= link_to @task.clause.name, @task.clause %>
+</p>
+
+<h2>OBLIGATION:</h2>
+<p>
+  <%= link_to @task.clause.obligation.agreement_name, @task.clause.obligation %>
+</p>
+
+<h2>ENTITY:</h2>
+<p>
+  <ul>
+    <% @task.clause.obligation.entities.each do |e| %>
+      <li><%= link_to e.name, e %></li>
+    <% end %>
+  </ul>
+</p>
+
+
+
+<h2>Links</h2>
+
+
+  <p><%= link_to "Edit task NOT YET WORKING" %></p>
+  <p><%= link_to "Delete task", @task, :method => :delete, :data => {:confirm => 'Are you sure'}%></p>

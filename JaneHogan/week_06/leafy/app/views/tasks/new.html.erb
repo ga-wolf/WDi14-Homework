@@ -1,0 +1,44 @@
+<h1>Hello!  Create  new task</h1>
+
+
+<%= form_for @task do |f| %>
+  <p>
+    <%= f.label :Task_description %>
+    <%= f.text_field :description%>
+  </p>
+
+  <p>
+    <%= f.label :Due_date %>
+    <%= f.text_field :date %>
+  </p>
+
+
+  <p>Who has to do this task</p>
+
+
+
+
+  <h2>
+  Who has to do this task?
+  </h2>
+
+  <p>
+  <%= f.label :contracting_party %>
+  <%= select_tag :entity_id, options_from_collection_for_select( Entity.all, "id", "name" )%>
+  </p>
+
+  <p>
+  <%= f.label :obligation %>
+  <%= select_tag :obligation_id, options_from_collection_for_select( Obligation.all, "id", "agreement_name" )%>
+  </p>
+
+  <p>
+  <%= f.label :clause %>
+  <%= select_tag :clause_id, options_from_collection_for_select( Clause.all, "id", "name" )%>
+  </p>
+
+  <%= f.submit "Really new task" %>
+
+
+
+  <% end %>

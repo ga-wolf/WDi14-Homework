@@ -1,0 +1,39 @@
+<h1>Sign up</h1>
+
+<!-- ActiveRecord will create errors for us so we can use them later -->
+<% if @user.errors.any? %>
+  <ol>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, :required => true %>
+  </p>
+
+  <p>
+    <!-- :password means the text shown will be Password:, and also in params this will be stored as :password -->
+    <%= f.label :password %>
+    <%= f.password_field :password, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :required => true %>
+  </p>
+
+  <h2>WHAT ENTITY DO YOU BELONG TO</h2>
+
+  <p>
+    <%= f.label :your_entity %>
+    <%= f.url_field :name %>
+  </p>
+
+
+
+  <%= f.submit "Sign up" %>
+<% end %>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leafy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <nav>
+<%= link_to "index of all agreements ", obligations_path %>
+<%= link_to "new agreements", new_obligation_path %>
+  <%= link_to "delete NOT YET CREATED" %>
+
+
+
+  </nav>
+
+
+
+</body>
+</html>
+<data value=""></data>
