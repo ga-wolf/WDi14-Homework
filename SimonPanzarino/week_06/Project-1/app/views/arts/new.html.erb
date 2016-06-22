@@ -1,0 +1,41 @@
+<%= include_gon(watch: true) %>
+<main class=bs-docs-masthead id=content role=main tabindex=-1>
+    <div class=container>
+      <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-4">
+
+      <h3 class="marioFont" style="text-align: left">Create your Puzzle!</h3>
+
+      </div>
+    </div>
+      <%= form_for @art, :html => { :class => 'form-horizontal' } do |f| %>
+
+        <div class="form-group">
+          <%= f.label :name, nil, class: 'col-sm-4 control-label' %>
+          <div class="col-sm-8">
+            <%= f.text_field :name, class: "form-control", placeholder: "Name", :required => true%>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :cells, nil, class: 'col-sm-4 control-label' %>
+          <div class="col-sm-8">
+            <%= f.number_field :cells, class: "form-control", placeholder: "Cells", :required => true %>
+          </div>
+        </div>
+
+        <%= f.hidden_field :user_id, :value => @user.id %>
+
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8" style="text-align: left">
+            <%= submit_tag "Save", class: "btn btn-info" %>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+</main>
+
+<script type="text/javascript">
+  createPuzzle();
+</script>

@@ -1,0 +1,29 @@
+<%= include_gon %>
+
+<div id="main">
+    <div class="menu">
+        <h2><%= @art.name %></h2>
+        <h3><%= image_tag("lives.png", class: "marioLives") %></h3>
+    </div>
+
+    <div id="gameBoard">
+        <div id="leftHints"></div>
+        <div id="top"></div>
+        <table id="cells"></table>
+        <div id="selector"><a id="fill" href="#">Draw</a><a id="break" href="#">Empty</a><a id="hardReset" href="#">Reset</a></div>
+    </div>
+
+</div>
+
+<div id="gameOver">
+    <div>
+        <%= image_tag("gameOverMario.png") %><br>
+        <h3>Game Over!</h3>
+        <a id="reset" class="btn btn-warning">Try Again</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var id = <%= @save.id %>;
+    startPuzzle();
+</script>

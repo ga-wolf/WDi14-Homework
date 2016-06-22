@@ -1,0 +1,361 @@
+// Place all the styles related to the Arts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: marioFont;
+  src: font-url('NewSuperMarioFontU.ttf');
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: image-url('mountain-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main .menu {
+  align-self: flex-start;
+  padding-left: 50px;
+}
+
+.menu h2 {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fcc630;
+  font-size: 36px;
+  -webkit-text-fill-color: #fcc630; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+}
+
+.menu h3 {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fff;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+   font-size: 31px;
+}
+
+.home h2 {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fff;
+  -webkit-text-fill-color: #e93737; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+   font-size: 60px;
+   margin-top: 100px;
+}
+
+#gameBoard {
+ position: relative;
+  width: 300px;
+  height: 400px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cells {
+  border: none;
+  border-spacing: 0;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(148, 169, 187);
+  border-left: none;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+#cells tr td:first-child {
+  border-left: 1px solid rgb(148, 169, 187);
+}
+
+#cells tr:first-child td{
+  border-top: 1px solid rgb(148, 169, 187);
+}
+
+#cells tr:nth-child(5n) td {
+  border-bottom: 1px solid black;
+}
+
+#cells tr:last-child td {
+  border-bottom: 1px solid rgb(148, 169, 187);
+}
+
+#cells tr td:nth-child(5n) {
+  border-right: 1px solid black;
+}
+
+#cells tr td:last-child {
+  border-right: 1px solid rgb(148, 169, 187);
+}
+
+#leftHints {
+  position: absolute;
+  left: -100px;
+  top: 0px;
+  list-style-type: none;
+  text-align: right;
+  line-height: 20px;
+  margin-top: 1px;
+}
+
+#topHints {
+  position: absolute;
+  left: 0px;
+  top: -100px;
+  list-style-type: none;
+  text-align: left;
+}
+
+#topHints li {
+  float: left;
+  padding: 0px;
+  vertical-align: bottom;
+}
+
+#topHints2 {
+  position: absolute;
+  left: 0px;
+  top: -100px;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  vertical-align: baseline;
+  margin: 0;
+  height: 300px;
+}
+
+#topHints2 li {
+  float: left;
+  padding: 0;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+
+#topHints2 li ul {
+  padding: 0;
+  line-height: 300px;
+}
+
+#topHints2 li ul li {
+  float: none;
+  list-style-type: none;
+}
+
+#top {
+  height:300px;
+  line-height: 300px;
+  position: absolute;
+  top: -300px;
+}
+
+#top ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  vertical-align:bottom;
+  display:inline-block;
+}
+
+#top ul li {
+  line-height:20px;
+  margin:0;
+  float: left;
+  width: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#top ul li ul li {
+  float: none;
+}
+
+#leftHints {
+  height:300px;
+  width: 300px;
+  line-height: 300px;
+  position: absolute;
+  top: -300px;
+}
+
+#leftHints ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+#leftHints ul li {
+  line-height: 17px;
+  margin:0;
+}
+
+#leftHints ul li ul {
+  display: inline-block;
+}
+
+#leftHints ul li ul li {
+  float: left;
+  width: auto;
+  padding: 0 5px;
+}
+
+#gameOver {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #129afd; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#129afd, #b0dcff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#129afd, #b0dcff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#129afd, #b0dcff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#129afd, #b0dcff); /* Standard syntax */
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameOver h3 {
+  text-align: center;
+  font-size: 42px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.marioLives {
+  width: 30px;
+  height: auto;
+}
+
+#selector {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#fill, #break, #hardReset {
+  background-color: rebeccapurple;
+  color: #fff;
+  margin: 0 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+#fill a, #break a, #hardReset a {
+  color: #fff;
+}
+
+.home {
+  background-image: image-url('fullBackground.jpg') !important;
+  background-size: 1700px auto !important;
+  background-position: bottom;
+  background-repeat: no-repeat !important;
+  height: 600px;
+}
+
+#marioPuzzle {
+  position: absolute;
+  bottom: 95px;
+  left: 46.5%;
+  width: 120px;
+  height: 120px;
+}
+
+#piranhaPuzzle {
+  position: absolute;
+  bottom: 307px;
+  left: 69.8%;
+  width: 140px;
+  height: 140px;
+}
+
+#coinPuzzle {
+  position: absolute;
+  bottom: 486px;
+  left: 40%;
+  width: 100px;
+  height: 100px;
+}
+
+.nineBnine {
+  background-image: image-url('9x9.png');
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: box-shadow 0.2s linear;
+}
+
+.nineBnine:hover {
+  box-shadow: 0px 0px 10px #000;
+}
+
+.marioPuzzleFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.coinFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.piranhaPuzzleFinished {
+  background-size: 100% auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.master {
+  padding: 15px 30px !important;
+  font-size: 20px !important;
+}
+
+.heroku {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 !important;
+}
+
+.puzzleLink {
+  color: white;
+  font-size: 14px;
+  margin: 20px;
+  transition: color 0.5s linear;
+}
+
+.puzzleLink:hover {
+  color: #fcc630;
+  text-decoration: none;
+}
+
+.marioFont {
+  font-family: marioFont, "Open Sans", sans-serif;
+  color: #fcc630;
+  -webkit-text-fill-color: #fcc630; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: white;
+   font-size: 40px;
+}
