@@ -1,0 +1,12 @@
+<main class=bs-docs-masthead id=content role=main tabindex=-1>
+    <div class=container>
+        <h3><%= @user.email %></h3>
+        <ul id="puzzles">
+          <% @user.arts.each do |a| %>
+            <li>
+              <%= a.name %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+</main>
