@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ThreeGames</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<hr>
+Here is the stuff from the layout folder
+<nav>
+  <a href="/home">Home</a>
+  <a href="/magic">Magic 8 Ball</a>
+  <a href="/secret">Secret Number</a>
+  <a href="/rps">Rock Paper Scissors</a>
+
+</nav>
+
+<hr>
+
+
+<%= yield %>
+
+</body>
+</html>

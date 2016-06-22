@@ -1,0 +1,24 @@
+nav {
+  background: linen;
+  height: 80px;
+  line-height: 80px;
+  font-family:fantasy;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+nav a {
+  padding: 0 5px;
+  text-decoration: none;
+  -webkit-transition:color 0.5s;
+  -moz-transition:color 0.5s;
+  -ms-transition:color 0.5s;
+  -o-transition:color 0.5s;
+  transition:color 0.5s;
+}
+
+nav a:hover {
+color: hotpink;
+
+}
