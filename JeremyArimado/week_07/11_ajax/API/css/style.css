@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    font-family: fantasy;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+.col {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% / 3);
+    min-height: 200px;
+    border: 1px solid black;
+}
+
+
+@media (max-width: 680px) {
+    .col {
+        width: 100%;
+    }
+}

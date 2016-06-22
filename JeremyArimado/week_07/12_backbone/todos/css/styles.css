@@ -1,0 +1,7 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    border: 4px solid blue; 
+}

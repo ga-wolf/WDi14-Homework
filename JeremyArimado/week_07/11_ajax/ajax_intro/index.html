@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script src="jq.js" charset="utf-8"></script>
+    <script>
+        var request = new XMLHttpRequest();
+
+        window.onload = function() {
+            
+            var contentDiv = document.getElementById('content')
+            var singleButton = document.querySelector("#singleButton");
+            var multipleButton = document.querySelector("#multipleButton");
+
+            var requestOmdb = function(option, query) {
+                if (option === 'single') {
+                    request.open('GET', 'http://omdbapi.com?t=' + query);
+                    request.send();
+                } else if (option === 'multi') {
+                    request.open('GET', 'http://omdbapi.com?s=' + query);
+                    request.send();
+                }
+            }
+
+            var addField = function (label, value) {
+                var element = document.createElement('div');
+                element.innerHTML = '<strong>' + label + '</strong> : ' + value;
+                contentDiv.appendChild(element);
+            };
+
+            var mapObjectToFields = function (dataObj) {
+                for (var prop in dataObj) {
+                    addField(prop, dataObj[prop]);
+                }
+            }
+
+            singleButton.addEventListener('click', function() {
+                console.log('single clicked')
+                contentDiv.innerHTML = '';
+                var query = document.getElementById('query').value;
+                requestOmdb('single', query);
+                request.onreadystatechange = function () {
+                    if (request.readyState !== 4) return;
+                    var data = JSON.parse(request.responseText);
+                    mapObjectToFields(data)
+
+                };
+            });
+
+            multipleButton.addEventListener('click', function() {
+                console.log('multi clicked')
+                contentDiv.innerHTML = '';
+                var query = document.getElementById('query').value;
+                requestOmdb('multi', query);
+                request.onreadystatechange = function () {
+                    if (request.readyState !== 4) return;
+                    var data = JSON.parse(request.responseText);
+                    console.log(data);
+                    data.Search.forEach(function(item) {
+                        mapObjectToFields(item);
+                        var seperator = document.createElement('hr');
+                        contentDiv.appendChild(seperator)
+                    })
+                };
+            });
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <input id="query" type="text" value="Satantango" />
+    <button id="singleButton">SINGLE</button>
+    <button id="multipleButton">MULTIPLE</button>
+    <div id="content">
+        <h1 class="name"></h1>
+        <p class="">
+    </div>
+    <div id="coors">
+
+    </div>
+
+</body>
+</html>
