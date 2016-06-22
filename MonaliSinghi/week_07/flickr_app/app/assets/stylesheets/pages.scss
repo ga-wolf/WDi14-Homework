@@ -1,0 +1,48 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: cursive;
+    text-align: center;
+    background-color: pink;
+    background-image: radial-gradient(white 10%, transparent 11%), radial-gradient(white 10%, transparent 11%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    font-size: 16px;
+}
+.form-container {
+    background: rgba(255,255,255,0.3);
+    border: 1px solid pink;
+    border-radius: 6px;
+    margin: 0 0 20px;
+    display: inline-block;
+    // padding: 20px;
+    input[type~=text] {
+        padding: 10px 6px;
+        border-radius: 6px;
+        border: 1px solid #000;
+    }
+    input[type~=submit] {
+        padding: 10px 6px;
+        border-radius: 6px;
+        border: 1px solid #000;
+        background: rebeccapurple;
+        color: #fff;
+        &:focus{
+          outline: none;
+        }
+    }
+}
+#content {
+    margin: 0 auto;
+}
+img {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 0 20px 10px 0;
+    border-radius: 50% 0;
+    border: 1px solid #f00;
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}

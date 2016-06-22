@@ -1,0 +1,13 @@
+<div class="content">
+  <h1>Shopping List</h1>
+<p id="notice"><%= notice %></p>
+<ul>
+  <% @shopping_entries.each do |entry| %>
+    <% product = @products.find entry.product_id %>
+    <li><%= product.name %> : $<%=entry.price%></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_shopping_list_path(@shopping_list) %> |
+<%= link_to 'Back', shopping_lists_path %>
+</div>

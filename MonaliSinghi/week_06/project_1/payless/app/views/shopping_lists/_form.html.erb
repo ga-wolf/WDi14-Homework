@@ -1,0 +1,17 @@
+<%= form_tag '/shopping_lists' do %>
+<div id="products">
+  <div id="prototype">
+    <p>
+      <%= label_tag :product %>
+      <%= select_tag 'products[]', options_from_collection_for_select(@products, :id, :name) %>
+    </p>
+    <p>
+      <%= label_tag :quanitiy %>
+      <%= number_field_tag "quanities[]" %>
+    </p>
+  </div>
+
+</div>
+  <p class="plus"><span>+</span><%= link_to 'Add Product', '#', :onclick => 'replicate();' %></p>
+  <p><%= submit_tag "Save Shopping List"%></p>
+<% end %>
