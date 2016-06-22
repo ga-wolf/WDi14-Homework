@@ -1,0 +1,22 @@
+<%= form_for @album do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :required => true %>
+  </p>
+  <p>
+    <%= f.label :year %>
+    <%= f.text_field :year, :required => true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+  </p>
+
+  <p>
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+  </p>
+
+
+  <%= f.submit %>
+<% end %>

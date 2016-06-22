@@ -1,0 +1,7 @@
+<h2>List all Albums</h2>
+
+<ul>
+<% @albums.each do |album| %>
+  <%= link_to(image_tag(album.image, :class => 'thumbnail'), album) %>
+<% end %>
+</ul>

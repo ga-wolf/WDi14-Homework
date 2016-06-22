@@ -1,0 +1,38 @@
+<main class=bs-docs-masthead id=content role=main tabindex=-1>
+    <div class=container>
+        <p class=lead>Edit Profile</p>
+        <%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+
+          <div class="form-group">
+            <%= f.label :email, { :class => 'col-sm-4 control-label' } %>
+            <div class="col-sm-8">
+              <%= f.email_field :email, class: "form-control", placeholder: "Email Address" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :image, { :class => 'col-sm-4 control-label' } %>
+            <div class="col-sm-8">
+              <%= f.url_field :image, class: "form-control", placeholder: "Avatar" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, { :class => 'col-sm-4 control-label' } %>
+            <div class="col-sm-8">
+              <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation, { :class => 'col-sm-4 control-label' } %>
+            <div class="col-sm-8">
+              <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password", :required => true %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8" style="text-align: left">
+              <%= f.submit "Update Profile", class: "btn btn-info" %>
+            </div>
+          </div>
+
+        <% end %>
+    </div>
+</main>

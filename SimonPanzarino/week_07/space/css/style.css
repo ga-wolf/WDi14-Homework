@@ -1,0 +1,33 @@
+/*body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}*/
+
+#mapid {
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*h1 {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}*/
+
+.section {
+  padding: 0;
+}
+
+footer.page-footer {
+  margin-top: 0px;
+}

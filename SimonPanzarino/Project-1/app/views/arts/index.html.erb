@@ -1,0 +1,114 @@
+<main class="bs-docs-masthead home" id="content" role=main tabindex=-1>
+    <div class="container">
+        <h2>Explore!</h2>
+        <% @puzzles.each do |p| %>
+          <% if p.name == "Mario" %>
+            <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished? %>
+                <%= link_to(art_path(p.id)) do %>
+                  <div id="marioPuzzle" class="marioPuzzleFinished"></div>
+                <% end %>
+
+            <% end %>
+
+            <% if p.save_states.where(:user_id => @current_user.id).empty? %>
+              <%= link_to(art_path(p.id)) do %>
+                <div id="marioPuzzle" class="nineBnine"></div>
+              <% end %>
+            <% end %>
+
+            <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished == false %>
+              <%= link_to(art_path(p.id)) do %>
+                <div id="marioPuzzle" class="nineBnine"></div>
+              <% end %>
+            <% end %>
+          <% end %>
+
+          <% if p.name == "Piranha Plant" %>
+          <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished? %>
+              <%= link_to(art_path(p.id)) do %>
+                <div id="piranhaPuzzle" class="piranhaPuzzleFinished"></div>
+              <% end %>
+
+          <% end %>
+
+          <% if p.save_states.where(:user_id => @current_user.id).empty? %>
+            <%= link_to(art_path(p.id)) do %>
+              <div id="piranhaPuzzle" class="nineBnine"></div>
+            <% end %>
+          <% end %>
+
+          <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished == false %>
+            <%= link_to(art_path(p.id)) do %>
+              <div id="piranhaPuzzle" class="nineBnine"></div>
+            <% end %>
+          <% end %>
+          <% end %>
+
+          <% if p.name == "Coin" %>
+          <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished? %>
+              <%= link_to(art_path(p.id)) do %>
+                <div id="coinPuzzle" class="coinFinished"></div>
+              <% end %>
+
+          <% end %>
+
+          <% if p.save_states.where(:user_id => @current_user.id).empty? %>
+            <%= link_to(art_path(p.id)) do %>
+              <div id="coinPuzzle" class="nineBnine"></div>
+            <% end %>
+          <% end %>
+
+          <% if p.save_states.where(:user_id => @current_user.id, :art_id => p.id).first.finished == false %>
+            <%= link_to(art_path(p.id)) do %>
+              <div id="coinPuzzle" class="nineBnine"></div>
+            <% end %>
+          <% end %>
+          <% end %>
+        <% end %>
+    </div>
+</main>
+<div class="bs-docs-masthead">
+  <div class="container">
+      <h3 class="marioFont">All Puzzles</h3>
+      <ul id="puzzles">
+          <% @puzzles.each do |p| %>
+          <li>
+              <%= link_to p.name, art_path(p.id), :class => "puzzleLink" %>
+          </li>
+          <% end %>
+      </ul>
+      <h3 class="marioFont">Your Puzzles</h3>
+      <ul id="puzzles">
+          <% if @your_puzzles.exists? %>
+          <% @your_puzzles.each do |p| %>
+          <li>
+              <%= link_to p.name, art_path(p.id), :class => "puzzleLink" %>
+              <%= link_to "Edit", edit_art_path(p.id), :class => "puzzleLink" %>
+              <%= link_to "Delete", destroy_art_path(p.id), :class => "puzzleLink", :method => :delete, :data => { :confirm => "Are you sure?" } %>
+          </li>
+          <% end %>
+      <% else %>
+          <li>Got none!</li>
+          <% end %>
+      </ul>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var marioLeft = window.innerWidth / 2 - 60;
+        $('#marioPuzzle').css({left: marioLeft})
+        var piranhaLeft = window.innerWidth / 2 + 280;
+        $('#piranhaPuzzle').css({left: piranhaLeft})
+        var coinLeft = window.innerWidth / 2 - 226;
+        $('#coinPuzzle').css({left: coinLeft})
+        $(window).resize(function () {
+            var marioLeft = window.innerWidth / 2 - 60;
+            $('#marioPuzzle').css({left: marioLeft})
+            var piranhaLeft = window.innerWidth / 2 + 280;
+            $('#piranhaPuzzle').css({left: piranhaLeft})
+            var coinLeft = window.innerWidth / 2 - 226;
+            $('#coinPuzzle').css({left: coinLeft})
+        });
+    });
+</script>

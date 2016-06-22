@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies VII</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Movies n Stuff</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form id="searchForm" class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" id="searchBox" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container main">
+    
+
+    <div class="row single">
+      <div class="col-sm-4 image"></div>
+      <div class="col-sm-8">
+        <div class="row">
+          <h1 id="singleTitle"></h1>
+        </div>
+        <div class="row">
+          <h4 id="misc"></h1>
+        </div>
+        <div class="row">
+          <p id="description"></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row multiple">
+      <div class="col-sm-12">
+        <h1 id="searchTitle"></h1>
+        <table class="table table-striped" id="multipleResults">
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

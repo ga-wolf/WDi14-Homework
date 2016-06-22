@@ -1,0 +1,13 @@
+<h2><%= @artist.name %></h2>
+<p><%= image_tag(@artist.image, :class => 'featured') %></p>
+<p>Formed: <%= @artist.year %></p>
+
+<h3>Albums:</h3>
+<% @artist.albums.each do |album| %>
+  <%= link_to(image_tag(album.image, :class => 'thumbnail'), album) %>
+<% end %>
+
+<div class="controls">
+  <%= link_to "Edit artist", edit_artist_path(@artist) %>
+  <%= link_to "Delete artist", @artist, :method => :delete, :data => { :confirm => 'Are you sure?'} %>
+</div>
