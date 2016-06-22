@@ -1,0 +1,45 @@
+body {
+    background: #009688;
+    color: #fff;
+}
+#map {
+    margin: 0 auto;
+    height: 98%;
+    width: 100%;
+    top: 1%;
+    bottom: 1%;
+    padding: 1px;
+}
+.row .col.l3 {
+    height: 720px;
+}
+.row .col.l6 {
+    height: 720px;
+}
+li {
+    list-style-type: none;
+}
+.longi ul {
+    margin-top: 10%;
+    text-align: left;
+}
+.longi table {
+    margin-top: 10%;
+}
+.longi tr{
+    /*margin: 0 auto;*/
+    text-align: center;
+    font-size: 32px;
+}
+.people table {
+    margin-top: 10%;
+    font-size: 20px;
+}
+.people caption {
+    font-weight: bold;
+    font-size: 18px;
+}
+nav .brand-logo {
+  font-size: 4.1rem;
+  font-weight: bold;
+}

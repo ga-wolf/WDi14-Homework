@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Realtime ISS</title>
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLoXS1lPMv75OISOZ0GujwAhH1LPlJP4"></script>
+    <script type="text/javascript">
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="" href="">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper teal">
+            <a class="brand-logo center">ISS  CURRENT LOCATION</a>
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col s12 m4 l3 teal">
+            <div class="people"></div>
+            <!-- <div id="map" /></div> -->
+        </div>
+        <div class="col s12 m4 l6 grey">
+            <div id="map"></div>
+        </div>
+        <div class="col s12 m4 l3 teal">
+            <div class="longi"></div>
+        </div>
+    </div>
+
+
+    <script src="js/google-maps.js" charset="utf-8"></script>
+    <script src="js/data.js" charset="utf-8"></script>
+</body>
+
+</html>
