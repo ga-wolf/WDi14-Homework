@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+}
+.vh {
+    background: hotpink;
+    height: 100px;
+    height: 10vh;
+}
+.vw {
+    background: lemonchiffon;
+    min-height: 100px;
+    width: 50vw;
+}
+.vmin {
+    min-height: 100px;
+    background: hotpink;
+    width: 50vmin;
+}
+.vmax {
+    min-height: 100px;
+    background: lemonchiffon;
+    width: 50vmax;
+}
+h1, h3, h5, h6, p {
+    transition: font-size 0.2s;
+}
+html, body {
+    line-height: 1.5;
+    font-size: 10px;
+    /* 62.5%, 16px */
+}
+h1 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1rem;
+}
+p {
+    font-size: 0.9rem;
+}
+
+/*@media (min-width: 700px) {
+  html,body{
+    font-size: 20px;
+  }
+}
+@media (min-width: 900px) {
+  html,body{
+    font-size: 30px;
+  }
+}*/
+
+h2 {
+    font-size: 2em;
+}
+.header {
+    width: 80%;
+    height: 100px;
+    background: #000;
+    margin: 40px auto;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px #080;
+}
+.header h1 {
+    line-height: 100px;
+    font-size: 4em;
+    text-shadow: 10px 0 0 #fff, 0 10px 0 #fff;
+}
+@keyframes fade-in-and-out {
+    0% {
+        opacity: 0;
+    }
+    50%{
+      opacity: .25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes just-keep-spinning {
+  0%{
+    /*transform: translate(-50%, -50%) rotate(0deg);*/
+    transform: translate(-150%,-50%);
+    -webkit-filter: invert(0%);
+  }
+  100% {
+    /*transform: translate(-50%, -50%) rotate(360deg);*/
+    transform: translate(50%, -50%);
+    -webkit-filter: invert(100%);
+  }
+}
+img {
+    /*animation: fade-in-and-out 5s infinite;*/
+    animation: just-keep-spinning 3s infinite linear;
+    animation-direction: alternate;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /*-webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+    box-shadow: 0 0 10px 10px rebeccapurple;
+}
