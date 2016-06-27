@@ -1,0 +1,102 @@
+h1 {
+    display: block;
+}
+@media (max-width: 300px) {
+    h1 {
+        display: none;
+    }
+}
+body {
+    background: gainsboro;
+}
+@media (max-width: 700px) {
+    body {
+        background-color: #f00;
+    }
+}
+.container {
+    max-width: 960px;
+    min-height: 200px;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+    color: gainsboro;
+    text-align: center;
+}
+img {
+    width: auto;
+    /*  */
+    max-width: 100%;
+    /* */
+    max-height: 300px; /* makes sure it is never higher*/
+    display: block;
+    margin: 0 auto;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.col {
+    float: left;
+    min-height: 200px;
+    border: 10px solid #000;
+    background: gainsboro;
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
+}
+
+.col-2, .lg-col-2, .md-col-2, .sm-col-2 {
+    width: 16.666666%;
+    width: -webkit-calc(100%/6);
+    width: -moz-calc(100%/6);
+    width: -ms-calc(100%/6);
+    width: -o-calc(100%/6);
+    width: calc(100%/6);
+}
+.col-3, .lg-col-3, .md-col-3, .sm-col-3 {
+    width: 25%;
+}
+.col-4, .lg-col-4, .md-col-4, .sm-col-4 {
+    width: 33.3333%;
+    /* For morden browsers */
+    width: -webkit-calc(100%/3);
+    width: -moz-calc(100%/3);
+    width: -ms-calc(100%/3);
+    width: -o-calc(100%/3);
+    width: calc(100%/3);
+}
+
+.col-6, .lg-col-6, .md-col-6, .sm-col-6 {
+    width: -webkit-calc(100%/2);
+    width: -moz-calc(100%/2);
+    width: -ms-calc(100%/2);
+    width: -o-calc(100%/2);
+    width: calc(100%/2);
+    width: 50%;
+}
+.col-12, .lg-col-12, .md-col-12, .sm-col-12 {
+    width: 100%;
+}
+
+@media (max-width: 760px) { /* sm- */
+  .col{
+    background: hotpink;
+  }
+}
+
+@media (max-width: 960px) and (min-width: 761px){ /* md- */
+  .col{
+    background: chartreuse;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 961px) { /* lg- */
+  .col{
+    background: lemonchiffon;
+  }
+}
