@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lots of APIs</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+     #mapImage1 {
+       width: 100%;
+       height: 400px;
+     }
+   </style>
+
+</head>
+<body>
+
+<h1>Who is there?</h1>
+
+<hr>
+
+<div class="container">
+
+  <div class="col space">
+    <h2>Space</h2>
+    <!-- <button>Please stop</button> -->
+    <div class="content"></div>
+  </div>
+
+  <div class="col mapImage">
+    <div class="content">
+      <div id="mapImage1"></div>
+    </div>
+  </div>
+
+  <div class="col map">
+    <h2>Map Info</h2>
+    <button>Please stop</button>
+    <div class="content"></div>
+  </div>
+
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+    async defer></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/space.js"></script>
+  <script src="js/map.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+}
+
+
+.col {
+  box-sizing: border-box;
+  float: left;
+  width: calc(100% / 3);
+  min-height: 200px;
+  border: 1px solid black;
+
+}
