@@ -1,0 +1,34 @@
+body {
+  background-image: url('http://wallpapercave.com/wp/kSQdCxM.jpg');
+  margin: 0;
+  font-family: Georgia;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+}
+
+.col {
+  box-sizing: border-box;
+  float: left;
+  width: 33.3333333%;
+  width: calc(100% / 3);
+  min-height: 200px;
+  border: 1px solid white;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+h2 {
+  border-bottom: 1px solid white;
+  font-weight: lighter;
+}
+
+@media (max-width: 680px) {
+  .col {
+    width: 100%;
+  }
+}

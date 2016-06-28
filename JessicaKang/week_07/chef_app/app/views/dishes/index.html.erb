@@ -1,0 +1,7 @@
+<h2>All dishes</h2>
+
+<% @dishes.each do |dish| %>
+
+  <%= link_to( image_tag( dish.image, :class => 'thumbnail' ), dish ) %>
+
+<% end %>

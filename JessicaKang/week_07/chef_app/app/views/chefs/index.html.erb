@@ -1,0 +1,16 @@
+<h2>The World's Most Popular Chefs</h2>
+
+<ul>
+  <% @chefs.each do |chef| %>
+  <li>
+      <%= link_to( image_tag( chef.image, :class => 'thumbnail' ), chef ) %>
+    <ul>
+      <li>Name: <%= link_to chef.name %></li>
+      <li>Nationality: <%= chef.nationality %></li>
+      <li>Date of Birth: <%= chef.dob %></li>
+      <li>Cooking Since: <%= chef.cooking_since %></li>
+    </ul>
+
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChefApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav>
+  <a href="/chefs">Home</a>
+  <a href="/chefs">Chefs</a>
+  <a href="/dishes">Dishes</a>
+  <a href="/chefs/new">Add a Chef</a>
+  <a href="/dishes/new">Add a dish</a>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>

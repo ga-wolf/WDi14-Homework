@@ -1,0 +1,18 @@
+body {
+  font-family: Georgia;
+  text-align: center;
+  background-color: #b2c4d4;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}

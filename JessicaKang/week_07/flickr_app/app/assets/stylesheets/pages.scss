@@ -1,0 +1,28 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+body {
+  text-align: center;
+  background-color: black;
+}
+h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-family: Georgia;
+  font-weight: lighter;
+}
+#navbar {
+display: inline-block;
+width: auto;
+height: 120px;
+background-color: skyblue;
+text-align: center;
+width: 400px;
+
+}

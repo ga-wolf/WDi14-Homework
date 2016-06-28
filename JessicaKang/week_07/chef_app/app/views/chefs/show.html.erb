@@ -1,0 +1,16 @@
+<h1><%= @chef.name %></h1>
+
+<%= image_tag @chef.image, :class => 'feature' %>
+
+<ul>
+  <li>Nationality: <%= @chef.nationality %></li>
+  <li>Date of Birth: <%= @chef.dob %></li>
+  <li>Cooking since: <%= @chef.cooking_since %></li>
+</ul>
+
+
+<div>
+  <%= link_to "Edit #{@chef.name}", "/chefs/#{@chef.id}/edit" %>
+  <%= link_to "Delete #{@chef.name}", "/chefs/#{@chef.id}/delete", :method => :delete, :data => { :confirm => "Are you sure?" } %>
+
+</div>

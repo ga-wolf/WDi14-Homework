@@ -1,0 +1,31 @@
+<h1>Create a new chef</h1>
+
+<%= form_for @chef do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality, :required => true %>
+</p>
+
+<p>
+  <%= f.label :dob, "Date of Birth" %>
+  <%= f.text_field :dob, :required => true %>
+</p>
+
+<p>
+  <%= f.label :cooking_since %>
+  <%= f.text_field :cooking_since, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+
+  <%= f.submit %>
+<% end %>
