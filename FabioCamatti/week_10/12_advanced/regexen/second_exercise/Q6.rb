@@ -7,11 +7,11 @@ require "pry"
 def regex6
   fname = "regex_exe2_6.txt"
   somefile = File.open(fname, "w")
-
+  count = 0
   ARGF.each do |line|
-
-      if line =~ /\s$/
-        matches = line.sub /\s$/, "\%"
+      count += 1
+      if line =~ /[ ]$/m
+        matches = line.sub /\s$/, "% # on line #{count}"
         somefile.puts matches
       end
 

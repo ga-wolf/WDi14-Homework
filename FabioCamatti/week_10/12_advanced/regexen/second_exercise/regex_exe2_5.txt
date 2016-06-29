@@ -1,0 +1,2 @@
+The first 'word' contains: 'wilma' and the second 'word' contains 'flint' on the file line 6
+The first 'word' contains: 'Wilma' and the second 'word' contains 'Flint' on the file line 23
