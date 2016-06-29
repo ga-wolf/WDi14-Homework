@@ -13,9 +13,9 @@ somefile = File.open(fname, "w")
 count = 0
 ARGF.each do |line|
     count += 1
-    if line =~ /(\w+a\b).(\w{5})/
-      matches = line.match(/(?<wilma>\w+a\b).(?<rest>\w{5})/)
-      somefile.puts "The first 'word' contains: '#{matches[:wilma]}' and the second 'word' contains '#{matches[:rest]}' on the file line #{count}"
+    if line =~ /(\w+a\b\S\w{1,5})|(\w+a\b).(\w{1,5})/
+      matches = line.match(/(?<wilma>\w+a\b\S\w{1,5})|(?<wilma>\w+a\b).(?<rest>\w{1,5})/)
+      somefile.puts "#{count}: The first 'word' contains: '#{matches[:wilma]}' and the second contains '#{matches[:rest]}'"
       # somefile.puts matches.pre_match
       # somefile.puts matches[0]
       # somefile.puts matches.post_match
