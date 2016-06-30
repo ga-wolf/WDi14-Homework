@@ -1,0 +1,31 @@
+<h2>Edit <%= @chef.name %></h2>
+
+<%= form_for @chef, :url => "/chefs/#{@chef.id}" do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality, :required => true %>
+</p>
+
+<p>
+  <%= f.label :dob, "Date of Birth" %>
+  <%= f.text_field :dob, :required => true %>
+</p>
+
+<p>
+  <%= f.label :cooking_since %>
+  <%= f.text_field :cooking_since, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,20 @@
+<h3>This should edit an animal</h3>
+
+<form method="POST" action="/dogs/<%= @dog["id"] %>">
+<p>
+  <label>Species: </label>
+  <input type="text" name="species" value="<%= @dog["species"] %>">
+</p>
+
+<p>
+  <label>Image: </label>
+  <input type="text" name="image" value="<%= @dog["image"] %>">
+</p>
+
+<p>
+  <label>Description: </label>
+  <input type="text" name="description" value="<%= @dog["description"] %>">
+</p>
+
+<input type="submit" value="Update this animal!">
+</form>

@@ -1,0 +1,19 @@
+<h2><%= @dish.name %></h2>
+
+<%= image_tag( @dish.image, :class => 'feature' ) %>
+
+<% if @dish.chef %>
+<p>Chef: <%= link_to( @dish.chef.name, @dish.chef ) %></p>
+<% end %>
+
+<p>Origin: <%= @dish.origin %></p>
+<p>Method: <%= @dish.method %></p>
+<p>Difficulty: <%= @dish.difficulty %></p>
+
+<div class="controls">
+
+  <%= link_to "Edit dish", edit_dish_path( @dish ) %>
+
+  <%= link_to "Delete dish", @dish, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+
+</div>

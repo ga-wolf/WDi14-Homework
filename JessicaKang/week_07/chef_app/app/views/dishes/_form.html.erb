@@ -1,0 +1,33 @@
+<h4>Please enter some details</h4>
+
+<%= form_for @dish do |f| %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.label :origin %>
+  <%= f.text_field :origin, :required => true %>
+</p>
+<p>
+  <%= f.label :method %>
+  <%= f.text_field :method, :required => true %>
+</p>
+<p>
+  <%= f.label :difficulty %>
+  <%= f.text_field :difficulty, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+
+<p>
+  <%= f.label :chef_id %>
+  <%= f.select :chef_id, Chef.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+</p>
+
+<%= f.submit %>
+
+<% end %>

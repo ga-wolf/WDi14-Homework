@@ -1,0 +1,13 @@
+<div id="container">
+
+<div id="navbar">
+<h2>PHOTO SEARCH</h2>
+
+<%=  form_tag root_path, :id => 'search' do %>
+  <%= search_field_tag :query %>
+  <%= submit_tag 'Search' %>
+<% end %>
+</div>
+
+<div id="results"></div>
+</div>
