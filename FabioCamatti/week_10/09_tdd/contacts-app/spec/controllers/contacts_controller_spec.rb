@@ -95,10 +95,71 @@ RSpec.describe ContactsController, type: :controller do
   end
   describe "GET #edit" do
     it "assigns an existing contact to @contact" do
-
+      contact = create :contact
+      get :edit, id: contact.id
+      expect(assigns(:contact)).to eq(contact)
     end
     it "renders the edit template" do
-      
+      contact = create :contact
+      get :edit, id: contact.id
+      expect(response).to render_template(:edit)
+    end
+  end
+  describe "PUT #update" do
+    before :each do
+      @contact = create :contact, first_name: "Groucho", last_name: "Marx"
+    end
+    context "with valid attributes" do
+        it "locates the correct contact" do
+          put :update, id: @contact.id, contact: attributes_for(:contact, first_name: "Gummo")
+          expect(assigns(:contact)).to eq(@contact)
+        end
+        it "change @contact's attributes" do
+          put :update, id: @contact.id, contact: attributes_for(:contact, first_name: "Gummo")
+          @contact.reload
+          expect(@contact.first_name).to eq("Gummo")
+        end
+        it "redirects to @contact's show page" do
+          put :update, id: @contact.id, contact: attributes_for(:contact)
+          expect(response).to redirect_to @contact
+        end
+      end
+    context "with invalid attributes" do
+        it "not change @contact's attributes" do
+          put :update, id: @contact.id, contact: attributes_for(:contact, first_name: nil)
+          @contact.reload
+          expect(@contact.first_name).to eq("Groucho")
+        end
+        it "re-render the edit template" do
+          put :update, id: @contact.id, contact: attributes_for(:contact, first_name: nil)
+          expect(response).to render_template(:edit)
+        end
+    end
+  end
+  describe "DELETE #destroy" do
+    before :each do
+      @c = create :contact
+    end
+    it "deletes the contact" do
+      expect {
+        delete :destroy, id: @c.id
+      }.to change(Contact, :count).by -1
+      # Send delete request to the destroy method passing in an ID
+        # Should change the Contact count by -1
+    end
+    it "redirect to the contacts/index" do
+      delete :destroy, id: @c.id
+      expect(response).to redirect_to contacts_path
+    end
+  end
+  describe "GET #index - JSON" do
+    it "should include all contacts as JSON" do
+      # Create a contact to users
+      contact = create :contact
+      # Make a get request, asking for JSON
+      get :index, format: :json
+      # Compare the result
+      expect(response.body).to eq(Contact.all.to_json)
     end
   end
 end
