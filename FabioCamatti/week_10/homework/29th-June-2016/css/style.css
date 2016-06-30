@@ -1,0 +1,15 @@
+.main {
+    display: table-cell;;
+    vertical-align: middle;;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 500px;
+    width: 500px;
+    border: 2px solid #000;
+}
+.main h1 {
+    text-align: center;
+    vertical-align: middle;
+}

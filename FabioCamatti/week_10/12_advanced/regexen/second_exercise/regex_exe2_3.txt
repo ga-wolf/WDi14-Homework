@@ -1,0 +1,8 @@
+The var $1 contains: 'wilma' on line 1
+The var $1 contains: 'wilma' on line 2
+The var $1 contains: 'wilma' on line 3
+The var $1 contains: 'wilma' on line 6
+The var $1 contains: 'llama' on line 19
+The var $1 contains: 'wilma' on line 21
+The var $1 contains: 'Wilma' on line 23
+The var $1 contains: 'wilma' on line 24

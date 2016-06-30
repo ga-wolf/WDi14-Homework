@@ -1,0 +1,4 @@
+2: The first 'word' contains: 'wilma' and the second contains 'and'
+6: The first 'word' contains: 'wilma' and the second contains 'flint'
+23: The first 'word' contains: 'Wilma' and the second contains 'Flint'
+24: The first 'word' contains: 'wilma&fred' and the second contains ''
