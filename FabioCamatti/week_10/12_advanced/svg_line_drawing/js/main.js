@@ -17,8 +17,11 @@ $(document).ready(function () {
 
   $("path").css("opacity", "1");
 
-  $("path").addClass("complete");
+  // $("path").addClass("complete");
 
+  $("path").animate({
+    "stroke-dashoffset": "0"
+  },3000);
 
   // $("#svg_1").animate({
   //   "stroke-dashoffset": "0"
