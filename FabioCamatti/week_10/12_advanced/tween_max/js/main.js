@@ -2,6 +2,7 @@ $(document).ready(function() {
     var $bill = $("img");
     var t1 = TweenMax.to($bill, 20, {
         left: "80vw",
+        ease: Bounce.easeOut,
         top: Math.random() > 0.5 ? "80vh" : "0vh",
         yoyo: true,
         rotation: 3600,
