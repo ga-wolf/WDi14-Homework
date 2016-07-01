@@ -1,0 +1,27 @@
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+path#svg_1{
+  stroke: hotpink;
+  stroke-width: 5;
+  stroke-dasharray: 1310;
+  stroke-dashoffset: 1310;
+  transition: stroke-dashoffset 3s;
+  /*animation: drawLine 5s linear forwards; /* forwards to make the animation to stop at the end of the SVG line, otherwise the SVG dissappear from the screen*/*/
+}
+
+path#svg_5{
+  stroke: rebeccapurple;
+  stroke-width: 5;
+  stroke-dasharray: 770;
+  stroke-dashoffset: 770;
+  transition: stroke-dashoffset 3s 3s;
+  /*animation: drawLine 6s linear forwards; /* forwards to make the animation to stop at the end of the SVG line, otherwise the SVG dissappear from the screen*/*/
+}
+
+svg:hover path#svg_5, sgv:hover path#svg_1{
+  stroke-dashoffset: 0;
+}
