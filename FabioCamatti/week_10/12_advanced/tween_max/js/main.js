@@ -2,8 +2,9 @@ $(document).ready(function() {
     var $bill = $("img");
     var t1 = TweenMax.to($bill, 20, {
         left: "80vw",
+        top: Math.random() > 0.5 ? "80vh" : "0vh",
         yoyo: true,
-        rotation: 360,
+        rotation: 3600,
         repeat: -1, //Make it goes back-and-foward
         onUpdate: function() {
             // console.log("Animation is happening");
@@ -29,7 +30,7 @@ $(document).ready(function() {
       t1.pause();
       t1.seek( currentVal );
     });
-    $(".speedA").on("input change", function () {
+    $(".speed").on("input change", function () {
       var currentVal = parseInt( $(this).val() );
       t1.play();
       t1.timeScale(currentVal);
