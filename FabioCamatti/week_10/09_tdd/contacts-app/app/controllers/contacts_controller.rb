@@ -6,6 +6,12 @@ class ContactsController < ApplicationController
     else
         @contacts = Contact.all
     end
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render :json => @contacts.to_json }
+    end
+
   end
 
   def show
@@ -27,11 +33,22 @@ class ContactsController < ApplicationController
   end
 
   def edit
-    
+    @contact = Contact.find params[:id]
   end
 
-  def delete
+  def update
+    @contact = Contact.find params[:id]
+    if @contact.update contact_params
+      redirect_to @contact
+    else
+      render :edit
+    end
+  end
 
+  def destroy
+    contact = Contact.find params[:id]
+    contact.destroy
+    redirect_to contacts_path
   end
 
   private
