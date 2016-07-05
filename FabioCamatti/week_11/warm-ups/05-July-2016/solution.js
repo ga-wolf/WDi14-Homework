@@ -1,3 +1,4 @@
+// https://gist.github.com/sherif-gamal/73a1c97cf08eca344a50e20afacd7ff9
 var happyNumbers = {};
 var unHappyNumbers = {};
 
