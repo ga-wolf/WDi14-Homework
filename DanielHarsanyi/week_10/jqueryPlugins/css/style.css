@@ -1,0 +1,50 @@
+body {
+  background-image: url("../assets/rainbowBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 80px;
+}
+
+#userInput {
+  display: inline;
+  height: 80px;
+  text-align: center;
+  font-size: 40px;
+  border-style: none;
+  background-image: linear-gradient( 135deg, red, orange, yellow, green, blue, indigo, violet );
+}
+
+#rainbowFiSubmit {
+  height: 80px;
+  display: inline;
+}
+
+#rainbowOutput {
+  font-size: 80px;
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
+
+.button-secondary {
+  font-size: 250%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  background: rgba(66, 184, 221, 0.85);
+}
+
+.button-secondary:hover {
+  background: rgba(66, 184, 221, 1);
+  transition: background 0.2s ease;
+}

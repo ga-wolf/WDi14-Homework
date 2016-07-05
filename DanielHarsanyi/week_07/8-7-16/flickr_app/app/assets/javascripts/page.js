@@ -116,7 +116,7 @@ var isSearchDifferent = function (searchTerm, newSearchTerm){
   }
 };
 
-var debounce = _.throttle(didScroll, 1500);
+var debounce = _.debounce(didScroll, 200);
 $(window).scroll(debounce);
 
 var scrollToTop = function(){
