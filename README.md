@@ -7,7 +7,7 @@
 - Clone your forked repository on your local computer
     + git clone url_of_your_fork_on_github
 - Add an upstream, so that your local copy's remote is pointing to my repository on Github (this repository)
-    + Move into the the repository (cd WDi14-Homework)
+    + Move into the repository (cd WDi14-Homework)
     + git remote add upstream https://github.com/ga-wolf/WDi14-Homework
     + git pull upstream master
 
